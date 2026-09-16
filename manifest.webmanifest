@@ -1,0 +1,16 @@
+{
+  "name": "Daily deep dive",
+  "short_name": "Deep dive",
+  "description": "A new rabbit hole every day, with books, papers, videos and articles to follow it.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5E6D1",
+  "theme_color": "#F5E6D1",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
