@@ -1,7 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-09-17",
-  "notes": "Editorial topics focused on critical thinking, reasoning and AI safety. User-supplied videos are treated as framing resources, not as authorities; factual claims are anchored in primary reports or research where available.",
+  "notes": "Editorial topics focused on critical thinking, health, neuroscience, society, reasoning and AI safety. User-supplied videos are treated as framing resources, not as authorities; factual claims are anchored in primary reports or research where available.",
   "topics": [
     {
       "id": "critical-thinking-ai-age",
@@ -31,21 +31,14 @@
             "source": "Stanovich, West & Toplak · Current Directions in Psychological Science (2013)",
             "url": "https://journals.sagepub.com/doi/10.1177/0963721413480174",
             "description": "A research review on the tendency to evaluate evidence in favor of prior views, and its weak relationship with intelligence.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "identity-and-abstract",
-              "limitation": "Bibliographic identity and abstract checked; full paper access may be restricted."
-            }
+            "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}
           },
           {
             "title": "Not all bullshit pondered is tossed: Reflection decreases receptivity to some types of misleading information but not others",
             "source": "Littrell, Meyers & Fugelsang · Applied Cognitive Psychology (2024)",
             "url": "https://doi.org/10.1002/acp.4154",
             "description": "Three studies testing where explanatory reflection helped and where it did not, including the influence of source authority.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "identity-and-abstract"
-            }
+            "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}
           }
         ],
         "videos": [
@@ -53,12 +46,8 @@
             "title": "This Is Boring But It Will Make You Scary Intelligent",
             "creator": "Sandeep Swadia · framing resource",
             "url": "https://www.youtube.com/watch?v=5mfwXuS06Ok",
-            "description": "Use this as a prompt for the topic's practical questions about authority, persuasion, AI-generated information and independent judgment; verify substantive claims against the research resources.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "framing-resource",
-              "limitation": "Included for its framing and practical prompts, not as the sole evidentiary basis for the topic."
-            }
+            "description": "Use this as a prompt for practical questions about authority, persuasion, AI-generated information and independent judgment; verify substantive claims against the research resources.",
+            "verification": {"checkedAt": "2026-09-17", "reviewLevel": "framing-resource"}
           }
         ],
         "articles": []
@@ -74,13 +63,11 @@
         "OpenAI says the incident began during internal cybersecurity evaluations in which models operated with reduced safeguards and found ways around isolation controls.",
         "Hugging Face's technical reconstruction describes an end-to-end intrusion carried out through many automated actions, beginning from an evaluation environment and progressing through vulnerabilities and stolen credentials.",
         "The compromise involved multiple layers of failure rather than a single magical 'escape': network boundaries, secrets, vulnerable services, lateral movement and detection all mattered.",
-        "Hugging Face reported no evidence that public user-facing models, datasets, Spaces or published software packages were tampered with in the incident disclosure.",
-        "The case shows why evaluating capable agents is itself a security problem: the test environment, the benchmark and nearby infrastructure become part of the threat model."
+        "Hugging Face reported no evidence that public user-facing models, datasets, Spaces or published software packages were tampered with in the incident disclosure."
       ],
       "criticalThinking": [
         "Which details are corroborated by both OpenAI and Hugging Face, and which come from only one party's reconstruction?",
         "What failed first: the model's objective, the sandbox, credential hygiene, vulnerable infrastructure or monitoring?",
-        "Does calling the system 'autonomous' tell you how much human design and setup preceded the incident?",
         "Which single control would have broken the attack chain earliest?",
         "How should labs test dangerous capabilities without giving evaluations a path into real production systems?"
       ],
@@ -90,46 +77,9 @@
         "papers": [],
         "videos": [],
         "articles": [
-          {
-            "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
-            "publication": "OpenAI · primary incident disclosure",
-            "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
-            "description": "OpenAI's initial public disclosure and subsequent updates about the evaluation incident.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "text-and-relevant-sections"
-            }
-          },
-          {
-            "title": "The Hugging Face incident and the road ahead",
-            "publication": "OpenAI · technical follow-up",
-            "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
-            "description": "OpenAI's later reconstruction of the incident, including the progression from sandbox escape to third-party and internal compromise.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "text-and-relevant-sections"
-            }
-          },
-          {
-            "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
-            "publication": "Hugging Face · primary technical timeline",
-            "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
-            "description": "Hugging Face's day-by-day technical reconstruction of the intrusion from its side of the incident.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "text-and-relevant-sections"
-            }
-          },
-          {
-            "title": "Security incident disclosure — July 2026",
-            "publication": "Hugging Face · primary incident disclosure",
-            "url": "https://github.com/huggingface/blog/blob/main/security-incident-july-2026.md",
-            "description": "Hugging Face's initial disclosure, including what it knew about affected internal systems and what it had not found evidence of tampering with.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "text-and-relevant-sections"
-            }
-          }
+          {"title": "OpenAI and Hugging Face partner to address security incident during model evaluation", "publication": "OpenAI · primary incident disclosure", "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "The Hugging Face incident and the road ahead", "publication": "OpenAI · technical follow-up", "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident", "publication": "Hugging Face · primary technical timeline", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
         ]
       },
       "lastVerified": "2026-09-17"
@@ -141,70 +91,380 @@
       "context": "Intelligence tests capture important cognitive abilities, but they do not measure every skill involved in good judgment. Research on rational thinking and myside bias helps explain a familiar puzzle: a person can be highly capable at reasoning, memory or problem solving and still use those abilities to defend a belief rather than test it fairly.",
       "takeaways": [
         "Intelligence and rational thinking overlap, but they are not interchangeable constructs.",
-        "Stanovich and colleagues report that myside bias often shows little relationship with intelligence, meaning cognitive ability does not automatically protect against favoring one's prior views.",
+        "Myside bias often shows little relationship with measured intelligence, so cognitive ability does not automatically protect against favoring prior views.",
         "A powerful reasoner may be better at generating arguments for a position; that becomes a liability when the goal quietly shifts from finding out what is true to defending what is already believed.",
-        "Good judgment therefore requires habits that intelligence tests do not fully capture, including actively considering alternatives, calibrating confidence and looking for disconfirming evidence.",
-        "The useful lesson is not that intelligence is bad or irrelevant, but that cognitive ability works best when paired with epistemic discipline."
+        "Good judgment also depends on considering alternatives, calibrating confidence and looking for disconfirming evidence."
       ],
       "criticalThinking": [
         "Am I using reasoning to investigate the claim, or to defend a conclusion I already prefer?",
         "Can I state the strongest version of the opposing explanation before criticizing it?",
         "What evidence would make my current belief less likely?",
-        "Is confidence coming from evidence, expertise, familiarity or simply from being able to produce a persuasive argument?",
         "Which thinking skill is actually being measured when someone is called intelligent?"
       ],
       "tags": ["intelligence", "rationality", "myside bias", "confirmation bias", "judgment", "metacognition"],
       "ressources": {
         "books": [
-          {
-            "title": "What Intelligence Tests Miss: The Psychology of Rational Thought",
-            "author": "Keith E. Stanovich · Yale University Press",
-            "url": "https://yalebooks.yale.edu/book/9780300142532/what-intelligence-tests-miss/",
-            "description": "A book-length argument for distinguishing cognitive ability measured by conventional intelligence tests from rational thinking skills involved in judgment and decision making.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "publisher-description-and-bibliographic-identity",
-              "limitation": "Publisher description and bibliographic details checked; the full book was not re-reviewed for this topic."
-            }
-          }
+          {"title": "What Intelligence Tests Miss: The Psychology of Rational Thought", "author": "Keith E. Stanovich · Yale University Press", "url": "https://yalebooks.yale.edu/book/9780300142532/what-intelligence-tests-miss/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "publisher-description-and-bibliographic-identity"}}
         ],
         "papers": [
-          {
-            "title": "Myside Bias, Rational Thinking, and Intelligence",
-            "source": "Stanovich, West & Toplak · Current Directions in Psychological Science (2013)",
-            "url": "https://journals.sagepub.com/doi/10.1177/0963721413480174",
-            "description": "Review of evidence that myside bias can be largely independent of measured intelligence.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "identity-and-abstract",
-              "limitation": "Bibliographic identity and abstract checked; full paper access may be restricted."
-            }
-          },
-          {
-            "title": "Natural myside bias is independent of cognitive ability",
-            "source": "Stanovich & West · Thinking & Reasoning (2007)",
-            "url": "https://www.tandfonline.com/doi/full/10.1080/13546780600780796",
-            "description": "Empirical work examining the relationship between natural myside bias and cognitive ability.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "identity-and-abstract"
-            }
-          }
+          {"title": "Myside Bias, Rational Thinking, and Intelligence", "source": "Stanovich, West & Toplak · Current Directions in Psychological Science (2013)", "url": "https://journals.sagepub.com/doi/10.1177/0963721413480174", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}},
+          {"title": "Natural myside bias is independent of cognitive ability", "source": "Stanovich & West · Thinking & Reasoning (2007)", "url": "https://www.tandfonline.com/doi/full/10.1080/13546780600780796", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}}
         ],
         "videos": [
-          {
-            "title": "Le paradoxe de l’intelligence",
-            "creator": "YouTube · framing resource supplied for this topic",
-            "url": "https://www.youtube.com/watch?v=CG2jTExMv88",
-            "description": "Use as an accessible perspective and question-generator; verify its substantive claims against the research and book resources above.",
-            "verification": {
-              "checkedAt": "2026-09-17",
-              "reviewLevel": "framing-resource",
-              "limitation": "The video is retained as the user's framing reference; it is not treated as the sole evidentiary authority for the topic."
-            }
-          }
+          {"title": "Le paradoxe de l’intelligence", "creator": "YouTube · framing resource supplied for this topic", "url": "https://www.youtube.com/watch?v=CG2jTExMv88", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "framing-resource"}}
         ],
         "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "infertility-conception-biology",
+      "category": "Reproductive biology & health",
+      "title": "Infertility: Why conception can fail on either side",
+      "context": "Infertility is not a single diagnosis and not simply a 'female problem'. Conception depends on ovulation, sperm production and transport, fertilization, tubal function, implantation and endocrine signalling. A useful deep dive separates population definitions from individual diagnosis and explains why some cases remain unexplained even after testing.",
+      "takeaways": [
+        "WHO defines infertility as failure to achieve pregnancy after 12 months or more of regular unprotected intercourse.",
+        "Male, female, combined and unexplained factors can all contribute.",
+        "Tests measure parts of a complex process; a normal result on one test does not prove that fertility is normal overall.",
+        "Age, anatomy, endocrine function, infections and sperm quantity, movement and morphology can all matter, but their importance differs by person."
+      ],
+      "criticalThinking": [
+        "Does a fertility statistic describe lifetime prevalence, a specific age group or people already seeking care?",
+        "Is a test measuring ovarian reserve, ovulation, egg quality, tubal function or something else?",
+        "Am I confusing a risk factor with a diagnosis?"
+      ],
+      "tags": ["infertility", "fertility", "ovulation", "sperm", "reproduction", "IVF"],
+      "ressources": {
+        "books": [], "papers": [], "videos": [],
+        "articles": [
+          {"title": "Infertility", "publication": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/infertility", "description": "Definition, causes, global burden and access-to-care overview from WHO.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ]
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "collagen-protein-vs-marketing",
+      "category": "Biochemistry & nutrition",
+      "title": "Collagen: Structural protein, digestion and supplement claims",
+      "context": "Collagen is a major structural protein in skin, tendon, cartilage and bone, but swallowing collagen does not send intact collagen directly to your face or joints. The interesting question is what happens after digestion and whether trials show meaningful effects beyond marketing claims.",
+      "takeaways": [
+        "Collagen is broken down during digestion into peptides and amino acids before the body reuses those building blocks.",
+        "Evidence is not uniform across outcomes: some reviews report benefits for skin or musculoskeletal outcomes, while higher-quality or non-industry-funded skin studies can produce weaker conclusions.",
+        "A statistically significant change is not automatically a large or clinically meaningful effect.",
+        "Funding source, study quality, formulation and outcome selection matter when reading supplement research."
+      ],
+      "criticalThinking": [
+        "Is the claim about collagen biology or about a commercial supplement?",
+        "Were outcomes objective measurements or self-reported impressions?",
+        "What happens when the analysis separates high-quality from low-quality trials or industry-funded from independent studies?"
+      ],
+      "tags": ["collagen", "skin", "joints", "protein", "supplements", "nutrition"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Effects of Collagen Supplements on Skin Aging: A Systematic Review and Meta-Analysis of Randomized Controlled Trials", "source": "Myung et al. · American Journal of Medicine (2025)", "url": "https://pubmed.ncbi.nlm.nih.gov/40324552/", "description": "A useful skeptical counterweight because it analyzes study quality and funding source.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}},
+          {"title": "Collagen Supplementation for Skin and Musculoskeletal Health: An Umbrella Review of Meta-Analyses", "source": "Ravindran et al. · Aesthetic Surgery Journal Open Forum (2026)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12968778/", "description": "Umbrella review spanning skin, bone, muscle and osteoarthritis outcomes.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "chocolate-cocoa-health-halo",
+      "category": "Food science & nutrition",
+      "title": "Chocolate: Cocoa chemistry, sugar and the health halo",
+      "context": "Chocolate is not one nutritional object. Cocoa contains flavanols and other compounds studied for cardiometabolic effects, while finished chocolate can also contain substantial sugar and fat. A good deep dive separates cocoa research from claims about eating any chocolate product.",
+      "takeaways": [
+        "Cocoa and high-cocoa dark chocolate have been studied for effects on blood pressure, lipids and glucose markers.",
+        "A 2024 meta-analysis of randomized trials found small improvements in several cardiometabolic markers but no effect on several others, including body weight and HbA1c.",
+        "The cocoa dose and product composition used in trials may differ substantially from ordinary confectionery.",
+        "A food can contain potentially beneficial compounds and still be energy-dense; those statements are not contradictory."
+      ],
+      "criticalThinking": [
+        "Does a headline say 'chocolate' when the study actually used cocoa extract or ≥70% dark chocolate?",
+        "How large is the effect in absolute terms?",
+        "Is the claim about a biomarker or about actual disease outcomes?"
+      ],
+      "tags": ["chocolate", "cocoa", "flavanols", "nutrition", "blood pressure", "food science"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Effects of Cocoa Consumption on Cardiometabolic Risk Markers: Meta-Analysis of Randomized Controlled Trials", "source": "Nutrients (2024)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11206597/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "tourism-southeast-asia-costs-benefits",
+      "category": "Economics, society & environment",
+      "title": "Tourism in Southeast Asia: Who gains, who pays?",
+      "context": "Tourism can create jobs, tax revenue and infrastructure while also increasing pressure on housing, ecosystems, heritage sites, water, waste systems and local culture. Southeast Asia is a useful case because rapid tourism growth meets coastal vulnerability, biodiversity pressure and unequal local benefit-sharing.",
+      "takeaways": [
+        "Tourism's economic benefits and environmental or social costs can occur at the same time.",
+        "ASEAN's own sustainable-tourism work identifies climate risk, ecosystem pressure, uneven community participation and fair benefit-sharing as continuing challenges.",
+        "A national increase in tourism receipts does not show how income is distributed locally or how much leaks to external owners and supply chains.",
+        "The right unit of analysis can be a neighborhood, island, ecosystem or labor market rather than an entire country."
+      ],
+      "criticalThinking": [
+        "Who receives the income and who bears the congestion, waste, housing or environmental costs?",
+        "Are tourism jobs stable and locally owned, or seasonal and externally controlled?",
+        "Would the conclusion change if we measured biodiversity, rents or water use rather than GDP?"
+      ],
+      "tags": ["tourism", "Southeast Asia", "ASEAN", "overtourism", "environment", "economics", "housing"],
+      "ressources": {
+        "books": [], "papers": [], "videos": [],
+        "articles": [
+          {"title": "Action Roadmap for Sustainable Tourism Development in ASEAN", "publication": "ASEAN Secretariat & ERIA (2024)", "url": "https://asean.org/book/action-roadmap-for-sustainable-tourism-development-in-asean/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "ASEAN Tourism Outlook Report 2026 — Sustainable and Resilient Tourism Development", "publication": "ASEAN Secretariat", "url": "https://asean.org/wp-content/uploads/2026/02/Dummy_ASEAN-Tourism-Outlook-Report_Final-Draft_rev-26-Feb-2026_CRD.pdf", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "relevant-sections"}}
+        ]
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "anabolic-steroids-mechanism-tradeoffs",
+      "category": "Endocrinology & performance",
+      "title": "Anabolic steroids: Muscle gains, androgen receptors and endocrine trade-offs",
+      "context": "Anabolic-androgenic steroids can increase muscle mass and strength because they act through androgen signalling, but supraphysiological use also disrupts the endocrine system and affects cardiovascular, liver, reproductive and psychiatric health. Understanding the mechanism makes both the effects and the risks easier to see.",
+      "takeaways": [
+        "Anabolic-androgenic steroids are related to testosterone and act largely through androgen receptors and downstream gene regulation.",
+        "Controlled studies and reviews show increases in lean mass and strength, but real-world nonmedical use can involve higher doses, longer exposure and multiple substances than trials capture.",
+        "Exogenous androgens can suppress the hypothalamic-pituitary-gonadal axis, reducing endogenous testosterone and spermatogenesis.",
+        "Cardiovascular, liver, lipid, reproductive and psychiatric risks vary with compound, dose, duration and individual susceptibility."
+      ],
+      "criticalThinking": [
+        "Are the risks being estimated from clinical doses, randomized trials or real-world supraphysiological use?",
+        "Does a short trial have enough duration to detect long-term harms?",
+        "Are 'steroids' being confused with corticosteroids or with anabolic-androgenic steroids?"
+      ],
+      "tags": ["steroids", "testosterone", "androgen receptor", "bodybuilding", "fertility", "endocrinology"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Anabolic-androgenic steroids: How do they work and what are the risks?", "source": "de Ronde & Smit · Frontiers in Endocrinology (2023)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9837614/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "Health consequences of anabolic steroids: a sexual-medicine perspective", "source": "Majzoub & Canguven · International Journal of Impotence Research (2026)", "url": "https://pubmed.ncbi.nlm.nih.gov/42026176/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "creatine-atp-muscle-brain",
+      "category": "Exercise physiology & nutrition",
+      "title": "Creatine: ATP buffering, muscle performance and disputed brain claims",
+      "context": "Creatine is one of the best-studied sports supplements, but claims now extend from strength and muscle gain to cognition and sleep deprivation. The useful question is not 'does creatine work?' but 'for which outcome, population, dose and level of evidence?'.",
+      "takeaways": [
+        "Creatine helps buffer cellular energy through the phosphocreatine system, which is especially relevant during repeated high-intensity efforts.",
+        "Evidence supports benefits for resistance-training-related performance and body composition in many contexts.",
+        "Cognitive evidence is more contested: some meta-analyses report benefits in selected domains, while EFSA concluded that a cause-and-effect relationship for improved cognition had not been established.",
+        "Different outcomes should not be bundled into one yes-or-no judgment about the supplement."
+      ],
+      "criticalThinking": [
+        "Is the claim about muscle performance, body composition, recovery or cognition?",
+        "Does the study involve healthy rested adults, sleep-deprived people, older adults or another group?",
+        "Is a mechanistic rationale being presented as if it were already clinical proof?"
+      ],
+      "tags": ["creatine", "ATP", "phosphocreatine", "muscle", "performance", "cognition"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Common questions and misconceptions about creatine supplementation: what does the scientific evidence really show?", "source": "Antonio et al. · Journal of the International Society of Sports Nutrition (2021)", "url": "https://jissn.biomedcentral.com/articles/10.1186/s12970-021-00412-w", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "The Effect of Creatine Supplementation on Resistance Training-Based Changes to Body Composition", "source": "Desai et al. · Journal of Strength and Conditioning Research (2024)", "url": "https://pubmed.ncbi.nlm.nih.gov/39074168/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}},
+          {"title": "Creatine and improvement in cognitive function: EFSA scientific opinion", "source": "EFSA Journal (2024)", "url": "https://pubmed.ncbi.nlm.nih.gov/39564533/", "description": "Useful counterpoint to stronger cognitive claims.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "muscle-hypertrophy-mechanisms",
+      "category": "Exercise physiology",
+      "title": "Muscle hypertrophy: What actually makes skeletal muscle grow?",
+      "context": "Muscle growth is not simply 'tearing fibers so they grow back bigger'. Resistance training changes mechanical tension, motor-unit recruitment, intracellular signalling, protein synthesis and long-term muscle architecture. Training volume matters, but more work is not automatically more growth.",
+      "takeaways": [
+        "Hypertrophy is a chronic adaptation produced by repeated training and recovery, not by one workout's soreness or damage.",
+        "High-load training is effective, but low-load training taken sufficiently close to fatigue can also stimulate hypertrophy in research settings.",
+        "Progressive overload is a training principle, but simply increasing total volume does not map one-to-one onto muscle growth.",
+        "Protein intake, energy availability, sleep, genetics, training age and program design can all influence the response."
+      ],
+      "criticalThinking": [
+        "Is the outcome muscle size, strength, soreness or a biochemical marker?",
+        "Does the study compare equal effort or equal volume between groups?",
+        "Are conclusions from trained participants being generalized to beginners, or vice versa?"
+      ],
+      "tags": ["muscle", "hypertrophy", "resistance training", "protein synthesis", "progressive overload", "strength"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "What are the potential mechanisms of fatigue-induced skeletal muscle hypertrophy with low-load resistance exercise training?", "source": "American Journal of Physiology-Cell Physiology (2024)", "url": "https://pubmed.ncbi.nlm.nih.gov/39726254/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}},
+          {"title": "Progression of total training volume in resistance training studies and its application to skeletal muscle growth", "source": "Physiological Measurement (2024)", "url": "https://pubmed.ncbi.nlm.nih.gov/39178897/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "animal-minds-cognition-consciousness",
+      "category": "Animal cognition & evolution",
+      "title": "Animal minds: Intelligence, consciousness and the measurement problem",
+      "context": "Calling an animal 'smart' hides several different questions: memory, problem solving, planning, social cognition, self-control, communication, awareness and learning. Comparative cognition becomes most interesting when we ask not which species is 'most intelligent', but how different minds solve different ecological problems—and how our tests can mislead us.",
+      "takeaways": [
+        "Animal cognition research is vulnerable to task-design problems: failure can reflect a bad test rather than a true cognitive limit.",
+        "Species can show sophisticated abilities in domains that fit their ecology while performing poorly on tasks built around human sensory or motivational assumptions.",
+        "A 2024 declaration by researchers argued there is strong support for conscious experience in mammals and birds and a realistic possibility across many other vertebrates and invertebrates, while uncertainty remains.",
+        "Cognition, intelligence and consciousness are related but distinct concepts."
+      ],
+      "criticalThinking": [
+        "What sensory world does this species live in, and does the experiment respect it?",
+        "Is a clever behavior evidence of insight, associative learning, or both?",
+        "Are null results being interpreted as cognitive limits when the task may simply be inappropriate?"
+      ],
+      "tags": ["animals", "cognition", "consciousness", "intelligence", "octopus", "birds", "comparative cognition"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Understanding the limits to animal cognition", "source": "Howard & Barron · Current Biology (2024)", "url": "https://pubmed.ncbi.nlm.nih.gov/38593777/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "identity-and-abstract"}}
+        ],
+        "videos": [],
+        "articles": [
+          {"title": "The New York Declaration on Animal Consciousness", "publication": "New York University-hosted declaration (2024)", "url": "https://sites.google.com/nyu.edu/nydeclaration", "description": "A scientific declaration and useful starting point, not a substitute for the underlying evidence or ongoing debate.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ]
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "child-sexual-exploitation-systems",
+      "category": "Child protection, crime & law",
+      "title": "Child sexual exploitation: Grooming, online systems, prevention and law",
+      "context": "A serious treatment of child sexual abuse and exploitation should avoid lurid detail and focus on how abuse becomes possible: grooming, secrecy, coercion, power asymmetries, digital platforms, reporting barriers, institutional failures, victim support, evidence collection and criminal-law responses.",
+      "takeaways": [
+        "Online child sexual exploitation is not one offense type; it can involve grooming, coercion, abuse imagery, livestreaming, extortion and cross-border offending.",
+        "Technology changes scale and reach, but abuse still depends on human relationships, access, power and opportunity.",
+        "Prevention includes child-safe institutions, platform design, education, reporting systems, specialized law enforcement and survivor-centered services.",
+        "Country-level evidence matters because prevalence estimates, reporting systems, legal definitions and enforcement capacity differ."
+      ],
+      "criticalThinking": [
+        "Is a prevalence estimate based on victim surveys, police reports, platform detections or prosecutions?",
+        "Does a law criminalize conduct on paper without providing the capacity to investigate it?",
+        "Which interventions reduce harm before abuse occurs rather than only reacting afterward?"
+      ],
+      "tags": ["child protection", "sexual exploitation", "grooming", "online safety", "law", "crime", "Southeast Asia"],
+      "ressources": {
+        "books": [], "papers": [], "videos": [],
+        "articles": [
+          {"title": "Disrupting Harm country reports: Evidence on online child sexual exploitation and abuse", "publication": "UNICEF Innocenti, ECPAT International & INTERPOL", "url": "https://www.unicef.org/innocenti/reports/disrupting-harm-country-reports", "description": "Multi-country evidence including Southeast Asian reports for Cambodia, Indonesia, Malaysia, the Philippines, Thailand and Viet Nam.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ]
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "ambition-intention-action-gap",
+      "category": "Behavior & self-regulation",
+      "title": "Ambitious but inconsistent: The gap between wanting and doing",
+      "context": "Ambition describes what someone wants, but repeated action depends on self-regulation, context, friction, habits and planning. The interesting science sits in the intention-action gap: why sincere goals often fail to become behavior, and why specific if-then plans can outperform motivation alone.",
+      "takeaways": [
+        "Strong intentions do not guarantee goal achievement; many failures occur during initiation, distraction, persistence or adjustment.",
+        "Implementation intentions translate goals into specific if-then responses tied to situations.",
+        "Meta-analytic evidence supports implementation intentions and mental contrasting as useful tools, though effects vary and publication bias can inflate estimates.",
+        "Consistency is therefore not simply a personality trait or moral virtue; environment and task design can change the probability of action."
+      ],
+      "criticalThinking": [
+        "Is the advice asking you to feel more motivated, or changing the situation in which behavior happens?",
+        "Can the desired behavior be attached to a concrete cue and made easier to start?",
+        "Is inconsistency actually a sign that the goal is poorly specified, conflicting with another goal, or impossible under current constraints?"
+      ],
+      "tags": ["ambition", "consistency", "motivation", "habits", "implementation intentions", "goals"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Implementation Intentions and Goal Achievement: A Meta-analysis of Effects and Processes", "source": "Gollwitzer & Sheeran · Advances in Experimental Social Psychology (2006)", "url": "https://doi.org/10.1016/S0065-2601(06)38002-1", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "A Meta-Analysis of the Effects of Mental Contrasting With Implementation Intentions on Goal Attainment", "source": "Wang, Wang & Gai · Frontiers in Psychology (2021)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8149892/", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [
+          {"title": "If you’re ambitious but inconsistent, please watch this", "creator": "YouTube · framing resource supplied for this topic", "url": "https://www.youtube.com/watch?v=K8AMhj-ImMI", "description": "Kept as the user's framing reference; practical or causal claims should be checked against the research above.", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "framing-resource", "limitation": "Video page could not be independently fetched during this update; the URL and title come from the user."}}
+        ],
+        "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "dopamine-prediction-error",
+      "category": "Neuroscience",
+      "title": "Dopamine: Prediction error, learning and why 'pleasure chemical' is too simple",
+      "context": "Dopamine is often reduced to a molecule of pleasure or motivation. In neuroscience, one of its best-studied roles involves learning from differences between expected and obtained outcomes. Newer work also suggests dopamine can encode richer information than a single reward-value signal.",
+      "takeaways": [
+        "Phasic dopamine activity has long been linked to reward prediction error: the difference between expected and received reward.",
+        "Prediction-error signals help update future expectations and actions rather than simply representing pleasure.",
+        "Recent work argues dopamine transients can also carry information about reward features beyond integrated value.",
+        "Different dopamine pathways and timescales make one-word explanations especially misleading."
+      ],
+      "criticalThinking": [
+        "Is a popular explanation talking about dopamine concentration, neuron firing, receptor activity or a whole behavioral system?",
+        "Does the evidence come from humans, rodents, primates or computational models?",
+        "Is 'dopamine causes X' replacing a more complicated circuit-level explanation?"
+      ],
+      "tags": ["dopamine", "reward", "prediction error", "learning", "motivation", "neuroscience"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "The curious case of dopaminergic prediction errors and learning associative information beyond value", "source": "Kahnt & Schoenbaum · Nature Reviews Neuroscience (2025)", "url": "https://www.nature.com/articles/s41583-024-00898-8", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "Neural Circuitry of Reward Prediction Error", "source": "Watabe-Uchida, Eshel & Uchida · Annual Review of Neuroscience (2017)", "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-neuro-072116-031109", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "memory-sleep-consolidation",
+      "category": "Neuroscience",
+      "title": "Memory during sleep: How the brain stabilizes and reorganizes experience",
+      "context": "Sleep is not a period in which the brain simply switches off. Research on memory consolidation examines how newly encoded traces are reactivated, redistributed and integrated, particularly through interactions between the hippocampus and neocortex during different sleep stages.",
+      "takeaways": [
+        "Memory is not stored like a static computer file; encoding, consolidation, retrieval and updating are distinct processes.",
+        "Sleep can support the strengthening and reorganization of newly learned information.",
+        "Slow oscillations, sleep spindles and hippocampal ripples are among the neural events studied in memory consolidation.",
+        "Experimental tools such as targeted memory reactivation can bias some consolidation processes but do not amount to effortless learning during sleep."
+      ],
+      "criticalThinking": [
+        "Is a study measuring recall the next morning, long-term retention or neural activity?",
+        "Does an effect from laboratory cueing generalize to learning entirely new information during sleep?",
+        "Which sleep stage and memory type are being discussed?"
+      ],
+      "tags": ["memory", "sleep", "hippocampus", "consolidation", "learning", "neuroscience"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "An update on recent advances in targeted memory reactivation during sleep", "source": "Carbone & Diekelmann · npj Science of Learning (2024)", "url": "https://www.nature.com/articles/s41539-024-00244-8", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "Engram mechanisms of memory linking and identity", "source": "Choucry, Nomoto & Inokuchi · Nature Reviews Neuroscience (2024)", "url": "https://www.nature.com/articles/s41583-024-00814-0", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [], "articles": []
+      },
+      "lastVerified": "2026-09-17"
+    },
+    {
+      "id": "neuroplasticity-learning-timescales",
+      "category": "Neuroscience",
+      "title": "Neuroplasticity: How learning changes neural circuits across seconds, days and years",
+      "context": "'Neuroplasticity' is often used as a vague synonym for self-improvement. In neuroscience it refers to changes in neural function and structure at many scales—from synaptic weights and firing patterns to network-level representations—driven by experience, learning, development and injury.",
+      "takeaways": [
+        "Plasticity occurs at multiple timescales and levels of organization; there is no single 'plasticity mechanism'.",
+        "Long-term learning can change population activity and connectivity patterns in prefrontal circuits.",
+        "Learning-related changes are constrained by existing circuitry, biology, sleep, repetition and context; the brain is adaptable but not infinitely malleable.",
+        "Popular claims that a short exercise 'rewires the brain' often skip the question of what neural change was actually measured."
+      ],
+      "criticalThinking": [
+        "What exactly changed: behavior, brain activity, synaptic strength, anatomy or connectivity?",
+        "How long did the change last?",
+        "Was the evidence causal or just a correlation between experience and a brain measure?"
+      ],
+      "tags": ["neuroplasticity", "learning", "prefrontal cortex", "brain", "synapses", "neuroscience"],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {"title": "Timescales of learning in prefrontal cortex", "source": "Miller & Constantinidis · Nature Reviews Neuroscience (2024)", "url": "https://www.nature.com/articles/s41583-024-00836-8", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}},
+          {"title": "Memory engram stability and flexibility", "source": "Zaki & Cai · Neuropsychopharmacology (2025)", "url": "https://www.nature.com/articles/s41386-024-01979-z", "verification": {"checkedAt": "2026-09-17", "reviewLevel": "text-and-relevant-sections"}}
+        ],
+        "videos": [], "articles": []
       },
       "lastVerified": "2026-09-17"
     }
