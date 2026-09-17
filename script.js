@@ -19,10 +19,31 @@
   };
 
   const GROUPS = [
-    { key: 'foundations', label: '', icon: '', meta: r => [r.creator || r.author, r.duration].filter(Boolean).join(' • ') },
-    { key: 'deepDives', label: '', icon: '', meta: r => [r.creator || r.author || r.journal].filter(Boolean).join(' • ') },
-    { key: 'criticalPerspectives', label: '', icon: '', meta: r => [r.author, r.publication || r.journal].filter(Boolean).join(' • ') },
-  ];
+  {
+    key: 'books',
+    label: 'Books',
+    icon: '📚',
+    meta: r => [r.author].filter(Boolean).join(' • ')
+  },
+  {
+    key: 'papers',
+    label: 'Papers',
+    icon: '📄',
+    meta: r => [r.source].filter(Boolean).join(' • ')
+  },
+  {
+    key: 'videos',
+    label: 'Videos',
+    icon: '▶️',
+    meta: r => [r.creator].filter(Boolean).join(' • ')
+  },
+  {
+    key: 'articles',
+    label: 'Articles',
+    icon: '📰',
+    meta: r => [r.publication].filter(Boolean).join(' • ')
+  },
+];
 
   // localStorage can be blocked (private mode, embedded views): never let it break the page
   const store = {
