@@ -105,7 +105,6 @@
   function renderCard(topic) {
     const key = String(topic.id);
     const [lead, rest] = splitTitle(topic.title);
-    const count = ressourceCount(topic);
     const save = el('button', { type: 'button', class: 'text-btn save-topic', 'aria-pressed': state.saved.has(key), text: state.saved.has(key) ? 'Saved' : 'Save topic' });
     save.setAttribute('aria-pressed', String(state.saved.has(key)));
     save.addEventListener('click', () => {
@@ -124,9 +123,8 @@
       el('h3', { class: 'section-label', text: 'Worth remembering' }),
       el('ul', { class: 'takeaways' }, topic.takeaways.map(text => el('li', { text }))),
     ]);
-    const envelope = el('button', { type: 'button', class: 'envelope', 'aria-expanded': 'false', 'aria-controls': 'sheet', 'aria-label': `Open ${count} resources for ${topic.title}` }, [
+    const envelope = el('button', { type: 'button', class: 'envelope', 'aria-expanded': 'false', 'aria-controls': 'sheet', 'aria-label': `Open resources for ${topic.title}` }, [
       el('span', { class: 'env-label', text: 'Resources' }),
-      el('span', { class: 'env-count', text: `${count} links inside` }),
     ]);
     envelope.addEventListener('click', () => {
       renderSheet(topic);
@@ -143,7 +141,7 @@
     els.loadMore.hidden = state.rendered >= state.filtered.length;
     els.status.textContent = !state.filtered.length ? (state.savedOnly ? 'No saved topics match yet. Save an idea from the collection to keep it here.' : 'No topics match. Try another question or subject.')
       : state.rendered >= state.filtered.length ? 'You’ve reached the end of this collection. More carefully chosen topics will follow.' : '';
-    els.bankCount.textContent = `${state.filtered.length} topics in this collection`;
+    els.bankCount.textContent = els.search.value.trim() || els.category.value || state.savedOnly ? `${state.filtered.length} matching topics` : "A growing collection of ideas";
   }
 
   function filterTopics() {

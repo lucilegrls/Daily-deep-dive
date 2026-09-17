@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-09-17",
   "notes": "Ressources marked search:true open a search page (Goodreads, YouTube, PubMed or Google Scholar) instead of a single item. Replace them with direct links as you verify each one.",
   "topics": [
@@ -1021,6 +1021,1784 @@
         ],
         "articles": []
       }
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Glucose and fructose: Two sugars, different routes",
+      "context": "A sugar molecule is a starting point for a chain of transport and enzyme reactions. Follow glucose and fructose from the intestine into energy metabolism, and separate the chemistry from claims about particular foods.",
+      "takeaways": [
+        "Glucose and fructose are monosaccharides; sucrose combines one of each.",
+        "Their intestinal transport and initial metabolic steps differ.",
+        "Food structure, quantity and the overall diet matter when interpreting metabolic effects."
+      ],
+      "tags": [
+        "glucose",
+        "and",
+        "fructose",
+        "two",
+        "sugars,",
+        "different",
+        "routes"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Intestinal Fructose and Glucose Metabolism in Health and Disease",
+            "source": "Merino et al. · Nutrients (2020)",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7019254/",
+            "description": "A molecular review of sugar transport, intestinal sensing and metabolic pathways; distinguishes established mechanisms from unresolved human evidence."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Carbohydrate metabolism",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
+            "description": "A sugar molecule is a starting point for a chain of transport and enzyme reactions. Follow glucose and fructose from the intestine into energy metabolism, and separate the chemistry from claims about particular foods."
+          }
+        ]
+      },
+      "id": 13
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "ATP: How cells pay for their work",
+      "context": "Moving a muscle, pumping ions and building a protein all require energy. ATP links the breakdown of fuel to the work a cell needs to do.",
+      "takeaways": [
+        "ATP couples energy-releasing reactions to energy-requiring processes.",
+        "Glycolysis and mitochondrial metabolism contribute to ATP production.",
+        "Cells continually regenerate ATP rather than storing a lifetime supply."
+      ],
+      "tags": [
+        "atp",
+        "how",
+        "cells",
+        "pay",
+        "for",
+        "their",
+        "work"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Overview of metabolic reactions",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-1-overview-of-metabolic-reactions",
+            "description": "Moving a muscle, pumping ions and building a protein all require energy. ATP links the breakdown of fuel to the work a cell needs to do."
+          }
+        ]
+      },
+      "id": 14
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Insulin and glucagon: Keeping fuel available",
+      "context": "Your blood glucose changes after meals and between them. Explore how the pancreas, liver and other tissues coordinate access to fuel.",
+      "takeaways": [
+        "Pancreatic beta cells release insulin; alpha cells release glucagon.",
+        "Insulin supports fuel uptake and storage in responsive tissues.",
+        "Glucagon helps the liver make glucose available between meals."
+      ],
+      "tags": [
+        "insulin",
+        "and",
+        "glucagon",
+        "keeping",
+        "fuel",
+        "available"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: The endocrine pancreas",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas",
+            "description": "Your blood glucose changes after meals and between them. Explore how the pancreas, liver and other tissues coordinate access to fuel."
+          }
+        ]
+      },
+      "id": 15
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Glycogen: The body’s carbohydrate reserve",
+      "context": "The liver and muscles both store glycogen, but they use it for different jobs. That distinction explains why eating, fasting and exercise change fuel availability.",
+      "takeaways": [
+        "Glycogen is a branched polymer of glucose.",
+        "Liver glycogen contributes to blood glucose regulation.",
+        "Muscle glycogen supplies fuel locally during activity."
+      ],
+      "tags": [
+        "glycogen",
+        "the",
+        "body’s",
+        "carbohydrate",
+        "reserve"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Carbohydrate metabolism",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
+            "description": "The liver and muscles both store glycogen, but they use it for different jobs. That distinction explains why eating, fasting and exercise change fuel availability."
+          }
+        ]
+      },
+      "id": 16
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Dietary fat: From the intestine to your cells",
+      "context": "Fat does not dissolve easily in watery body fluids. Follow the emulsification, digestion and transport steps that make it usable.",
+      "takeaways": [
+        "Bile helps emulsify dietary fat.",
+        "Digestive enzymes break lipids into absorbable components.",
+        "Lipoproteins transport many lipids through the circulation."
+      ],
+      "tags": [
+        "dietary",
+        "fat",
+        "from",
+        "the",
+        "intestine",
+        "to",
+        "your",
+        "cells"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Chemical digestion and absorption a closer look",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-7-chemical-digestion-and-absorption-a-closer-look",
+            "description": "Fat does not dissolve easily in watery body fluids. Follow the emulsification, digestion and transport steps that make it usable."
+          }
+        ]
+      },
+      "id": 17
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Protein digestion: What happens after a meal",
+      "context": "A dietary protein must be dismantled before its building blocks can be used. Follow that process and distinguish protein turnover from simply eating more protein.",
+      "takeaways": [
+        "Stomach and intestinal enzymes break proteins into smaller units.",
+        "Amino acids supply building blocks for many body proteins.",
+        "Protein synthesis and breakdown both occur throughout life."
+      ],
+      "tags": [
+        "protein",
+        "digestion",
+        "what",
+        "happens",
+        "after",
+        "a",
+        "meal"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Chemical digestion and absorption a closer look",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-7-chemical-digestion-and-absorption-a-closer-look",
+            "description": "A dietary protein must be dismantled before its building blocks can be used. Follow that process and distinguish protein turnover from simply eating more protein."
+          }
+        ]
+      },
+      "id": 18
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "The liver: A chemical processing hub",
+      "context": "The liver sits at the crossroads of nutrient processing, storage and waste handling. Trace how one organ can coordinate so many different reactions.",
+      "takeaways": [
+        "The liver processes nutrients arriving from the digestive tract.",
+        "It participates in carbohydrate, lipid and amino acid metabolism.",
+        "Metabolic processing changes molecules; it does not make every exposure harmless."
+      ],
+      "tags": [
+        "the",
+        "liver",
+        "a",
+        "chemical",
+        "processing",
+        "hub"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Protein metabolism",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-4-protein-metabolism",
+            "description": "The liver sits at the crossroads of nutrient processing, storage and waste handling. Trace how one organ can coordinate so many different reactions."
+          }
+        ]
+      },
+      "id": 19
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Kidneys: Why urine is more than filtered water",
+      "context": "Your kidneys filter blood and then selectively recover or secrete substances. Learn how filtration becomes a tightly controlled balance of water and solutes.",
+      "takeaways": [
+        "Filtration occurs at the renal corpuscle.",
+        "Tubules reabsorb useful substances and secrete others.",
+        "Final urine composition reflects several stages of regulation."
+      ],
+      "tags": [
+        "kidneys",
+        "why",
+        "urine",
+        "is",
+        "more",
+        "than",
+        "filtered",
+        "water"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Physiology of urine formation",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-5-physiology-of-urine-formation",
+            "description": "Your kidneys filter blood and then selectively recover or secrete substances. Learn how filtration becomes a tightly controlled balance of water and solutes."
+          }
+        ]
+      },
+      "id": 20
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Electrolytes: Why charged minerals matter",
+      "context": "Sodium, potassium and other ions help control fluid movement and electrical signals. Their effects depend on concentration and location.",
+      "takeaways": [
+        "Electrolytes dissociate into charged particles in solution.",
+        "Sodium and potassium are distributed differently across cell membranes.",
+        "Fluid and electrolyte regulation involves the kidneys and hormonal signals."
+      ],
+      "tags": [
+        "electrolytes",
+        "why",
+        "charged",
+        "minerals",
+        "matter"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Electrolyte balance",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/26-3-electrolyte-balance",
+            "description": "Sodium, potassium and other ions help control fluid movement and electrical signals. Their effects depend on concentration and location."
+          }
+        ]
+      },
+      "id": 21
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Acid–base balance: How blood pH stays stable",
+      "context": "Normal metabolism produces substances that can alter acidity. Buffers, breathing and kidney function work on different timescales to keep pH controlled.",
+      "takeaways": [
+        "Buffers resist sudden changes in pH.",
+        "The lungs regulate carbon dioxide removal.",
+        "The kidneys contribute through hydrogen ion and bicarbonate handling."
+      ],
+      "tags": [
+        "acid–base",
+        "balance",
+        "how",
+        "blood",
+        "ph",
+        "stays",
+        "stable"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Acid base balance",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/26-4-acid-base-balance",
+            "description": "Normal metabolism produces substances that can alter acidity. Buffers, breathing and kidney function work on different timescales to keep pH controlled."
+          }
+        ]
+      },
+      "id": 22
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Nerve signals: Electricity made from ions",
+      "context": "A nerve impulse comes from controlled changes in membrane permeability. Understand how a chemical gradient becomes an electrical signal.",
+      "takeaways": [
+        "Ion gradients and membrane permeability determine membrane potential.",
+        "Action potentials involve coordinated opening of ion channels.",
+        "Synapses transfer signals between cells through electrical or chemical mechanisms."
+      ],
+      "tags": [
+        "nerve",
+        "signals",
+        "electricity",
+        "made",
+        "from",
+        "ions"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: The action potential",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential",
+            "description": "A nerve impulse comes from controlled changes in membrane permeability. Understand how a chemical gradient becomes an electrical signal."
+          }
+        ]
+      },
+      "id": 23
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Muscle contraction: From a nerve signal to movement",
+      "context": "A muscle shortens because protein filaments slide past one another. Follow the roles of calcium and ATP in that microscopic cycle.",
+      "takeaways": [
+        "Actin and myosin interact in the sliding filament mechanism.",
+        "Calcium allows contraction to be activated.",
+        "ATP supports cross-bridge cycling and relaxation processes."
+      ],
+      "tags": [
+        "muscle",
+        "contraction",
+        "from",
+        "a",
+        "nerve",
+        "signal",
+        "to",
+        "movement"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Muscle fiber contraction and relaxation",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation",
+            "description": "A muscle shortens because protein filaments slide past one another. Follow the roles of calcium and ATP in that microscopic cycle."
+          }
+        ]
+      },
+      "id": 24
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Oxygen transport: What your lungs and blood actually do",
+      "context": "Breathing moves air, but oxygen still needs to cross a membrane and travel to tissues. Separate ventilation, gas exchange and transport.",
+      "takeaways": [
+        "Gas exchange depends on partial-pressure gradients.",
+        "Hemoglobin carries most oxygen in blood.",
+        "Carbon dioxide travels in several forms, including bicarbonate."
+      ],
+      "tags": [
+        "oxygen",
+        "transport",
+        "what",
+        "your",
+        "lungs",
+        "and",
+        "blood",
+        "actually",
+        "do"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Transport of gases",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases",
+            "description": "Breathing moves air, but oxygen still needs to cross a membrane and travel to tissues. Separate ventilation, gas exchange and transport."
+          }
+        ]
+      },
+      "id": 25
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Immunity: Fast defenses and learned responses",
+      "context": "The immune system combines immediate defenses with responses that recognize particular targets. Explore how those layers communicate.",
+      "takeaways": [
+        "Innate defenses act without the same antigen specificity as adaptive responses.",
+        "B and T lymphocytes participate in adaptive immunity.",
+        "Immunological memory changes responses to later encounters."
+      ],
+      "tags": [
+        "immunity",
+        "fast",
+        "defenses",
+        "and",
+        "learned",
+        "responses"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: The adaptive immune response t lymphocytes and their functional types",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types",
+            "description": "The immune system combines immediate defenses with responses that recognize particular targets. Explore how those layers communicate."
+          }
+        ]
+      },
+      "id": 26
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Hormone receptors: Why one signal affects some cells",
+      "context": "A hormone circulates widely, yet only certain cells respond. Receptors and intracellular pathways explain the selectivity.",
+      "takeaways": [
+        "A target cell needs the relevant receptor to respond.",
+        "Receptors can act at the membrane or inside the cell.",
+        "Feedback loops help regulate many endocrine pathways."
+      ],
+      "tags": [
+        "hormone",
+        "receptors",
+        "why",
+        "one",
+        "signal",
+        "affects",
+        "some",
+        "cells"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and Physiology: Hormones",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-2-hormones",
+            "description": "A hormone circulates widely, yet only certain cells respond. Receptors and intracellular pathways explain the selectivity."
+          }
+        ]
+      },
+      "id": 27
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "The menstrual cycle: Coordinating ovaries and uterus",
+      "context": "Ovarian and uterine changes run together under hormonal control. Track the sequence rather than assuming every cycle follows a fixed calendar.",
+      "takeaways": [
+        "FSH and LH help regulate ovarian activity.",
+        "Estrogen and progesterone influence the uterine lining.",
+        "Ovulation and cycle length vary; calendar dates alone do not establish hormone levels."
+      ],
+      "tags": [
+        "the",
+        "menstrual",
+        "cycle",
+        "coordinating",
+        "ovaries",
+        "and",
+        "uterus"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Anatomy and physiology of the ovarian reproductive system",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/27-2-anatomy-and-physiology-of-the-ovarian-reproductive-system",
+            "description": "Ovarian and uterine changes run together under hormonal control. Track the sequence rather than assuming every cycle follows a fixed calendar."
+          }
+        ]
+      },
+      "id": 28
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin B12: What it does and how it is handled",
+      "context": "B12 links nutrition, nerve function and blood cell production. Its absorption also depends on a sequence of digestive steps.",
+      "takeaways": [
+        "Vitamin B12 contributes to DNA synthesis and neurological function.",
+        "Normal absorption involves intrinsic factor and the small intestine.",
+        "Low intake and impaired absorption are distinct causes of deficiency."
+      ],
+      "tags": [
+        "vitamin",
+        "b12",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin B12 — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
+            "description": "B12 links nutrition, nerve function and blood cell production. Its absorption also depends on a sequence of digestive steps."
+          }
+        ]
+      },
+      "id": 29
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin D: What it does and how it is handled",
+      "context": "Vitamin D connects skin synthesis, dietary intake and hormone-like signaling. Explore why a laboratory value and a supplement dose are different questions.",
+      "takeaways": [
+        "Vitamin D undergoes activation steps in the body.",
+        "It helps regulate calcium absorption and bone health.",
+        "Requirements and safe intake limits are different measures."
+      ],
+      "tags": [
+        "vitamin",
+        "d",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin D — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
+            "description": "Vitamin D connects skin synthesis, dietary intake and hormone-like signaling. Explore why a laboratory value and a supplement dose are different questions."
+          }
+        ]
+      },
+      "id": 30
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin C: What it does and how it is handled",
+      "context": "Vitamin C participates in chemical reactions rather than serving as a general energy booster. Follow its roles in connective tissue and iron absorption.",
+      "takeaways": [
+        "Vitamin C supports collagen synthesis.",
+        "It enhances absorption of non-heme iron.",
+        "Meeting nutritional needs differs from claiming benefits for high doses."
+      ],
+      "tags": [
+        "vitamin",
+        "c",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin C — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/",
+            "description": "Vitamin C participates in chemical reactions rather than serving as a general energy booster. Follow its roles in connective tissue and iron absorption."
+          }
+        ]
+      },
+      "id": 31
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin B1: What it does and how it is handled",
+      "context": "Thiamin helps enzymes process energy-yielding nutrients. Understanding coenzymes explains why a small nutrient can have widespread effects.",
+      "takeaways": [
+        "Thiamin is a water-soluble vitamin.",
+        "Its active form participates in carbohydrate-related enzyme reactions.",
+        "A deficiency can affect tissues with high metabolic demands."
+      ],
+      "tags": [
+        "vitamin",
+        "b1",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin B1 — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional/",
+            "description": "Thiamin helps enzymes process energy-yielding nutrients. Understanding coenzymes explains why a small nutrient can have widespread effects."
+          },
+          {
+            "title": "Thiamin – Vitamin B1",
+            "publication": "Harvard T.H. Chan School of Public Health · The Nutrition Source",
+            "url": "https://nutritionsource.hsph.harvard.edu/vitamin-b1/",
+            "description": "An accessible companion to the NIH reference, covering food sources, cell function and deficiency."
+          }
+        ]
+      },
+      "id": 32
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin A: What it does and how it is handled",
+      "context": "Vitamin A is a family of compounds involved in vision and cell regulation. Food form and dose matter to its benefits and risks.",
+      "takeaways": [
+        "Retinal participates in the visual cycle.",
+        "Retinoids contribute to cell differentiation.",
+        "Preformed vitamin A and provitamin A carotenoids have different intake considerations."
+      ],
+      "tags": [
+        "vitamin",
+        "a",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin A — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/",
+            "description": "Vitamin A is a family of compounds involved in vision and cell regulation. Food form and dose matter to its benefits and risks."
+          }
+        ]
+      },
+      "id": 33
+    },
+    {
+      "category": "Biochemistry & biology",
+      "title": "Vitamin K: What it does and how it is handled",
+      "context": "Vitamin K helps activate proteins involved in clotting. Its role illustrates how a nutrient can modify a protein after it is made.",
+      "takeaways": [
+        "Vitamin K supports activation of several clotting-related proteins.",
+        "It also has roles in bone-related proteins.",
+        "Vitamin K intake can interact with some anticoagulant medicines."
+      ],
+      "tags": [
+        "vitamin",
+        "k",
+        "what",
+        "it",
+        "does",
+        "and",
+        "how",
+        "it",
+        "is",
+        "handled"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Vitamin K — health professional fact sheet",
+            "publication": "NIH · Office of Dietary Supplements",
+            "url": "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/",
+            "description": "Vitamin K helps activate proteins involved in clotting. Its role illustrates how a nutrient can modify a protein after it is made."
+          }
+        ]
+      },
+      "id": 34
+    },
+    {
+      "category": "Finance & economics",
+      "title": "Bonds: What you own when you lend money",
+      "context": "A bond is a claim on promised payments. Read its cash flows first, then ask what could prevent those payments from arriving.",
+      "takeaways": [
+        "The issuer borrows; the bondholder lends.",
+        "Coupon, maturity and principal define core promised cash flows.",
+        "Credit risk concerns the issuer’s ability to meet its obligations."
+      ],
+      "tags": [
+        "bonds",
+        "what",
+        "you",
+        "own",
+        "when",
+        "you",
+        "lend",
+        "money"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Bonds: structure, types and risks",
+            "publication": "U.S. Securities and Exchange Commission · Investor.gov",
+            "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+            "description": "A bond is a claim on promised payments. Read its cash flows first, then ask what could prevent those payments from arriving."
+          }
+        ]
+      },
+      "id": 35
+    },
+    {
+      "category": "Finance & economics",
+      "title": "Bond prices: Why rising rates can reduce value",
+      "context": "A fixed payment becomes less attractive when comparable new investments offer more. Discounting makes that intuition precise.",
+      "takeaways": [
+        "Bond prices reflect the present value of future cash flows.",
+        "For fixed-rate bonds, higher required yields generally mean lower prices.",
+        "Maturity and cash-flow timing affect sensitivity to interest-rate changes."
+      ],
+      "tags": [
+        "bond",
+        "prices",
+        "why",
+        "rising",
+        "rates",
+        "can",
+        "reduce",
+        "value"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Bonds: structure, types and risks",
+            "publication": "U.S. Securities and Exchange Commission · Investor.gov",
+            "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+            "description": "A fixed payment becomes less attractive when comparable new investments offer more. Discounting makes that intuition precise."
+          }
+        ]
+      },
+      "id": 36
+    },
+    {
+      "category": "Finance & economics",
+      "title": "Bond yield: Why a coupon is not your return",
+      "context": "The rate printed on a bond is only one piece of the return. Compare purchase price, income, repayment and assumptions about holding the investment.",
+      "takeaways": [
+        "Coupon rate describes interest relative to face value.",
+        "Current yield relates annual interest to market price.",
+        "Yield to maturity depends on assumptions and does not guarantee realized returns."
+      ],
+      "tags": [
+        "bond",
+        "yield",
+        "why",
+        "a",
+        "coupon",
+        "is",
+        "not",
+        "your",
+        "return"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Bonds: structure, types and risks",
+            "publication": "U.S. Securities and Exchange Commission · Investor.gov",
+            "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+            "description": "The rate printed on a bond is only one piece of the return. Compare purchase price, income, repayment and assumptions about holding the investment."
+          }
+        ]
+      },
+      "id": 37
+    },
+    {
+      "category": "Finance & economics",
+      "title": "Bond risk: Credit, inflation and early repayment",
+      "context": "A predictable payment schedule does not make purchasing power or market value predictable. Examine different ways a bond investment can disappoint.",
+      "takeaways": [
+        "Inflation can erode the purchasing power of payments.",
+        "Selling before maturity exposes the holder to market prices.",
+        "Callable bonds may be repaid early under their terms."
+      ],
+      "tags": [
+        "bond",
+        "risk",
+        "credit,",
+        "inflation",
+        "and",
+        "early",
+        "repayment"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Bonds: structure, types and risks",
+            "publication": "U.S. Securities and Exchange Commission · Investor.gov",
+            "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
+            "description": "A predictable payment schedule does not make purchasing power or market value predictable. Examine different ways a bond investment can disappoint."
+          }
+        ]
+      },
+      "id": 38
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Marketing: Finding a need worth serving",
+      "context": "Marketing starts before an advertisement exists. Explore how research, product choices, delivery and communication fit together.",
+      "takeaways": [
+        "Customer needs guide the offer.",
+        "Value includes perceived benefits and the costs of obtaining them.",
+        "A marketing strategy connects the offer to a chosen audience."
+      ],
+      "tags": [
+        "marketing",
+        "finding",
+        "a",
+        "need",
+        "worth",
+        "serving"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Marketing and the marketing process",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
+            "description": "Marketing starts before an advertisement exists. Explore how research, product choices, delivery and communication fit together."
+          }
+        ]
+      },
+      "id": 39
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Consumer behavior: How purchase decisions happen",
+      "context": "A purchase reflects motives, context and perceived alternatives. Trace the decision process without reducing customers to stereotypes.",
+      "takeaways": [
+        "Need recognition can start a purchase process.",
+        "People search for information and evaluate alternatives.",
+        "Experience after purchase influences future decisions."
+      ],
+      "tags": [
+        "consumer",
+        "behavior",
+        "how",
+        "purchase",
+        "decisions",
+        "happen"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: The consumer purchasing decision process",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/3-3-the-consumer-purchasing-decision-process",
+            "description": "A purchase reflects motives, context and perceived alternatives. Trace the decision process without reducing customers to stereotypes."
+          }
+        ]
+      },
+      "id": 40
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Segmentation: Which customers share a useful need?",
+      "context": "A market is rarely one uniform audience. Useful segments help a business make specific choices about who it can serve well.",
+      "takeaways": [
+        "Segmentation groups customers using relevant differences.",
+        "A segment should support actionable marketing decisions.",
+        "A demographic label alone does not explain a customer’s needs."
+      ],
+      "tags": [
+        "segmentation",
+        "which",
+        "customers",
+        "share",
+        "a",
+        "useful",
+        "need?"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Market segmentation and consumer markets",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
+            "description": "A market is rarely one uniform audience. Useful segments help a business make specific choices about who it can serve well."
+          }
+        ]
+      },
+      "id": 41
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Positioning: The comparison customers make",
+      "context": "A product enters a mental landscape of alternatives. Positioning clarifies the reason a particular audience should consider it.",
+      "takeaways": [
+        "Positioning depends on a target audience and competing alternatives.",
+        "A meaningful difference must matter to that audience.",
+        "Communication and product experience need to support the same promise."
+      ],
+      "tags": [
+        "positioning",
+        "the",
+        "comparison",
+        "customers",
+        "make"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Product positioning",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
+            "description": "A product enters a mental landscape of alternatives. Positioning clarifies the reason a particular audience should consider it."
+          }
+        ]
+      },
+      "id": 42
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Marketing research: Asking questions that change decisions",
+      "context": "Research should reduce uncertainty around a decision. Match the question to the method, and identify what the evidence cannot establish.",
+      "takeaways": [
+        "Begin with a defined problem.",
+        "Qualitative and quantitative methods answer different kinds of questions.",
+        "Sampling and measurement choices limit what findings can support."
+      ],
+      "tags": [
+        "marketing",
+        "research",
+        "asking",
+        "questions",
+        "that",
+        "change",
+        "decisions"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Steps in a successful marketing research plan",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/6-3-steps-in-a-successful-marketing-research-plan",
+            "description": "Research should reduce uncertainty around a decision. Match the question to the method, and identify what the evidence cannot establish."
+          }
+        ]
+      },
+      "id": 43
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Pricing: What a number communicates",
+      "context": "Price affects revenue, demand and expectations. Explore how costs, competition and perceived value influence a pricing decision.",
+      "takeaways": [
+        "Costs help establish the economics of an offer.",
+        "Customers compare price with perceived value and alternatives.",
+        "A pricing objective should be explicit before choosing a tactic."
+      ],
+      "tags": [
+        "pricing",
+        "what",
+        "a",
+        "number",
+        "communicates"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Pricing and its role in the marketing mix",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/12-1-pricing-and-its-role-in-the-marketing-mix",
+            "description": "Price affects revenue, demand and expectations. Explore how costs, competition and perceived value influence a pricing decision."
+          }
+        ]
+      },
+      "id": 44
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Branding: Building expectations people remember",
+      "context": "A brand gathers associations around an offer. Study how consistent experience and recognition develop those associations over time.",
+      "takeaways": [
+        "Brand identity and customer perception are related but distinct.",
+        "Brands help customers recognize and compare offers.",
+        "Experience can strengthen or weaken communicated promises."
+      ],
+      "tags": [
+        "branding",
+        "building",
+        "expectations",
+        "people",
+        "remember"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of Marketing: Branding and brand development",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/9-5-branding-and-brand-development",
+            "description": "A brand gathers associations around an offer. Study how consistent experience and recognition develop those associations over time."
+          }
+        ]
+      },
+      "id": 45
+    },
+    {
+      "category": "Marketing & business",
+      "title": "Marketing ethics: Persuasion, evidence and trust",
+      "context": "A persuasive message can still be misleading. Examine what businesses owe customers when claims, targeting and incentives shape a decision.",
+      "takeaways": [
+        "Claims should have appropriate support.",
+        "Customers need material information to evaluate an offer.",
+        "Ethical evaluation includes the consequences of marketing choices."
+      ],
+      "tags": [
+        "marketing",
+        "ethics",
+        "persuasion,",
+        "evidence",
+        "and",
+        "trust"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Ethical marketing",
+            "publication": "OpenStax · Principles of Marketing",
+            "url": "https://openstax.org/books/principles-marketing/pages/1-7-ethical-marketing",
+            "description": "A persuasive message can still be misleading. Examine what businesses owe customers when claims, targeting and incentives shape a decision."
+          }
+        ]
+      },
+      "id": 46
+    },
+    {
+      "category": "Learning & study",
+      "title": "Retrieval practice: Why remembering is part of learning",
+      "context": "Closing the book and trying to explain an idea reveals what you can retrieve. That effort can also strengthen later recall.",
+      "takeaways": [
+        "Practice recalling before checking the answer.",
+        "Feedback helps identify omissions and errors.",
+        "Recall questions should test understanding as well as isolated facts."
+      ],
+      "tags": [
+        "retrieval",
+        "practice",
+        "why",
+        "remembering",
+        "is",
+        "part",
+        "of",
+        "learning"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: retrieval practice",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/retrieval-practice",
+            "description": "Closing the book and trying to explain an idea reveals what you can retrieve. That effort can also strengthen later recall."
+          }
+        ]
+      },
+      "id": 47
+    },
+    {
+      "category": "Learning & study",
+      "title": "Spaced practice: Making room for forgetting",
+      "context": "Revisiting material across separate sessions changes the conditions of practice. Build a schedule around repeated retrieval and feedback.",
+      "takeaways": [
+        "Spread study across sessions.",
+        "Use later sessions to retrieve older material.",
+        "The useful spacing interval depends on the material and the retention goal."
+      ],
+      "tags": [
+        "spaced",
+        "practice",
+        "making",
+        "room",
+        "for",
+        "forgetting"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: spaced practice",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/spaced-practice",
+            "description": "Revisiting material across separate sessions changes the conditions of practice. Build a schedule around repeated retrieval and feedback."
+          }
+        ]
+      },
+      "id": 48
+    },
+    {
+      "category": "Learning & study",
+      "title": "Interleaving: Learning which method to choose",
+      "context": "When problem types are mixed, you must identify the appropriate approach. Explore how that differs from repeating one method in a block.",
+      "takeaways": [
+        "Mix related kinds of problems.",
+        "Practice recognizing which strategy applies.",
+        "More difficult practice does not automatically mean poorer learning."
+      ],
+      "tags": [
+        "interleaving",
+        "learning",
+        "which",
+        "method",
+        "to",
+        "choose"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: interleaving",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/interleaving",
+            "description": "When problem types are mixed, you must identify the appropriate approach. Explore how that differs from repeating one method in a block."
+          }
+        ]
+      },
+      "id": 49
+    },
+    {
+      "category": "Learning & study",
+      "title": "Elaboration: Explaining why a fact makes sense",
+      "context": "A fact becomes more usable when connected to an explanation. Ask how it fits what you already know, then check that your connection is accurate.",
+      "takeaways": [
+        "Ask why and how questions.",
+        "Connect new material to prior knowledge.",
+        "Verify explanations rather than accepting a plausible story."
+      ],
+      "tags": [
+        "elaboration",
+        "explaining",
+        "why",
+        "a",
+        "fact",
+        "makes",
+        "sense"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: elaboration",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/elaboration",
+            "description": "A fact becomes more usable when connected to an explanation. Ask how it fits what you already know, then check that your connection is accurate."
+          }
+        ]
+      },
+      "id": 50
+    },
+    {
+      "category": "Learning & study",
+      "title": "Concrete examples: Giving an abstract idea something to attach to",
+      "context": "An example can make an unfamiliar principle intelligible. Compare several examples to separate the principle from incidental details.",
+      "takeaways": [
+        "Find examples that instantiate the same concept.",
+        "Explain which features are relevant.",
+        "Use varied cases so understanding can transfer."
+      ],
+      "tags": [
+        "concrete",
+        "examples",
+        "giving",
+        "an",
+        "abstract",
+        "idea",
+        "something",
+        "to",
+        "attach",
+        "to"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: concrete examples",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/concrete-examples",
+            "description": "An example can make an unfamiliar principle intelligible. Compare several examples to separate the principle from incidental details."
+          }
+        ]
+      },
+      "id": 51
+    },
+    {
+      "category": "Learning & study",
+      "title": "Dual coding: Connecting words and diagrams",
+      "context": "Words and visuals can represent complementary parts of an idea. Use a diagram to show relationships that a paragraph alone makes harder to track.",
+      "takeaways": [
+        "Connect a visual with a verbal explanation.",
+        "Choose visuals that represent the content rather than decorate it.",
+        "Reconstructing a diagram can become retrieval practice."
+      ],
+      "tags": [
+        "dual",
+        "coding",
+        "connecting",
+        "words",
+        "and",
+        "diagrams"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [
+          {
+            "title": "Improving Students’ Learning With Effective Learning Techniques",
+            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
+            "url": "https://doi.org/10.1177/1529100612453266",
+            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+          }
+        ],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Learning strategy: dual coding",
+            "publication": "The Learning Scientists · cognitive psychology researchers",
+            "url": "https://www.learningscientists.org/dual-coding",
+            "description": "Words and visuals can represent complementary parts of an idea. Use a diagram to show relationships that a paragraph alone makes harder to track."
+          }
+        ]
+      },
+      "id": 52
+    },
+    {
+      "category": "Law",
+      "title": "Copyright: An idea versus its expression",
+      "context": "A concept and a particular expression of it raise different legal questions. Start with that distinction before asking who can copy, adapt or publish a work.",
+      "takeaways": [
+        "Copyright generally concerns expression rather than ideas as such.",
+        "Ownership, licensing and exceptions are separate questions.",
+        "Rules and remedies depend on the applicable jurisdiction."
+      ],
+      "tags": [
+        "copyright",
+        "an",
+        "idea",
+        "versus",
+        "its",
+        "expression"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Copyright: rights, ownership and limitations",
+            "publication": "WIPO",
+            "url": "https://www.wipo.int/en/web/copyright",
+            "description": "A concept and a particular expression of it raise different legal questions. Start with that distinction before asking who can copy, adapt or publish a work."
+          }
+        ]
+      },
+      "id": 53
+    },
+    {
+      "category": "Law",
+      "title": "Patents: Disclosure in exchange for exclusivity",
+      "context": "Patent systems connect technical disclosure with a time-limited legal right. Learn why an invention and a granted patent are different things.",
+      "takeaways": [
+        "Patentability involves requirements such as novelty and inventive step.",
+        "A granted patent is territorial.",
+        "The claims define the protected subject matter."
+      ],
+      "tags": [
+        "patents",
+        "disclosure",
+        "in",
+        "exchange",
+        "for",
+        "exclusivity"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Patents: protection and the patent system",
+            "publication": "WIPO",
+            "url": "https://www.wipo.int/en/web/patents",
+            "description": "Patent systems connect technical disclosure with a time-limited legal right. Learn why an invention and a granted patent are different things."
+          }
+        ]
+      },
+      "id": 54
+    },
+    {
+      "category": "Law",
+      "title": "Trade secrets: Protecting knowledge without publishing it",
+      "context": "Some valuable knowledge is protected through secrecy rather than registration. Compare the benefits and limits with patent disclosure.",
+      "takeaways": [
+        "Secrecy and protective measures matter.",
+        "Trade secret protection does not generally prevent independent development.",
+        "Protection can be lost when information becomes public."
+      ],
+      "tags": [
+        "trade",
+        "secrets",
+        "protecting",
+        "knowledge",
+        "without",
+        "publishing",
+        "it"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Trade secrets and confidential business information",
+            "publication": "WIPO",
+            "url": "https://www.wipo.int/en/web/trade-secrets",
+            "description": "Some valuable knowledge is protected through secrecy rather than registration. Compare the benefits and limits with patent disclosure."
+          }
+        ]
+      },
+      "id": 55
+    },
+    {
+      "category": "Law",
+      "title": "Trademarks: Protecting the sign customers recognize",
+      "context": "A trademark identifies commercial origin. Explore why a brand name, its reputation and a registered right are related but different.",
+      "takeaways": [
+        "Trademarks distinguish goods or services.",
+        "Protection relates to territory and relevant goods or services.",
+        "Distinctiveness affects whether a sign can function as a trademark."
+      ],
+      "tags": [
+        "trademarks",
+        "protecting",
+        "the",
+        "sign",
+        "customers",
+        "recognize"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Trademarks: distinctive signs and protection",
+            "publication": "WIPO",
+            "url": "https://www.wipo.int/en/web/trademarks",
+            "description": "A trademark identifies commercial origin. Explore why a brand name, its reputation and a registered right are related but different."
+          }
+        ]
+      },
+      "id": 56
+    },
+    {
+      "category": "Law",
+      "title": "WTO non-discrimination: Two different comparisons",
+      "context": "Most-favoured-nation treatment and national treatment ask different comparative questions. Understand the framework before applying an exception.",
+      "takeaways": [
+        "MFN concerns treatment among trading partners.",
+        "National treatment concerns imported and domestic products under relevant rules.",
+        "Treaty scope and exceptions matter to the analysis."
+      ],
+      "tags": [
+        "wto",
+        "non-discrimination",
+        "two",
+        "different",
+        "comparisons"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Principles of the trading system",
+            "publication": "World Trade Organization",
+            "url": "https://www.wto.org/english/thewto_e/whatis_e/tif_e/fact2_e.htm",
+            "description": "Most-favoured-nation treatment and national treatment ask different comparative questions. Understand the framework before applying an exception."
+          }
+        ]
+      },
+      "id": 57
+    },
+    {
+      "category": "Law",
+      "title": "International arbitration: How an award crosses borders",
+      "context": "Choosing arbitration is only part of resolving a dispute. Consider how an award may be recognized and enforced where assets are located.",
+      "takeaways": [
+        "An arbitration agreement and an arbitral award perform different roles.",
+        "The New York Convention provides a framework for recognition and enforcement.",
+        "Enforcement may be refused on specified grounds; local procedure still matters."
+      ],
+      "tags": [
+        "international",
+        "arbitration",
+        "how",
+        "an",
+        "award",
+        "crosses",
+        "borders"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "New York Convention: text, status and explanatory materials",
+            "publication": "UNCITRAL",
+            "url": "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards",
+            "description": "Choosing arbitration is only part of resolving a dispute. Consider how an award may be recognized and enforced where assets are located."
+          }
+        ]
+      },
+      "id": 58
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "Electoral systems: How votes become seats",
+      "context": "Identical votes can produce different parliaments under different rules. Compare representation, accountability and the incentives faced by parties.",
+      "takeaways": [
+        "Plurality, majority and proportional systems translate votes differently.",
+        "District design and electoral thresholds influence outcomes.",
+        "No single electoral system optimizes every democratic objective."
+      ],
+      "tags": [
+        "electoral",
+        "systems",
+        "how",
+        "votes",
+        "become",
+        "seats"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Electoral System Design: the International IDEA handbook",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/publications/catalogue/electoral-system-design-new-international-idea-handbook",
+            "description": "Identical votes can produce different parliaments under different rules. Compare representation, accountability and the incentives faced by parties."
+          }
+        ]
+      },
+      "id": 59
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "Constitutions: Designing the rules of government",
+      "context": "A constitution allocates authority and creates limits. Study how institutional design interacts with political practice.",
+      "takeaways": [
+        "Constitutions establish powers and procedures.",
+        "Rights and institutions require implementation to be effective.",
+        "Amendment rules balance adaptability and stability."
+      ],
+      "tags": [
+        "constitutions",
+        "designing",
+        "the",
+        "rules",
+        "of",
+        "government"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "A Practical Guide to Constitution Building",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/sites/default/files/2023-08/a-practical-guide-to-constitution-building.pdf",
+            "description": "A constitution allocates authority and creates limits. Study how institutional design interacts with political practice."
+          }
+        ]
+      },
+      "id": 60
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "Election administration: Who controls the count?",
+      "context": "Election credibility depends on administration as well as voting rules. Explore independence, resources and accountability.",
+      "takeaways": [
+        "An electoral management body needs a defined mandate.",
+        "Formal independence and practical autonomy are distinct.",
+        "Transparent procedures and accountability support credibility."
+      ],
+      "tags": [
+        "election",
+        "administration",
+        "who",
+        "controls",
+        "the",
+        "count?"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Independence in Electoral Management",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/publications/catalogue/independence-electoral-management",
+            "description": "Election credibility depends on administration as well as voting rules. Explore independence, resources and accountability."
+          }
+        ]
+      },
+      "id": 61
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "Government formation: Who gets to govern after a vote?",
+      "context": "An election does not always produce an obvious government. Formation rules determine appointments, confidence and removal.",
+      "takeaways": [
+        "Constitutions define how governments take office.",
+        "Confidence procedures shape relationships with legislatures.",
+        "Removal mechanisms influence stability and accountability."
+      ],
+      "tags": [
+        "government",
+        "formation",
+        "who",
+        "gets",
+        "to",
+        "govern",
+        "after",
+        "a",
+        "vote?"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Government Formation and Removal Mechanisms",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/publications/catalogue/government-formation-and-removal-mechanisms",
+            "description": "An election does not always produce an obvious government. Formation rules determine appointments, confidence and removal."
+          }
+        ]
+      },
+      "id": 62
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "The civil service: Keeping government working between elections",
+      "context": "Public administration carries policy into practice. Explore how professional standards and political accountability can coexist.",
+      "takeaways": [
+        "Public service institutions implement government decisions.",
+        "Appointment and oversight rules affect professionalism.",
+        "Constitutional design can support inclusion and accountability."
+      ],
+      "tags": [
+        "the",
+        "civil",
+        "service",
+        "keeping",
+        "government",
+        "working",
+        "between",
+        "elections"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "The Public Service: constitution-building primer",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/publications/catalogue/the-public-service",
+            "description": "Public administration carries policy into practice. Explore how professional standards and political accountability can coexist."
+          }
+        ]
+      },
+      "id": 63
+    },
+    {
+      "category": "Politics & institutions",
+      "title": "Comparative politics: Reading an electoral dataset critically",
+      "context": "A cross-country dataset can reveal institutional patterns, but a category is not a complete account of political life.",
+      "takeaways": [
+        "Definitions determine which systems can be compared.",
+        "Check the date and sources behind an entry.",
+        "Institutional classifications need political and historical context."
+      ],
+      "tags": [
+        "comparative",
+        "politics",
+        "reading",
+        "an",
+        "electoral",
+        "dataset",
+        "critically"
+      ],
+      "ressources": {
+        "books": [],
+        "papers": [],
+        "videos": [],
+        "articles": [
+          {
+            "title": "Electoral System Design Database",
+            "publication": "International IDEA",
+            "url": "https://www.idea.int/data-tools/data/electoral-system-design-database",
+            "description": "A cross-country dataset can reveal institutional patterns, but a category is not a complete account of political life."
+          }
+        ]
+      },
+      "id": 64
     }
   ]
 }

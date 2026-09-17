@@ -1,5 +1,5 @@
 /* Network first: refresh the collection online, retain the shell offline. */
-const CACHE = 'ddd-collection-v2';
+const CACHE = 'ddd-collection-v3';
 const ASSETS = ['./', './index.html', './style.css', './script.js', './topics.json', './manifest.webmanifest',
   './icon/icon-192.png', './icon/icon-512.png', './icon/envelope.png', './icon/envelope-paper.png',
   './icon/paper-top.png', './icon/paper-middle.png', './icon/paper-bottom.png',

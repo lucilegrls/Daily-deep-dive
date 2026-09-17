@@ -245,7 +245,7 @@ The current logic is approximately:
 
 - count valid resources for the topic
 - hide the envelope if the count is `0`
-- show the count in the envelope
+- show a Resources label in the envelope without a resource count
 - clicking the envelope opens the resource sheet
 
 The relevant behavior is:
@@ -1018,3 +1018,21 @@ Implemented foundation: batched vertical collection, topic-specific envelopes, s
 The collection stops when available topics are exhausted; it does not repeat or invent topics. Search links remain labeled as searches and require editorial verification before launch. Resource-paper container is transparent; exact lace/clip silhouette and washed-white artwork still require replacement assets. No claim of completed content verification or store readiness.
 
 Next milestones: human-reviewed source library expansion; final transparent artwork and visual QA; topic relationships and notes; accessible product testing; decide accounts, sync, pricing, content rights, privacy disclosures, and distribution before commercial launch. No advertising or sponsored filler.
+
+
+## Latest direction — 17 September 2026
+
+Do not display the number of resources on or above an envelope. Keep the Resources label and the topic-specific interaction. Resource counts are only used internally to exclude empty entries.
+
+Expand the curated collection around finance (especially bonds), glucose and fructose, individual vitamins, body mechanisms and biochemistry, marketing, evidence-based study methods, law, and politics. Refine broad interests into focused questions; these interests guide expansion and do not limit the app to these disciplines. This update adds 52 focused topics, bringing the collection to 64. New entries link directly to textbooks, research educators, regulators and international institutions. Avoid resource quotas and Wikipedia. Continue toward a much larger authored collection and commercial app with distinctive artwork.
+
+Linking readers to external materials does not license reproduction of those materials. Retain original card text; verify jurisdiction-specific legal details and medical claims against current primary sources before commercial release.
+
+
+## Open-ended discovery — latest user clarification
+
+The collection must not have a fixed target number or a closed list of disciplines. Continuously research and add distinct subjects. The 64 topics in this update are a starting collection, not a cap. Interests include dopamine, social media, geopolitics, current wars, investments, intellectual property, scientific experiments, history (including the Vietnam War), brain mechanisms, cell mechanisms, health and food, as well as bonds, vitamins, marketing, study techniques and law. These are examples, not an exhaustive taxonomy.
+
+Refine interests into explanatory questions. Rotate disciplines, avoid duplicates, and distinguish related mechanisms instead of repackaging the same topic. Preserve substantive, credible sources and the absolute Wikipedia exclusion. For current wars and other evolving subjects, verify event dates, identify jurisdictions and actors, use multiple independent credible sources, and record lastVerified and asOf dates in topic metadata. Present contested claims with attribution rather than certainty. For experiments, distinguish observed results, replication evidence and interpretation.
+
+An ongoing background research task can extend topics.json; the current static feed reads that collection when it loads. This does not create unlimited topics immediately at the end of a scroll. A future production content service should supply new reviewed topics through cursor-based pagination, with background sourcing, validation, deduplication and refresh of dated entries. Preserve existing cards and saved IDs when new content arrives. Never repeat cards or invent sources to simulate an infinite collection.
