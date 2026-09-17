@@ -19,10 +19,9 @@
   };
 
   const GROUPS = [
-    { key: 'books', label: 'Books', icon: '📚', meta: r => [r.author && `by ${r.author}`, r.hook].filter(Boolean).join('. ') },
-    { key: 'papers', label: 'Research papers', icon: '📄', meta: r => r.source },
-    { key: 'videos', label: 'Videos', icon: '🎥', meta: r => r.creator },
-    { key: 'articles', label: 'Articles', icon: '📰', meta: r => r.publication },
+    { key: 'foundations', label: '', icon: '', meta: r => [r.creator || r.author, r.duration].filter(Boolean).join(' • ') },
+    { key: 'deepDives', label: '', icon: '', meta: r => [r.creator || r.author || r.journal].filter(Boolean).join(' • ') },
+    { key: 'criticalPerspectives', label: '', icon: '', meta: r => [r.author, r.publication || r.journal].filter(Boolean).join(' • ') },
   ];
 
   // localStorage can be blocked (private mode, embedded views): never let it break the page
@@ -198,12 +197,15 @@
         sharedKind ? el('p', { class: 'r-group-note', text: `Each link opens a ${sharedKind}` }) : null,
         el('ul', { class: 'r-list' }, items.map(r => {
           const meta = group.meta(r);
-          return el('li', { class: 'r-item' }, [
+          const typeLabel = r.type ? r.type.charAt(0).toUpperCase() + r.type.slice(1) : '';
+          return el('li', { class: 'r-item', 'data-type': r.type || '' }, [
+            typeLabel ? el('span', { class: 'r-type-badge', text: typeLabel }) : null,
             el('a', { class: 'r-link', href: safeUrl(r.url), target: '_blank', rel: 'noopener noreferrer' }, [
               r.title,
               el('span', { class: 'sr-only', text: ' (opens in a new tab)' }),
             ]),
             meta ? el('p', { class: 'r-meta', text: meta }) : null,
+            r.description ? el('p', { class: 'r-description', text: r.description }) : null,
             r.search && !sharedKind ? el('span', { class: 'r-note', text: `Opens a ${r.searchLabel || 'search'}` }) : null,
           ]);
         })),
