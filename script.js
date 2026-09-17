@@ -128,15 +128,6 @@
     return [title.slice(0, i).trim(), title.slice(i + 1).trim()];
   }
 
-  function renderCriticalThinking(topic) {
-    if (!Array.isArray(topic.criticalThinking) || !topic.criticalThinking.length) return null;
-    return el('aside', { class: 'critical-thinking', 'aria-label': 'Critical thinking prompts' }, [
-      el('h3', { class: 'section-label critical-thinking-label', text: 'Question the idea' }),
-      el('p', { class: 'critical-thinking-intro', text: 'Before you accept the explanation, test it:' }),
-      el('ul', { class: 'critical-thinking-list' }, topic.criticalThinking.map(text => el('li', { text }))),
-    ]);
-  }
-
   function renderCard(topic) {
     const key = String(topic.id);
     const [lead, rest] = splitTitle(topic.title);
@@ -158,9 +149,6 @@
       el('h3', { class: 'section-label', text: 'Worth remembering' }),
       el('ul', { class: 'takeaways' }, topic.takeaways.map(text => el('li', { text }))),
     ];
-    const criticalThinking = renderCriticalThinking(topic);
-    if (criticalThinking) cardChildren.push(criticalThinking);
-
     const card = el('article', { class: 'card', 'aria-labelledby': heading }, cardChildren);
     const envelope = el('button', { type: 'button', class: 'envelope', 'aria-expanded': 'false', 'aria-controls': 'sheet', 'aria-label': `Open resources for ${topic.title}` }, [
       el('span', { class: 'env-label', text: 'Resources' }),
@@ -187,7 +175,7 @@
     const query = els.search.value.trim().toLocaleLowerCase();
     state.filtered = state.topics.filter(t => (!state.savedOnly || state.saved.has(String(t.id))) &&
       (!els.category.value || t.category === els.category.value) &&
-      [t.title, t.context, t.category, ...(t.tags || []), ...t.takeaways, ...(t.criticalThinking || [])].join(' ').toLocaleLowerCase().includes(query));
+      [t.title, t.context, t.category, ...(t.tags || []), ...t.takeaways].join(' ').toLocaleLowerCase().includes(query));
     state.rendered = 0;
     els.feed.replaceChildren();
     appendBatch();
