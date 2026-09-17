@@ -562,7 +562,7 @@ img, svg { max-width: 100%; }
 .envelope:active { translate: 0 2px; }
 .envelope:focus-visible { outline-offset: 10px; border-radius: 14px; }
 .envelope.is-open {
-  background: url('icon/envelope-paper.png') center / contain no-repeat;
+  background: url('icon/envelope-paper (1).png') center / contain no-repeat;
 }
 
 .envelope > span { position: absolute; display: block; }
