@@ -1,1026 +1,634 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-09-17",
-  "notes": "Ressources marked search:true open a search page (Goodreads, YouTube, PubMed or Google Scholar) instead of a single item. Replace them with direct links as you verify each one.",
+  "notes": "Direct sources only. Verification records distinguish text/selected-section review from identity-and-abstract checks; see SOURCE_AUDIT.md. The collection has no cap; the daily editorial task requires at least 10 verified new topics.",
   "topics": [
     {
       "id": 1,
       "category": "Biochemistry & biology",
-      "title": "Iron: Absorption and bioavailability",
-      "context": "You can eat plenty of iron and still run low, because what counts is how much your gut actually lets in. Iron from meat and fish (heme) is absorbed far more easily than iron from plants (non-heme), and the rest of your plate can boost or block it. Knowing the rules turns “eat more spinach” into a real strategy, especially if you menstruate.",
+      "title": "Iron: Why intake and absorption differ",
+      "context": "Iron intake is only part of the story. Absorption depends on its chemical form, the rest of a meal and the body’s iron status. Compare dietary mechanisms with supplement experiments without assuming that one study supplies a treatment plan.",
       "takeaways": [
-        "From a mixed diet you absorb roughly 14–18% of the iron you eat; from a vegetarian diet, closer to 5–12%.",
-        "Vitamin C in the same meal (citrus, peppers, tomatoes) noticeably boosts how much plant iron you absorb.",
-        "Tea, coffee and calcium can get in the way, so enjoy them between meals rather than alongside your iron-rich ones.",
-        "A hormone called hepcidin rises after an iron dose, which is why some studies find alternate-day supplements absorb better. Check with a doctor before supplementing."
+        "Heme and non-heme iron follow different absorption pathways; iron stores help regulate how much enters the body.",
+        "Vitamin C can enhance non-heme iron absorption, while some meal components inhibit it; effects in single meals need not predict long-term iron status.",
+        "Published dietary absorption estimates depend on assumptions about iron stores and diet composition, rather than describing everyone’s absorption.",
+        "Alternate-day dosing experiments in iron-depleted women measured absorption; they do not establish a universal supplement schedule."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Understanding Nutrition",
-            "author": "Ellie Whitney and Sharon Rady Rolfes",
-            "hook": "The classic nutrition textbook, with a clear chapter on trace minerals",
-            "url": "https://www.goodreads.com/search?q=Understanding+Nutrition+Ellie+Whitney+and+Sharon+Rady+Rolfes",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Iron Physiology and Pathophysiology in Humans",
-            "author": "Gregory J. Anderson and Gordon D. McLaren",
-            "hook": "A deep reference if you want the full molecular story",
-            "url": "https://www.goodreads.com/search?q=Iron+Physiology+and+Pathophysiology+in+Humans+Gregory+J.+Anderson+and+Gordon+D.+McLaren",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Iron bioavailability and dietary reference values",
             "source": "Hurrell & Egli, American Journal of Clinical Nutrition (2010)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Iron+bioavailability+and+dietary+reference+values%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20200263/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Review on iron and its importance for human health",
             "source": "Abbaspour et al., Journal of Research in Medical Sciences (2014)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Review+on+iron+and+its+importance+for+human+health%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3999603/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
             "title": "Iron absorption from oral iron supplements given on consecutive versus alternate days and as single morning doses versus twice-daily split dosing in iron-depleted women",
             "source": "Stoffel et al., The Lancet Haematology (2017)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Iron+absorption+from+oral+iron+supplements+given+on+consecutive+versus+alternate+days+and+as+single+morning+doses+versus+twice-daily+split+dosing+in+iron-depleted+women%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29032957/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "Iron metabolism explained",
-            "creator": "Ninja Nerd",
-            "url": "https://www.youtube.com/results?search_query=Ninja+Nerd+iron+metabolism",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Iron deficiency anemia",
-            "creator": "Osmosis",
-            "url": "https://www.youtube.com/results?search_query=Osmosis+iron+deficiency+anemia",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": [
           {
-            "title": "Iron: fact sheet for consumers",
-            "publication": "NIH Office of Dietary Supplements",
-            "url": "https://ods.od.nih.gov/factsheets/Iron-Consumer/"
-          },
-          {
             "title": "Iron: fact sheet for health professionals",
+            "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/",
             "publication": "NIH Office of Dietary Supplements",
-            "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 2,
       "category": "Menstrual health & hormones",
-      "title": "Luteal phase: What your body asks for",
-      "context": "The luteal phase is the stretch between ovulation and your period, usually about two weeks, when progesterone takes the lead. Many people notice their hunger, sleep and mood shift here, and that’s physiology rather than a lack of willpower. Understanding it helps you plan meals, training and even your calendar with your body instead of against it.",
+      "title": "The luteal phase: Hormones, variation and evidence",
+      "context": "The luteal phase follows ovulation. Progesterone changes temperature and prepares the uterus, but cycle length and symptoms vary. Separate large observational records from smaller intervention studies.",
       "takeaways": [
-        "In a study of over 600,000 tracked cycles, the luteal phase averaged about 12 days, with real variation between people.",
-        "Progesterone nudges your resting body temperature up by a few tenths of a degree, which is what temperature-based cycle tracking picks up.",
-        "Calcium has some of the better evidence for easing PMS symptoms; ask a clinician before starting any supplement.",
-        "Sleep can get lighter in the days before your period, so a calm wind-down routine pays off most then."
+        "An app-based study of over 600,000 ovulatory cycles found a mean luteal phase of about 12 days; its selected users do not represent every population.",
+        "Progesterone raises basal body temperature after ovulation, providing one clue to cycle timing.",
+        "Reported sleep symptoms and measured sleep architecture are different outcomes; changes before menstruation are not identical for everyone.",
+        "A calcium trial studied people with clinically significant PMS. Its result does not mean everyone needs calcium supplements."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Period Repair Manual",
-            "author": "Lara Briden",
-            "hook": "A practical, evidence-minded guide to hormones and cycle health",
-            "url": "https://www.goodreads.com/search?q=Period+Repair+Manual+Lara+Briden",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Taking Charge of Your Fertility",
-            "author": "Toni Weschler",
-            "hook": "The go-to guide for reading your cycle’s signs, like temperature",
-            "url": "https://www.goodreads.com/search?q=Taking+Charge+of+Your+Fertility+Toni+Weschler",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Roar",
-            "author": "Stacy T. Sims",
-            "hook": "How female physiology changes training and nutrition needs",
-            "url": "https://www.goodreads.com/search?q=Roar+Stacy+T.+Sims",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Real-world menstrual cycle characteristics of more than 600,000 menstrual cycles",
             "source": "Bull et al., npj Digital Medicine (2019)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Real-world+menstrual+cycle+characteristics+of+more+than+600%2C000+menstrual+cycles%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6710244/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
-            "title": "Circadian rhythms, sleep, and the menstrual cycle",
+            "title": "Circadian rhythms, sleep, and menstrual cycle",
             "source": "Baker & Driver, Sleep Medicine (2007)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Circadian+rhythms%2C+sleep%2C+and+the+menstrual+cycle%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/17383933/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Calcium carbonate and the premenstrual syndrome: effects on premenstrual and menstrual symptoms",
             "source": "Thys-Jacobs et al., American Journal of Obstetrics and Gynecology (1998)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Calcium+carbonate+and+the+premenstrual+syndrome%3A+effects+on+premenstrual+and+menstrual+symptoms%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/9731851/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "How menstruation works",
-            "creator": "TED-Ed",
-            "url": "https://www.youtube.com/results?search_query=TED-Ed+how+menstruation+works",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Training and eating across your cycle",
-            "creator": "Stacy Sims interviews",
-            "url": "https://www.youtube.com/results?search_query=Stacy+Sims+menstrual+cycle+training+nutrition",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": [
           {
             "title": "Your menstrual cycle",
-            "publication": "Office on Women’s Health (US)",
-            "url": "https://www.womenshealth.gov/menstrual-cycle/your-menstrual-cycle"
-          },
-          {
-            "title": "Premenstrual syndrome (PMS)",
-            "publication": "NHS",
-            "url": "https://www.nhs.uk/conditions/pre-menstrual-syndrome/"
+            "url": "https://womenshealth.gov/menstrual-cycle/your-menstrual-cycle",
+            "publication": "US Office on Women’s Health",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 3,
       "category": "Psychology & behavior",
-      "title": "Doomscrolling: Why bad news is so sticky",
-      "context": "Ever opened your phone for one thing and surfaced forty minutes later, a little more anxious? Our brains give threats extra weight (the negativity bias), and endless feeds with unpredictable rewards lean right into that. Once you can see the mechanism, it gets much easier to design your way out of it.",
+      "title": "Doomscrolling: Negative news and distress",
+      "context": "Repeatedly checking distressing news can become difficult to stop. Research connects negative media exposure with distress, but observational associations cannot show whether scrolling causes every reported symptom.",
       "takeaways": [
-        "Negative information tends to grab more attention and linger longer in memory than positive information of the same size.",
-        "Unpredictable rewards, like the occasional great post, keep you swiping in the same way a slot machine does.",
-        "After the 2013 Boston Marathon bombing, people who watched hours of coverage reported more acute stress than some who were actually there.",
-        "Friction works: move apps off your home screen, log out, or set a stopping cue such as “one article, then close”."
+        "A broad psychology review describes stronger effects of negative than positive information across several domains; that is background evidence, not a test of a particular app.",
+        "Following the Boston Marathon bombing, heavier media exposure was associated with greater acute stress in a survey.",
+        "The Doomscrolling Scale study reports associations with personality, distress and wellbeing; the authors are Satici and colleagues.",
+        "An association can reflect several directions of influence, including distressed people seeking more news."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Stolen Focus",
-            "author": "Johann Hari",
-            "hook": "A readable investigation into why attention feels harder than ever",
-            "url": "https://www.goodreads.com/search?q=Stolen+Focus+Johann+Hari",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Irresistible",
-            "author": "Adam Alter",
-            "hook": "How apps and games are engineered to keep us hooked",
-            "url": "https://www.goodreads.com/search?q=Irresistible+Adam+Alter",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Digital Minimalism",
-            "author": "Cal Newport",
-            "hook": "A plan for keeping the tech that serves you and dropping the rest",
-            "url": "https://www.goodreads.com/search?q=Digital+Minimalism+Cal+Newport",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Bad is stronger than good",
             "source": "Baumeister et al., Review of General Psychology (2001)",
-            "url": "https://scholar.google.com/scholar?q=%22Bad+is+stronger+than+good%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://doi.org/10.1037/1089-2680.5.4.323",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Media's role in broadcasting acute stress following the Boston Marathon bombings",
             "source": "Holman, Garfin & Silver, PNAS (2014)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Media%27s+role+in+broadcasting+acute+stress+following+the+Boston+Marathon+bombings%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3890785/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
             "title": "Doomscrolling Scale: its Association with Personality Traits, Psychological Distress, Social Media Use, and Wellbeing",
-            "source": "Sharma et al., Applied Research in Quality of Life (2022)",
-            "url": "https://scholar.google.com/scholar?q=%22Doomscrolling+Scale%3A+its+Association+with+Personality+Traits%2C+Psychological+Distress%2C+Social+Media+Use%2C+and+Wellbeing%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "source": "Satici, Gocet Tekin, Deniz & Satici · Applied Research in Quality of Life (online 2022; volume 2023)",
+            "url": "https://link.springer.com/article/10.1007/s11482-022-10110-7",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "How a handful of tech companies control billions of minds every day",
-            "creator": "Tristan Harris, TED",
-            "url": "https://www.youtube.com/results?search_query=Tristan+Harris+TED+how+a+handful+of+tech+companies+control+billions+of+minds",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Quit social media",
-            "creator": "Cal Newport, TEDx",
-            "url": "https://www.youtube.com/results?search_query=Cal+Newport+TEDx+quit+social+media",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
-        "articles": [
-          {
-            "title": "Center for Humane Technology",
-            "publication": "Humane Tech",
-            "url": "https://www.humanetech.com/"
-          }
-        ]
-      }
+        "videos": [],
+        "articles": []
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 4,
       "category": "Philosophy & ethics",
-      "title": "Stoicism: The dichotomy of control",
-      "context": "Nearly two thousand years ago, Epictetus, who was born enslaved and became a famous teacher, built a philosophy around one question: is this up to me or not? Sorting your worries into those two piles is surprisingly calming, and the idea later helped inspire modern cognitive therapies. It’s less about hiding feelings and more about putting your energy where it can actually land.",
+      "title": "Stoicism: What is up to us?",
+      "context": "Epictetus distinguishes moral choice and judgment from external circumstances. Read the ancient texts alongside specialist scholarship to understand this as part of a philosophy of virtue.",
       "takeaways": [
-        "Your judgments, intentions and actions are up to you; outcomes, other people and your reputation are not.",
-        "The Stoics weren’t emotionless. They examined the beliefs underneath their emotions.",
-        "Seneca describes an evening review: what went well today, what didn’t, and what you’d do differently.",
-        "Albert Ellis, a founder of cognitive behavioral approaches, named Epictetus as an influence."
+        "Epictetus places judgment and moral choice at the center of what is up to us.",
+        "External outcomes can matter practically without determining whether a choice is virtuous.",
+        "Stoic accounts connect emotions to judgments; the aim is thoughtful evaluation rather than simply suppressing feelings.",
+        "The Enchiridion and Meditations are primary texts; translations and historical context affect how their language is understood."
       ],
       "ressources": {
         "books": [
           {
             "title": "Enchiridion",
-            "author": "Epictetus",
-            "hook": "The short original handbook, readable in an afternoon",
-            "url": "https://www.goodreads.com/search?q=Enchiridion+Epictetus",
-            "search": true,
-            "searchLabel": "Goodreads search"
+            "url": "https://www.gutenberg.org/files/45109/45109-h/45109-h.htm",
+            "author": "Epictetus · Project Gutenberg public-domain translation",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
             "title": "Meditations",
-            "author": "Marcus Aurelius",
-            "hook": "An emperor’s private notes to himself; try the Gregory Hays translation",
-            "url": "https://www.goodreads.com/search?q=Meditations+Marcus+Aurelius",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "How to Think Like a Roman Emperor",
-            "author": "Donald Robertson",
-            "hook": "A psychotherapist links Stoic ideas to modern CBT",
-            "url": "https://www.goodreads.com/search?q=How+to+Think+Like+a+Roman+Emperor+Donald+Robertson",
-            "search": true,
-            "searchLabel": "Goodreads search"
+            "url": "https://www.gutenberg.org/files/2680/2680-h/2680-h.htm",
+            "author": "Marcus Aurelius · Project Gutenberg public-domain translation",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
-        "papers": [
-          {
-            "title": "Studies linking Stoic ideas and cognitive behavioral therapy",
-            "source": "A starting search across academic journals",
-            "url": "https://scholar.google.com/scholar?q=Stoicism+cognitive+behavioral+therapy+Epictetus",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          },
-          {
-            "title": "Scholarship on Epictetus and what is “up to us”",
-            "source": "A starting search across academic journals",
-            "url": "https://scholar.google.com/scholar?q=Epictetus+eph%27+hemin+dichotomy+of+control",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          }
-        ],
-        "videos": [
-          {
-            "title": "The philosophy of Stoicism",
-            "creator": "Massimo Pigliucci, TED-Ed",
-            "url": "https://www.youtube.com/results?search_query=TED-Ed+the+philosophy+of+Stoicism+Massimo+Pigliucci",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Epictetus and Stoic philosophy",
-            "creator": "The School of Life",
-            "url": "https://www.youtube.com/results?search_query=The+School+of+Life+Epictetus+Stoicism",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "papers": [],
+        "videos": [],
         "articles": [
           {
             "title": "Stoicism",
+            "url": "https://plato.stanford.edu/entries/stoicism/",
             "publication": "Stanford Encyclopedia of Philosophy",
-            "url": "https://plato.stanford.edu/entries/stoicism/"
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
             "title": "Epictetus",
+            "url": "https://plato.stanford.edu/entries/epictetus/",
             "publication": "Stanford Encyclopedia of Philosophy",
-            "url": "https://plato.stanford.edu/entries/epictetus/"
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 5,
       "category": "Economics & personal finance",
-      "title": "Inflation: Why your money quietly shrinks",
-      "context": "Inflation is the slow rise in prices that means the same money buys a little less each year. It sounds small, but at a steady 3% prices roughly double in about 24 years, so cash sitting still is quietly losing value. Understanding it helps you read the news, negotiate your salary and decide where your savings should live.",
+      "title": "Inflation: Prices and purchasing power",
+      "context": "Inflation measures a change in the overall price level using a basket of goods and services. Your own expenses may move differently, so distinguish a published index from an individual budget.",
       "takeaways": [
-        "The rule of 72: divide 72 by the inflation rate to estimate how many years it takes prices to double.",
-        "Your real return is roughly your interest rate minus inflation, so 5% savings with 4% inflation is only about 1% of real growth.",
-        "Many central banks aim for low, stable inflation and raise interest rates when prices run hot.",
-        "A raise smaller than inflation is a pay cut in disguise, which is useful to know before a salary talk."
+        "A price index combines many prices with weights; inflation does not mean every item rises at the same rate.",
+        "With nominal return n and inflation i, the real return is (1+n)/(1+i)-1; subtraction is an approximation.",
+        "A wage increase below the inflation rate lowers purchasing power relative to that price index.",
+        "Friedman’s 1968 monetary-policy argument is historical scholarship, not a complete explanation of every inflation episode."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Money: The True Story of a Made-Up Thing",
-            "author": "Jacob Goldstein",
-            "hook": "A fun, short history of what money really is",
-            "url": "https://www.goodreads.com/search?q=Money%3A+The+True+Story+of+a+Made-Up+Thing+Jacob+Goldstein",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Naked Economics",
-            "author": "Charles Wheelan",
-            "hook": "Economics explained without the equations",
-            "url": "https://www.goodreads.com/search?q=Naked+Economics+Charles+Wheelan",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Price of Time",
-            "author": "Edward Chancellor",
-            "hook": "A deeper look at interest rates and what happens when they’re too low",
-            "url": "https://www.goodreads.com/search?q=The+Price+of+Time+Edward+Chancellor",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "The Role of Monetary Policy",
             "source": "Milton Friedman, American Economic Review (1968)",
-            "url": "https://scholar.google.com/scholar?q=%22The+Role+of+Monetary+Policy%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          },
-          {
-            "title": "What Caused the U.S. Pandemic-Era Inflation?",
-            "source": "Bernanke & Blanchard (2023)",
-            "url": "https://scholar.google.com/scholar?q=%22What+Caused+the+U.S.+Pandemic-Era+Inflation%3F%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://www.aeaweb.org/aer/top20/58.1.1-17.pdf",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "How the economic machine works",
-            "creator": "Ray Dalio",
-            "url": "https://www.youtube.com/results?search_query=Ray+Dalio+how+the+economic+machine+works",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Inflation and bubbles and tulips",
-            "creator": "CrashCourse Economics",
-            "url": "https://www.youtube.com/results?search_query=Crash+Course+Economics+inflation+and+bubbles+and+tulips",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": [
           {
-            "title": "Inflation: what it is and how to control it",
-            "publication": "Investopedia",
-            "url": "https://www.investopedia.com/terms/i/inflation.asp"
+            "title": "Inflation: Prices on the Rise",
+            "url": "https://www.imf.org/-/media/files/publications/fandd/back-to-basics/oner-inflation.pdf",
+            "publication": "Ceyda Oner · IMF Finance & Development",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
-            "title": "Rule of 72",
-            "publication": "Investopedia",
-            "url": "https://www.investopedia.com/terms/r/ruleof72.asp"
+            "title": "Tracking inflation",
+            "url": "https://openstax.org/books/principles-economics-3e/pages/22-1-tracking-inflation",
+            "publication": "OpenStax · Principles of Economics 3e",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 6,
       "category": "AI & LLMs",
-      "title": "Scaling laws: Why bigger models got smarter",
-      "context": "In 2020, researchers found that language models improve in a surprisingly smooth, predictable way as you add parameters, data and compute. That finding helped justify the enormous training runs behind today’s LLMs, and a 2022 follow-up showed many models had been trained on too little data for their size. It’s the closest thing AI has to a law of physics, with real limits and lively debates.",
+      "title": "Scaling laws: Patterns and limits",
+      "context": "Language-model researchers measured how training loss changes with data, model size and compute. These studies describe particular experimental ranges and metrics; they are not universal laws of intelligence.",
       "takeaways": [
-        "Loss falls as a power law with model size, data and compute, so on log-scale axes the trend looks like a straight line.",
-        "DeepMind’s Chinchilla work suggested scaling training data alongside model size, roughly 20 tokens per parameter.",
-        "Some “emergent” abilities may partly reflect how we measure them rather than sudden leaps.",
-        "Scaling predicts average performance well, but not exactly which skills appear or when."
+        "Kaplan and colleagues reported power-law relationships within the training regimes they studied.",
+        "The Chinchilla study showed that compute allocation between model size and training data matters.",
+        "Its often cited tokens-per-parameter ratio comes from a particular optimization study, rather than a permanent prescription.",
+        "Schaeffer and colleagues show that apparent emergence can depend on the evaluation metric."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Why Machines Learn",
-            "author": "Anil Ananthaswamy",
-            "hook": "The elegant math behind modern AI, told as a story",
-            "url": "https://www.goodreads.com/search?q=Why+Machines+Learn+Anil+Ananthaswamy",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Alignment Problem",
-            "author": "Brian Christian",
-            "hook": "How we try to make AI systems do what we actually mean",
-            "url": "https://www.goodreads.com/search?q=The+Alignment+Problem+Brian+Christian",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Genius Makers",
-            "author": "Cade Metz",
-            "hook": "The people and rivalries behind the deep learning boom",
-            "url": "https://www.goodreads.com/search?q=Genius+Makers+Cade+Metz",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Scaling Laws for Neural Language Models",
             "source": "Kaplan et al., arXiv (2020)",
-            "url": "https://arxiv.org/abs/2001.08361"
+            "url": "https://arxiv.org/abs/2001.08361",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Preprint identity and abstract checked; peer-review status is not implied."
+            }
           },
           {
             "title": "Training Compute-Optimal Large Language Models",
             "source": "Hoffmann et al., arXiv (2022)",
-            "url": "https://arxiv.org/abs/2203.15556"
+            "url": "https://arxiv.org/abs/2203.15556",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Preprint identity and abstract checked; peer-review status is not implied."
+            }
           },
           {
             "title": "Are Emergent Abilities of Large Language Models a Mirage?",
             "source": "Schaeffer, Miranda & Koyejo, arXiv (2023)",
-            "url": "https://arxiv.org/abs/2304.15004"
+            "url": "https://arxiv.org/abs/2304.15004",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Preprint identity and abstract checked; peer-review status is not implied."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "But what is a GPT? Visual intro to transformers",
-            "creator": "3Blue1Brown",
-            "url": "https://www.youtube.com/results?search_query=3Blue1Brown+but+what+is+a+GPT",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Intro to large language models",
-            "creator": "Andrej Karpathy",
-            "url": "https://www.youtube.com/results?search_query=Andrej+Karpathy+intro+to+large+language+models",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": [
           {
-            "title": "Research and data on AI trends",
-            "publication": "Epoch AI",
-            "url": "https://epoch.ai/"
+            "title": "But what is a GPT? A visual introduction to transformers",
+            "url": "https://www.3blue1brown.com/lessons/gpt/",
+            "publication": "Grant Sanderson · 3Blue1Brown (architecture background)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 7,
       "category": "Digital rights & law",
-      "title": "GDPR: Your right to see your data",
-      "context": "Under Europe’s GDPR, you can ask a company what personal data it holds about you, why it has it and who it shares it with, and it generally has one month to answer. It’s one of the most powerful and least used privacy tools around, and it has inspired similar laws worldwide, including Vietnam’s own personal data rules. Knowing how to use it turns vague privacy worries into concrete answers.",
+      "title": "GDPR: Understanding the right of access",
+      "context": "Under the EU GDPR, access concerns both personal data and information about its processing. Read the regulation with the European Data Protection Board’s detailed guidance, including limits and exceptions.",
       "takeaways": [
-        "Article 15 gives you a copy of your data plus details on why it’s used, who receives it and how long it’s kept.",
-        "A request is usually free and can be a plain email; no special form is required.",
-        "Companies normally have one month to reply, which can be extended by two more for complex requests.",
-        "Vietnam’s Decree 13/2023 on personal data protection borrows several GDPR ideas, including rights over your own data."
+        "Article 15 covers a copy of personal data and information such as purposes, recipients and retention.",
+        "Access requests are generally free; identification and narrowly defined exceptions can affect the response.",
+        "The normal response period is one month. An extension of two further months requires justification and notice within the first month.",
+        "Access is not unlimited: other people’s rights and specific legal restrictions may matter."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Privacy Is Power",
-            "author": "Carissa Véliz",
-            "hook": "A short, sharp case for taking back control of your data",
-            "url": "https://www.goodreads.com/search?q=Privacy+Is+Power+Carissa+V%C3%A9liz",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Data and Goliath",
-            "author": "Bruce Schneier",
-            "hook": "How mass data collection works and what to do about it",
-            "url": "https://www.goodreads.com/search?q=Data+and+Goliath+Bruce+Schneier",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Age of Surveillance Capitalism",
-            "author": "Shoshana Zuboff",
-            "hook": "The big-picture critique of the data economy",
-            "url": "https://www.goodreads.com/search?q=The+Age+of+Surveillance+Capitalism+Shoshana+Zuboff",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
-        "papers": [
-          {
-            "title": "Shattering one-way mirrors: data subject access rights in practice",
-            "source": "Ausloos & Dewitte, International Data Privacy Law (2018)",
-            "url": "https://scholar.google.com/scholar?q=%22Shattering+one-way+mirrors%3A+data+subject+access+rights+in+practice%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          },
-          {
-            "title": "Why a right to explanation of automated decision-making does not exist in the General Data Protection Regulation",
-            "source": "Wachter, Mittelstadt & Floridi, International Data Privacy Law (2017)",
-            "url": "https://scholar.google.com/scholar?q=%22Why+a+right+to+explanation+of+automated+decision-making+does+not+exist+in+the+General+Data+Protection+Regulation%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          }
-        ],
-        "videos": [
-          {
-            "title": "Max Schrems on enforcing privacy rights",
-            "creator": "noyb / talks by Max Schrems",
-            "url": "https://www.youtube.com/results?search_query=Max+Schrems+noyb+talk+GDPR",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "How to make a subject access request",
-            "creator": "Various explainers",
-            "url": "https://www.youtube.com/results?search_query=how+to+make+a+GDPR+subject+access+request",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "books": [],
+        "papers": [],
+        "videos": [],
         "articles": [
           {
-            "title": "Article 15: right of access by the data subject",
-            "publication": "gdpr-info.eu",
-            "url": "https://gdpr-info.eu/art-15-gdpr/"
+            "title": "GDPR: official regulation, including Articles 12 and 15",
+            "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+            "publication": "European Union · EUR-Lex",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "official-record; provisions-cross-checked-in-EDPB-guidelines"
+            }
           },
           {
-            "title": "noyb: European Center for Digital Rights",
-            "publication": "noyb",
-            "url": "https://noyb.eu/en"
+            "title": "Guidelines 01/2022 on the right of access — final version 2.1",
+            "url": "https://www.edpb.europa.eu/system/files/2023-04/edpb_guidelines_202201_data_subject_rights_access_v2_en.pdf",
+            "publication": "European Data Protection Board · final guidelines (2023; correction 2024)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 8,
       "category": "Health & nutrition",
-      "title": "Circadian rhythm: Why morning light matters",
-      "context": "Your body runs on a roughly 24-hour clock that times sleepiness, hormones, digestion and body temperature. Light is the strongest signal that sets that clock, which is why bright mornings and dim evenings can make falling asleep easier. It’s one of the few sleep tips that’s both free and well supported by research.",
+      "title": "Circadian rhythms: How light changes timing",
+      "context": "The body’s clocks coordinate daily patterns in physiology. Light is a timing signal, but its effect depends on biological time, intensity and duration.",
       "takeaways": [
-        "A master clock in the brain, the suprachiasmatic nucleus, keeps clocks in the rest of the body in sync.",
-        "Light in the morning shifts your clock earlier; bright light late at night pushes it later.",
-        "Melatonin rises as evening darkens and works more as a “it’s night” signal than a knockout pill.",
-        "A consistent wake-up time anchors your rhythm, even more than a perfect bedtime."
+        "The suprachiasmatic nucleus helps coordinate daily rhythms across the body.",
+        "Light can advance or delay circadian phase depending on when it occurs relative to the internal clock.",
+        "Experiments on natural light exposure and evening light-emitting readers test specific conditions, rather than universal routines.",
+        "Molecular clock mechanisms explain recurring rhythms; sleep timing also depends on sleep pressure and circumstances."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "The Circadian Code",
-            "author": "Satchin Panda",
-            "hook": "A leading researcher on timing sleep, meals and light",
-            "url": "https://www.goodreads.com/search?q=The+Circadian+Code+Satchin+Panda",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Internal Time",
-            "author": "Till Roenneberg",
-            "hook": "Why some of us are larks and others owls",
-            "url": "https://www.goodreads.com/search?q=Internal+Time+Till+Roenneberg",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Why We Sleep",
-            "author": "Matthew Walker",
-            "hook": "A gripping read, though some of its claims have been debated",
-            "url": "https://www.goodreads.com/search?q=Why+We+Sleep+Matthew+Walker",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Entrainment of the human circadian clock to the natural light-dark cycle",
             "source": "Wright et al., Current Biology (2013)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Entrainment+of+the+human+circadian+clock+to+the+natural+light-dark+cycle%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/23910656/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness",
             "source": "Chang et al., PNAS (2015)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Evening+use+of+light-emitting+eReaders+negatively+affects+sleep%2C+circadian+timing%2C+and+next-morning+alertness%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/25535358/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Transcriptional architecture of the mammalian circadian clock",
             "source": "Takahashi, Nature Reviews Genetics (2017)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Transcriptional+architecture+of+the+mammalian+circadian+clock%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27990019/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "Why do we sleep?",
-            "creator": "Russell Foster, TED",
-            "url": "https://www.youtube.com/results?search_query=Russell+Foster+TED+why+do+we+sleep",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Circadian rhythms and timing your day",
-            "creator": "Satchin Panda talks",
-            "url": "https://www.youtube.com/results?search_query=Satchin+Panda+circadian+rhythm+talk",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": [
           {
             "title": "Circadian rhythms",
+            "url": "https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms",
             "publication": "NIH National Institute of General Medical Sciences",
-            "url": "https://www.nigms.nih.gov/education/fact-sheets/Pages/circadian-rhythms.aspx"
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
-            "title": "Nobel Prize in Physiology or Medicine 2017: press release",
-            "publication": "Nobel Prize",
-            "url": "https://www.nobelprize.org/prizes/medicine/2017/press-release/"
+            "title": "Nobel Prize in Physiology or Medicine 2017: molecular clock mechanisms",
+            "url": "https://www.nobelprize.org/prizes/medicine/2017/press-release/",
+            "publication": "Nobel Assembly at Karolinska Institutet",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 9,
       "category": "Productivity & focus",
-      "title": "Attention residue: The hidden cost of switching",
-      "context": "When you jump from one task to another, part of your attention stays stuck on the first one. Researcher Sophie Leroy called this attention residue, and it explains why a “quick look” at messages can leave you foggy for much longer than the look itself. Designing longer, cleaner blocks of focus is one of the simplest upgrades you can make to your day.",
+      "title": "Interrupted work: Attention and resuming a task",
+      "context": "Interruptions affect more than elapsed time. Studies examine how concern about returning to unfinished work competes with attention to a new task.",
       "takeaways": [
-        "Leaving a task unfinished tends to create more residue than wrapping it up before you switch.",
-        "Jotting a quick “ready to resume” note (where you are, what’s next) helped people let go of an interrupted task in Leroy’s later research.",
-        "Batching email and chat into set windows keeps residue from leaking into your deep work.",
-        "Interrupted work often gets done faster but with more stress, so speed isn’t the whole story."
+        "Leroy and Glomb tested interruptions involving anticipated time pressure when resuming work.",
+        "A ready-to-resume plan reduced the measured attention costs in their experiments; the result is context dependent.",
+        "In Mark and colleagues’ experiment, interrupted participants compensated with faster work while reporting more stress.",
+        "Speed, accuracy and experienced strain are separate outcomes, so one measure cannot describe the whole cost."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Deep Work",
-            "author": "Cal Newport",
-            "hook": "The modern case for protected, distraction-free focus",
-            "url": "https://www.goodreads.com/search?q=Deep+Work+Cal+Newport",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Attention Span",
-            "author": "Gloria Mark",
-            "hook": "Two decades of research on how we actually switch attention",
-            "url": "https://www.goodreads.com/search?q=Attention+Span+Gloria+Mark",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Four Thousand Weeks",
-            "author": "Oliver Burkeman",
-            "hook": "A kinder take on time, limits and what to focus on",
-            "url": "https://www.goodreads.com/search?q=Four+Thousand+Weeks+Oliver+Burkeman",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
-          {
-            "title": "Why is it so hard to do my work? The challenge of attention residue when switching between work tasks",
-            "source": "Leroy, Organizational Behavior and Human Decision Processes (2009)",
-            "url": "https://scholar.google.com/scholar?q=%22Why+is+it+so+hard+to+do+my+work%3F+The+challenge+of+attention+residue+when+switching+between+work+tasks%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
-          },
           {
             "title": "Tasks interrupted: How anticipating time pressure on resumption of an interrupted task causes attention residue and low performance on interrupting tasks and how a “ready-to-resume” plan mitigates the effects",
             "source": "Leroy & Glomb, Organization Science (2018)",
-            "url": "https://scholar.google.com/scholar?q=%22Tasks+interrupted%3A+How+anticipating+time+pressure+on+resumption+of+an+interrupted+task+causes+attention+residue+and+low+performance+on+interrupting+tasks+and+how+a+%E2%80%9Cready-to-resume%E2%80%9D+plan+mitigates+the+effects%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://pubsonline.informs.org/doi/10.1287/orsc.2017.1184",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "The cost of interrupted work: more speed and stress",
             "source": "Mark, Gudith & Klocke, CHI (2008)",
-            "url": "https://scholar.google.com/scholar?q=%22The+cost+of+interrupted+work%3A+more+speed+and+stress%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://www.ics.uci.edu/~gmark/chi08-mark.pdf",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "Attention residue explained",
-            "creator": "Sophie Leroy talks and interviews",
-            "url": "https://www.youtube.com/results?search_query=Sophie+Leroy+attention+residue",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Why our attention spans are shrinking",
-            "creator": "Gloria Mark talks",
-            "url": "https://www.youtube.com/results?search_query=Gloria+Mark+attention+span+talk",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": []
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 10,
       "category": "Psychology & behavior",
-      "title": "Willpower: The ego depletion debate",
-      "context": "For years, a famous idea said willpower is like a muscle that tires with use, so resisting cookies in the morning leaves you weaker by evening. Then large replication projects struggled to find the effect, and the story got more interesting. What’s emerging instead is that beliefs, motivation and a well-designed environment may matter more than a fixed tank of self-control.",
+      "title": "Ego depletion: A theory tested by replication",
+      "context": "Early experiments proposed that an act of self-control reduces performance on a later task. Replication studies and competing explanations make this a useful example of how psychological evidence is revised.",
       "takeaways": [
-        "The original 1998 ego depletion studies inspired hundreds of follow-ups before the doubts set in.",
-        "A 2016 replication across 23 labs found an effect close to zero.",
-        "In some studies, people who believed willpower isn’t easily used up showed little or no depletion.",
-        "People who seem most self-controlled often lean less on willpower and more on avoiding temptation in the first place."
+        "The 1998 paper introduced experimental evidence for a limited-resource account of self-control.",
+        "A 2016 replication across 23 laboratories found an effect near zero for its specified protocol.",
+        "Job and colleagues studied how beliefs about willpower interact with performance; this does not settle every competing explanation.",
+        "A failed replication challenges a tested claim without proving that fatigue or motivation never matters."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Willpower",
-            "author": "Roy F. Baumeister and John Tierney",
-            "hook": "The popular case for the muscle model, read it with the debate in mind",
-            "url": "https://www.goodreads.com/search?q=Willpower+Roy+F.+Baumeister+and+John+Tierney",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "Good Habits, Bad Habits",
-            "author": "Wendy Wood",
-            "hook": "Why habits beat willpower, from a leading habits researcher",
-            "url": "https://www.goodreads.com/search?q=Good+Habits%2C+Bad+Habits+Wendy+Wood",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Marshmallow Test",
-            "author": "Walter Mischel",
-            "hook": "The story behind the famous delay-of-gratification studies",
-            "url": "https://www.goodreads.com/search?q=The+Marshmallow+Test+Walter+Mischel",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "Ego depletion: is the active self a limited resource?",
             "source": "Baumeister et al., Journal of Personality and Social Psychology (1998)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Ego+depletion%3A+is+the+active+self+a+limited+resource%3F%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/9599441/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "A Multilab Preregistered Replication of the Ego-Depletion Effect",
             "source": "Hagger et al., Perspectives on Psychological Science (2016)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22A+Multilab+Preregistered+Replication+of+the+Ego-Depletion+Effect%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27474142/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Ego depletion--is it all in your head? Implicit theories about willpower affect self-regulation",
             "source": "Job, Dweck & Walton, Psychological Science (2010)",
-            "url": "https://scholar.google.com/scholar?q=%22Ego+depletion--is+it+all+in+your+head%3F+Implicit+theories+about+willpower+affect+self-regulation%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/20876879/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "The willpower instinct",
-            "creator": "Kelly McGonigal, Talks at Google",
-            "url": "https://www.youtube.com/results?search_query=Kelly+McGonigal+willpower+instinct+talks+at+google",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "The replication crisis in psychology",
-            "creator": "Various explainers",
-            "url": "https://www.youtube.com/results?search_query=replication+crisis+psychology+ego+depletion+explained",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": []
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 11,
       "category": "Economics & personal finance",
-      "title": "Index funds: Why boring investing often wins",
-      "context": "An index fund simply buys everything in a market index instead of trying to pick winners. Because most professional stock pickers fail to beat their benchmark over long periods, especially after fees, low-cost index investing has become standard advice for everyday savers. It’s worth understanding the logic and its limits before putting money anywhere. This is general education, not financial advice.",
+      "title": "Index funds: Benchmarks, costs and comparison",
+      "context": "An index fund aims to follow a chosen benchmark. The case for passive management involves costs and careful comparisons, while the benchmark itself determines the exposure you receive.",
       "takeaways": [
-        "S&P’s SPIVA reports keep finding that most actively managed funds trail their index over 10 to 15 years.",
-        "Fees compound too: a 1% yearly fee can quietly take a large slice of long-term returns.",
-        "Spreading money across a whole market lowers single-company risk, but index funds still fall when the whole market does.",
-        "What’s available depends on where you live, so compare fees, currency and tax rules before choosing."
+        "Sharpe’s arithmetic compares active and passive dollars within the same market under explicitly stated definitions.",
+        "His discussion also notes sampling, fees and misleading benchmark comparisons; an index fund need not own every security.",
+        "Fama–French and Carhart studied historical mutual-fund performance, including costs and the difficulty of separating persistence from luck.",
+        "Index tracking does not remove market risk, and a narrow index does not provide broad diversification."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "The Little Book of Common Sense Investing",
-            "author": "John C. Bogle",
-            "hook": "The index fund argument from the man who popularized it",
-            "url": "https://www.goodreads.com/search?q=The+Little+Book+of+Common+Sense+Investing+John+C.+Bogle",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "A Random Walk Down Wall Street",
-            "author": "Burton G. Malkiel",
-            "hook": "The classic on why markets are hard to beat",
-            "url": "https://www.goodreads.com/search?q=A+Random+Walk+Down+Wall+Street+Burton+G.+Malkiel",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Psychology of Money",
-            "author": "Morgan Housel",
-            "hook": "Short stories about how behavior shapes wealth",
-            "url": "https://www.goodreads.com/search?q=The+Psychology+of+Money+Morgan+Housel",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "The Arithmetic of Active Management",
             "source": "William F. Sharpe, Financial Analysts Journal (1991)",
-            "url": "https://scholar.google.com/scholar?q=%22The+Arithmetic+of+Active+Management%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://web.stanford.edu/~wfsharpe/art/active/active.htm",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           },
           {
             "title": "Luck versus Skill in the Cross-Section of Mutual Fund Returns",
             "source": "Fama & French, Journal of Finance (2010)",
-            "url": "https://scholar.google.com/scholar?q=%22Luck+versus+Skill+in+the+Cross-Section+of+Mutual+Fund+Returns%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.2010.01598.x",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "On Persistence in Mutual Fund Performance",
             "source": "Carhart, Journal of Finance (1997)",
-            "url": "https://scholar.google.com/scholar?q=%22On+Persistence+in+Mutual+Fund+Performance%22",
-            "search": true,
-            "searchLabel": "Google Scholar search"
+            "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1997.tb03808.x",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "Index funds and evidence-based investing",
-            "creator": "Ben Felix, Common Sense Investing",
-            "url": "https://www.youtube.com/results?search_query=Ben+Felix+index+funds",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "John Bogle on index investing",
-            "creator": "Interviews with John Bogle",
-            "url": "https://www.youtube.com/results?search_query=John+Bogle+interview+index+fund",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
-        "articles": [
-          {
-            "title": "SPIVA: active vs. passive scorecards",
-            "publication": "S&P Dow Jones Indices",
-            "url": "https://www.spglobal.com/spdji/en/research-insights/spiva/"
-          },
-          {
-            "title": "Index fund: definition and how it works",
-            "publication": "Investopedia",
-            "url": "https://www.investopedia.com/terms/i/indexfund.asp"
-          },
-          {
-            "title": "Bogleheads wiki",
-            "publication": "Bogleheads",
-            "url": "https://www.bogleheads.org/wiki/Main_Page"
-          }
-        ]
-      }
+        "videos": [],
+        "articles": []
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "id": 12,
       "category": "Recent promising research",
-      "title": "Gut–brain axis: Your second brain",
-      "context": "Your gut has its own nervous system, and it’s in constant conversation with your brain through the vagus nerve, hormones, immune signals and the trillions of microbes living there. Research over the past two decades suggests this link may shape stress and mood, though much of the strongest evidence still comes from animal studies. It’s one of the most exciting, and most over-hyped, areas in biology right now.",
+      "title": "The gut–brain axis: Mechanisms and evidence",
+      "context": "The gut and brain communicate through neural, hormonal, immune and metabolic routes. Distinguish mechanistic animal experiments from human observational findings before interpreting microbiome claims.",
       "takeaways": [
-        "The enteric nervous system has hundreds of millions of neurons, which is why it’s nicknamed the second brain.",
-        "Most of the body’s serotonin is made in the gut, although that serotonin doesn’t cross into the brain directly.",
-        "Mice raised without gut microbes show exaggerated stress responses; human evidence is promising but earlier-stage.",
-        "A varied, fiber-rich diet feeds a more diverse microbiome, a sensible habit whatever the hype."
+        "The enteric nervous system participates in gut function and communicates with the central nervous system.",
+        "Gut-produced serotonin and brain serotonin are distinct pools; a simple increase in one does not imply an increase in the other.",
+        "Sudo and colleagues’ stress-response experiment involved germ-free mice, not a demonstrated treatment in humans.",
+        "Valles-Colomer and colleagues found human microbiome associations with quality of life and depression; associations alone cannot establish causation."
       ],
       "ressources": {
-        "books": [
-          {
-            "title": "Gut",
-            "author": "Giulia Enders",
-            "hook": "A cheerful, illustrated tour of the digestive system",
-            "url": "https://www.goodreads.com/search?q=Gut+Giulia+Enders",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Mind-Gut Connection",
-            "author": "Emeran Mayer",
-            "hook": "A gastroenterologist on how gut and brain talk",
-            "url": "https://www.goodreads.com/search?q=The+Mind-Gut+Connection+Emeran+Mayer",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          },
-          {
-            "title": "The Psychobiotic Revolution",
-            "author": "Scott C. Anderson, John F. Cryan and Ted Dinan",
-            "hook": "What microbes might mean for mood, from researchers in the field",
-            "url": "https://www.goodreads.com/search?q=The+Psychobiotic+Revolution+Scott+C.+Anderson%2C+John+F.+Cryan+and+Ted+Dinan",
-            "search": true,
-            "searchLabel": "Goodreads search"
-          }
-        ],
+        "books": [],
         "papers": [
           {
             "title": "The Microbiota-Gut-Brain Axis",
             "source": "Cryan et al., Physiological Reviews (2019)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22The+Microbiota-Gut-Brain+Axis%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/31460832/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "Postnatal microbial colonization programs the hypothalamic-pituitary-adrenal system for stress response in mice",
             "source": "Sudo et al., Journal of Physiology (2004)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22Postnatal+microbial+colonization+programs+the+hypothalamic-pituitary-adrenal+system+for+stress+response+in+mice%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/15133062/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           },
           {
             "title": "The neuroactive potential of the human gut microbiota in quality of life and depression",
             "source": "Valles-Colomer et al., Nature Microbiology (2019)",
-            "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%22The+neuroactive+potential+of+the+human+gut+microbiota+in+quality+of+life+and+depression%22",
-            "search": true,
-            "searchLabel": "PubMed search"
+            "url": "https://pubmed.ncbi.nlm.nih.gov/30718848/",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "identity-and-abstract",
+              "limitation": "Bibliographic identity and abstract checked; full paper not reviewed. Publisher access may be restricted."
+            }
           }
         ],
-        "videos": [
-          {
-            "title": "How bacteria rule over your body: the microbiome",
-            "creator": "Kurzgesagt",
-            "url": "https://www.youtube.com/results?search_query=Kurzgesagt+microbiome+how+bacteria+rule+over+your+body",
-            "search": true,
-            "searchLabel": "YouTube search"
-          },
-          {
-            "title": "Mind-altering microorganisms",
-            "creator": "John Cryan, TEDx",
-            "url": "https://www.youtube.com/results?search_query=John+Cryan+TEDx+gut+brain+microbes",
-            "search": true,
-            "searchLabel": "YouTube search"
-          }
-        ],
+        "videos": [],
         "articles": []
-      }
+      },
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1047,7 +655,11 @@
             "title": "Intestinal Fructose and Glucose Metabolism in Health and Disease",
             "source": "Merino et al. · Nutrients (2020)",
             "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7019254/",
-            "description": "A molecular review of sugar transport, intestinal sensing and metabolic pathways; distinguishes established mechanisms from unresolved human evidence."
+            "description": "A molecular review of sugar transport, intestinal sensing and metabolic pathways; distinguishes established mechanisms from unresolved human evidence.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
@@ -1056,11 +668,16 @@
             "title": "Anatomy and Physiology: Carbohydrate metabolism",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
-            "description": "A sugar molecule is a starting point for a chain of transport and enzyme reactions. Follow glucose and fructose from the intestine into energy metabolism, and separate the chemistry from claims about particular foods."
+            "description": "A sugar molecule is a starting point for a chain of transport and enzyme reactions. Follow glucose and fructose from the intestine into energy metabolism, and separate the chemistry from claims about particular foods.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 13
+      "id": 13,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1089,11 +706,16 @@
             "title": "Anatomy and Physiology: Overview of metabolic reactions",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-1-overview-of-metabolic-reactions",
-            "description": "Moving a muscle, pumping ions and building a protein all require energy. ATP links the breakdown of fuel to the work a cell needs to do."
+            "description": "Moving a muscle, pumping ions and building a protein all require energy. ATP links the breakdown of fuel to the work a cell needs to do.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 14
+      "id": 14,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1121,11 +743,16 @@
             "title": "Anatomy and Physiology: The endocrine pancreas",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas",
-            "description": "Your blood glucose changes after meals and between them. Explore how the pancreas, liver and other tissues coordinate access to fuel."
+            "description": "Your blood glucose changes after meals and between them. Explore how the pancreas, liver and other tissues coordinate access to fuel.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 15
+      "id": 15,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1152,11 +779,16 @@
             "title": "Anatomy and Physiology: Carbohydrate metabolism",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-2-carbohydrate-metabolism",
-            "description": "The liver and muscles both store glycogen, but they use it for different jobs. That distinction explains why eating, fasting and exercise change fuel availability."
+            "description": "The liver and muscles both store glycogen, but they use it for different jobs. That distinction explains why eating, fasting and exercise change fuel availability.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 16
+      "id": 16,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1186,11 +818,16 @@
             "title": "Anatomy and Physiology: Chemical digestion and absorption a closer look",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-7-chemical-digestion-and-absorption-a-closer-look",
-            "description": "Fat does not dissolve easily in watery body fluids. Follow the emulsification, digestion and transport steps that make it usable."
+            "description": "Fat does not dissolve easily in watery body fluids. Follow the emulsification, digestion and transport steps that make it usable.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 17
+      "id": 17,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1219,11 +856,16 @@
             "title": "Anatomy and Physiology: Chemical digestion and absorption a closer look",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-7-chemical-digestion-and-absorption-a-closer-look",
-            "description": "A dietary protein must be dismantled before its building blocks can be used. Follow that process and distinguish protein turnover from simply eating more protein."
+            "description": "A dietary protein must be dismantled before its building blocks can be used. Follow that process and distinguish protein turnover from simply eating more protein.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 18
+      "id": 18,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1251,11 +893,25 @@
             "title": "Anatomy and Physiology: Protein metabolism",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/24-4-protein-metabolism",
-            "description": "The liver sits at the crossroads of nutrient processing, storage and waste handling. Trace how one organ can coordinate so many different reactions."
+            "description": "The liver sits at the crossroads of nutrient processing, storage and waste handling. Trace how one organ can coordinate so many different reactions.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "The liver, pancreas and gallbladder",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-6-accessory-organs-in-digestion-the-liver-pancreas-and-gallbladder",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 19
+      "id": 19,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1285,11 +941,25 @@
             "title": "Physiology of urine formation",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-5-physiology-of-urine-formation",
-            "description": "Your kidneys filter blood and then selectively recover or secrete substances. Learn how filtration becomes a tightly controlled balance of water and solutes."
+            "description": "Your kidneys filter blood and then selectively recover or secrete substances. Learn how filtration becomes a tightly controlled balance of water and solutes.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Tubular reabsorption",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-6-tubular-reabsorption",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 20
+      "id": 20,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1316,11 +986,16 @@
             "title": "Anatomy and Physiology: Electrolyte balance",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/26-3-electrolyte-balance",
-            "description": "Sodium, potassium and other ions help control fluid movement and electrical signals. Their effects depend on concentration and location."
+            "description": "Sodium, potassium and other ions help control fluid movement and electrical signals. Their effects depend on concentration and location.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 21
+      "id": 21,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1349,11 +1024,16 @@
             "title": "Anatomy and Physiology: Acid base balance",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/26-4-acid-base-balance",
-            "description": "Normal metabolism produces substances that can alter acidity. Buffers, breathing and kidney function work on different timescales to keep pH controlled."
+            "description": "Normal metabolism produces substances that can alter acidity. Buffers, breathing and kidney function work on different timescales to keep pH controlled.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 22
+      "id": 22,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1381,11 +1061,16 @@
             "title": "Anatomy and Physiology: The action potential",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential",
-            "description": "A nerve impulse comes from controlled changes in membrane permeability. Understand how a chemical gradient becomes an electrical signal."
+            "description": "A nerve impulse comes from controlled changes in membrane permeability. Understand how a chemical gradient becomes an electrical signal.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 23
+      "id": 23,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1415,11 +1100,16 @@
             "title": "Anatomy and Physiology: Muscle fiber contraction and relaxation",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-3-muscle-fiber-contraction-and-relaxation",
-            "description": "A muscle shortens because protein filaments slide past one another. Follow the roles of calcium and ATP in that microscopic cycle."
+            "description": "A muscle shortens because protein filaments slide past one another. Follow the roles of calcium and ATP in that microscopic cycle.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 24
+      "id": 24,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1450,11 +1140,16 @@
             "title": "Anatomy and Physiology: Transport of gases",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases",
-            "description": "Breathing moves air, but oxygen still needs to cross a membrane and travel to tissues. Separate ventilation, gas exchange and transport."
+            "description": "Breathing moves air, but oxygen still needs to cross a membrane and travel to tissues. Separate ventilation, gas exchange and transport.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 25
+      "id": 25,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1482,11 +1177,25 @@
             "title": "Anatomy and Physiology: The adaptive immune response t lymphocytes and their functional types",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types",
-            "description": "The immune system combines immediate defenses with responses that recognize particular targets. Explore how those layers communicate."
+            "description": "The immune system combines immediate defenses with responses that recognize particular targets. Explore how those layers communicate.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Barrier defenses and the innate immune response",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-2-barrier-defenses-and-the-innate-immune-response",
+            "publication": "OpenStax · Anatomy and Physiology 2e",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 26
+      "id": 26,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1516,11 +1225,16 @@
             "title": "Anatomy and Physiology: Hormones",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-2-hormones",
-            "description": "A hormone circulates widely, yet only certain cells respond. Receptors and intracellular pathways explain the selectivity."
+            "description": "A hormone circulates widely, yet only certain cells respond. Receptors and intracellular pathways explain the selectivity.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 27
+      "id": 27,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1549,11 +1263,16 @@
             "title": "Anatomy and physiology of the ovarian reproductive system",
             "publication": "OpenStax · Anatomy and Physiology 2e",
             "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/27-2-anatomy-and-physiology-of-the-ovarian-reproductive-system",
-            "description": "Ovarian and uterine changes run together under hormonal control. Track the sequence rather than assuming every cycle follows a fixed calendar."
+            "description": "Ovarian and uterine changes run together under hormonal control. Track the sequence rather than assuming every cycle follows a fixed calendar.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 28
+      "id": 28,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1585,11 +1304,16 @@
             "title": "Vitamin B12 — health professional fact sheet",
             "publication": "NIH · Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/",
-            "description": "B12 links nutrition, nerve function and blood cell production. Its absorption also depends on a sequence of digestive steps."
+            "description": "B12 links nutrition, nerve function and blood cell production. Its absorption also depends on a sequence of digestive steps.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 29
+      "id": 29,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1621,11 +1345,16 @@
             "title": "Vitamin D — health professional fact sheet",
             "publication": "NIH · Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/",
-            "description": "Vitamin D connects skin synthesis, dietary intake and hormone-like signaling. Explore why a laboratory value and a supplement dose are different questions."
+            "description": "Vitamin D connects skin synthesis, dietary intake and hormone-like signaling. Explore why a laboratory value and a supplement dose are different questions.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 30
+      "id": 30,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1657,11 +1386,16 @@
             "title": "Vitamin C — health professional fact sheet",
             "publication": "NIH · Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/",
-            "description": "Vitamin C participates in chemical reactions rather than serving as a general energy booster. Follow its roles in connective tissue and iron absorption."
+            "description": "Vitamin C participates in chemical reactions rather than serving as a general energy booster. Follow its roles in connective tissue and iron absorption.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 31
+      "id": 31,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1690,20 +1424,19 @@
         "videos": [],
         "articles": [
           {
-            "title": "Vitamin B1 — health professional fact sheet",
-            "publication": "NIH · Office of Dietary Supplements",
-            "url": "https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional/",
-            "description": "Thiamin helps enzymes process energy-yielding nutrients. Understanding coenzymes explains why a small nutrient can have widespread effects."
-          },
-          {
             "title": "Thiamin – Vitamin B1",
             "publication": "Harvard T.H. Chan School of Public Health · The Nutrition Source",
             "url": "https://nutritionsource.hsph.harvard.edu/vitamin-b1/",
-            "description": "An accessible companion to the NIH reference, covering food sources, cell function and deficiency."
+            "description": "A substantive overview of thiamin’s cellular roles, food sources and deficiency from Harvard’s nutrition reference.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 32
+      "id": 32,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1735,11 +1468,16 @@
             "title": "Vitamin A — health professional fact sheet",
             "publication": "NIH · Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/",
-            "description": "Vitamin A is a family of compounds involved in vision and cell regulation. Food form and dose matter to its benefits and risks."
+            "description": "Vitamin A is a family of compounds involved in vision and cell regulation. Food form and dose matter to its benefits and risks.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 33
+      "id": 33,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Biochemistry & biology",
@@ -1771,11 +1509,16 @@
             "title": "Vitamin K — health professional fact sheet",
             "publication": "NIH · Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/",
-            "description": "Vitamin K helps activate proteins involved in clotting. Its role illustrates how a nutrient can modify a protein after it is made."
+            "description": "Vitamin K helps activate proteins involved in clotting. Its role illustrates how a nutrient can modify a protein after it is made.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 34
+      "id": 34,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Finance & economics",
@@ -1805,11 +1548,25 @@
             "title": "Bonds: structure, types and risks",
             "publication": "U.S. Securities and Exchange Commission · Investor.gov",
             "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
-            "description": "A bond is a claim on promised payments. Read its cash flows first, then ask what could prevent those payments from arriving."
+            "description": "A bond is a claim on promised payments. Read its cash flows first, then ask what could prevent those payments from arriving.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Characteristics of bonds",
+            "url": "https://openstax.org/books/principles-finance/pages/10-1-characteristics-of-bonds",
+            "publication": "OpenStax · Principles of Finance",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 35
+      "id": 35,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Finance & economics",
@@ -1839,11 +1596,25 @@
             "title": "Bonds: structure, types and risks",
             "publication": "U.S. Securities and Exchange Commission · Investor.gov",
             "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
-            "description": "A fixed payment becomes less attractive when comparable new investments offer more. Discounting makes that intuition precise."
+            "description": "A fixed payment becomes less attractive when comparable new investments offer more. Discounting makes that intuition precise.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Bond valuation",
+            "url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation",
+            "publication": "OpenStax · Principles of Finance",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 36
+      "id": 36,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Finance & economics",
@@ -1874,11 +1645,25 @@
             "title": "Bonds: structure, types and risks",
             "publication": "U.S. Securities and Exchange Commission · Investor.gov",
             "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
-            "description": "The rate printed on a bond is only one piece of the return. Compare purchase price, income, repayment and assumptions about holding the investment."
+            "description": "The rate printed on a bond is only one piece of the return. Compare purchase price, income, repayment and assumptions about holding the investment.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Bond valuation",
+            "url": "https://openstax.org/books/principles-finance/pages/10-2-bond-valuation",
+            "publication": "OpenStax · Principles of Finance",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 37
+      "id": 37,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Finance & economics",
@@ -1907,11 +1692,25 @@
             "title": "Bonds: structure, types and risks",
             "publication": "U.S. Securities and Exchange Commission · Investor.gov",
             "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds",
-            "description": "A predictable payment schedule does not make purchasing power or market value predictable. Examine different ways a bond investment can disappoint."
+            "description": "A predictable payment schedule does not make purchasing power or market value predictable. Examine different ways a bond investment can disappoint.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
+          },
+          {
+            "title": "Characteristics of bonds",
+            "url": "https://openstax.org/books/principles-finance/pages/10-1-characteristics-of-bonds",
+            "publication": "OpenStax · Principles of Finance",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 38
+      "id": 38,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -1939,11 +1738,16 @@
             "title": "Principles of Marketing: Marketing and the marketing process",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/1-1-marketing-and-the-marketing-process",
-            "description": "Marketing starts before an advertisement exists. Explore how research, product choices, delivery and communication fit together."
+            "description": "Marketing starts before an advertisement exists. Explore how research, product choices, delivery and communication fit together.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 39
+      "id": 39,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -1971,11 +1775,16 @@
             "title": "Principles of Marketing: The consumer purchasing decision process",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/3-3-the-consumer-purchasing-decision-process",
-            "description": "A purchase reflects motives, context and perceived alternatives. Trace the decision process without reducing customers to stereotypes."
+            "description": "A purchase reflects motives, context and perceived alternatives. Trace the decision process without reducing customers to stereotypes.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 40
+      "id": 40,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2004,11 +1813,16 @@
             "title": "Principles of Marketing: Market segmentation and consumer markets",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/5-1-market-segmentation-and-consumer-markets",
-            "description": "A market is rarely one uniform audience. Useful segments help a business make specific choices about who it can serve well."
+            "description": "A market is rarely one uniform audience. Useful segments help a business make specific choices about who it can serve well.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 41
+      "id": 41,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2035,11 +1849,16 @@
             "title": "Principles of Marketing: Product positioning",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/5-6-product-positioning",
-            "description": "A product enters a mental landscape of alternatives. Positioning clarifies the reason a particular audience should consider it."
+            "description": "A product enters a mental landscape of alternatives. Positioning clarifies the reason a particular audience should consider it.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 42
+      "id": 42,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2068,11 +1887,16 @@
             "title": "Principles of Marketing: Steps in a successful marketing research plan",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/6-3-steps-in-a-successful-marketing-research-plan",
-            "description": "Research should reduce uncertainty around a decision. Match the question to the method, and identify what the evidence cannot establish."
+            "description": "Research should reduce uncertainty around a decision. Match the question to the method, and identify what the evidence cannot establish.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 43
+      "id": 43,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2099,11 +1923,16 @@
             "title": "Principles of Marketing: Pricing and its role in the marketing mix",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/12-1-pricing-and-its-role-in-the-marketing-mix",
-            "description": "Price affects revenue, demand and expectations. Explore how costs, competition and perceived value influence a pricing decision."
+            "description": "Price affects revenue, demand and expectations. Explore how costs, competition and perceived value influence a pricing decision.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 44
+      "id": 44,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2130,11 +1959,16 @@
             "title": "Principles of Marketing: Branding and brand development",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/9-5-branding-and-brand-development",
-            "description": "A brand gathers associations around an offer. Study how consistent experience and recognition develop those associations over time."
+            "description": "A brand gathers associations around an offer. Study how consistent experience and recognition develop those associations over time.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 45
+      "id": 45,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Marketing & business",
@@ -2162,11 +1996,16 @@
             "title": "Ethical marketing",
             "publication": "OpenStax · Principles of Marketing",
             "url": "https://openstax.org/books/principles-marketing/pages/1-7-ethical-marketing",
-            "description": "A persuasive message can still be misleading. Examine what businesses owe customers when claims, targeting and incentives shape a decision."
+            "description": "A persuasive message can still be misleading. Examine what businesses owe customers when claims, targeting and incentives shape a decision.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 46
+      "id": 46,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2191,23 +2030,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: retrieval practice",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/retrieval-practice",
-            "description": "Closing the book and trying to explain an idea reveals what you can retrieve. That effort can also strengthen later recall."
-          }
-        ]
+        "articles": []
       },
-      "id": 47
+      "id": 47,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2230,23 +2066,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: spaced practice",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/spaced-practice",
-            "description": "Revisiting material across separate sessions changes the conditions of practice. Build a schedule around repeated retrieval and feedback."
-          }
-        ]
+        "articles": []
       },
-      "id": 48
+      "id": 48,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2269,23 +2102,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: interleaving",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/interleaving",
-            "description": "When problem types are mixed, you must identify the appropriate approach. Explore how that differs from repeating one method in a block."
-          }
-        ]
+        "articles": []
       },
-      "id": 49
+      "id": 49,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2309,23 +2139,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: elaboration",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/elaboration",
-            "description": "A fact becomes more usable when connected to an explanation. Ask how it fits what you already know, then check that your connection is accurate."
-          }
-        ]
+        "articles": []
       },
-      "id": 50
+      "id": 50,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2352,23 +2179,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: concrete examples",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/concrete-examples",
-            "description": "An example can make an unfamiliar principle intelligible. Compare several examples to separate the principle from incidental details."
-          }
-        ]
+        "articles": []
       },
-      "id": 51
+      "id": 51,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Learning & study",
@@ -2391,23 +2215,20 @@
         "books": [],
         "papers": [
           {
-            "title": "Improving Students’ Learning With Effective Learning Techniques",
-            "source": "Dunlosky et al. · Psychological Science in the Public Interest (2013)",
-            "url": "https://doi.org/10.1177/1529100612453266",
-            "description": "A comprehensive evaluation of ten learning techniques. Compare evidence for retrieval and spacing with the more conditional findings for other techniques."
+            "title": "Teaching the science of learning",
+            "url": "https://link.springer.com/article/10.1186/s41235-017-0087-y",
+            "source": "Weinstein, Madan & Sumeracki · Cognitive Research: Principles and Implications (2018)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ],
         "videos": [],
-        "articles": [
-          {
-            "title": "Learning strategy: dual coding",
-            "publication": "The Learning Scientists · cognitive psychology researchers",
-            "url": "https://www.learningscientists.org/dual-coding",
-            "description": "Words and visuals can represent complementary parts of an idea. Use a diagram to show relationships that a paragraph alone makes harder to track."
-          }
-        ]
+        "articles": []
       },
-      "id": 52
+      "id": 52,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2432,14 +2253,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "Copyright: rights, ownership and limitations",
-            "publication": "WIPO",
-            "url": "https://www.wipo.int/en/web/copyright",
-            "description": "A concept and a particular expression of it raise different legal questions. Start with that distinction before asking who can copy, adapt or publish a work."
+            "title": "Understanding Copyright and Related Rights",
+            "url": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_909_2016.pdf",
+            "publication": "WIPO · 2016 introductory guide",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 53
+      "id": 53,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2464,14 +2289,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "Patents: protection and the patent system",
-            "publication": "WIPO",
-            "url": "https://www.wipo.int/en/web/patents",
-            "description": "Patent systems connect technical disclosure with a time-limited legal right. Learn why an invention and a granted patent are different things."
+            "title": "Understanding Industrial Property — patents and related rights",
+            "url": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_895_2016.pdf",
+            "publication": "WIPO · 2016 introductory guide",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 54
+      "id": 54,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2497,14 +2326,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "Trade secrets and confidential business information",
-            "publication": "WIPO",
-            "url": "https://www.wipo.int/en/web/trade-secrets",
-            "description": "Some valuable knowledge is protected through secrecy rather than registration. Compare the benefits and limits with patent disclosure."
+            "title": "WIPO Guide to Trade Secrets and Innovation — protection basics",
+            "url": "https://www.wipo.int/web-publications/wipo-guide-to-trade-secrets-and-innovation/en/part-iii-basics-of-trade-secret-protection.html",
+            "publication": "WIPO · trade-secrets guide (2024)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 55
+      "id": 55,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2529,14 +2362,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "Trademarks: distinctive signs and protection",
-            "publication": "WIPO",
-            "url": "https://www.wipo.int/en/web/trademarks",
-            "description": "A trademark identifies commercial origin. Explore why a brand name, its reputation and a registered right are related but different."
+            "title": "Understanding Industrial Property — trademarks and related rights",
+            "url": "https://www.wipo.int/edocs/pubdocs/en/wipo_pub_895_2016.pdf",
+            "publication": "WIPO · 2016 introductory guide",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 56
+      "id": 56,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2563,11 +2400,16 @@
             "title": "Principles of the trading system",
             "publication": "World Trade Organization",
             "url": "https://www.wto.org/english/thewto_e/whatis_e/tif_e/fact2_e.htm",
-            "description": "Most-favoured-nation treatment and national treatment ask different comparative questions. Understand the framework before applying an exception."
+            "description": "Most-favoured-nation treatment and national treatment ask different comparative questions. Understand the framework before applying an exception.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 57
+      "id": 57,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Law",
@@ -2596,11 +2438,17 @@
             "title": "New York Convention: text, status and explanatory materials",
             "publication": "UNCITRAL",
             "url": "https://uncitral.un.org/en/texts/arbitration/conventions/foreign_arbitral_awards",
-            "description": "Choosing arbitration is only part of resolving a dispute. Consider how an award may be recognized and enforced where assets are located."
+            "description": "Choosing arbitration is only part of resolving a dispute. Consider how an award may be recognized and enforced where assets are located.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "official-record-and-summary; linked-full-text-inaccessible",
+              "limitation": "Official summary and linked-text identity checked; full treaty and guide could not be fetched for review."
+            }
           }
         ]
       },
-      "id": 58
+      "id": 58,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2625,14 +2473,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "Electoral System Design: the International IDEA handbook",
-            "publication": "International IDEA",
-            "url": "https://www.idea.int/publications/catalogue/electoral-system-design-new-international-idea-handbook",
-            "description": "Identical votes can produce different parliaments under different rules. Compare representation, accountability and the incentives faced by parties."
+            "title": "Electoral System Design: The New International IDEA Handbook",
+            "url": "https://www.idea.int/sites/default/files/publications/electoral-system-design-the-new-international-idea-handbook.pdf",
+            "publication": "International IDEA · 2005 handbook, 2008 reprint",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 59
+      "id": 59,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2660,11 +2512,16 @@
             "title": "A Practical Guide to Constitution Building",
             "publication": "International IDEA",
             "url": "https://www.idea.int/sites/default/files/2023-08/a-practical-guide-to-constitution-building.pdf",
-            "description": "A constitution allocates authority and creates limits. Study how institutional design interacts with political practice."
+            "description": "A constitution allocates authority and creates limits. Study how institutional design interacts with political practice.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 60
+      "id": 60,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2690,13 +2547,17 @@
         "articles": [
           {
             "title": "Independence in Electoral Management",
+            "url": "https://www.idea.int/sites/default/files/publications/independence-in-electoral-management.pdf",
             "publication": "International IDEA",
-            "url": "https://www.idea.int/publications/catalogue/independence-electoral-management",
-            "description": "Election credibility depends on administration as well as voting rules. Explore independence, resources and accountability."
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 61
+      "id": 61,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2725,13 +2586,17 @@
         "articles": [
           {
             "title": "Government Formation and Removal Mechanisms",
-            "publication": "International IDEA",
-            "url": "https://www.idea.int/publications/catalogue/government-formation-and-removal-mechanisms",
-            "description": "An election does not always produce an obvious government. Formation rules determine appointments, confidence and removal."
+            "url": "https://www.idea.int/sites/default/files/publications/government-formation-and-removal-mechanisms-primer.pdf",
+            "publication": "International IDEA · constitution-building primer",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 62
+      "id": 62,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2758,14 +2623,18 @@
         "videos": [],
         "articles": [
           {
-            "title": "The Public Service: constitution-building primer",
-            "publication": "International IDEA",
-            "url": "https://www.idea.int/publications/catalogue/the-public-service",
-            "description": "Public administration carries policy into practice. Explore how professional standards and political accountability can coexist."
+            "title": "The Public Service",
+            "url": "https://www.idea.int/sites/default/files/2026-06/the-public-service.pdf",
+            "publication": "International IDEA · constitution-building primer (June 2026)",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 63
+      "id": 63,
+      "lastVerified": "2026-09-17"
     },
     {
       "category": "Politics & institutions",
@@ -2794,11 +2663,16 @@
             "title": "Electoral System Design Database",
             "publication": "International IDEA",
             "url": "https://www.idea.int/data-tools/data/electoral-system-design-database",
-            "description": "A cross-country dataset can reveal institutional patterns, but a category is not a complete account of political life."
+            "description": "A cross-country dataset can reveal institutional patterns, but a category is not a complete account of political life.",
+            "verification": {
+              "checkedAt": "2026-09-17",
+              "reviewLevel": "text-and-relevant-sections"
+            }
           }
         ]
       },
-      "id": 64
+      "id": 64,
+      "lastVerified": "2026-09-17"
     }
   ]
 }

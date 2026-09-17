@@ -18,7 +18,7 @@ Four topics render initially, with more appended near the bottom. The Explore mo
 
 See [project context and roadmap](Daily_Deep_Dive_Project_Context.md). Every resource must be comprehensive for its scope, credible, substantive, and only as long as necessary. No Wikipedia, filler, SEO content farms, or resource quotas. Existing Wikipedia entries have been removed, and rendering rejects Wikipedia domains. URL filtering cannot certify source quality; editorial review is required.
 
-Resources use the existing `ressources` JSON property and `books`, `papers`, `videos`, `articles` groups. Optional `tags` participate in search. Use unique stable IDs, a category, a title, context, takeaways, and at least one valid resource. Resource descriptions and book hooks appear in the sheet. Search links are explicitly labeled and must be replaced with verified direct destinations where possible before commercial release.
+Resources use the existing `ressources` JSON property and `books`, `papers`, `videos`, `articles` groups. Optional `tags` participate in search. Use unique stable IDs, a category, a title, context, takeaways, and at least one valid resource. Resource descriptions and book hooks appear in the sheet. Only direct destinations belong in the curated bibliography. Each resource has a dated `verification` field; distinguish text review from identity/abstract checks. See [source audit and limits](SOURCE_AUDIT.md) and [entry ledger](source-audit.json). The daily editorial task requires at least 10 verified, distinct topics per run, with no collection cap and no resource quota.
 
 ## Artwork
 

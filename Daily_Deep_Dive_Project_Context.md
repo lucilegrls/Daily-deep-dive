@@ -1015,7 +1015,7 @@ The final goal is a marketable app with a distinctive, authored visual identity 
 
 Implemented foundation: batched vertical collection, topic-specific envelopes, search, category filtering, local saved topics, Wikipedia removal and URL blocking, normalized envelope filename, portable manifest, and network-first offline shell.
 
-The collection stops when available topics are exhausted; it does not repeat or invent topics. Search links remain labeled as searches and require editorial verification before launch. Resource-paper container is transparent; exact lace/clip silhouette and washed-white artwork still require replacement assets. No claim of completed content verification or store readiness.
+The collection stops when available topics are exhausted; it does not repeat or invent topics. Search placeholders have now been removed; direct resources carry dated review levels in source-audit.json. Resource-paper container is transparent; exact lace/clip silhouette and washed-white artwork still require replacement assets. The source audit records its full-text access limits; there is no claim of store readiness.
 
 Next milestones: human-reviewed source library expansion; final transparent artwork and visual QA; topic relationships and notes; accessible product testing; decide accounts, sync, pricing, content rights, privacy disclosures, and distribution before commercial launch. No advertising or sponsored filler.
 
@@ -1036,3 +1036,12 @@ The collection must not have a fixed target number or a closed list of disciplin
 Refine interests into explanatory questions. Rotate disciplines, avoid duplicates, and distinguish related mechanisms instead of repackaging the same topic. Preserve substantive, credible sources and the absolute Wikipedia exclusion. For current wars and other evolving subjects, verify event dates, identify jurisdictions and actors, use multiple independent credible sources, and record lastVerified and asOf dates in topic metadata. Present contested claims with attribution rather than certainty. For experiments, distinguish observed results, replication evidence and interpretation.
 
 An ongoing background research task can extend topics.json; the current static feed reads that collection when it loads. This does not create unlimited topics immediately at the end of a scroll. A future production content service should supply new reviewed topics through cursor-based pagination, with background sourcing, validation, deduplication and refresh of dated entries. Preserve existing cards and saved IDs when new content arrives. Never repeat cards or invent sources to simulate an infinite collection.
+
+
+## Daily publishing and source audit — 17 September 2026
+
+Add at least 10 distinct, adequately sourced and verified new topics every daily research run. The collection has no maximum size. Do not impose a resource count or force every resource type. Rotate disciplines, avoid duplicates, preserve IDs, and never add filler or fabricated citations to meet the minimum. If access or execution blocks the minimum, report the exact shortfall and blocker.
+
+All 169 previous resource entries have been assessed. The updated bibliography contains 100 direct entries and no search placeholders. See SOURCE_AUDIT.md and source-audit.json for decisions and review limits. Each resource has a dated verification record distinguishing readable text/selected-section review from bibliographic identity and abstract checks; never equate these. Full-text access remains incomplete for 21 papers and the UNCITRAL convention materials. The first 12 cards were corrected to match the evidence reviewed.
+
+For every new publication, confirm the direct destination, responsible author/institution, identity, depth, relevance and support for the card's actual claims. Preserve verification evidence in the audit ledger. Do not call a paywalled abstract a full-text review. Use substantive accessible material for the core explanation when available; identify access limits honestly. For evolving subjects, verify current facts against authoritative evidence, record asOf/lastVerified, and separate competing claims, observation, interpretation and causal findings.
