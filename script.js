@@ -162,15 +162,13 @@
     if (criticalThinking) cardChildren.push(criticalThinking);
 
     const card = el('article', { class: 'card', 'aria-labelledby': heading }, cardChildren);
-    const envelope = el('button', { type: 'button', class: 'envelope', 'aria-expanded': 'false', 'aria-controls': 'sheet', 'aria-label': `Open resources for ${topic.title}` }, [
-      el('span', { class: 'env-label', text: 'Resources' }),
-    ]);
+    const envelope = el('button', { type: 'button', class: 'envelope', 'aria-expanded': 'false', 'aria-controls': 'sheet', 'aria-label': `Open ${topic.title}` });
     envelope.addEventListener('click', () => {
       renderSheet(topic);
       state.envelope = envelope;
       openSheet();
     });
-    return el('section', { class: 'stage topic-entry', 'data-topic-id': key }, [card, el('div', { class: 'envelope-wrap' }, [envelope, el('p', { class: 'env-hint', text: 'follow the evidence', 'aria-hidden': 'true' })])]);
+    return el('section', { class: 'stage topic-entry', 'data-topic-id': key }, [card, el('div', { class: 'envelope-wrap' }, [envelope])]);
   }
 
   function appendBatch() {
