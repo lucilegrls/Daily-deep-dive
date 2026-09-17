@@ -1,105 +1,37 @@
-# Daily deep dive
+# Daily Deep Dive
 
-A new rabbit hole every day: one specific topic, why it matters, what's worth remembering, and an envelope of ressources (books, papers, videos, articles) to follow it further.
+A calm, tactile collection of curated ideas. Scroll through topics, open each envelope to explore its resources, search by question or subject, and save topics for later.
 
-Made for Lucile. Mobile first, installable on an Android home screen, no app store needed.
+## Run locally
 
-## What's in the folder
-
-| File | What it does |
-| --- | --- |
-| `index.html` | Page structure: header, topic card, envelope, ressources sheet |
-| `style.css` | Colors, type, backdrop, envelope animation, dark mode, responsive layout |
-| `script.js` | Daily pick, "New topic" button, envelope and sheet, theme toggle |
-| `topics.json` | The curated topic bank (12 topics to start) |
-| `manifest.webmanifest` | Lets Android install it like an app |
-| `sw.js` | Offline support, so it still opens without a connection |
-| `icons/` | Home screen icons |
-
-## How it picks a topic
-
-Every day gets one topic from the bank, chosen by a fixed shuffle of the dates, so it stays the same all day and doesn't repeat until you've been through the whole bank. "New topic" shows a different one right away; "Back to today's pick" returns to the day's topic. Adding topics changes the rotation, which is fine.
-
-## Try it on your computer
-
-Browsers block `topics.json` when you double-click `index.html`, so run a tiny local server from inside the folder:
-
-```bash
+```sh
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+Open `http://localhost:8000`. Serve over HTTPS for installation and offline support. The relative manifest paths support GitHub Pages and other static hosts.
 
-## Put it online (free)
+## Collection behavior
 
-**Netlify Drop (easiest, about 2 minutes)**
-1. Go to https://app.netlify.com/drop and sign in.
-2. Drag the whole `daily-deep-dive` folder onto the page.
-3. You'll get a link like `something-random.netlify.app`. Rename it under *Site configuration → Change site name* (for example `lucile-daily-deep-dive`).
-4. To update later, open the site in Netlify, go to *Deploys*, and drag the folder in again.
+Four topics render initially, with more appended near the bottom. The Explore more button provides a keyboard-accessible fallback. Topics do not change at midnight or repeat endlessly. The end message reflects the current finite library. Surprise me scrolls to a topic matching the current filters. Saved topic IDs persist on this device; there is no account or cloud sync.
 
-**GitHub Pages**
-1. Create a new public repository, for example `daily-deep-dive`.
-2. Upload all the files (keep the `icons` folder).
-3. Go to *Settings → Pages*, set *Source* to *Deploy from a branch*, choose `main` and `/ (root)`, and save.
-4. After a minute your site is at `https://YOUR-USERNAME.github.io/daily-deep-dive/`.
+## Content policy
 
-## Add it to your Android home screen
+See [project context and roadmap](Daily_Deep_Dive_Project_Context.md). Every resource must be comprehensive for its scope, credible, substantive, and only as long as necessary. No Wikipedia, filler, SEO content farms, or resource quotas. Existing Wikipedia entries have been removed, and rendering rejects Wikipedia domains. URL filtering cannot certify source quality; editorial review is required.
 
-1. Open your live link in **Chrome** on your phone.
-2. Tap the **⋮** menu (top right).
-3. Tap **Add to home screen** (on some phones it says **Install app**), then **Install** or **Add**.
-4. The envelope icon appears on your home screen and opens full screen, like an app.
+Resources use the existing `ressources` JSON property and `books`, `papers`, `videos`, `articles` groups. Optional `tags` participate in search. Use unique stable IDs, a category, a title, context, takeaways, and at least one valid resource. Resource descriptions and book hooks appear in the sheet. Search links are explicitly labeled and must be replaced with verified direct destinations where possible before commercial release.
 
-If you update the site and don't see changes, close the app fully and reopen it; it always fetches the latest version when you're online.
+## Artwork
 
-## Add or edit topics
+Assets live in `icon/`. `envelope.png` and `envelope-paper.png` are the closed/open envelope images. Replace the three `paper-*.png` assets with matched, transparent PNGs retaining the lace and clip silhouette. CSS keeps the outer sheet transparent and lightly washes the caps; opaque pixels embedded in the artwork still require asset replacement. Keep readable paper interiors and aligned slice widths. The resource-paper CSS variables provide a central replacement point.
 
-Open `topics.json` and add an object to the `topics` list. Give it a new `id`.
+## Offline and updates
 
-```json
-{
-  "id": 13,
-  "category": "Productivity & focus",
-  "title": "Time blocking: Planning your day in chunks",
-  "context": "Two or three sentences on what you'll discover and why it's useful.",
-  "takeaways": [
-    "Three or four things worth remembering.",
-    "Keep each one to a sentence."
-  ],
-  "ressources": {
-    "books":    [{ "title": "", "author": "", "hook": "", "url": "https://..." }],
-    "papers":   [{ "title": "", "source": "", "url": "https://..." }],
-    "videos":   [{ "title": "", "creator": "", "url": "https://..." }],
-    "articles": [{ "title": "", "publication": "", "url": "https://..." }]
-  }
-}
-```
+The service worker caches the full local shell and artwork, uses network-first requests, and falls back to cached files offline. Remote resources and fonts are not bundled. Change `CACHE` in `sw.js` after releases. Failed asset requests do not return HTML as an image or JSON response.
 
-Guidelines from the brief: specific titles (never just "Biochemistry"), sentence case, a warm and conversational tone, and 2 to 3 items in each ressource group.
+## Commercial roadmap
 
-A title with a colon is shown in two parts: the words before the colon become the big headline.
+Preserve the authored editorial identity as new images arrive. Grow the curated library, verify content and links, then add related topics, notes, and optional review. Accounts, cloud sync, payments, licensing, privacy documentation, and app-store distribution are future work. This repository is the product foundation, not a completed commercial launch.
 
-### About the links
+## Validation
 
-- Articles and arXiv papers point straight to the page.
-- Books open a **Goodreads search**, videos a **YouTube search**, and most papers a **PubMed** or **Google Scholar** search. These always load, and they usually show the exact item first. Items like this have `"search": true` and the sheet says so.
-- When you've found the exact page you like, paste its link into `url` and delete the `search` and `searchLabel` lines.
-- Test links from time to time; websites move things.
-
-## Next steps (Phase 3: AI topics)
-
-`script.js` already has a switch for AI-generated topics (`CONFIG.aiEndpoint`), turned off for now.
-
-Important: **never put a Claude API key in `script.js`.** Anyone who opens the site can read it. Instead:
-
-1. Create a small serverless function (Netlify Functions or Vercel both have free tiers) that stores the key as a secret environment variable.
-2. The function calls the Claude API, asks for one topic in the same JSON shape as `topics.json`, checks it, and returns it.
-3. Set `aiEndpoint` in `script.js` to that function's address (for example `/.netlify/functions/new-topic`).
-4. About 40% of "New topic" taps will then ask for a fresh AI topic, falling back to the curated bank if anything fails.
-
-Also worth planning: AI-suggested links need checking, because language models can invent URLs. Keeping AI ressources as search links is a safe default.
-
-## Ideas for later
-
-Favorites, an archive of past topics, filters by category, sharing a topic, and reading-time estimates.
+Run `node --check script.js` and `node --check sw.js`. Serve the app and check scrolling, topic envelopes, search, subjects, saving, modal keyboard access, narrow screens, dark mode, and offline reload. All precached paths must exist.

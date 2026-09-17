@@ -562,7 +562,7 @@ img, svg { max-width: 100%; }
 .envelope:active { translate: 0 2px; }
 .envelope:focus-visible { outline-offset: 10px; border-radius: 14px; }
 .envelope.is-open {
-  background: url('icon/envelope-paper (1).png') center / contain no-repeat;
+  background: url('icon/envelope-paper.png') center / contain no-repeat;
 }
 
 .envelope > span { position: absolute; display: block; }
@@ -932,3 +932,26 @@ img, svg { max-width: 100%; }
     transition-delay: 0s !important;
   }
 }
+
+/* Collection layout. Keep artwork replaceable through these three variables. */
+:root {
+  --resource-paper-top: url('icon/paper-top.png');
+  --resource-paper-middle: url('icon/paper-middle.png');
+  --resource-paper-bottom: url('icon/paper-bottom.png');
+}
+.topic-feed { display: flex; flex-direction: column; gap: 80px; }
+.topic-entry { scroll-margin-top: 28px; }
+.discovery { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; margin: 0 0 38px; }
+.discovery label { display: flex; flex-direction: column; gap: 8px; font-size: .85rem; }
+.search-label { flex: 1 1 260px; }
+.discovery input, .discovery select { width: 100%; min-height: 44px; padding: 10px 12px; color: var(--ink); background: var(--card); border: 1px solid currentColor; border-radius: 5px; font: inherit; }
+.discovery button { min-height: 44px; }
+.save-topic { font-size: .8rem; padding: 8px; }
+button[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 4px; }
+.sheet-paper { background: transparent; box-shadow: none; border-radius: 0; }
+.paper-fill { background-image: var(--resource-paper-middle); }
+.paper-cap { filter: saturate(.55) brightness(1.08); }
+#feed-status { text-align: center; line-height: 1.6; margin: 36px 0 12px; }
+#load-more { align-self: center; min-height: 44px; }
+[hidden] { display: none !important; }
+@media (max-width: 719px) { .topic-feed { gap: 52px; } .category-label { flex: 1 1 170px; } }

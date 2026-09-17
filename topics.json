@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-09-16",
+  "version": 2,
+  "updated": "2026-09-17",
   "notes": "Ressources marked search:true open a search page (Goodreads, YouTube, PubMed or Google Scholar) instead of a single item. Replace them with direct links as you verify each one.",
   "topics": [
     {
@@ -82,11 +82,6 @@
             "title": "Iron: fact sheet for health professionals",
             "publication": "NIH Office of Dietary Supplements",
             "url": "https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/"
-          },
-          {
-            "title": "Human iron metabolism",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Human_iron_metabolism"
           }
         ]
       }
@@ -178,11 +173,6 @@
             "title": "Premenstrual syndrome (PMS)",
             "publication": "NHS",
             "url": "https://www.nhs.uk/conditions/pre-menstrual-syndrome/"
-          },
-          {
-            "title": "Luteal phase",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Luteal_phase"
           }
         ]
       }
@@ -265,16 +255,6 @@
           }
         ],
         "articles": [
-          {
-            "title": "Doomscrolling",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Doomscrolling"
-          },
-          {
-            "title": "Negativity bias",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Negativity_bias"
-          },
           {
             "title": "Center for Humane Technology",
             "publication": "Humane Tech",
@@ -363,11 +343,6 @@
             "title": "Epictetus",
             "publication": "Stanford Encyclopedia of Philosophy",
             "url": "https://plato.stanford.edu/entries/epictetus/"
-          },
-          {
-            "title": "Stoicism",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Stoicism"
           }
         ]
       }
@@ -452,11 +427,6 @@
             "title": "Rule of 72",
             "publication": "Investopedia",
             "url": "https://www.investopedia.com/terms/r/ruleof72.asp"
-          },
-          {
-            "title": "Inflation",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Inflation"
           }
         ]
       }
@@ -533,11 +503,6 @@
           }
         ],
         "articles": [
-          {
-            "title": "Neural scaling law",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Neural_scaling_law"
-          },
           {
             "title": "Research and data on AI trends",
             "publication": "Epoch AI",
@@ -626,11 +591,6 @@
             "title": "noyb: European Center for Digital Rights",
             "publication": "noyb",
             "url": "https://noyb.eu/en"
-          },
-          {
-            "title": "General Data Protection Regulation",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/General_Data_Protection_Regulation"
           }
         ]
       }
@@ -722,11 +682,6 @@
             "title": "Nobel Prize in Physiology or Medicine 2017: press release",
             "publication": "Nobel Prize",
             "url": "https://www.nobelprize.org/prizes/medicine/2017/press-release/"
-          },
-          {
-            "title": "Circadian rhythm",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Circadian_rhythm"
           }
         ]
       }
@@ -808,18 +763,7 @@
             "searchLabel": "YouTube search"
           }
         ],
-        "articles": [
-          {
-            "title": "Task switching (psychology)",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Task_switching_(psychology)"
-          },
-          {
-            "title": "Human multitasking",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Human_multitasking"
-          }
-        ]
+        "articles": []
       }
     },
     {
@@ -899,18 +843,7 @@
             "searchLabel": "YouTube search"
           }
         ],
-        "articles": [
-          {
-            "title": "Ego depletion",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Ego_depletion"
-          },
-          {
-            "title": "Replication crisis",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Replication_crisis"
-          }
-        ]
+        "articles": []
       }
     },
     {
@@ -1086,18 +1019,7 @@
             "searchLabel": "YouTube search"
           }
         ],
-        "articles": [
-          {
-            "title": "Gut–brain axis",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Gut%E2%80%93brain_axis"
-          },
-          {
-            "title": "Enteric nervous system",
-            "publication": "Wikipedia",
-            "url": "https://en.wikipedia.org/wiki/Enteric_nervous_system"
-          }
-        ]
+        "articles": []
       }
     }
   ]
