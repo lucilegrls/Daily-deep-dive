@@ -12,7 +12,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import brandPaper from "@/assets/brand-paper-grain.jpg.asset.json";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AccountProvider } from "@/lib/account";
 import { LanguageProvider } from "@/lib/i18n";
 import { LanguageGate } from "@/components/LanguageGate";
@@ -43,9 +42,7 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
+  useEffect(() => console.error(error), [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">

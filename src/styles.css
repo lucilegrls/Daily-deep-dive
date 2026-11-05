@@ -304,7 +304,7 @@
 
 [data-theme="maximal"] body {
   background-color: var(--color-background);
-  background-image: url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
+  background-image: url("/theme-assets/maximalist-background.png");
   background-repeat: repeat;
   background-size: 262px 446px;
   background-attachment: fixed;
@@ -328,7 +328,7 @@
   background-color: transparent;
   background-image:
     linear-gradient(oklch(1 0 0 / 0.68), oklch(1 0 0 / 0.68)),
-    url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
+    url("/theme-assets/maximalist-background.png");
   background-size:
     auto,
     262px 446px;
@@ -571,7 +571,7 @@
       oklch(0.975 0.008 95 / 0.85),
       oklch(0.975 0.008 95 / 0.85)
     ),
-    url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
+    url("/theme-assets/maximalist-background.png");
   background-size: auto, 262px 446px;
   background-attachment: scroll, scroll;
   border-top: 2px solid var(--color-border);

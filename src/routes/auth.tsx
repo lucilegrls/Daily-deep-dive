@@ -2,7 +2,6 @@ import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { friendlyError } from "@/lib/friendly-error";
 import { useEffect, useState } from "react";
 
-import { lovable } from "@/integrations/lovable/index";
 import { supabase } from "@/integrations/supabase/client";
 import { useAccount } from "@/lib/account";
 import { useI18n } from "@/lib/i18n";
@@ -94,10 +93,13 @@ function AuthPage() {
 
   const google = async () => {
     setError(null);
-    const result = await lovable.auth.signInWithOAuth("google", {
-      redirect_uri: returnUrl(),
+    const { error: oauthError } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: returnUrl(),
+      },
     });
-    if (result.error) {
+    if (oauthError) {
       setError(t("auth.googleError"));
     }
   };

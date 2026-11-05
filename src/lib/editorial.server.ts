@@ -257,7 +257,9 @@ export async function runDailyExpansion(target = 10): Promise<RunResult> {
     };
   }
   const admin = await getAdmin();
-  const apiKey = process.env["LOVABLE_API_KEY"];
+  const apiKey = process.env["AI_API_KEY"];
+  const apiBaseUrl = process.env["AI_API_BASE_URL"];
+  const model = process.env["AI_MODEL"];
   // Duplicate-run guard: refuse while another run started within the hour.
   const { data: running } = await admin
     .from("editorial_runs")
@@ -303,7 +305,9 @@ export async function runDailyExpansion(target = 10): Promise<RunResult> {
     };
   };
 
-  if (!apiKey) return fail("No research model key is configured for this workspace.");
+  if (!apiKey || !apiBaseUrl || !model) {
+    return fail("No optional research model is configured; no AI call was made.");
+  }
 
   // Claim the next ideas so a second run picks up where this one left off
   // instead of taking the same entries again. Anything not used is released.
@@ -351,14 +355,14 @@ export async function runDailyExpansion(target = 10): Promise<RunResult> {
   let rejected = 0;
   const notes: string[] = [];
 
-  const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+  const response = await fetch(`${apiBaseUrl.replace(/\/$/, "")}/v1/chat/completions`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "google/gemini-3-flash-preview",
+      model,
       messages: [
         {
           role: "system",
