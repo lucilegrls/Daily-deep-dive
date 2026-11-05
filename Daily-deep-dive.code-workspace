@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "name": "Daily Deep Dive",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}

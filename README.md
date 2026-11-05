@@ -34,6 +34,24 @@ wrangler deploy --dry-run
 La commande `pnpm deploy:cloudflare` publie réellement : ne l'utiliser qu'après
 la sauvegarde complète, la configuration des secrets et l'accord de basculement.
 
+## Développer avec Cursor
+
+Ouvrir `Daily-deep-dive.code-workspace` dans Cursor. Les règles permanentes du
+projet se trouvent dans `.cursor/rules/` et rappellent notamment de ne jamais
+écrire dans la production ou versionner un secret.
+
+Au premier démarrage :
+
+```powershell
+pnpm install
+Copy-Item .env.example .env.local
+pnpm dev
+```
+
+Renseigner uniquement les variables publiques de la cible Supabase dans
+`.env.local`. Les clés serveur ne doivent être ajoutées qu'au moment de la
+restauration contrôlée du backend.
+
 ## Sécurité et coûts
 
 - Les clés `VITE_*` sont publiques par conception ; la clé service-role et la

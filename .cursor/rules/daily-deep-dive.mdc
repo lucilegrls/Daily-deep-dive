@@ -1,0 +1,17 @@
+---
+description: Règles permanentes pour développer Daily Deep Dive hors de Lovable
+alwaysApply: true
+---
+
+# Daily Deep Dive
+
+- Le projet doit rester indépendant de Lovable. N'ajoute pas de paquet, d'URL, de stockage d'authentification ou de passerelle Lovable.
+- La cible est TanStack Start + React + Supabase/PostgreSQL, avec Cloudflare comme hébergement préparé.
+- Utilise `pnpm`. Avant de proposer une modification terminée, lance au minimum `pnpm typecheck` et les tests concernés; lance `pnpm test` pour une modification transversale.
+- Ne place jamais de clé, mot de passe, chaîne PostgreSQL ou fichier `.env.local` dans Git. Pars de `.env.example` et conserve les vraies valeurs localement.
+- Ne modifie jamais une base de production, l'authentification, les rôles, les politiques RLS, le stockage ou le déploiement sans sauvegarde vérifiée et confirmation explicite.
+- Préserve les thèmes, sujets, ressources, utilisateurs, sujets sauvegardés, notes, lectures, progressions et rôles.
+- Les migrations SQL sont additives et réversibles autant que possible. Ne supprime ni table ni colonne sans plan de retour arrière.
+- L'IA éditoriale reste désactivée par défaut (`AI_DRAFTING_ENABLED=false`) afin d'éviter des frais involontaires.
+- Consulte `docs/MIGRATION_HORS_LOVABLE.md` avant tout travail lié au backend, à l'authentification ou au déploiement.
+
