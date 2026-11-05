@@ -1,0 +1,754 @@
+[
+ {
+  "family": "Neuroscience",
+  "idea": "Dopamine: prediction error, learning and why “pleasure chemical” is too simple"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Memory during sleep: consolidation, hippocampal replay and reorganization"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Neuroplasticity: how learning changes neural circuits across seconds, days and years"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "How memories are encoded: engrams, hippocampus and cortex"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Why we forget: interference, decay, retrieval failure and adaptive forgetting"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Working memory: why the brain can hold only so much at once"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Attention: selection, salience and competition between signals"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "The prefrontal cortex: goals, inhibition and flexible behavior"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Basal ganglia: action selection, habits and reinforcement learning"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "The cerebellum: far more than balance"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "The amygdala: threat learning beyond the “fear center” cliché"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Stress physiology: cortisol, HPA axis and brain adaptation"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Chronic stress: when adaptation becomes costly"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Pain: nociception versus the subjective experience of pain"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Placebo and nocebo effects: prediction, expectation and physiology"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Addiction: reinforcement, craving, habit and compulsive behavior"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Curiosity: why information itself can become rewarding"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Boredom: signal, attention state or motivational problem?"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Sleep architecture: NREM, REM, spindles and slow waves"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Circadian rhythms: clocks, light and timing signals"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Decision making under uncertainty"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Risk perception: why probability feels different from probability"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Emotion regulation: reappraisal, suppression and neural control"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Language in the brain: networks rather than one “language center”"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Consciousness: what neuroscience can and cannot currently explain"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Predictive processing: does the brain primarily infer what is out there?"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Neurogenesis: where it occurs and what claims go beyond the evidence"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Brain lateralization: what “left-brained/right-brained” gets wrong"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Brain energy use: glucose, oxygen and metabolic constraints"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "Neurotransmitters beyond dopamine: serotonin, glutamate, GABA, acetylcholine, norepinephrine"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "How anesthesia changes consciousness"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "What happens during a concussion"
+ },
+ {
+  "family": "Neuroscience",
+  "idea": "How neurodegenerative diseases spread through networks"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Infertility: why conception can fail on either side"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Ovulation: hormones, follicles and timing"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Ovarian reserve: what AMH can and cannot tell you"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Egg quality versus egg quantity"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Spermatogenesis: how sperm are produced over time"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Semen analysis: concentration, motility, morphology and their limits"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Fertilization: what actually happens when sperm meets egg"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Implantation: embryo–endometrium communication"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Fallopian tubes: transport, cilia and tubal-factor infertility"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Endometriosis and fertility"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "PCOS and fertility"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Age and fertility: why the curves differ for eggs and sperm"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Unexplained infertility: what “unexplained” really means"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "IVF: stimulation, retrieval, fertilization, embryo culture and transfer"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Embryo selection and PGT: evidence, limits and ethics"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Male infertility as an under-discussed public-health issue"
+ },
+ {
+  "family": "Fertility & reproductive biology",
+  "idea": "Environmental exposures and reproductive health"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Collagen: structural protein, digestion and supplement claims"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "How collagen is synthesized inside the body"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Vitamin C and collagen chemistry"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Collagen types I, II, III and IV"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Why tendons adapt more slowly than muscles"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Skin aging: collagen, elastin, UV and glycation"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Bone matrix: collagen plus mineral"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Osteoarthritis: cartilage biology versus pain"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Gelatin, collagen peptides and ordinary dietary protein"
+ },
+ {
+  "family": "Collagen, connective tissue & aging",
+  "idea": "Industry funding in supplement research"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Chocolate: cocoa chemistry, sugar and the health halo"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "From cacao fruit to chocolate bar: fermentation, roasting and tempering"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Cocoa flavanols: mechanism versus marketing"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Why dark chocolate tastes bitter"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Sugar, fat and reward in highly palatable foods"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Theobromine versus caffeine"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Chocolate and heavy-metal contamination"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Cocoa agriculture, deforestation and labor"
+ },
+ {
+  "family": "Chocolate & food science",
+  "idea": "Why “70% cocoa” does not tell you everything nutritionally"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Tourism in Southeast Asia: who gains, who pays?"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Overtourism: what makes a destination exceed its carrying capacity?"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Tourism and housing prices"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Short-term rentals and neighborhood change"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Tourism leakage: how much money actually stays local?"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Bali: tourism dependence, water and waste"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Thailand: mass tourism and local economic structure"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Viet Nam: tourism growth, heritage and urban transformation"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Cambodia: Angkor, conservation and visitor pressure"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Island tourism: reefs, sewage and freshwater scarcity"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Cruise tourism and port externalities"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Tourism employment: wages, seasonality and informal labor"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Cultural commodification: preservation or distortion?"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Ecotourism: when does it actually protect ecosystems?"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Aviation emissions and the climate cost of travel"
+ },
+ {
+  "family": "Tourism & Southeast Asia",
+  "idea": "Tourist taxes: what they can and cannot fix"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Anabolic steroids: muscle gains, androgen receptors and endocrine trade-offs"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Testosterone: endogenous hormone versus exogenous drug"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "HPG axis suppression: why external testosterone reduces natural production"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Aromatization: testosterone to estradiol"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "DHT: androgen signaling and tissue-specific effects"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Why anabolic and androgenic effects cannot be perfectly separated"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Steroids and fertility"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Steroids and the cardiovascular system"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Steroids, lipids and atherosclerosis"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Oral versus injectable anabolic steroids"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "“Cycles,” stacking and why real-world use differs from clinical trials"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Post-cycle recovery: what is known and what remains uncertain"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Performance-enhancing drugs beyond steroids"
+ },
+ {
+  "family": "Steroids, hormones & performance enhancement",
+  "idea": "Anti-doping science and detection windows"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine: ATP buffering, muscle performance and disputed brain claims"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "ATP: what cells actually spend when they do work"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Phosphocreatine: the rapid energy-buffering system"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Why creatine increases body mass early"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine loading versus steady dosing"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine and resistance training"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine and sprint performance"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine in vegetarians and vegans"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine and the brain"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Creatine under sleep deprivation"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "How to read supplement safety evidence"
+ },
+ {
+  "family": "Creatine & bioenergetics",
+  "idea": "Why mechanism does not automatically prove a performance benefit"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Muscle hypertrophy: what actually makes skeletal muscle grow?"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Skeletal muscle architecture: fibers, fascicles and sarcomeres"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Motor units and recruitment"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Type I versus Type II fibers"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Mechanical tension versus muscle damage"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Muscle protein synthesis: signal versus long-term growth"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "mTOR signaling without turning it into a magic switch"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Satellite cells and myonuclei"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Strength versus hypertrophy"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Neural adaptation in early strength gains"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Training volume: dose–response and individual variation"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Training frequency: what changes when weekly volume is matched?"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Proximity to failure"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Rest intervals"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Exercise range of motion"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Eccentric versus concentric contractions"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Delayed-onset muscle soreness: what soreness does and does not tell you"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Muscle memory after detraining"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Aging and sarcopenia"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Protein intake and muscle growth"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Energy surplus, deficit and body recomposition"
+ },
+ {
+  "family": "Muscle & exercise physiology",
+  "idea": "Recovery: sleep, fatigue and performance"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Animal minds: intelligence, consciousness and the measurement problem"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Octopus intelligence and distributed nervous systems"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Crows and ravens: tool use, planning and social cognition"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Parrots and vocal learning"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Dolphins: communication and social structure"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Elephants: memory, social behavior and death responses"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Primates: cooperation, hierarchy and theory-of-mind experiments"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Dogs: domestication and sensitivity to human cues"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Bees: learning with a tiny nervous system"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Fish cognition and pain"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Cephalopod learning and memory"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Animal navigation: magnetic fields, stars, smell and landmarks"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Migration: how animals know where to go"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Echolocation"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Color vision across species"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Why some animals regenerate body parts"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Hibernation and metabolic suppression"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Venom: convergent evolution of biochemical weapons"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Symbiosis: when species become dependent on one another"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Animal consciousness: what can be inferred and what remains inaccessible"
+ },
+ {
+  "family": "Animal minds & biology",
+  "idea": "Anthropomorphism versus anthropodenial"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Child sexual exploitation: grooming, online systems, prevention and law"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Grooming: how trust, secrecy and dependency are built"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Online grooming versus offline grooming"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Sextortion and coercion"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Child sexual abuse material: production, circulation and victimization"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Livestreamed abuse and cross-border enforcement"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Platform detection: hashing, moderation and privacy trade-offs"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Why victims often delay disclosure"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Trauma-informed interviewing"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Institutional safeguarding failures"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Mandatory reporting: benefits and controversies"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Criminal evidence in digital abuse cases"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Cross-border jurisdiction and mutual legal assistance"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Prevention before offending: what evidence exists?"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Recidivism: how it is measured and what predicts it"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Public myths about offenders versus actual risk research"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Survivor-centered justice and support"
+ },
+ {
+  "family": "Child protection, sexual abuse & exploitation",
+  "idea": "Child protection systems in Southeast Asia"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Ambitious but inconsistent: the gap between wanting and doing"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "The intention–behavior gap"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Implementation intentions: why “if X, then Y” can work"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Mental contrasting"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Habit formation: repetition plus context"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Friction: why environment can beat willpower"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Self-control: trait, state or situation?"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Goal conflict: when two good goals sabotage each other"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Motivation versus identity"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Intrinsic versus extrinsic motivation"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Goal disengagement: when quitting is rational"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Action crisis: the point where persistence becomes reconsideration"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Perfectionism and procrastination"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Temporal discounting: why future goals lose to immediate rewards"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Commitment devices"
+ },
+ {
+  "family": "Ambition, consistency & self-regulation",
+  "idea": "Why streaks motivate some people and trap others"
+ }
+]

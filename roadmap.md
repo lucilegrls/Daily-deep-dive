@@ -1,0 +1,23 @@
+- [x] Move editor_note into private table (RLS column-safety fix)
+- [x] Multi-language support (English, French, Spanish, Chinese, Arabic): first-visit card + header switcher, stored in the browser, no account needed. Interface wording only.
+- [ ] Translate remaining secondary pages (sign-in, onboarding wizard, account, suggestion box, leaderboard, topic sheet) — currently still English
+- [ ] Optional later: editor-written topic translations (topic text stays as written and sourced)
+- [x] Restore original Topic Sheet opening, individual in-app source overlays, editor preview, and desktop/mobile verification; preserve existing media/rights/progress logic. No publication. (In-app article/PDF reading still awaits rights-cleared content.)
+- [x] Production hardening pass: integrity limits, append-only reads, source-health fields, AI approval guard, data export/deletion, RLS role tests (21/21), recovery runbook
+- [ ] Link checker stays off until outbound traffic can be pinned (security blocker)
+- [x] Hardening pass 2: link-check rollup (health only, never approval), bounded probe with redirect re-checks and 1-byte GET fallback (still OFF), plain-language error messages, boundary tests
+- [ ] Link checker activation — blocked: the hosting runtime cannot resolve DNS or pin a validated IP, so DNS rebinding can't be ruled out
+
+- [x] Hardening pass 3: saved full health tests (7/7) + suite runner, RLS 21/21, note/save/progress recovery (no duplicate writes, sign-in prompt on expired session), recovery messages in 5 languages, recovery runbook owner steps
+- [ ] Backups: owner must confirm backup status in Cloud settings (not visible to the agent)
+- [x] Hardening pass 4: per-account write limits (saves, reads, embed reports; suggestions already), server-stamped timestamps, rate-limit tests 8/8, deduped/scrubbed diagnostics + docs/OBSERVABILITY.md, feed benchmark at ~5,300 topics, deep-page cap, resource audit (read-only)
+- [ ] Owner review: 481 sources added 28 Sep–1 Oct by an outside backfill arrived already "approved"; 10 URLs shared across topics, 2 same-title pairs
+- [ ] Live resource-progress failure test (automated only so far)
+- [x] Hardening pass 5: security scan clean (2 intentional public catalogue notes), dependency fixes (source-map-js, js-yaml), local-time-zone streaks + tests 4/4, sign-out moved to Account, mobile header centred
+- [x] Large-file candidate import: bounded batches, source validation, progress, resumable checkpoints, insert-only preservation and tests; 657 candidates inserted, interrupted-request recovery and duplicate replay verified.
+- [x] Verify final 657-record backend import counts, preservation and spot-check topic IDs 1, 166, 331 without requiring human preview sign-in: 1299 total, 642 prior rows, 657 unreviewed candidates; IDs 1 and 166 unchanged, ID 331 gained four candidates.
+- [x] Resolve all public bibliography sources consistently inside their overlays; validate provider URLs, preserve restrictions, test media lifecycle and audit supported/fallback counts without catalogue writes. Matching approved/published/safe-URL filters verified; 184 tests pass. Desktop/mobile close, Escape, focus, next/previous and playback teardown verified; 357 official videos and 78 direct PDFs supported by resolver, 865 honest link fallbacks. Actual playback/PDF availability remains provider/browser-controlled; YouTube challenged the sandbox and the tested IMF PDF was blank.
+- [x] Fix PDF blank-display regression: actual arXiv 30-page document rendered on desktop/mobile, page navigation/zoom/cleanup/focus verified; IMF CORS denial now shows explicit fallback. 188 tests passed, harness build OK. No publication or catalogue changes.
+- [x] Clean public topic/source workflow copy at display time; preserve scientific facts, internal records and PDF rendering; 18 desktop/mobile theme/language journeys verified, arXiv canvas rendered, 188 tests passed; preview unpublished.
+- [x] Route unsupported bibliography links directly to originals using shared media metadata/resolver; desktop/mobile PMC article and MIT source open directly, Ctrl-click stays native, video stays in-app, arXiv 30-page PDF has visible canvas ink, next/previous unload supported sources, 18 copy journeys clean; 189 tests pass and harness build OK. No publication or data changes.
+- [x] Strip internal appraisal/audit/replication disclaimers from public limitation lines (readerCopy regex + 8 regression tests with exact stored strings); scaling-laws topic sheet verified jargon-free with topical descriptions intact; 197 tests pass, typecheck clean; preview unpublished.

@@ -1,0 +1,1 @@
+ALTER TABLE public.topic_backlog ADD COLUMN IF NOT EXISTS notes text;

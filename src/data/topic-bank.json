@@ -1,0 +1,1322 @@
+[
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "The glymphatic system: how the brain cleans itself",
+  "notes": "CSF circulation, waste clearance, sleep, aquaporin-4, metabolic waste."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "mTOR vs AMPK: your body's growth and energy switches",
+  "notes": "growth, conservation, exercise, fasting, nutrition, metabolism."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How proteins fold — and what happens when they don't",
+  "notes": "amino acids, 3D structure, chaperones, misfolding, aggregation."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Epigenetic clocks: can we measure biological age?",
+  "notes": "DNA methylation, chronological vs biological age, limitations."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "The placebo and nocebo effect inside the brain",
+  "notes": "expectation, endogenous opioids, dopamine, pain pathways."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "The blood-brain barrier: what is allowed into your brain?",
+  "notes": "endothelial cells, tight junctions, transporters, drugs, toxins."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Your skeleton is constantly destroying and rebuilding itself",
+  "notes": "osteoclasts, osteoblasts, calcium, vitamin D, PTH, loading."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Lactate is not just “muscle waste”",
+  "notes": "glycolysis, pyruvate, lactate shuttle, liver, brain, fatigue."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How your body adapts to extreme heat",
+  "notes": "sweating, plasma volume, aldosterone, heat-shock proteins, acclimation."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Endocrine disruptors: how chemicals can imitate hormones",
+  "notes": "receptors, agonists/antagonists, dose-response, BPA, phthalates."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "RNA splicing: how one gene can make different proteins",
+  "notes": "pre-mRNA, introns, exons, spliceosome, alternative splicing."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Your microbiome is a chemical factory",
+  "notes": "SCFAs, bile acids, fermentation, immune/metabolic signaling."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Stablecoins: what actually keeps a digital dollar worth $1?",
+  "notes": "reserves, redemption, arbitrage, depegging, settlement."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How a semiconductor is actually made",
+  "notes": "wafers, photolithography, doping, etching, deposition, transistors, packaging."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "The internet is mostly physical: undersea cables",
+  "notes": "fiber optics, repeaters, landing stations, routing, data centers."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How recommendation algorithms decide what you see",
+  "notes": "candidate generation, ranking, engagement signals, embeddings, feedback loops."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How do we prove an image or video is real in the AI era?",
+  "notes": "metadata, signatures, content credentials, provenance, detection limitations."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Dark patterns: when interface design manipulates your decisions",
+  "notes": "defaults, friction, scarcity cues, consumer law, behavioral economics."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "Why monopolies emerge naturally in some digital markets",
+  "notes": "network effects, switching costs, scale, platforms, two-sided markets."
+ },
+ {
+  "group": "Science, body, technology & systems",
+  "set": "A",
+  "title": "How insurance companies insure disasters bigger than themselves",
+  "notes": "risk pooling, underwriting, reinsurance, catastrophe bonds."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The fall of the Roman Republic",
+  "notes": "institutions, inequality, civil war, patronage, military loyalty, Augustus."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Scramble for Africa",
+  "notes": "Berlin Conference, colonial borders, extraction, long-term consequences."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Opium Wars",
+  "notes": "trade imbalance, silver, opium, Qing China, unequal treaties, treaty ports."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The South Sea Bubble of 1720",
+  "notes": "public debt, speculation, insider behavior, financial mania."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Nuremberg Trials and the birth of modern international criminal law",
+  "notes": "crimes against humanity, individual liability, command responsibility."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "How the Ottoman Empire governed such a diverse territory",
+  "notes": "millet systems, taxation, administration, Janissaries, trade."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "Salt as a political weapon",
+  "notes": "salt taxes, imperial China, Gandhi, colonial control."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Haitian Revolution",
+  "notes": "slavery, French colonial wealth, Toussaint Louverture, Napoleon, independence."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "How the Medici built power through banking",
+  "notes": "finance, political networks, papal banking, patronage, Florence."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Dutch East India Company: the world’s first mega-corporation?",
+  "notes": "shares, monopoly rights, governance, colonial violence."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Magna Carta: what it actually changed",
+  "notes": "King John, barons, due process, later reinterpretation."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "How Versailles controlled the French nobility",
+  "notes": "ritual, status competition, patronage, architecture, political control."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Black Death and how it transformed European society",
+  "notes": "mortality, wages, labor scarcity, religion, mobility."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Cuban Missile Crisis — day by day",
+  "notes": "intelligence, nuclear deterrence, negotiation, escalation risk."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Industrial Revolution from the worker’s point of view",
+  "notes": "factories, child labor, urbanization, wages, unions."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Green Revolution",
+  "notes": "high-yield crops, fertilizers, irrigation, food security, environmental costs."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "How propaganda worked during the Cold War",
+  "notes": "radio, film, newspapers, cultural diplomacy, influence campaigns."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "Why cities built walls — and why they stopped",
+  "notes": "defense, taxation, siege warfare, cannons, urban growth."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "The Thirty Years’ War and the making of the modern state system",
+  "notes": "religion, dynastic politics, mercenaries, Westphalia."
+ },
+ {
+  "group": "History",
+  "set": "B",
+  "title": "How universal suffrage gradually emerged",
+  "notes": "property requirements, gender, class, reform, mass politics."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why inflation can continue after the original shock is gone",
+  "notes": "expectations, wages, second-round effects, persistence."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "How banks create money when they lend",
+  "notes": "balance sheets, deposits, credit creation, reserves, capital requirements."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why interest rates affect almost everything",
+  "notes": "mortgages, bonds, currencies, investment, consumption, valuations."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why currencies rise and fall",
+  "notes": "rates, trade, capital flows, inflation, expectations, speculation."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why housing becomes unaffordable",
+  "notes": "land, zoning, rates, construction, demand, demographics, credit."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why governments can borrow so much money",
+  "notes": "sovereign debt, taxation capacity, refinancing, sustainability."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Yield curves: why the shape of interest rates matters",
+  "notes": "short vs long rates, expectations, term premium, inversions."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why companies are worth the present value of future cash flows",
+  "notes": "discounting, risk, terminal value, valuation sensitivity."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why productivity determines long-term living standards",
+  "notes": "technology, capital, education, institutions."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why some countries stay poor while others grow",
+  "notes": "institutions, geography, human capital, trade, state capacity."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "What actually causes inequality",
+  "notes": "wages, capital, technology, globalization, taxation, housing, inheritance."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why CEOs and top workers earn so much more than others",
+  "notes": "superstar economics, scale, bargaining, winner-take-most markets."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why prices are not simply “cost + profit”",
+  "notes": "marginal cost, willingness to pay, elasticity, competition."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Price discrimination: why everyone pays a different price for the same thing",
+  "notes": "airlines, hotels, segmentation, dynamic pricing."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Behavioral economics: why humans systematically make “irrational” choices",
+  "notes": "loss aversion, anchoring, defaults, present bias."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Network effects: why some markets tip toward one winner",
+  "notes": "platforms, payments, switching costs, scale."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "How supply chains transmit economic shocks",
+  "notes": "inventories, bottlenecks, shipping, bullwhip effects, JIT production."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why minimum wages do not always behave like simple supply-and-demand diagrams predict",
+  "notes": "monopsony, frictions, bargaining, empirical evidence."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "Why central banks need credibility",
+  "notes": "expectations, inflation targeting, forward guidance, independence."
+ },
+ {
+  "group": "Economics",
+  "set": "C",
+  "title": "How financial crises actually spread",
+  "notes": "leverage, liquidity, margin calls, fire sales, bank runs, contagion."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why rice cultures and wheat cultures developed differently",
+  "notes": "agriculture, climate, labor coordination, cuisine, settlement."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why clothes communicate status before we even speak",
+  "notes": "sumptuary laws, luxury, uniforms, class, subcultures."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "How beauty standards change across time and place",
+  "notes": "body ideals, skin tone, hair, cosmetics, media, colonial influence."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why table manners are so different around the world",
+  "notes": "utensils, communal eating, seating, etiquette, hierarchy."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why humans create rituals",
+  "notes": "weddings, funerals, initiation, symbolism, bonding, uncertainty."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why every culture has ghosts",
+  "notes": "ancestors, death, memory, religion, folklore, social fears."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "How language changes the way people think",
+  "notes": "linguistic relativity, color, time, spatial orientation, Sapir–Whorf."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why luxury exists in every society",
+  "notes": "scarcity, signaling, craftsmanship, conspicuous consumption."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why homes look so different across cultures",
+  "notes": "climate, privacy, family structure, religion, materials."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "The culture of cafés and why they became intellectual spaces",
+  "notes": "coffeehouses, newspapers, politics, literary culture."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why some societies value minimalism and others ornament",
+  "notes": "aesthetics, religion, wealth, modernism, taste."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why marriage means such different things across societies",
+  "notes": "romance, property, kinship, inheritance, dowry, bridewealth."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "How cultures define childhood differently",
+  "notes": "schooling, work, play, independence, family expectations."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "How food becomes national identity",
+  "notes": "migration, colonial exchange, invented traditions, authenticity."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why silence means different things in different cultures",
+  "notes": "hierarchy, intimacy, disagreement, high/low-context communication."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why cultures experience time differently",
+  "notes": "punctuality, work rhythms, waiting, industrialization."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why people behave differently in public and private",
+  "notes": "face, honor, shame, reputation, impression management."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "The cultural history of cleanliness",
+  "notes": "bathing, perfume, soap, disease theory, class, colonialism."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "Why embarrassment and shame are cultural emotions",
+  "notes": "social norms, saving face, honor/guilt cultures, reputation."
+ },
+ {
+  "group": "Culture",
+  "set": "D",
+  "title": "How cities create their own cultures",
+  "notes": "neighborhoods, slang, nightlife, migration, architecture, class."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Different sizes of infinity",
+  "notes": "countable vs uncountable infinity, Cantor’s diagonal argument."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Why randomness is so unintuitive",
+  "notes": "independence, expected value, regression to mean, gambler’s fallacy."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "The birthday paradox",
+  "notes": "why 23 people create a >50% shared-birthday probability."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "The Monty Hall problem",
+  "notes": "conditional probability and information."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Why exponential growth fools the human brain",
+  "notes": "doubling, compounding, epidemics, population."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Chaos theory: how tiny differences become huge outcomes",
+  "notes": "initial conditions, strange attractors, butterfly effect."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Fractals: why the same patterns appear at different scales",
+  "notes": "self-similarity, fractal dimension, Mandelbrot, nature."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Prime numbers and why they matter for internet security",
+  "notes": "factorization, modular arithmetic, RSA."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "How GPS uses geometry to find you",
+  "notes": "trilateration, timing, coordinates, error correction."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Bayes’ theorem: how evidence should change your beliefs",
+  "notes": "priors, likelihoods, posteriors, medical tests, evidence."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "The mathematics of optimal decisions",
+  "notes": "expected utility, uncertainty, payoff matrices."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Game theory: why rational people sometimes make bad collective choices",
+  "notes": "Nash equilibrium, prisoner’s dilemma, cooperation."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "How queueing theory explains waiting lines",
+  "notes": "arrival rates, service rates, bottlenecks."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Network mathematics: why some people and websites become hubs",
+  "notes": "graph theory, centrality, preferential attachment."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "The mathematics of epidemics",
+  "notes": "SIR models, reproduction numbers, thresholds."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Why averages can lie",
+  "notes": "mean vs median, skew, Simpson’s paradox, aggregation."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Why the normal distribution appears everywhere",
+  "notes": "central limit theorem, sampling, measurement error."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Non-Euclidean geometry",
+  "notes": "curved surfaces, spherical and hyperbolic geometry."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Gödel’s incompleteness theorem",
+  "notes": "true statements unprovable within sufficiently powerful systems."
+ },
+ {
+  "group": "Mathematics",
+  "set": "E",
+  "title": "Why calculus works",
+  "notes": "limits, derivatives, integrals, Fundamental Theorem of Calculus."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why Renaissance perspective changed painting forever",
+  "notes": "geometry, vanishing points, Brunelleschi, Alberti."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why Impressionist paintings looked “unfinished” to their first audiences",
+  "notes": "brushwork, light, photography, Salon culture."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why abstract art can still feel emotional",
+  "notes": "color, shape, scale, rhythm, visual psychology."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How artists manipulate where you look",
+  "notes": "composition, contrast, focal points, visual hierarchy."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "The science of color in art",
+  "notes": "pigments vs light, complementary colors, optical mixing."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How marble becomes “skin” in sculpture",
+  "notes": "carving, polishing, translucency, anatomy, contrapposto."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why old paintings crack, yellow, and change color",
+  "notes": "varnish, oxidation, pigments, conservation science."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why some artworks become worth hundreds of millions",
+  "notes": "scarcity, provenance, collectors, auctions, signaling."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How experts detect forged art",
+  "notes": "provenance, pigments, canvas dating, spectroscopy, XRF."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How photography changed painting",
+  "notes": "realism, cropping, movement, Impressionism, portraiture."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why museums look the way they do",
+  "notes": "white cube, salon hangs, lighting, architecture, curatorial authority."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Cubism: why Picasso and Braque broke objects apart",
+  "notes": "multiple viewpoints, Cézanne, geometry, collage."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How lighting changes an artwork",
+  "notes": "chiaroscuro, Caravaggio, color temperature, shadow."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How artists mixed pigments before modern paint tubes",
+  "notes": "minerals, plants, insects, binders, grinding, toxic pigments."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why self-portraits became so important",
+  "notes": "identity, status, mirrors, gender, self-fashioning."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Street art: when does vandalism become art?",
+  "notes": "public space, property law, Banksy, commercialization."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why ancient art often looks “less realistic” on purpose",
+  "notes": "symbolism, hierarchy of scale, idealization."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Why faces in portraits feel alive",
+  "notes": "eye direction, symmetry, skin tone, sfumato, face perception."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "How art has been used as propaganda",
+  "notes": "empires, Napoleon, Soviet realism, wartime posters."
+ },
+ {
+  "group": "Art",
+  "set": "F",
+  "title": "Can AI make art, and what exactly is it learning?",
+  "notes": "diffusion, training data, style imitation, copyright, originality."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How octopuses think with their arms",
+  "notes": "distributed nervous systems, arm autonomy, intelligence."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How bees communicate with a dance",
+  "notes": "waggle dance, direction, distance, sunlight, collective decisions."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "Do dolphins have names?",
+  "notes": "signature whistles, vocal learning, individual recognition."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How birds navigate across entire continents",
+  "notes": "magnetoreception, stars, smell, landmarks, inherited maps."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How echolocation creates a picture of the world",
+  "notes": "ultrasound, echoes, Doppler shifts, spatial representation."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "Do elephants understand death?",
+  "notes": "reactions to dead conspecifics, bones, social bonds, interpretation limits."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How an ant colony behaves like one organism",
+  "notes": "pheromones, decentralized decisions, division of labor, emergence."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How whales communicate across oceans",
+  "notes": "low-frequency sound, songs, dialects, cultural transmission."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "Why crows are frighteningly intelligent",
+  "notes": "tools, planning, facial recognition, memory, social learning."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How animals regenerate body parts",
+  "notes": "axolotls, zebrafish, stem cells, blastema formation."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How animals survive being frozen",
+  "notes": "antifreeze proteins, cryoprotectants, controlled ice formation."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "What actually happens during hibernation",
+  "notes": "metabolic suppression, temperature, heart rate, muscle preservation."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How animals breathe through their skin",
+  "notes": "diffusion, amphibian skin, oxygen gradients."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How chameleons change color",
+  "notes": "nanocrystals, structural coloration, iridophores, hormones."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How squid and octopuses become invisible",
+  "notes": "chromatophores, iridophores, papillae, neural control."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How penguins survive Antarctic cold",
+  "notes": "countercurrent heat exchange, feathers, fat, huddling."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How domestication changed wolves into dogs",
+  "notes": "selection, behavior, genetics, morphology, starch digestion."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "Do animals understand fairness?",
+  "notes": "inequity-aversion experiments, cooperation, interpretation debates."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How fish form schools without a leader",
+  "notes": "local rules, vision, lateral-line sensing, synchronization."
+ },
+ {
+  "group": "Animals",
+  "set": "G",
+  "title": "How metamorphosis rebuilds an animal",
+  "notes": "hormones, imaginal discs, tissue remodeling, nervous-system changes."
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we get goosebumps?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does time feel faster as we get older?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do onions make us cry?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does metal feel colder than wood when they are the same temperature?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we forget what we walked into a room for?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do our fingers wrinkle in water?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does spicy food feel hot when it isn't actually burning us?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we yawn when someone else yawns?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do mirrors seem to reverse left and right but not up and down?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does your voice sound weird in recordings?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we hiccup?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why can’t you tickle yourself?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does alcohol make people pee more?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we get brain freeze?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does rain have a smell?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do old books smell so good?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do airplanes dim the lights before takeoff and landing?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does your stomach make noises when you're hungry?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why does water taste different from one city to another?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "H",
+  "title": "Why do we suddenly remember embarrassing moments from years ago?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we get déjà vu?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we blush?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does ice float?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we dream?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do your ears pop on an airplane?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do traffic jams appear when there is no accident?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does popcorn pop?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why are airplane windows round?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does toothpaste make orange juice taste disgusting?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do cats purr?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do mosquitoes bite some people more than others?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we get pins and needles?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we feel dizzy after spinning?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does your skin peel after a sunburn?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does bread go stale even before it dries out?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do some songs get stuck in your head?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do we sometimes wake up just before the alarm?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why can we see our breath when it’s cold?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why does salt melt ice?",
+  "notes": ""
+ },
+ {
+  "group": "Everyday Why",
+  "set": "I",
+  "title": "Why do supermarkets put milk at the back?",
+  "notes": "investigate whether the popular explanation is actually supported."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How multinational companies legally shift profits between countries",
+  "notes": "transfer pricing, royalties, management fees, loans, IP, PE rules."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "What makes a company tax resident in a country?",
+  "notes": "incorporation, management and control, substance, treaty rules."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Why some expenses are tax-deductible and others are not",
+  "notes": "business-purpose tests, capital vs revenue, documentation."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Salary vs dividends vs director’s fees",
+  "notes": "legal character, deductibility, withholding, payroll, individual tax."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Why companies use holding companies",
+  "notes": "ownership, dividends, capital gains, financing, governance, treaties."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "What creates a permanent establishment?",
+  "notes": "offices, employees, agents, construction, remote work."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How double tax treaties actually work",
+  "notes": "residence/source, allocation rules, credits, beneficial ownership, anti-abuse."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How VAT/GST works across a supply chain",
+  "notes": "output/input tax, registration, imports, reverse charge, zero-rating."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Why intellectual property is often at the center of tax planning",
+  "notes": "royalties, licensing, DEMPE, patent boxes, withholding."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Debt vs equity: why the legal form of financing matters",
+  "notes": "interest, dividends, thin capitalization, insolvency ranking."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How venture capital investment is legally structured",
+  "notes": "preferred shares, liquidation preference, anti-dilution, SAFEs, vesting."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "What directors can actually be personally liable for",
+  "notes": "fiduciary duties, conflicts, insolvency, negligence, fraud."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "What happens legally when a company suffers a data breach",
+  "notes": "notification, contracts, regulation, insurance, cross-border data."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Who is liable when AI makes the wrong decision?",
+  "notes": "negligence, product liability, contracts, developers/users, oversight."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Why contracts contain so many “boilerplate” clauses",
+  "notes": "governing law, jurisdiction, force majeure, indemnity, limitation."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Arbitration vs litigation: why companies choose one over the other",
+  "notes": "confidentiality, enforceability, New York Convention, seat."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How foreign investment restrictions actually work",
+  "notes": "ownership caps, negative lists, licences, approvals, JVs, security screening."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "What actually happens in an M&A due diligence",
+  "notes": "corporate, contracts, employment, tax, IP, litigation, licences, red flags."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "Why companies create subsidiaries instead of putting everything into one entity",
+  "notes": "liability, regulation, tax, investors, risk segregation."
+ },
+ {
+  "group": "Tax, law & business",
+  "set": "J",
+  "title": "How companies avoid tax without breaking the law — and where avoidance becomes abuse",
+  "notes": "planning vs evasion, GAAR, substance, sham, anti-abuse."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "What does “offshore” actually mean?",
+  "notes": "offshore vs foreign company vs tax haven; legality and misconceptions."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Why do companies incorporate in the Cayman Islands?",
+  "notes": "funds, tax neutrality, legal predictability, investor familiarity."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Why are BVI companies used so often?",
+  "notes": "corporate law, administration, holding structures, JVs."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "What is a tax haven?",
+  "notes": "low/no tax, secrecy, substance, information exchange, competing definitions."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Offshore holding companies: what do they actually do?",
+  "notes": "ownership, dividends, financing, exits, segregation, governance."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How multi-layer corporate structures work",
+  "notes": "parent, intermediate holding, operating company, IP/finance entities."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Why economic substance rules changed offshore planning",
+  "notes": "premises, employees, decision-making, CIGA."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "What is beneficial ownership?",
+  "notes": "legal owner vs UBO, nominees, registers, AML."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How nominee directors and shareholders work",
+  "notes": "legal role, use cases, limitations, control."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How offshore banking differs from offshore incorporation",
+  "notes": "bank vs entity jurisdiction, KYC, source of funds, CRS/FATCA."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How the Common Reporting Standard changed offshore secrecy",
+  "notes": "automatic reporting, tax residence, participating jurisdictions."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How FATCA made US tax reporting global",
+  "notes": "US persons, FFIs, reporting, withholding consequences."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "What are controlled foreign company rules?",
+  "notes": "taxing foreign subsidiary profits before distribution."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How treaty shopping used to work — and why it became harder",
+  "notes": "intermediary entities, beneficial ownership, PPT, LOB, substance."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How offshore structures interact with double-tax treaties",
+  "notes": "residence, source, withholding, credits, PE, anti-abuse."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How transfer pricing applies to offshore entities",
+  "notes": "fees, royalties, loans, arm’s-length pricing, DEMPE."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Why intellectual property is often held offshore",
+  "notes": "licensing, royalty streams, IP ownership, substance, BEPS."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How private equity funds use offshore structures",
+  "notes": "fund vehicle, GP, LPs, SPVs, blockers, portfolio companies."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "Why ships and aircraft are often owned through offshore companies",
+  "notes": "finance, registration, liability, leasing, mobility."
+ },
+ {
+  "group": "Offshore / cross-border structuring",
+  "set": "K",
+  "title": "How governments detect abusive offshore structures",
+  "notes": "UBO registers, CRS, FATCA, exchange of information, CbCR, data matching."
+ }
+]

@@ -1,0 +1,2 @@
+DROP POLICY leaderboard_snapshot_public_read ON public.leaderboard_snapshot;
+CREATE POLICY leaderboard_snapshot_public_read ON public.leaderboard_snapshot FOR SELECT TO anon, authenticated USING (place <= 100 AND period IN ('week','all'));

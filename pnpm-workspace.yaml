@@ -1,0 +1,5 @@
+allowBuilds:
+  # Required by Vite/Vitest. Keep the allow-list narrow.
+  esbuild: true
+  # Cloudflare's local Workers runtime.
+  workerd: true

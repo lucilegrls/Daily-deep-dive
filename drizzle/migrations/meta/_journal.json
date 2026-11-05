@@ -1,0 +1,83 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1791681748111,
+      "tag": "0000_production_hardening_integrity_health",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791863356444,
+      "tag": "0001_link_check_health_rollup",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792082049605,
+      "tag": "0002_write_rate_limits",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792082070351,
+      "tag": "0003_write_rate_limits_stamp",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792082845353,
+      "tag": "0004_streak_local_timezone",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1792145390977,
+      "tag": "0005_resource_agent_reviews",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792154376898,
+      "tag": "0006_fix_ai_origin_guard_field_access",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1792484525239,
+      "tag": "0007_autonomous_source_verification",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1792484739741,
+      "tag": "0008_verification_same_kind_replacement",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1792485030638,
+      "tag": "0009_verified_replacement_idempotent",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1792487737192,
+      "tag": "0010_keyless_research_pilot",
+      "breakpoints": true
+    }
+  ]
+}
