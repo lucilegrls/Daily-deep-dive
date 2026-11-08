@@ -5,13 +5,13 @@ import { OnboardingWizard } from "@/components/OnboardingWizard";
 export const Route = createFileRoute("/start")({
   head: () => ({
     meta: [
-      { title: "Build my feed — Daily Deep Dive" },
+      { title: "Build my feed — Curiosity, Sourced" },
       {
         name: "description",
         content:
-          "Answer three short questions — your subjects, how adventurous your feed should be, and the look of your reading room — and Daily Deep Dive shapes the library around you.",
+          "Answer three short questions — your subjects, how adventurous your feed should be, and the look of your reading room — and Curiosity, Sourced shapes the library around you.",
       },
-      { property: "og:title", content: "Build my feed — Daily Deep Dive" },
+      { property: "og:title", content: "Build my feed — Curiosity, Sourced" },
       {
         property: "og:description",
         content:

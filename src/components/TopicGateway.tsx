@@ -1,29 +1,32 @@
 import type React from "react";
 import { useAccount } from "@/lib/account";
 import { gatewayFor } from "@/lib/themes";
+import { useI18n } from "@/lib/i18n";
 
 interface TopicGatewayProps {
+  title: string;
   href: string;
   onOpen: () => void;
   className?: string;
 }
 
 /**
- * The themed artwork is a secondary pointer target for the topic. The
- * neighbouring title link carries the accessible name and keyboard focus, so
- * each topic contributes one clear stop instead of two duplicate links.
+ * The single object a reader taps to open a topic's library.
+ * Which object appears depends on the chosen look; the interaction,
+ * accessible name and motion behaviour stay identical everywhere.
  */
-export function TopicGateway({ href, onOpen, className }: TopicGatewayProps) {
+export function TopicGateway({ title, href, onOpen, className }: TopicGatewayProps) {
   const { theme } = useAccount();
+  const { lang } = useI18n();
   const gateway = gatewayFor(theme);
 
   return (
     <a
       href={href}
       onClick={(e) => openInPlace(e, onOpen)}
-      tabIndex={-1}
-      aria-hidden="true"
-      className={`flex w-24 shrink-0 cursor-pointer items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1.5 group-hover:-rotate-[1.2deg] motion-reduce:transition-none motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-0 sm:w-44 ${className ?? ""}`}
+      onKeyDown={(e) => spaceOpens(e, onOpen)}
+      aria-label={`${lang === "fr" ? "Ouvrir le sujet" : "Open topic"}: ${title}`}
+      className={`flex w-32 shrink-0 cursor-pointer items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-1.5 group-hover:-rotate-[1.2deg] focus:outline-none motion-reduce:transition-none motion-reduce:group-hover:translate-y-0 motion-reduce:group-hover:rotate-0 sm:w-44 ${className ?? ""}`}
     >
       <img
         key={gateway.src}

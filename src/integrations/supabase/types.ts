@@ -14,6 +14,80 @@ export type Database = {
   }
   public: {
     Tables: {
+      claim_editorial_reviews: {
+        Row: {
+          claim_id: string
+          decision: string
+          evidence_summary: string
+          id: number
+          limitations: string | null
+          reviewed_at: string
+          reviewer: string
+        }
+        Insert: {
+          claim_id: string
+          decision: string
+          evidence_summary: string
+          id?: never
+          limitations?: string | null
+          reviewed_at?: string
+          reviewer: string
+        }
+        Update: {
+          claim_id?: string
+          decision?: string
+          evidence_summary?: string
+          id?: never
+          limitations?: string | null
+          reviewed_at?: string
+          reviewer?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "claim_editorial_reviews_claim_id_fkey"
+            columns: ["claim_id"]
+            isOneToOne: false
+            referencedRelation: "topic_claims"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      claim_supporting_resources: {
+        Row: {
+          claim_id: string
+          evidence_locator: string | null
+          notes: string | null
+          resource_id: string
+        }
+        Insert: {
+          claim_id: string
+          evidence_locator?: string | null
+          notes?: string | null
+          resource_id: string
+        }
+        Update: {
+          claim_id?: string
+          evidence_locator?: string | null
+          notes?: string | null
+          resource_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "claim_supporting_resources_claim_id_fkey"
+            columns: ["claim_id"]
+            isOneToOne: false
+            referencedRelation: "topic_claims"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "claim_supporting_resources_resource_id_fkey"
+            columns: ["resource_id"]
+            isOneToOne: false
+            referencedRelation: "content_resources"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       concept_glossary: {
         Row: {
           created_at: string
@@ -281,26 +355,36 @@ export type Database = {
           description: string | null
           difficulty: string | null
           duration: string | null
+          embed_status: string
           embed_type: string
           embed_url: string | null
           embedding_status: string
+          final_url: string | null
           format: string | null
           id: string
           is_start_here: boolean
           kind: string
           last_checked: string | null
           last_checked_at: string | null
+          last_embed_check_at: string | null
+          last_failed_check_at: string | null
+          last_successful_check_at: string | null
           link_status: string
+          mime_type: string | null
           needs_review: boolean
           needs_review_reason: string | null
           next_check_at: string | null
+          normalized_url: string | null
           origin: string
           position: number
           publication: string | null
           published_at: string | null
+          response_time_ms: number | null
           review_status: string
           rights_status: string
           source: string | null
+          source_domain: string | null
+          technical_status: string
           thumbnail_url: string | null
           title: string
           topic_fit_status: string
@@ -321,26 +405,36 @@ export type Database = {
           description?: string | null
           difficulty?: string | null
           duration?: string | null
+          embed_status?: string
           embed_type?: string
           embed_url?: string | null
           embedding_status?: string
+          final_url?: string | null
           format?: string | null
           id?: string
           is_start_here?: boolean
           kind: string
           last_checked?: string | null
           last_checked_at?: string | null
+          last_embed_check_at?: string | null
+          last_failed_check_at?: string | null
+          last_successful_check_at?: string | null
           link_status?: string
+          mime_type?: string | null
           needs_review?: boolean
           needs_review_reason?: string | null
           next_check_at?: string | null
+          normalized_url?: string | null
           origin?: string
           position?: number
           publication?: string | null
           published_at?: string | null
+          response_time_ms?: number | null
           review_status?: string
           rights_status?: string
           source?: string | null
+          source_domain?: string | null
+          technical_status?: string
           thumbnail_url?: string | null
           title: string
           topic_fit_status?: string
@@ -361,26 +455,36 @@ export type Database = {
           description?: string | null
           difficulty?: string | null
           duration?: string | null
+          embed_status?: string
           embed_type?: string
           embed_url?: string | null
           embedding_status?: string
+          final_url?: string | null
           format?: string | null
           id?: string
           is_start_here?: boolean
           kind?: string
           last_checked?: string | null
           last_checked_at?: string | null
+          last_embed_check_at?: string | null
+          last_failed_check_at?: string | null
+          last_successful_check_at?: string | null
           link_status?: string
+          mime_type?: string | null
           needs_review?: boolean
           needs_review_reason?: string | null
           next_check_at?: string | null
+          normalized_url?: string | null
           origin?: string
           position?: number
           publication?: string | null
           published_at?: string | null
+          response_time_ms?: number | null
           review_status?: string
           rights_status?: string
           source?: string | null
+          source_domain?: string | null
+          technical_status?: string
           thumbnail_url?: string | null
           title?: string
           topic_fit_status?: string
@@ -516,17 +620,24 @@ export type Database = {
           context: string
           created_at: string
           difficulty: string | null
+          editorial_review_reason: string | null
+          editorial_reviewed_by: string | null
           id: number
+          jurisdiction: string | null
+          last_editorial_review_at: string | null
           last_verified: string | null
           last_verified_at: string | null
+          next_editorial_review_due_at: string | null
           origin: string
           published_at: string | null
           related_ids: number[]
+          risk_level: string
           search_text: string
           slug: string
           status: string
           tags: string[]
           takeaways: string[]
+          temporal_scope: string | null
           title: string
           updated_at: string
           verification_stage: string | null
@@ -536,17 +647,24 @@ export type Database = {
           context?: string
           created_at?: string
           difficulty?: string | null
+          editorial_review_reason?: string | null
+          editorial_reviewed_by?: string | null
           id: number
+          jurisdiction?: string | null
+          last_editorial_review_at?: string | null
           last_verified?: string | null
           last_verified_at?: string | null
+          next_editorial_review_due_at?: string | null
           origin?: string
           published_at?: string | null
           related_ids?: number[]
+          risk_level?: string
           search_text?: string
           slug: string
           status?: string
           tags?: string[]
           takeaways?: string[]
+          temporal_scope?: string | null
           title: string
           updated_at?: string
           verification_stage?: string | null
@@ -556,17 +674,24 @@ export type Database = {
           context?: string
           created_at?: string
           difficulty?: string | null
+          editorial_review_reason?: string | null
+          editorial_reviewed_by?: string | null
           id?: number
+          jurisdiction?: string | null
+          last_editorial_review_at?: string | null
           last_verified?: string | null
           last_verified_at?: string | null
+          next_editorial_review_due_at?: string | null
           origin?: string
           published_at?: string | null
           related_ids?: number[]
+          risk_level?: string
           search_text?: string
           slug?: string
           status?: string
           tags?: string[]
           takeaways?: string[]
+          temporal_scope?: string | null
           title?: string
           updated_at?: string
           verification_stage?: string | null
@@ -1113,6 +1238,116 @@ export type Database = {
           },
         ]
       }
+      resource_check_runs: {
+        Row: {
+          attempted: number
+          average_response_ms: number | null
+          checker_version: string
+          embed_failures: number
+          error_detail: string | null
+          failed: number
+          finished_at: string | null
+          id: string
+          rate_limited: number
+          redirected: number
+          source: string
+          started_at: string
+          status: string
+          succeeded: number
+          timed_out: number
+        }
+        Insert: {
+          attempted?: number
+          average_response_ms?: number | null
+          checker_version: string
+          embed_failures?: number
+          error_detail?: string | null
+          failed?: number
+          finished_at?: string | null
+          id?: string
+          rate_limited?: number
+          redirected?: number
+          source: string
+          started_at?: string
+          status?: string
+          succeeded?: number
+          timed_out?: number
+        }
+        Update: {
+          attempted?: number
+          average_response_ms?: number | null
+          checker_version?: string
+          embed_failures?: number
+          error_detail?: string | null
+          failed?: number
+          finished_at?: string | null
+          id?: string
+          rate_limited?: number
+          redirected?: number
+          source?: string
+          started_at?: string
+          status?: string
+          succeeded?: number
+          timed_out?: number
+        }
+        Relationships: []
+      }
+      resource_editorial_reviews: {
+        Row: {
+          as_of_date: string | null
+          coverage_checked: boolean
+          credibility_checked: boolean
+          decision: string
+          id: number
+          identity_checked: boolean
+          jurisdiction: string | null
+          limitations: string | null
+          notes: string | null
+          relevance_checked: boolean
+          resource_id: string
+          reviewed_at: string
+          reviewer: string
+        }
+        Insert: {
+          as_of_date?: string | null
+          coverage_checked?: boolean
+          credibility_checked?: boolean
+          decision: string
+          id?: never
+          identity_checked?: boolean
+          jurisdiction?: string | null
+          limitations?: string | null
+          notes?: string | null
+          relevance_checked?: boolean
+          resource_id: string
+          reviewed_at?: string
+          reviewer: string
+        }
+        Update: {
+          as_of_date?: string | null
+          coverage_checked?: boolean
+          credibility_checked?: boolean
+          decision?: string
+          id?: never
+          identity_checked?: boolean
+          jurisdiction?: string | null
+          limitations?: string | null
+          notes?: string | null
+          relevance_checked?: boolean
+          resource_id?: string
+          reviewed_at?: string
+          reviewer?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "resource_editorial_reviews_resource_id_fkey"
+            columns: ["resource_id"]
+            isOneToOne: false
+            referencedRelation: "content_resources"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       resource_embed_failures: {
         Row: {
           created_at: string
@@ -1176,6 +1411,86 @@ export type Database = {
         Relationships: [
           {
             foreignKeyName: "resource_progress_resource_id_fkey"
+            columns: ["resource_id"]
+            isOneToOne: false
+            referencedRelation: "content_resources"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      resource_technical_checks: {
+        Row: {
+          auth_required: boolean | null
+          check_type: string
+          checked_at: string
+          checker_version: string
+          content_type: string | null
+          destination_changed: boolean | null
+          embed_status: string
+          failure_reason: string | null
+          final_url: string | null
+          id: number
+          normalized_url: string | null
+          observation: Json
+          original_url: string
+          paywall_detected: boolean | null
+          redirect_chain: Json
+          resource_id: string
+          response_time_ms: number | null
+          run_id: string
+          source_domain: string | null
+          status_code: number | null
+          technical_status: string
+        }
+        Insert: {
+          auth_required?: boolean | null
+          check_type?: string
+          checked_at?: string
+          checker_version: string
+          content_type?: string | null
+          destination_changed?: boolean | null
+          embed_status?: string
+          failure_reason?: string | null
+          final_url?: string | null
+          id?: never
+          normalized_url?: string | null
+          observation?: Json
+          original_url: string
+          paywall_detected?: boolean | null
+          redirect_chain?: Json
+          resource_id: string
+          response_time_ms?: number | null
+          run_id?: string
+          source_domain?: string | null
+          status_code?: number | null
+          technical_status: string
+        }
+        Update: {
+          auth_required?: boolean | null
+          check_type?: string
+          checked_at?: string
+          checker_version?: string
+          content_type?: string | null
+          destination_changed?: boolean | null
+          embed_status?: string
+          failure_reason?: string | null
+          final_url?: string | null
+          id?: never
+          normalized_url?: string | null
+          observation?: Json
+          original_url?: string
+          paywall_detected?: boolean | null
+          redirect_chain?: Json
+          resource_id?: string
+          response_time_ms?: number | null
+          run_id?: string
+          source_domain?: string | null
+          status_code?: number | null
+          technical_status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "resource_technical_checks_resource_id_fkey"
             columns: ["resource_id"]
             isOneToOne: false
             referencedRelation: "content_resources"
@@ -1389,6 +1704,44 @@ export type Database = {
           status?: string
         }
         Relationships: []
+      }
+      topic_claims: {
+        Row: {
+          claim_text: string
+          created_at: string
+          created_by: string | null
+          id: string
+          location_hint: string | null
+          status: string
+          topic_id: number
+        }
+        Insert: {
+          claim_text: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          location_hint?: string | null
+          status?: string
+          topic_id: number
+        }
+        Update: {
+          claim_text?: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          location_hint?: string | null
+          status?: string
+          topic_id?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "topic_claims_topic_id_fkey"
+            columns: ["topic_id"]
+            isOneToOne: false
+            referencedRelation: "content_topics"
+            referencedColumns: ["id"]
+          },
+        ]
       }
       topic_notes: {
         Row: {
@@ -1637,17 +1990,6 @@ export type Database = {
       complete_research_pilot: { Args: never; Returns: undefined }
       content_health_current_totals: { Args: never; Returns: Json }
       expand_interests: { Args: { _interests: string[] }; Returns: string[] }
-      record_ux_event: {
-        Args: {
-          _elapsed_ms?: number
-          _event_name: string
-          _journey_id: string
-          _step?: number
-          _surface: string
-          _variant?: string
-        }
-        Returns: boolean
-      }
       feed_topics:
         | {
             Args: {

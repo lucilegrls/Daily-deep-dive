@@ -11,7 +11,7 @@ const RAW = /violates|permission denied|relation |column |schema cache|syntax|JW
 const NETWORK = /failed to fetch|fetch failed|networkerror|network request failed|load failed|timed out|TimeoutError/i;
 
 const EN: Record<string, string> = {
-  "err.network": "We couldn't reach Deep Dive. Check your connection and try again.",
+  "err.network": "We couldn't reach Curiosity, Sourced. Check your connection and try again.",
   "err.session": "Your session has expired. Please sign in again.",
   "err.permission": "You don't have access to this.",
   "err.duplicate": "That's already been saved.",

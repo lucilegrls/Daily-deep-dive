@@ -6,7 +6,7 @@ const resp = (status: number, headers: Record<string, string> = {}) => new Respo
 
 describe("link checker boundaries", () => {
   it("stays switched off in this runtime", () => expect(LINK_PROBE_ENABLED).toBe(false));
-  it.each(["http://169.254.169.254/", "http://metadata.google.internal/", "https://en.wikipedia.org/wiki/X", "https://en.wikipedia.org./wiki/X", "http://[::1]/", "https://a:b@example.org/"])(
+  it.each(["http://169.254.169.254/", "http://10.0.0.1/", "http://172.16.0.1/", "http://192.168.1.1/", "http://127.0.0.1/", "http://metadata.google.internal/", "file:///etc/passwd", "ftp://example.org/file", "https://en.wikipedia.org/wiki/X", "https://en.wikipedia.org./wiki/X", "http://[::1]/", "https://a:b@example.org/", "not a url"])(
     "rejects %s", (u) => expect(isProbeableUrl(u)).toBe(false));
   it("revalidates every redirect hop", async () => {
     const seen: string[] = [];

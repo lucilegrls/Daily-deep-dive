@@ -107,3 +107,21 @@ describe("readerPublication", () => {
     expect(readerPublication("2024")).toBe("2024");
   });
 });
+
+describe("remaining snapshot workflow notes", () => {
+  it("removes date-window eligibility but retains actual recording dates", () => {
+    expect(readerCopy("Direct causal explanation; short, outside date window.")).toBe("Direct causal explanation; short.");
+    expect(readerCopy("Strong university lecture on awareness/attention but older than recent window; recording course date Spring 2019.")).toBe("Strong university lecture on awareness/attention; recording course date Spring 2019.");
+  });
+  it("removes appraisal-only limitations without hiding access restrictions", () => {
+    expect(readerCopy("Full article not inspected in this pass.")).toBe("");
+    expect(readerCopy("No independent appraisal of every underlying study.")).toBe("");
+    expect(readerCopy("No independent replication appraisal; embeds/rights not assessed.")).toBe("");
+    expect(readerCopy("Abstract and citation reviewed; full-text access may require subscription.")).toBe("Full-text access may require subscription.");
+  });
+  it("retains citations and verification when they are the research subject", () => {
+    expect(readerCopy("Explains verification of beneficial ownership and authority access.")).toBe("Explains verification of beneficial ownership and authority access.");
+    expect(readerCopy("Technical paper explaining two-stage candidate generation and ranking in a large recommendation system.")).toBe("Technical paper explaining two-stage candidate generation and ranking in a large recommendation system.");
+    expect(readerCopy("Examines replication failures and publication bias.")).toBe("Examines replication failures and publication bias.");
+  });
+});

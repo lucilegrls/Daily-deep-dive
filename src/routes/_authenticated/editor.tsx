@@ -29,16 +29,16 @@ import {
 export const Route = createFileRoute("/_authenticated/editor")({
   head: () => ({
     meta: [
-      { title: "Editor's desk — Daily Deep Dive" },
+      { title: "Editor's desk — Curiosity, Sourced" },
       {
         name: "description",
         content:
           "Review drafted topics, approve or reject suggested sources, and follow the daily expansion runs.",
       },
-      { property: "og:title", content: "Editor's desk — Daily Deep Dive" },
+      { property: "og:title", content: "Editor's desk — Curiosity, Sourced" },
       {
         property: "og:description",
-        content: "The review queue behind the Daily Deep Dive library.",
+        content: "The review queue behind the Curiosity, Sourced library.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

@@ -23,13 +23,13 @@ import type { TranslationKey } from "@/lib/translations";
 export const Route = createFileRoute("/_authenticated/account")({
   head: () => ({
     meta: [
-      { title: "Your reading room — Daily Deep Dive" },
+      { title: "Your reading room — Curiosity, Sourced" },
       {
         name: "description",
         content:
           "Your name, subjects, feed style, look and reading history — visible only to you.",
       },
-      { property: "og:title", content: "Your reading room — Daily Deep Dive" },
+      { property: "og:title", content: "Your reading room — Curiosity, Sourced" },
       {
         property: "og:description",
         content:
@@ -319,16 +319,10 @@ function AccountPage() {
           </h2>
           <dl className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {[
+              { term: t("ac.currentStreak"), value: t(streak.current === 1 ? "nav.streakDay" : "nav.streakDays", { count: streak.current }) },
+              { term: t("ac.bestStreak"), value: t(streak.best === 1 ? "nav.streakDay" : "nav.streakDays", { count: streak.best }) },
               { term: t("ac.totalReads"), value: String(streak.total) },
-              {
-                term: t("ac.savedTopics"),
-                value:
-                  savedStatus === "loading"
-                    ? "…"
-                    : savedStatus === "error"
-                      ? t("ac.unavailable")
-                      : String(saved.length),
-              },
+              { term: t("ac.savedTopics"), value: savedStatus === "loading" ? "…" : savedStatus === "error" ? t("ac.unavailable") : String(saved.length) },
               { term: t("ac.topicsRead"), value: String(readTopicIds.length) },
             ].map(({ term, value }) => (
               <div key={term}>
@@ -339,36 +333,6 @@ function AccountPage() {
               </div>
             ))}
           </dl>
-          <details className="mt-5 border-t border-border/60 pt-4 text-sm">
-            <summary className="cursor-pointer text-muted-foreground">
-              {t("ac.currentStreak")} &amp; {t("nav.ranking")}
-            </summary>
-            <dl className="mt-4 grid grid-cols-2 gap-4">
-              <div>
-                <dt className="text-muted-foreground">{t("ac.currentStreak")}</dt>
-                <dd className="mt-1 text-foreground">
-                  {t(
-                    streak.current === 1 ? "nav.streakDay" : "nav.streakDays",
-                    { count: streak.current },
-                  )}
-                </dd>
-              </div>
-              <div>
-                <dt className="text-muted-foreground">{t("ac.bestStreak")}</dt>
-                <dd className="mt-1 text-foreground">
-                  {t(streak.best === 1 ? "nav.streakDay" : "nav.streakDays", {
-                    count: streak.best,
-                  })}
-                </dd>
-              </div>
-            </dl>
-            <Link
-              to="/leaderboard"
-              className="mt-4 inline-flex min-h-11 items-center underline decoration-border underline-offset-4"
-            >
-              {t("nav.ranking")}
-            </Link>
-          </details>
         </section>
 
         <nav

@@ -1,0 +1,2325 @@
+{
+  "locale": "fr",
+  "count": 331,
+  "source_date": "2026-10-22",
+  "scope": "Reviewed topic titles only; preserve original IDs, slugs, categories, summaries and resources.",
+  "topics": [
+    {
+      "id": 1,
+      "slug": "iron-why-intake-and-absorption-differ",
+      "category": "Biochemistry & biology",
+      "title_en": "Iron: Why intake and absorption differ",
+      "title_fr": "Fer : pourquoi les apports et l’absorption diffèrent"
+    },
+    {
+      "id": 2,
+      "slug": "the-luteal-phase-hormones-variation-and-evidence",
+      "category": "Menstrual health & hormones",
+      "title_en": "The luteal phase: Hormones, variation and evidence",
+      "title_fr": "Phase lutéale : hormones, variations et données"
+    },
+    {
+      "id": 3,
+      "slug": "doomscrolling-negative-news-and-distress",
+      "category": "Psychology & behavior",
+      "title_en": "Doomscrolling: Negative news and distress",
+      "title_fr": "Défilement compulsif de mauvaises nouvelles et détresse"
+    },
+    {
+      "id": 4,
+      "slug": "stoicism-what-is-up-to-us",
+      "category": "Philosophy & ethics",
+      "title_en": "Stoicism: What is up to us?",
+      "title_fr": "Stoïcisme : qu’est-ce qui dépend de nous ?"
+    },
+    {
+      "id": 5,
+      "slug": "inflation-prices-and-purchasing-power",
+      "category": "Economics & personal finance",
+      "title_en": "Inflation: Prices and purchasing power",
+      "title_fr": "Inflation : prix et pouvoir d’achat"
+    },
+    {
+      "id": 6,
+      "slug": "scaling-laws-patterns-and-limits",
+      "category": "AI & LLMs",
+      "title_en": "Scaling laws: Patterns and limits",
+      "title_fr": "Lois d’échelle : régularités et limites"
+    },
+    {
+      "id": 7,
+      "slug": "gdpr-understanding-the-right-of-access",
+      "category": "Digital rights & law",
+      "title_en": "GDPR: Understanding the right of access",
+      "title_fr": "RGPD : comprendre le droit d’accès"
+    },
+    {
+      "id": 8,
+      "slug": "circadian-rhythms-how-light-changes-timing",
+      "category": "Health & nutrition",
+      "title_en": "Circadian rhythms: How light changes timing",
+      "title_fr": "Rythmes circadiens : comment la lumière règle l’horloge biologique"
+    },
+    {
+      "id": 9,
+      "slug": "interrupted-work-attention-and-resuming-a-task",
+      "category": "Productivity & focus",
+      "title_en": "Interrupted work: Attention and resuming a task",
+      "title_fr": "Interruptions au travail : attention et reprise d’une tâche"
+    },
+    {
+      "id": 10,
+      "slug": "ego-depletion-a-theory-tested-by-replication",
+      "category": "Psychology & behavior",
+      "title_en": "Ego depletion: A theory tested by replication",
+      "title_fr": "Épuisement de l’ego : une théorie mise à l’épreuve par les réplications"
+    },
+    {
+      "id": 11,
+      "slug": "index-funds-benchmarks-costs-and-comparison",
+      "category": "Economics & personal finance",
+      "title_en": "Index funds: Benchmarks, costs and comparison",
+      "title_fr": "Fonds indiciels : indices de référence, coûts et comparaison"
+    },
+    {
+      "id": 12,
+      "slug": "the-gut-brain-axis-mechanisms-and-evidence",
+      "category": "Recent promising research",
+      "title_en": "The gut–brain axis: Mechanisms and evidence",
+      "title_fr": "Axe intestin-cerveau : mécanismes et données"
+    },
+    {
+      "id": 13,
+      "slug": "glucose-and-fructose-two-sugars-different-routes",
+      "category": "Biochemistry & biology",
+      "title_en": "Glucose and fructose: Two sugars, different routes",
+      "title_fr": "Glucose et fructose : deux sucres, des voies différentes"
+    },
+    {
+      "id": 14,
+      "slug": "atp-how-cells-pay-for-their-work",
+      "category": "Biochemistry & biology",
+      "title_en": "ATP: How cells pay for their work",
+      "title_fr": "ATP : comment les cellules fournissent l’énergie nécessaire à leurs activités"
+    },
+    {
+      "id": 15,
+      "slug": "insulin-and-glucagon-keeping-fuel-available",
+      "category": "Biochemistry & biology",
+      "title_en": "Insulin and glucagon: Keeping fuel available",
+      "title_fr": "Insuline et glucagon : maintenir les réserves d’énergie disponibles"
+    },
+    {
+      "id": 16,
+      "slug": "glycogen-the-body-s-carbohydrate-reserve",
+      "category": "Biochemistry & biology",
+      "title_en": "Glycogen: The body’s carbohydrate reserve",
+      "title_fr": "Glycogène : les réserves de glucides de l’organisme"
+    },
+    {
+      "id": 17,
+      "slug": "dietary-fat-from-the-intestine-to-your-cells",
+      "category": "Biochemistry & biology",
+      "title_en": "Dietary fat: From the intestine to your cells",
+      "title_fr": "Lipides alimentaires : de l’intestin aux cellules"
+    },
+    {
+      "id": 18,
+      "slug": "protein-digestion-what-happens-after-a-meal",
+      "category": "Biochemistry & biology",
+      "title_en": "Protein digestion: What happens after a meal",
+      "title_fr": "Digestion des protéines : que se passe-t-il après un repas ?"
+    },
+    {
+      "id": 19,
+      "slug": "the-liver-a-chemical-processing-hub",
+      "category": "Biochemistry & biology",
+      "title_en": "The liver: A chemical processing hub",
+      "title_fr": "Le foie, centre de traitement chimique"
+    },
+    {
+      "id": 20,
+      "slug": "kidneys-why-urine-is-more-than-filtered-water",
+      "category": "Biochemistry & biology",
+      "title_en": "Kidneys: Why urine is more than filtered water",
+      "title_fr": "Reins : pourquoi l’urine n’est pas de l’eau simplement filtrée"
+    },
+    {
+      "id": 21,
+      "slug": "electrolytes-why-charged-minerals-matter",
+      "category": "Biochemistry & biology",
+      "title_en": "Electrolytes: Why charged minerals matter",
+      "title_fr": "Électrolytes : l’importance des minéraux chargés"
+    },
+    {
+      "id": 22,
+      "slug": "acid-base-balance-how-blood-ph-stays-stable",
+      "category": "Biochemistry & biology",
+      "title_en": "Acid–base balance: How blood pH stays stable",
+      "title_fr": "Équilibre acido-basique : comment le pH sanguin reste stable"
+    },
+    {
+      "id": 23,
+      "slug": "nerve-signals-electricity-made-from-ions",
+      "category": "Biochemistry & biology",
+      "title_en": "Nerve signals: Electricity made from ions",
+      "title_fr": "Signaux nerveux : l’électricité produite par les ions"
+    },
+    {
+      "id": 24,
+      "slug": "muscle-contraction-from-a-nerve-signal-to-movement",
+      "category": "Biochemistry & biology",
+      "title_en": "Muscle contraction: From a nerve signal to movement",
+      "title_fr": "Contraction musculaire : du signal nerveux au mouvement"
+    },
+    {
+      "id": 25,
+      "slug": "oxygen-transport-what-your-lungs-and-blood-actually-do",
+      "category": "Biochemistry & biology",
+      "title_en": "Oxygen transport: What your lungs and blood actually do",
+      "title_fr": "Transport de l’oxygène : le rôle réel des poumons et du sang"
+    },
+    {
+      "id": 26,
+      "slug": "immunity-fast-defenses-and-learned-responses",
+      "category": "Biochemistry & biology",
+      "title_en": "Immunity: Fast defenses and learned responses",
+      "title_fr": "Immunité : défenses rapides et réponses acquises"
+    },
+    {
+      "id": 27,
+      "slug": "hormone-receptors-why-one-signal-affects-some-cells",
+      "category": "Biochemistry & biology",
+      "title_en": "Hormone receptors: Why one signal affects some cells",
+      "title_fr": "Récepteurs hormonaux : pourquoi certains tissus répondent à un signal"
+    },
+    {
+      "id": 28,
+      "slug": "the-menstrual-cycle-coordinating-ovaries-and-uterus",
+      "category": "Biochemistry & biology",
+      "title_en": "The menstrual cycle: Coordinating ovaries and uterus",
+      "title_fr": "Cycle menstruel : coordination des ovaires et de l’utérus"
+    },
+    {
+      "id": 29,
+      "slug": "vitamin-b12-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin B12: What it does and how it is handled",
+      "title_fr": "Vitamine B12 : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 30,
+      "slug": "vitamin-d-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin D: What it does and how it is handled",
+      "title_fr": "Vitamine D : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 31,
+      "slug": "vitamin-c-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin C: What it does and how it is handled",
+      "title_fr": "Vitamine C : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 32,
+      "slug": "vitamin-b1-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin B1: What it does and how it is handled",
+      "title_fr": "Vitamine B1 : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 33,
+      "slug": "vitamin-a-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin A: What it does and how it is handled",
+      "title_fr": "Vitamine A : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 34,
+      "slug": "vitamin-k-what-it-does-and-how-it-is-handled",
+      "category": "Biochemistry & biology",
+      "title_en": "Vitamin K: What it does and how it is handled",
+      "title_fr": "Vitamine K : rôles et devenir dans l’organisme"
+    },
+    {
+      "id": 35,
+      "slug": "bonds-what-you-own-when-you-lend-money",
+      "category": "Finance & economics",
+      "title_en": "Bonds: What you own when you lend money",
+      "title_fr": "Obligations : ce que vous détenez lorsque vous prêtez de l’argent"
+    },
+    {
+      "id": 36,
+      "slug": "bond-prices-why-rising-rates-can-reduce-value",
+      "category": "Finance & economics",
+      "title_en": "Bond prices: Why rising rates can reduce value",
+      "title_fr": "Prix des obligations : pourquoi la hausse des taux peut en réduire la valeur"
+    },
+    {
+      "id": 37,
+      "slug": "bond-yield-why-a-coupon-is-not-your-return",
+      "category": "Finance & economics",
+      "title_en": "Bond yield: Why a coupon is not your return",
+      "title_fr": "Rendement obligataire : pourquoi le coupon n’est pas votre rendement"
+    },
+    {
+      "id": 38,
+      "slug": "bond-risk-credit-inflation-and-early-repayment",
+      "category": "Finance & economics",
+      "title_en": "Bond risk: Credit, inflation and early repayment",
+      "title_fr": "Risques obligataires : crédit, inflation et remboursement anticipé"
+    },
+    {
+      "id": 39,
+      "slug": "marketing-finding-a-need-worth-serving",
+      "category": "Marketing & business",
+      "title_en": "Marketing: Finding a need worth serving",
+      "title_fr": "Marketing : trouver un besoin auquel répondre"
+    },
+    {
+      "id": 40,
+      "slug": "consumer-behavior-how-purchase-decisions-happen",
+      "category": "Marketing & business",
+      "title_en": "Consumer behavior: How purchase decisions happen",
+      "title_fr": "Comportement du consommateur : comment se prennent les décisions d’achat"
+    },
+    {
+      "id": 41,
+      "slug": "segmentation-which-customers-share-a-useful-need",
+      "category": "Marketing & business",
+      "title_en": "Segmentation: Which customers share a useful need?",
+      "title_fr": "Segmentation : quels clients partagent un besoin auquel répondre ?"
+    },
+    {
+      "id": 42,
+      "slug": "positioning-the-comparison-customers-make",
+      "category": "Marketing & business",
+      "title_en": "Positioning: The comparison customers make",
+      "title_fr": "Positionnement : la comparaison que font les clients"
+    },
+    {
+      "id": 43,
+      "slug": "marketing-research-asking-questions-that-change-decisions",
+      "category": "Marketing & business",
+      "title_en": "Marketing research: Asking questions that change decisions",
+      "title_fr": "Études de marché : poser des questions qui orientent les décisions"
+    },
+    {
+      "id": 44,
+      "slug": "pricing-what-a-number-communicates",
+      "category": "Marketing & business",
+      "title_en": "Pricing: What a number communicates",
+      "title_fr": "Prix : ce qu’un chiffre communique"
+    },
+    {
+      "id": 45,
+      "slug": "branding-building-expectations-people-remember",
+      "category": "Marketing & business",
+      "title_en": "Branding: Building expectations people remember",
+      "title_fr": "Image de marque : créer des attentes durables"
+    },
+    {
+      "id": 46,
+      "slug": "marketing-ethics-persuasion-evidence-and-trust",
+      "category": "Marketing & business",
+      "title_en": "Marketing ethics: Persuasion, evidence and trust",
+      "title_fr": "Éthique du marketing : persuasion, preuves et confiance"
+    },
+    {
+      "id": 47,
+      "slug": "retrieval-practice-why-remembering-is-part-of-learning",
+      "category": "Learning & study",
+      "title_en": "Retrieval practice: Why remembering is part of learning",
+      "title_fr": "Rappel actif : pourquoi se souvenir fait partie de l’apprentissage"
+    },
+    {
+      "id": 48,
+      "slug": "spaced-practice-making-room-for-forgetting",
+      "category": "Learning & study",
+      "title_en": "Spaced practice: Making room for forgetting",
+      "title_fr": "Répétition espacée : faire une place à l’oubli"
+    },
+    {
+      "id": 49,
+      "slug": "interleaving-learning-which-method-to-choose",
+      "category": "Learning & study",
+      "title_en": "Interleaving: Learning which method to choose",
+      "title_fr": "Entraînement entrelacé : apprendre à choisir la bonne méthode"
+    },
+    {
+      "id": 50,
+      "slug": "elaboration-explaining-why-a-fact-makes-sense",
+      "category": "Learning & study",
+      "title_en": "Elaboration: Explaining why a fact makes sense",
+      "title_fr": "Élaboration : expliquer pourquoi un fait a du sens"
+    },
+    {
+      "id": 51,
+      "slug": "concrete-examples-giving-an-abstract-idea-something-to-attach-to",
+      "category": "Learning & study",
+      "title_en": "Concrete examples: Giving an abstract idea something to attach to",
+      "title_fr": "Exemples concrets : ancrer une idée abstraite"
+    },
+    {
+      "id": 52,
+      "slug": "dual-coding-connecting-words-and-diagrams",
+      "category": "Learning & study",
+      "title_en": "Dual coding: Connecting words and diagrams",
+      "title_fr": "Double codage : relier les mots et les schémas"
+    },
+    {
+      "id": 53,
+      "slug": "copyright-an-idea-versus-its-expression",
+      "category": "Law",
+      "title_en": "Copyright: An idea versus its expression",
+      "title_fr": "Droit d’auteur : une idée et la forme qui l’exprime"
+    },
+    {
+      "id": 54,
+      "slug": "patents-disclosure-in-exchange-for-exclusivity",
+      "category": "Law",
+      "title_en": "Patents: Disclosure in exchange for exclusivity",
+      "title_fr": "Brevets : divulguer une invention en échange d’une exclusivité"
+    },
+    {
+      "id": 55,
+      "slug": "trade-secrets-protecting-knowledge-without-publishing-it",
+      "category": "Law",
+      "title_en": "Trade secrets: Protecting knowledge without publishing it",
+      "title_fr": "Secrets d’affaires : protéger un savoir sans le divulguer"
+    },
+    {
+      "id": 56,
+      "slug": "trademarks-protecting-the-sign-customers-recognize",
+      "category": "Law",
+      "title_en": "Trademarks: Protecting the sign customers recognize",
+      "title_fr": "Marques : protéger le signe reconnu par les clients"
+    },
+    {
+      "id": 57,
+      "slug": "wto-non-discrimination-two-different-comparisons",
+      "category": "Law",
+      "title_en": "WTO non-discrimination: Two different comparisons",
+      "title_fr": "Non-discrimination à l’OMC : deux comparaisons différentes"
+    },
+    {
+      "id": 58,
+      "slug": "international-arbitration-how-an-award-crosses-borders",
+      "category": "Law",
+      "title_en": "International arbitration: How an award crosses borders",
+      "title_fr": "Arbitrage international : comment une sentence franchit les frontières"
+    },
+    {
+      "id": 59,
+      "slug": "electoral-systems-how-votes-become-seats",
+      "category": "Politics & institutions",
+      "title_en": "Electoral systems: How votes become seats",
+      "title_fr": "Systèmes électoraux : comment les voix deviennent des sièges"
+    },
+    {
+      "id": 60,
+      "slug": "constitutions-designing-the-rules-of-government",
+      "category": "Politics & institutions",
+      "title_en": "Constitutions: Designing the rules of government",
+      "title_fr": "Constitutions : concevoir les règles de gouvernement"
+    },
+    {
+      "id": 61,
+      "slug": "election-administration-who-controls-the-count",
+      "category": "Politics & institutions",
+      "title_en": "Election administration: Who controls the count?",
+      "title_fr": "Administration électorale : qui contrôle le dépouillement ?"
+    },
+    {
+      "id": 62,
+      "slug": "government-formation-who-gets-to-govern-after-a-vote",
+      "category": "Politics & institutions",
+      "title_en": "Government formation: Who gets to govern after a vote?",
+      "title_fr": "Formation du gouvernement : qui gouverne après le vote ?"
+    },
+    {
+      "id": 63,
+      "slug": "the-civil-service-keeping-government-working-between-elections",
+      "category": "Politics & institutions",
+      "title_en": "The civil service: Keeping government working between elections",
+      "title_fr": "Fonction publique : faire fonctionner l’État entre les élections"
+    },
+    {
+      "id": 64,
+      "slug": "comparative-politics-reading-an-electoral-dataset-critically",
+      "category": "Politics & institutions",
+      "title_en": "Comparative politics: Reading an electoral dataset critically",
+      "title_fr": "Politique comparée : lire avec esprit critique un jeu de données électorales"
+    },
+    {
+      "id": 65,
+      "slug": "dopamine-prediction-error-and-learning",
+      "category": "Neuroscience & the brain",
+      "title_en": "Dopamine: prediction error, learning and why “pleasure chemical” is too simple",
+      "title_fr": "Dopamine : erreur de prédiction, apprentissage et limites de l’idée de « molécule du plaisir »"
+    },
+    {
+      "id": 66,
+      "slug": "muscle-hypertrophy-what-makes-muscle-grow",
+      "category": "Fitness & performance",
+      "title_en": "Muscle hypertrophy: what actually makes skeletal muscle grow?",
+      "title_fr": "Hypertrophie musculaire : qu’est-ce qui fait réellement grossir le muscle squelettique ?"
+    },
+    {
+      "id": 67,
+      "slug": "creatine-atp-buffering-and-disputed-brain-claims",
+      "category": "Fitness & performance",
+      "title_en": "Creatine: ATP buffering, muscle performance and disputed brain claims",
+      "title_fr": "Créatine : réserve d’ATP, performance musculaire et hypothèses débattues sur le cerveau"
+    },
+    {
+      "id": 68,
+      "slug": "how-collagen-is-synthesized-inside-the-body",
+      "category": "Biochemistry & biology",
+      "title_en": "How collagen is synthesized inside the body",
+      "title_fr": "Comment le collagène est synthétisé dans l’organisme"
+    },
+    {
+      "id": 69,
+      "slug": "the-glymphatic-system-how-the-brain-cleans-itself",
+      "category": "Neuroscience & the brain",
+      "title_en": "The glymphatic system: how the brain cleans itself",
+      "title_fr": "Système glymphatique : comment le cerveau élimine ses déchets"
+    },
+    {
+      "id": 70,
+      "slug": "how-banks-create-money-when-they-lend",
+      "category": "Finance & economics",
+      "title_en": "How banks create money when they lend",
+      "title_fr": "Comment les banques créent de la monnaie en accordant des prêts"
+    },
+    {
+      "id": 71,
+      "slug": "why-do-onions-make-us-cry",
+      "category": "Everyday why",
+      "title_en": "Why do onions make us cry?",
+      "title_fr": "Pourquoi les oignons nous font-ils pleurer ?"
+    },
+    {
+      "id": 72,
+      "slug": "how-octopuses-think-with-their-arms",
+      "category": "Animals & nature",
+      "title_en": "How octopuses think with their arms",
+      "title_fr": "Comment les pieuvres pensent avec leurs bras"
+    },
+    {
+      "id": 73,
+      "slug": "why-renaissance-perspective-changed-painting-forever",
+      "category": "Art & culture",
+      "title_en": "Why Renaissance perspective changed painting forever",
+      "title_fr": "Pourquoi la perspective de la Renaissance a transformé la peinture"
+    },
+    {
+      "id": 74,
+      "slug": "what-makes-a-company-tax-resident",
+      "category": "Law",
+      "title_en": "What makes a company tax resident in a country?",
+      "title_fr": "Qu’est-ce qui détermine la résidence fiscale d’une entreprise ?"
+    },
+    {
+      "id": 75,
+      "slug": "endocrine-disruptors-how-chemicals-can-imitate-hormones",
+      "category": "Biochemistry & biology",
+      "title_en": "Endocrine disruptors: how chemicals can imitate hormones",
+      "title_fr": "Perturbateurs endocriniens : comment des substances chimiques peuvent imiter les hormones"
+    },
+    {
+      "id": 76,
+      "slug": "rna-splicing-how-one-gene-can-make-different-proteins",
+      "category": "Biochemistry & biology",
+      "title_en": "RNA splicing: how one gene can make different proteins",
+      "title_fr": "Épissage de l’ARN : comment un gène peut produire différentes protéines"
+    },
+    {
+      "id": 77,
+      "slug": "your-microbiome-is-a-chemical-factory",
+      "category": "Recent promising research",
+      "title_en": "Your microbiome is a chemical factory",
+      "title_fr": "Le microbiote, une usine chimique"
+    },
+    {
+      "id": 78,
+      "slug": "stablecoins-what-actually-keeps-a-digital-dollar-worth-1",
+      "category": "Finance & economics",
+      "title_en": "Stablecoins: what actually keeps a digital dollar worth $1?",
+      "title_fr": "Stablecoins : qu’est-ce qui maintient réellement un dollar numérique à 1 dollar ?"
+    },
+    {
+      "id": 79,
+      "slug": "how-a-semiconductor-is-actually-made",
+      "category": "Science & technology",
+      "title_en": "How a semiconductor is actually made",
+      "title_fr": "Comment fabrique-t-on réellement un semi-conducteur ?"
+    },
+    {
+      "id": 80,
+      "slug": "the-internet-is-mostly-physical-undersea-cables",
+      "category": "Science & technology",
+      "title_en": "The internet is mostly physical: undersea cables",
+      "title_fr": "Internet est surtout matériel : les câbles sous-marins"
+    },
+    {
+      "id": 81,
+      "slug": "how-recommendation-algorithms-decide-what-you-see",
+      "category": "AI & LLMs",
+      "title_en": "How recommendation algorithms decide what you see",
+      "title_fr": "Comment les algorithmes de recommandation décident de ce que vous voyez"
+    },
+    {
+      "id": 82,
+      "slug": "how-do-we-prove-an-image-or-video-is-real-in-the-ai-era",
+      "category": "AI & LLMs",
+      "title_en": "How do we prove an image or video is real in the AI era?",
+      "title_fr": "Comment vérifier l’authenticité d’une image ou d’une vidéo à l’ère de l’IA ?"
+    },
+    {
+      "id": 83,
+      "slug": "dark-patterns-when-interface-design-manipulates-your-decisions",
+      "category": "Digital rights & law",
+      "title_en": "Dark patterns: when interface design manipulates your decisions",
+      "title_fr": "Interfaces manipulatrices : quand le design influence vos décisions"
+    },
+    {
+      "id": 84,
+      "slug": "why-monopolies-emerge-naturally-in-some-digital-markets",
+      "category": "Finance & economics",
+      "title_en": "Why monopolies emerge naturally in some digital markets",
+      "title_fr": "Pourquoi des monopoles apparaissent naturellement sur certains marchés numériques"
+    },
+    {
+      "id": 85,
+      "slug": "mtor-vs-ampk-your-body-s-growth-and-energy-switches",
+      "category": "Biochemistry & biology",
+      "title_en": "mTOR vs AMPK: your body's growth and energy switches",
+      "title_fr": "mTOR et AMPK : les interrupteurs de croissance et d’énergie de l’organisme"
+    },
+    {
+      "id": 86,
+      "slug": "how-insurance-companies-insure-disasters-bigger-than-themselves",
+      "category": "Finance & economics",
+      "title_en": "How insurance companies insure disasters bigger than themselves",
+      "title_fr": "Comment les assureurs couvrent des catastrophes qui les dépassent"
+    },
+    {
+      "id": 87,
+      "slug": "how-proteins-fold-and-what-happens-when-they-don-t",
+      "category": "Biochemistry & biology",
+      "title_en": "How proteins fold — and what happens when they don't",
+      "title_fr": "Comment les protéines se replient — et ce qui arrive quand elles ne le font pas"
+    },
+    {
+      "id": 88,
+      "slug": "epigenetic-clocks-can-we-measure-biological-age",
+      "category": "Biochemistry & biology",
+      "title_en": "Epigenetic clocks: can we measure biological age?",
+      "title_fr": "Horloges épigénétiques : peut-on mesurer l’âge biologique ?"
+    },
+    {
+      "id": 89,
+      "slug": "the-placebo-and-nocebo-effect-inside-the-brain",
+      "category": "Neuroscience & the brain",
+      "title_en": "The placebo and nocebo effect inside the brain",
+      "title_fr": "Effets placebo et nocebo dans le cerveau"
+    },
+    {
+      "id": 90,
+      "slug": "the-blood-brain-barrier-what-is-allowed-into-your-brain",
+      "category": "Neuroscience & the brain",
+      "title_en": "The blood-brain barrier: what is allowed into your brain?",
+      "title_fr": "Barrière hémato-encéphalique : que peut atteindre votre cerveau ?"
+    },
+    {
+      "id": 91,
+      "slug": "your-skeleton-is-constantly-destroying-and-rebuilding-itself",
+      "category": "Biochemistry & biology",
+      "title_en": "Your skeleton is constantly destroying and rebuilding itself",
+      "title_fr": "Votre squelette se résorbe et se renouvelle sans cesse"
+    },
+    {
+      "id": 92,
+      "slug": "lactate-is-not-just-muscle-waste",
+      "category": "Biochemistry & biology",
+      "title_en": "Lactate is not just “muscle waste”",
+      "title_fr": "Le lactate n’est pas simplement un « déchet musculaire »"
+    },
+    {
+      "id": 93,
+      "slug": "how-your-body-adapts-to-extreme-heat",
+      "category": "Biochemistry & biology",
+      "title_en": "How your body adapts to extreme heat",
+      "title_fr": "Comment l’organisme s’adapte aux fortes chaleurs"
+    },
+    {
+      "id": 94,
+      "slug": "the-fall-of-the-roman-republic",
+      "category": "History",
+      "title_en": "The fall of the Roman Republic",
+      "title_fr": "La chute de la République romaine"
+    },
+    {
+      "id": 95,
+      "slug": "the-dutch-east-india-company-the-worlds-first-mega-corporation",
+      "category": "History",
+      "title_en": "The Dutch East India Company: the world’s first mega-corporation?",
+      "title_fr": "Compagnie néerlandaise des Indes orientales : première multinationale géante ?"
+    },
+    {
+      "id": 96,
+      "slug": "the-magna-carta-what-it-actually-changed",
+      "category": "History",
+      "title_en": "The Magna Carta: what it actually changed",
+      "title_fr": "Magna Carta : ce qu’elle a réellement changé"
+    },
+    {
+      "id": 97,
+      "slug": "how-versailles-controlled-the-french-nobility",
+      "category": "History",
+      "title_en": "How Versailles controlled the French nobility",
+      "title_fr": "Comment Versailles encadrait la noblesse française"
+    },
+    {
+      "id": 98,
+      "slug": "the-black-death-and-how-it-transformed-european-society",
+      "category": "History",
+      "title_en": "The Black Death and how it transformed European society",
+      "title_fr": "Peste noire : la transformation de la société européenne"
+    },
+    {
+      "id": 99,
+      "slug": "the-cuban-missile-crisis-day-by-day",
+      "category": "History",
+      "title_en": "The Cuban Missile Crisis — day by day",
+      "title_fr": "Crise des missiles de Cuba, jour après jour"
+    },
+    {
+      "id": 100,
+      "slug": "the-industrial-revolution-from-the-workers-point-of-view",
+      "category": "History",
+      "title_en": "The Industrial Revolution from the worker’s point of view",
+      "title_fr": "Révolution industrielle : le point de vue des travailleurs"
+    },
+    {
+      "id": 101,
+      "slug": "the-green-revolution",
+      "category": "History",
+      "title_en": "The Green Revolution",
+      "title_fr": "Révolution verte"
+    },
+    {
+      "id": 102,
+      "slug": "how-propaganda-worked-during-the-cold-war",
+      "category": "History",
+      "title_en": "How propaganda worked during the Cold War",
+      "title_fr": "Le fonctionnement de la propagande pendant la guerre froide"
+    },
+    {
+      "id": 103,
+      "slug": "why-cities-built-walls-and-why-they-stopped",
+      "category": "History",
+      "title_en": "Why cities built walls — and why they stopped",
+      "title_fr": "Pourquoi les villes ont construit des remparts — et pourquoi elles ont cessé d’en construire"
+    },
+    {
+      "id": 104,
+      "slug": "the-thirty-years-war-and-the-making-of-the-modern-state-system",
+      "category": "History",
+      "title_en": "The Thirty Years’ War and the making of the modern state system",
+      "title_fr": "Guerre de Trente Ans et naissance du système étatique moderne"
+    },
+    {
+      "id": 105,
+      "slug": "the-scramble-for-africa",
+      "category": "History",
+      "title_en": "The Scramble for Africa",
+      "title_fr": "La course au partage de l’Afrique"
+    },
+    {
+      "id": 106,
+      "slug": "how-universal-suffrage-gradually-emerged",
+      "category": "History",
+      "title_en": "How universal suffrage gradually emerged",
+      "title_fr": "L’émergence progressive du suffrage universel"
+    },
+    {
+      "id": 107,
+      "slug": "the-opium-wars",
+      "category": "History",
+      "title_en": "The Opium Wars",
+      "title_fr": "Les guerres de l’opium"
+    },
+    {
+      "id": 108,
+      "slug": "the-south-sea-bubble-of-1720",
+      "category": "History",
+      "title_en": "The South Sea Bubble of 1720",
+      "title_fr": "La bulle de la Compagnie des mers du Sud de 1720"
+    },
+    {
+      "id": 109,
+      "slug": "the-nuremberg-trials-and-the-birth-of-modern-international-criminal-law",
+      "category": "History",
+      "title_en": "The Nuremberg Trials and the birth of modern international criminal law",
+      "title_fr": "Procès de Nuremberg : naissance du droit pénal international moderne"
+    },
+    {
+      "id": 110,
+      "slug": "how-the-ottoman-empire-governed-such-a-diverse-territory",
+      "category": "History",
+      "title_en": "How the Ottoman Empire governed such a diverse territory",
+      "title_fr": "Comment l’Empire ottoman gouvernait un territoire aussi divers"
+    },
+    {
+      "id": 111,
+      "slug": "salt-as-a-political-weapon",
+      "category": "History",
+      "title_en": "Salt as a political weapon",
+      "title_fr": "Le sel comme arme politique"
+    },
+    {
+      "id": 112,
+      "slug": "the-haitian-revolution",
+      "category": "History",
+      "title_en": "The Haitian Revolution",
+      "title_fr": "La révolution haïtienne"
+    },
+    {
+      "id": 113,
+      "slug": "how-the-medici-built-power-through-banking",
+      "category": "History",
+      "title_en": "How the Medici built power through banking",
+      "title_fr": "Comment les Médicis ont bâti leur pouvoir grâce à la banque"
+    },
+    {
+      "id": 114,
+      "slug": "why-inflation-can-continue-after-the-original-shock-is-gone",
+      "category": "Finance & economics",
+      "title_en": "Why inflation can continue after the original shock is gone",
+      "title_fr": "Pourquoi l’inflation peut persister après la disparition du choc initial"
+    },
+    {
+      "id": 115,
+      "slug": "why-some-countries-stay-poor-while-others-grow",
+      "category": "Finance & economics",
+      "title_en": "Why some countries stay poor while others grow",
+      "title_fr": "Pourquoi certains pays restent pauvres tandis que d’autres se développent"
+    },
+    {
+      "id": 116,
+      "slug": "what-actually-causes-inequality",
+      "category": "Finance & economics",
+      "title_en": "What actually causes inequality",
+      "title_fr": "Quelles sont les véritables causes des inégalités ?"
+    },
+    {
+      "id": 117,
+      "slug": "why-ceos-and-top-workers-earn-so-much-more-than-others",
+      "category": "Finance & economics",
+      "title_en": "Why CEOs and top workers earn so much more than others",
+      "title_fr": "Pourquoi les PDG et les salariés les mieux rémunérés gagnent-ils tellement plus que les autres ?"
+    },
+    {
+      "id": 118,
+      "slug": "why-prices-are-not-simply-cost-profit",
+      "category": "Finance & economics",
+      "title_en": "Why prices are not simply “cost + profit”",
+      "title_fr": "Pourquoi les prix ne se résument pas à « coût + bénéfice »"
+    },
+    {
+      "id": 119,
+      "slug": "price-discrimination-why-everyone-pays-a-different-price-for-the-same-thing",
+      "category": "Finance & economics",
+      "title_en": "Price discrimination: why everyone pays a different price for the same thing",
+      "title_fr": "La discrimination par les prix : pourquoi chacun paie un prix différent pour la même chose"
+    },
+    {
+      "id": 120,
+      "slug": "behavioral-economics-why-humans-systematically-make-irrational-choices",
+      "category": "Psychology & behavior",
+      "title_en": "Behavioral economics: why humans systematically make “irrational” choices",
+      "title_fr": "L’économie comportementale : pourquoi nos choix s’écartent systématiquement de la rationalité"
+    },
+    {
+      "id": 121,
+      "slug": "network-effects-why-some-markets-tip-toward-one-winner",
+      "category": "Finance & economics",
+      "title_en": "Network effects: why some markets tip toward one winner",
+      "title_fr": "Les effets de réseau : pourquoi certains marchés basculent vers un seul gagnant"
+    },
+    {
+      "id": 122,
+      "slug": "how-supply-chains-transmit-economic-shocks",
+      "category": "Finance & economics",
+      "title_en": "How supply chains transmit economic shocks",
+      "title_fr": "Comment les chaînes d’approvisionnement transmettent les chocs économiques"
+    },
+    {
+      "id": 123,
+      "slug": "why-minimum-wages-do-not-always-behave-like-simple-supply-and-demand-diagrams-pr",
+      "category": "Finance & economics",
+      "title_en": "Why minimum wages do not always behave like simple supply-and-demand diagrams predict",
+      "title_fr": "Pourquoi le salaire minimum ne suit pas toujours les prévisions simples de l’offre et de la demande"
+    },
+    {
+      "id": 124,
+      "slug": "why-central-banks-need-credibility",
+      "category": "Finance & economics",
+      "title_en": "Why central banks need credibility",
+      "title_fr": "Pourquoi les banques centrales ont besoin de crédibilité"
+    },
+    {
+      "id": 125,
+      "slug": "how-financial-crises-actually-spread",
+      "category": "Finance & economics",
+      "title_en": "How financial crises actually spread",
+      "title_fr": "Comment les crises financières se propagent réellement"
+    },
+    {
+      "id": 126,
+      "slug": "why-interest-rates-affect-almost-everything",
+      "category": "Finance & economics",
+      "title_en": "Why interest rates affect almost everything",
+      "title_fr": "Pourquoi les taux d’intérêt influent sur presque tout"
+    },
+    {
+      "id": 127,
+      "slug": "why-currencies-rise-and-fall",
+      "category": "Finance & economics",
+      "title_en": "Why currencies rise and fall",
+      "title_fr": "Pourquoi les monnaies montent et baissent"
+    },
+    {
+      "id": 128,
+      "slug": "why-housing-becomes-unaffordable",
+      "category": "Finance & economics",
+      "title_en": "Why housing becomes unaffordable",
+      "title_fr": "Pourquoi le logement devient inabordable"
+    },
+    {
+      "id": 129,
+      "slug": "why-governments-can-borrow-so-much-money",
+      "category": "Finance & economics",
+      "title_en": "Why governments can borrow so much money",
+      "title_fr": "Pourquoi les gouvernements peuvent emprunter autant"
+    },
+    {
+      "id": 130,
+      "slug": "yield-curves-why-the-shape-of-interest-rates-matters",
+      "category": "Finance & economics",
+      "title_en": "Yield curves: why the shape of interest rates matters",
+      "title_fr": "Les courbes de rendement : pourquoi la forme des taux d’intérêt compte"
+    },
+    {
+      "id": 131,
+      "slug": "why-companies-are-worth-the-present-value-of-future-cash-flows",
+      "category": "Finance & economics",
+      "title_en": "Why companies are worth the present value of future cash flows",
+      "title_fr": "Pourquoi la valeur d’une entreprise correspond à la valeur actuelle de ses flux de trésorerie futurs"
+    },
+    {
+      "id": 132,
+      "slug": "why-productivity-determines-long-term-living-standards",
+      "category": "Finance & economics",
+      "title_en": "Why productivity determines long-term living standards",
+      "title_fr": "Pourquoi la productivité détermine le niveau de vie à long terme"
+    },
+    {
+      "id": 133,
+      "slug": "why-rice-cultures-and-wheat-cultures-developed-differently",
+      "category": "Art & culture",
+      "title_en": "Why rice cultures and wheat cultures developed differently",
+      "title_fr": "Pourquoi les cultures du riz et du blé ont évolué différemment"
+    },
+    {
+      "id": 134,
+      "slug": "the-culture-of-cafes-and-why-they-became-intellectual-spaces",
+      "category": "Art & culture",
+      "title_en": "The culture of cafés and why they became intellectual spaces",
+      "title_fr": "La culture des cafés et leur rôle de lieux de débats intellectuels"
+    },
+    {
+      "id": 135,
+      "slug": "why-some-societies-value-minimalism-and-others-ornament",
+      "category": "Art & culture",
+      "title_en": "Why some societies value minimalism and others ornament",
+      "title_fr": "Pourquoi certaines sociétés valorisent le minimalisme et d’autres l’ornement"
+    },
+    {
+      "id": 136,
+      "slug": "why-marriage-means-such-different-things-across-societies",
+      "category": "Art & culture",
+      "title_en": "Why marriage means such different things across societies",
+      "title_fr": "Pourquoi le mariage a des significations si différentes selon les sociétés"
+    },
+    {
+      "id": 137,
+      "slug": "how-cultures-define-childhood-differently",
+      "category": "Art & culture",
+      "title_en": "How cultures define childhood differently",
+      "title_fr": "Comment les cultures définissent différemment l’enfance"
+    },
+    {
+      "id": 138,
+      "slug": "how-food-becomes-national-identity",
+      "category": "Art & culture",
+      "title_en": "How food becomes national identity",
+      "title_fr": "Comment la cuisine devient un marqueur d’identité nationale"
+    },
+    {
+      "id": 139,
+      "slug": "why-silence-means-different-things-in-different-cultures",
+      "category": "Art & culture",
+      "title_en": "Why silence means different things in different cultures",
+      "title_fr": "Pourquoi le silence n’a pas le même sens dans toutes les cultures"
+    },
+    {
+      "id": 140,
+      "slug": "why-cultures-experience-time-differently",
+      "category": "Art & culture",
+      "title_en": "Why cultures experience time differently",
+      "title_fr": "Pourquoi les cultures ne vivent pas le temps de la même manière"
+    },
+    {
+      "id": 141,
+      "slug": "why-people-behave-differently-in-public-and-private",
+      "category": "Psychology & behavior",
+      "title_en": "Why people behave differently in public and private",
+      "title_fr": "Pourquoi les gens se comportent différemment en public et en privé"
+    },
+    {
+      "id": 142,
+      "slug": "the-cultural-history-of-cleanliness",
+      "category": "Art & culture",
+      "title_en": "The cultural history of cleanliness",
+      "title_fr": "L’histoire culturelle de la propreté"
+    },
+    {
+      "id": 143,
+      "slug": "why-embarrassment-and-shame-are-cultural-emotions",
+      "category": "Psychology & behavior",
+      "title_en": "Why embarrassment and shame are cultural emotions",
+      "title_fr": "Pourquoi la gêne et la honte sont des émotions culturelles"
+    },
+    {
+      "id": 144,
+      "slug": "why-clothes-communicate-status-before-we-even-speak",
+      "category": "Art & culture",
+      "title_en": "Why clothes communicate status before we even speak",
+      "title_fr": "Pourquoi les vêtements signalent le statut avant même qu’on parle"
+    },
+    {
+      "id": 145,
+      "slug": "how-cities-create-their-own-cultures",
+      "category": "Art & culture",
+      "title_en": "How cities create their own cultures",
+      "title_fr": "Comment les villes créent leur propre culture"
+    },
+    {
+      "id": 146,
+      "slug": "how-beauty-standards-change-across-time-and-place",
+      "category": "Art & culture",
+      "title_en": "How beauty standards change across time and place",
+      "title_fr": "Comment les canons de beauté évoluent selon les époques et les lieux"
+    },
+    {
+      "id": 147,
+      "slug": "why-table-manners-are-so-different-around-the-world",
+      "category": "Art & culture",
+      "title_en": "Why table manners are so different around the world",
+      "title_fr": "Pourquoi les manières de table varient tant dans le monde"
+    },
+    {
+      "id": 148,
+      "slug": "why-humans-create-rituals",
+      "category": "Art & culture",
+      "title_en": "Why humans create rituals",
+      "title_fr": "Pourquoi les humains créent des rituels"
+    },
+    {
+      "id": 149,
+      "slug": "why-every-culture-has-ghosts",
+      "category": "Art & culture",
+      "title_en": "Why every culture has ghosts",
+      "title_fr": "Pourquoi toutes les cultures ont des fantômes"
+    },
+    {
+      "id": 150,
+      "slug": "how-language-changes-the-way-people-think",
+      "category": "Art & culture",
+      "title_en": "How language changes the way people think",
+      "title_fr": "Comment la langue influence notre façon de penser"
+    },
+    {
+      "id": 151,
+      "slug": "why-luxury-exists-in-every-society",
+      "category": "Art & culture",
+      "title_en": "Why luxury exists in every society",
+      "title_fr": "Pourquoi le luxe existe dans toutes les sociétés"
+    },
+    {
+      "id": 152,
+      "slug": "why-homes-look-so-different-across-cultures",
+      "category": "Art & culture",
+      "title_en": "Why homes look so different across cultures",
+      "title_fr": "Pourquoi les maisons sont si différentes d’une culture à l’autre"
+    },
+    {
+      "id": 153,
+      "slug": "different-sizes-of-infinity",
+      "category": "Mathematics",
+      "title_en": "Different sizes of infinity",
+      "title_fr": "Les différentes tailles de l’infini"
+    },
+    {
+      "id": 154,
+      "slug": "bayes-theorem-how-evidence-should-change-your-beliefs",
+      "category": "Mathematics",
+      "title_en": "Bayes’ theorem: how evidence should change your beliefs",
+      "title_fr": "Le théorème de Bayes : comment les preuves devraient faire évoluer nos croyances"
+    },
+    {
+      "id": 155,
+      "slug": "the-mathematics-of-optimal-decisions",
+      "category": "Mathematics",
+      "title_en": "The mathematics of optimal decisions",
+      "title_fr": "Les mathématiques des décisions optimales"
+    },
+    {
+      "id": 156,
+      "slug": "game-theory-why-rational-people-sometimes-make-bad-collective-choices",
+      "category": "Mathematics",
+      "title_en": "Game theory: why rational people sometimes make bad collective choices",
+      "title_fr": "La théorie des jeux : pourquoi des choix rationnels peuvent être collectivement mauvais"
+    },
+    {
+      "id": 157,
+      "slug": "how-queueing-theory-explains-waiting-lines",
+      "category": "Mathematics",
+      "title_en": "How queueing theory explains waiting lines",
+      "title_fr": "Comment la théorie des files d’attente explique les temps d’attente"
+    },
+    {
+      "id": 158,
+      "slug": "network-mathematics-why-some-people-and-websites-become-hubs",
+      "category": "Mathematics",
+      "title_en": "Network mathematics: why some people and websites become hubs",
+      "title_fr": "Les mathématiques des réseaux : pourquoi certaines personnes et certains sites deviennent des pôles"
+    },
+    {
+      "id": 159,
+      "slug": "the-mathematics-of-epidemics",
+      "category": "Mathematics",
+      "title_en": "The mathematics of epidemics",
+      "title_fr": "Les mathématiques des épidémies"
+    },
+    {
+      "id": 160,
+      "slug": "why-averages-can-lie",
+      "category": "Mathematics",
+      "title_en": "Why averages can lie",
+      "title_fr": "Pourquoi les moyennes peuvent être trompeuses"
+    },
+    {
+      "id": 161,
+      "slug": "why-the-normal-distribution-appears-everywhere",
+      "category": "Mathematics",
+      "title_en": "Why the normal distribution appears everywhere",
+      "title_fr": "Pourquoi la loi normale apparaît partout"
+    },
+    {
+      "id": 162,
+      "slug": "non-euclidean-geometry",
+      "category": "Mathematics",
+      "title_en": "Non-Euclidean geometry",
+      "title_fr": "Les géométries non euclidiennes"
+    },
+    {
+      "id": 163,
+      "slug": "godels-incompleteness-theorem",
+      "category": "Mathematics",
+      "title_en": "Gödel’s incompleteness theorem",
+      "title_fr": "Le théorème d’incomplétude de Gödel"
+    },
+    {
+      "id": 164,
+      "slug": "why-randomness-is-so-unintuitive",
+      "category": "Mathematics",
+      "title_en": "Why randomness is so unintuitive",
+      "title_fr": "Pourquoi le hasard est si difficile à appréhender"
+    },
+    {
+      "id": 165,
+      "slug": "why-calculus-works",
+      "category": "Mathematics",
+      "title_en": "Why calculus works",
+      "title_fr": "Pourquoi le calcul infinitésimal fonctionne"
+    },
+    {
+      "id": 166,
+      "slug": "the-birthday-paradox",
+      "category": "Mathematics",
+      "title_en": "The birthday paradox",
+      "title_fr": "Le paradoxe des anniversaires"
+    },
+    {
+      "id": 167,
+      "slug": "the-monty-hall-problem",
+      "category": "Mathematics",
+      "title_en": "The Monty Hall problem",
+      "title_fr": "Le problème de Monty Hall"
+    },
+    {
+      "id": 168,
+      "slug": "why-exponential-growth-fools-the-human-brain",
+      "category": "Mathematics",
+      "title_en": "Why exponential growth fools the human brain",
+      "title_fr": "Pourquoi la croissance exponentielle trompe notre intuition"
+    },
+    {
+      "id": 169,
+      "slug": "chaos-theory-how-tiny-differences-become-huge-outcomes",
+      "category": "Mathematics",
+      "title_en": "Chaos theory: how tiny differences become huge outcomes",
+      "title_fr": "La théorie du chaos : comment de minuscules écarts produisent de grands effets"
+    },
+    {
+      "id": 170,
+      "slug": "fractals-why-the-same-patterns-appear-at-different-scales",
+      "category": "Mathematics",
+      "title_en": "Fractals: why the same patterns appear at different scales",
+      "title_fr": "Les fractales : pourquoi les mêmes motifs apparaissent à différentes échelles"
+    },
+    {
+      "id": 171,
+      "slug": "prime-numbers-and-why-they-matter-for-internet-security",
+      "category": "Mathematics",
+      "title_en": "Prime numbers and why they matter for internet security",
+      "title_fr": "Les nombres premiers et leur rôle dans la sécurité d’Internet"
+    },
+    {
+      "id": 172,
+      "slug": "how-gps-uses-geometry-to-find-you",
+      "category": "Mathematics",
+      "title_en": "How GPS uses geometry to find you",
+      "title_fr": "Comment le GPS utilise la géométrie pour vous localiser"
+    },
+    {
+      "id": 173,
+      "slug": "how-photography-changed-painting",
+      "category": "Art & culture",
+      "title_en": "How photography changed painting",
+      "title_fr": "Comment la photographie a transformé la peinture"
+    },
+    {
+      "id": 174,
+      "slug": "why-museums-look-the-way-they-do",
+      "category": "Art & culture",
+      "title_en": "Why museums look the way they do",
+      "title_fr": "Pourquoi les musées ont cette apparence"
+    },
+    {
+      "id": 175,
+      "slug": "cubism-why-picasso-and-braque-broke-objects-apart",
+      "category": "Art & culture",
+      "title_en": "Cubism: why Picasso and Braque broke objects apart",
+      "title_fr": "Le cubisme : pourquoi Picasso et Braque ont décomposé les objets"
+    },
+    {
+      "id": 176,
+      "slug": "how-lighting-changes-an-artwork",
+      "category": "Art & culture",
+      "title_en": "How lighting changes an artwork",
+      "title_fr": "Comment l’éclairage transforme une œuvre d’art"
+    },
+    {
+      "id": 177,
+      "slug": "how-artists-mixed-pigments-before-modern-paint-tubes",
+      "category": "Art & culture",
+      "title_en": "How artists mixed pigments before modern paint tubes",
+      "title_fr": "Comment les artistes mélangeaient les pigments avant les tubes de peinture modernes"
+    },
+    {
+      "id": 178,
+      "slug": "why-self-portraits-became-so-important",
+      "category": "Art & culture",
+      "title_en": "Why self-portraits became so important",
+      "title_fr": "Pourquoi les autoportraits sont devenus si importants"
+    },
+    {
+      "id": 179,
+      "slug": "street-art-when-does-vandalism-become-art",
+      "category": "Art & culture",
+      "title_en": "Street art: when does vandalism become art?",
+      "title_fr": "L’art urbain : à quel moment le vandalisme devient-il de l’art ?"
+    },
+    {
+      "id": 180,
+      "slug": "why-ancient-art-often-looks-less-realistic-on-purpose",
+      "category": "Art & culture",
+      "title_en": "Why ancient art often looks “less realistic” on purpose",
+      "title_fr": "Pourquoi l’art ancien paraît souvent « moins réaliste » à dessein"
+    },
+    {
+      "id": 181,
+      "slug": "why-faces-in-portraits-feel-alive",
+      "category": "Art & culture",
+      "title_en": "Why faces in portraits feel alive",
+      "title_fr": "Pourquoi les visages des portraits semblent vivants"
+    },
+    {
+      "id": 182,
+      "slug": "how-art-has-been-used-as-propaganda",
+      "category": "Art & culture",
+      "title_en": "How art has been used as propaganda",
+      "title_fr": "Comment l’art a servi la propagande"
+    },
+    {
+      "id": 183,
+      "slug": "why-impressionist-paintings-looked-unfinished-to-their-first-audiences",
+      "category": "Art & culture",
+      "title_en": "Why Impressionist paintings looked “unfinished” to their first audiences",
+      "title_fr": "Pourquoi les premières toiles impressionnistes ont paru « inachevées »"
+    },
+    {
+      "id": 184,
+      "slug": "can-ai-make-art-and-what-exactly-is-it-learning",
+      "category": "AI & LLMs",
+      "title_en": "Can AI make art, and what exactly is it learning?",
+      "title_fr": "L’IA peut-elle créer de l’art, et qu’apprend-elle exactement ?"
+    },
+    {
+      "id": 185,
+      "slug": "why-abstract-art-can-still-feel-emotional",
+      "category": "Art & culture",
+      "title_en": "Why abstract art can still feel emotional",
+      "title_fr": "Pourquoi l’art abstrait peut malgré tout susciter des émotions"
+    },
+    {
+      "id": 186,
+      "slug": "how-artists-manipulate-where-you-look",
+      "category": "Art & culture",
+      "title_en": "How artists manipulate where you look",
+      "title_fr": "Comment les artistes dirigent notre regard"
+    },
+    {
+      "id": 187,
+      "slug": "the-science-of-color-in-art",
+      "category": "Art & culture",
+      "title_en": "The science of color in art",
+      "title_fr": "La science de la couleur dans l’art"
+    },
+    {
+      "id": 188,
+      "slug": "how-marble-becomes-skin-in-sculpture",
+      "category": "Art & culture",
+      "title_en": "How marble becomes “skin” in sculpture",
+      "title_fr": "Comment le marbre devient une « peau » en sculpture"
+    },
+    {
+      "id": 189,
+      "slug": "why-old-paintings-crack-yellow-and-change-color",
+      "category": "Art & culture",
+      "title_en": "Why old paintings crack, yellow, and change color",
+      "title_fr": "Pourquoi les peintures anciennes se fissurent, jaunissent et changent de couleur"
+    },
+    {
+      "id": 190,
+      "slug": "why-some-artworks-become-worth-hundreds-of-millions",
+      "category": "Art & culture",
+      "title_en": "Why some artworks become worth hundreds of millions",
+      "title_fr": "Pourquoi certaines œuvres valent des centaines de millions"
+    },
+    {
+      "id": 191,
+      "slug": "how-experts-detect-forged-art",
+      "category": "Art & culture",
+      "title_en": "How experts detect forged art",
+      "title_fr": "Comment les experts détectent les faux en art"
+    },
+    {
+      "id": 192,
+      "slug": "how-animals-regenerate-body-parts",
+      "category": "Animals & nature",
+      "title_en": "How animals regenerate body parts",
+      "title_fr": "Comment les animaux régénèrent des parties de leur corps"
+    },
+    {
+      "id": 193,
+      "slug": "how-animals-survive-being-frozen",
+      "category": "Animals & nature",
+      "title_en": "How animals survive being frozen",
+      "title_fr": "Comment les animaux survivent à la congélation"
+    },
+    {
+      "id": 194,
+      "slug": "what-actually-happens-during-hibernation",
+      "category": "Animals & nature",
+      "title_en": "What actually happens during hibernation",
+      "title_fr": "Que se passe-t-il réellement pendant l’hibernation ?"
+    },
+    {
+      "id": 195,
+      "slug": "how-animals-breathe-through-their-skin",
+      "category": "Animals & nature",
+      "title_en": "How animals breathe through their skin",
+      "title_fr": "Comment les animaux respirent par la peau"
+    },
+    {
+      "id": 196,
+      "slug": "how-chameleons-change-color",
+      "category": "Animals & nature",
+      "title_en": "How chameleons change color",
+      "title_fr": "Comment les caméléons changent de couleur"
+    },
+    {
+      "id": 197,
+      "slug": "how-squid-and-octopuses-become-invisible",
+      "category": "Animals & nature",
+      "title_en": "How squid and octopuses become invisible",
+      "title_fr": "Comment les calmars et les pieuvres deviennent invisibles"
+    },
+    {
+      "id": 198,
+      "slug": "how-penguins-survive-antarctic-cold",
+      "category": "Animals & nature",
+      "title_en": "How penguins survive Antarctic cold",
+      "title_fr": "Comment les manchots survivent au froid antarctique"
+    },
+    {
+      "id": 199,
+      "slug": "how-domestication-changed-wolves-into-dogs",
+      "category": "Animals & nature",
+      "title_en": "How domestication changed wolves into dogs",
+      "title_fr": "Comment la domestication a transformé les loups en chiens"
+    },
+    {
+      "id": 200,
+      "slug": "do-animals-understand-fairness",
+      "category": "Animals & nature",
+      "title_en": "Do animals understand fairness?",
+      "title_fr": "Les animaux comprennent-ils l’équité ?"
+    },
+    {
+      "id": 201,
+      "slug": "how-fish-form-schools-without-a-leader",
+      "category": "Animals & nature",
+      "title_en": "How fish form schools without a leader",
+      "title_fr": "Comment les poissons forment des bancs sans chef"
+    },
+    {
+      "id": 202,
+      "slug": "how-bees-communicate-with-a-dance",
+      "category": "Animals & nature",
+      "title_en": "How bees communicate with a dance",
+      "title_fr": "Comment les abeilles communiquent par la danse"
+    },
+    {
+      "id": 203,
+      "slug": "how-metamorphosis-rebuilds-an-animal",
+      "category": "Animals & nature",
+      "title_en": "How metamorphosis rebuilds an animal",
+      "title_fr": "Comment la métamorphose reconstruit un animal"
+    },
+    {
+      "id": 204,
+      "slug": "do-dolphins-have-names",
+      "category": "Animals & nature",
+      "title_en": "Do dolphins have names?",
+      "title_fr": "Les dauphins ont-ils des noms ?"
+    },
+    {
+      "id": 205,
+      "slug": "how-birds-navigate-across-entire-continents",
+      "category": "Animals & nature",
+      "title_en": "How birds navigate across entire continents",
+      "title_fr": "Comment les oiseaux traversent des continents entiers"
+    },
+    {
+      "id": 206,
+      "slug": "how-echolocation-creates-a-picture-of-the-world",
+      "category": "Animals & nature",
+      "title_en": "How echolocation creates a picture of the world",
+      "title_fr": "Comment l’écholocation produit une image du monde"
+    },
+    {
+      "id": 207,
+      "slug": "do-elephants-understand-death",
+      "category": "Animals & nature",
+      "title_en": "Do elephants understand death?",
+      "title_fr": "Les éléphants comprennent-ils la mort ?"
+    },
+    {
+      "id": 208,
+      "slug": "how-an-ant-colony-behaves-like-one-organism",
+      "category": "Animals & nature",
+      "title_en": "How an ant colony behaves like one organism",
+      "title_fr": "Comment une colonie de fourmis se comporte comme un seul organisme"
+    },
+    {
+      "id": 209,
+      "slug": "how-whales-communicate-across-oceans",
+      "category": "Animals & nature",
+      "title_en": "How whales communicate across oceans",
+      "title_fr": "Comment les baleines communiquent à travers les océans"
+    },
+    {
+      "id": 210,
+      "slug": "why-crows-are-frighteningly-intelligent",
+      "category": "Animals & nature",
+      "title_en": "Why crows are frighteningly intelligent",
+      "title_fr": "Pourquoi l’intelligence des corbeaux est si impressionnante"
+    },
+    {
+      "id": 211,
+      "slug": "why-do-we-get-goosebumps",
+      "category": "Everyday why",
+      "title_en": "Why do we get goosebumps?",
+      "title_fr": "Pourquoi avons-nous la chair de poule ?"
+    },
+    {
+      "id": 212,
+      "slug": "why-does-your-voice-sound-weird-in-recordings",
+      "category": "Everyday why",
+      "title_en": "Why does your voice sound weird in recordings?",
+      "title_fr": "Pourquoi notre voix semble-t-elle étrange sur les enregistrements ?"
+    },
+    {
+      "id": 213,
+      "slug": "why-do-we-hiccup",
+      "category": "Everyday why",
+      "title_en": "Why do we hiccup?",
+      "title_fr": "Pourquoi avons-nous le hoquet ?"
+    },
+    {
+      "id": 214,
+      "slug": "why-cant-you-tickle-yourself",
+      "category": "Everyday why",
+      "title_en": "Why can’t you tickle yourself?",
+      "title_fr": "Pourquoi ne peut-on pas se chatouiller soi-même ?"
+    },
+    {
+      "id": 215,
+      "slug": "why-does-alcohol-make-people-pee-more",
+      "category": "Everyday why",
+      "title_en": "Why does alcohol make people pee more?",
+      "title_fr": "Pourquoi l’alcool fait-il davantage uriner ?"
+    },
+    {
+      "id": 216,
+      "slug": "why-do-we-get-brain-freeze",
+      "category": "Everyday why",
+      "title_en": "Why do we get brain freeze?",
+      "title_fr": "Pourquoi a-t-on un mal de tête quand on mange quelque chose de glacé ?"
+    },
+    {
+      "id": 217,
+      "slug": "why-does-rain-have-a-smell",
+      "category": "Everyday why",
+      "title_en": "Why does rain have a smell?",
+      "title_fr": "Pourquoi la pluie a-t-elle une odeur ?"
+    },
+    {
+      "id": 218,
+      "slug": "why-do-old-books-smell-so-good",
+      "category": "Everyday why",
+      "title_en": "Why do old books smell so good?",
+      "title_fr": "Pourquoi les vieux livres sentent-ils si bon ?"
+    },
+    {
+      "id": 219,
+      "slug": "why-do-airplanes-dim-the-lights-before-takeoff-and-landing",
+      "category": "Everyday why",
+      "title_en": "Why do airplanes dim the lights before takeoff and landing?",
+      "title_fr": "Pourquoi les avions tamisent-ils les lumières avant le décollage et l’atterrissage ?"
+    },
+    {
+      "id": 220,
+      "slug": "why-does-your-stomach-make-noises-when-you-re-hungry",
+      "category": "Everyday why",
+      "title_en": "Why does your stomach make noises when you're hungry?",
+      "title_fr": "Pourquoi le ventre gargouille-t-il quand on a faim ?"
+    },
+    {
+      "id": 221,
+      "slug": "why-does-water-taste-different-from-one-city-to-another",
+      "category": "Everyday why",
+      "title_en": "Why does water taste different from one city to another?",
+      "title_fr": "Pourquoi l’eau n’a-t-elle pas le même goût d’une ville à l’autre ?"
+    },
+    {
+      "id": 222,
+      "slug": "why-does-time-feel-faster-as-we-get-older",
+      "category": "Everyday why",
+      "title_en": "Why does time feel faster as we get older?",
+      "title_fr": "Pourquoi le temps semble-t-il passer plus vite avec l’âge ?"
+    },
+    {
+      "id": 223,
+      "slug": "why-do-we-suddenly-remember-embarrassing-moments-from-years-ago",
+      "category": "Everyday why",
+      "title_en": "Why do we suddenly remember embarrassing moments from years ago?",
+      "title_fr": "Pourquoi nous revient-il soudainement en mémoire des moments gênants datant de plusieurs années ?"
+    },
+    {
+      "id": 224,
+      "slug": "why-does-metal-feel-colder-than-wood-when-they-are-the-same-temperature",
+      "category": "Everyday why",
+      "title_en": "Why does metal feel colder than wood when they are the same temperature?",
+      "title_fr": "Pourquoi le métal semble-t-il plus froid que le bois à température égale ?"
+    },
+    {
+      "id": 225,
+      "slug": "why-do-we-forget-what-we-walked-into-a-room-for",
+      "category": "Everyday why",
+      "title_en": "Why do we forget what we walked into a room for?",
+      "title_fr": "Pourquoi oublie-t-on ce qu’on allait faire en entrant dans une pièce ?"
+    },
+    {
+      "id": 226,
+      "slug": "why-do-our-fingers-wrinkle-in-water",
+      "category": "Everyday why",
+      "title_en": "Why do our fingers wrinkle in water?",
+      "title_fr": "Pourquoi nos doigts se rident-ils dans l’eau ?"
+    },
+    {
+      "id": 227,
+      "slug": "why-does-spicy-food-feel-hot-when-it-isn-t-actually-burning-us",
+      "category": "Everyday why",
+      "title_en": "Why does spicy food feel hot when it isn't actually burning us?",
+      "title_fr": "Pourquoi les aliments épicés donnent-ils une sensation de chaleur sans nous brûler réellement ?"
+    },
+    {
+      "id": 228,
+      "slug": "why-do-we-yawn-when-someone-else-yawns",
+      "category": "Everyday why",
+      "title_en": "Why do we yawn when someone else yawns?",
+      "title_fr": "Pourquoi bâille-t-on quand quelqu’un d’autre bâille ?"
+    },
+    {
+      "id": 229,
+      "slug": "why-do-mirrors-seem-to-reverse-left-and-right-but-not-up-and-down",
+      "category": "Everyday why",
+      "title_en": "Why do mirrors seem to reverse left and right but not up and down?",
+      "title_fr": "Pourquoi les miroirs semblent-ils inverser la gauche et la droite, mais pas le haut et le bas ?"
+    },
+    {
+      "id": 230,
+      "slug": "why-do-we-get-deja-vu",
+      "category": "Everyday why",
+      "title_en": "Why do we get déjà vu?",
+      "title_fr": "Pourquoi éprouve-t-on du déjà-vu ?"
+    },
+    {
+      "id": 231,
+      "slug": "why-do-cats-purr",
+      "category": "Everyday why",
+      "title_en": "Why do cats purr?",
+      "title_fr": "Pourquoi les chats ronronnent-ils ?"
+    },
+    {
+      "id": 232,
+      "slug": "why-do-mosquitoes-bite-some-people-more-than-others",
+      "category": "Everyday why",
+      "title_en": "Why do mosquitoes bite some people more than others?",
+      "title_fr": "Pourquoi les moustiques piquent-ils certaines personnes davantage que d’autres ?"
+    },
+    {
+      "id": 233,
+      "slug": "why-do-we-get-pins-and-needles",
+      "category": "Everyday why",
+      "title_en": "Why do we get pins and needles?",
+      "title_fr": "Pourquoi a-t-on des fourmillements ?"
+    },
+    {
+      "id": 234,
+      "slug": "why-do-we-feel-dizzy-after-spinning",
+      "category": "Everyday why",
+      "title_en": "Why do we feel dizzy after spinning?",
+      "title_fr": "Pourquoi a-t-on la tête qui tourne après avoir tourné sur soi-même ?"
+    },
+    {
+      "id": 235,
+      "slug": "why-does-your-skin-peel-after-a-sunburn",
+      "category": "Everyday why",
+      "title_en": "Why does your skin peel after a sunburn?",
+      "title_fr": "Pourquoi la peau pèle-t-elle après un coup de soleil ?"
+    },
+    {
+      "id": 236,
+      "slug": "why-does-bread-go-stale-even-before-it-dries-out",
+      "category": "Everyday why",
+      "title_en": "Why does bread go stale even before it dries out?",
+      "title_fr": "Pourquoi le pain rassit-il avant même de sécher ?"
+    },
+    {
+      "id": 237,
+      "slug": "why-do-some-songs-get-stuck-in-your-head",
+      "category": "Everyday why",
+      "title_en": "Why do some songs get stuck in your head?",
+      "title_fr": "Pourquoi certaines chansons nous restent-elles en tête ?"
+    },
+    {
+      "id": 238,
+      "slug": "why-do-we-sometimes-wake-up-just-before-the-alarm",
+      "category": "Everyday why",
+      "title_en": "Why do we sometimes wake up just before the alarm?",
+      "title_fr": "Pourquoi nous réveillons-nous parfois juste avant que le réveil sonne ?"
+    },
+    {
+      "id": 239,
+      "slug": "why-can-we-see-our-breath-when-its-cold",
+      "category": "Everyday why",
+      "title_en": "Why can we see our breath when it’s cold?",
+      "title_fr": "Pourquoi voit-on son souffle quand il fait froid ?"
+    },
+    {
+      "id": 240,
+      "slug": "why-does-salt-melt-ice",
+      "category": "Everyday why",
+      "title_en": "Why does salt melt ice?",
+      "title_fr": "Pourquoi le sel fait-il fondre la glace ?"
+    },
+    {
+      "id": 241,
+      "slug": "why-do-we-blush",
+      "category": "Everyday why",
+      "title_en": "Why do we blush?",
+      "title_fr": "Pourquoi rougit-on ?"
+    },
+    {
+      "id": 242,
+      "slug": "why-do-supermarkets-put-milk-at-the-back",
+      "category": "Everyday why",
+      "title_en": "Why do supermarkets put milk at the back?",
+      "title_fr": "Pourquoi les supermarchés placent-ils le lait au fond du magasin ?"
+    },
+    {
+      "id": 243,
+      "slug": "why-does-ice-float",
+      "category": "Everyday why",
+      "title_en": "Why does ice float?",
+      "title_fr": "Pourquoi la glace flotte-t-elle ?"
+    },
+    {
+      "id": 244,
+      "slug": "why-do-we-dream",
+      "category": "Everyday why",
+      "title_en": "Why do we dream?",
+      "title_fr": "Pourquoi rêve-t-on ?"
+    },
+    {
+      "id": 245,
+      "slug": "why-do-your-ears-pop-on-an-airplane",
+      "category": "Everyday why",
+      "title_en": "Why do your ears pop on an airplane?",
+      "title_fr": "Pourquoi les oreilles se débouchent-elles en avion ?"
+    },
+    {
+      "id": 246,
+      "slug": "why-do-traffic-jams-appear-when-there-is-no-accident",
+      "category": "Everyday why",
+      "title_en": "Why do traffic jams appear when there is no accident?",
+      "title_fr": "Pourquoi des embouteillages se forment-ils sans accident ?"
+    },
+    {
+      "id": 247,
+      "slug": "why-does-popcorn-pop",
+      "category": "Everyday why",
+      "title_en": "Why does popcorn pop?",
+      "title_fr": "Pourquoi le maïs éclate-t-il en pop-corn ?"
+    },
+    {
+      "id": 248,
+      "slug": "why-are-airplane-windows-round",
+      "category": "Everyday why",
+      "title_en": "Why are airplane windows round?",
+      "title_fr": "Pourquoi les hublots des avions sont-ils ronds ?"
+    },
+    {
+      "id": 249,
+      "slug": "why-does-toothpaste-make-orange-juice-taste-disgusting",
+      "category": "Everyday why",
+      "title_en": "Why does toothpaste make orange juice taste disgusting?",
+      "title_fr": "Pourquoi le dentifrice rend-il le jus d’orange dégoûtant ?"
+    },
+    {
+      "id": 250,
+      "slug": "how-multinational-companies-legally-shift-profits-between-countries",
+      "category": "Law",
+      "title_en": "How multinational companies legally shift profits between countries",
+      "title_fr": "Comment les multinationales déplacent-elles légalement leurs bénéfices d’un pays à l’autre ?"
+    },
+    {
+      "id": 251,
+      "slug": "debt-vs-equity-why-the-legal-form-of-financing-matters",
+      "category": "Law",
+      "title_en": "Debt vs equity: why the legal form of financing matters",
+      "title_fr": "Dette ou capitaux propres : pourquoi la forme juridique du financement compte"
+    },
+    {
+      "id": 252,
+      "slug": "how-venture-capital-investment-is-legally-structured",
+      "category": "Law",
+      "title_en": "How venture capital investment is legally structured",
+      "title_fr": "Comment se structure juridiquement un investissement en capital-risque ?"
+    },
+    {
+      "id": 253,
+      "slug": "what-directors-can-actually-be-personally-liable-for",
+      "category": "Law",
+      "title_en": "What directors can actually be personally liable for",
+      "title_fr": "Dans quels cas les dirigeants peuvent-ils réellement être tenus personnellement responsables ?"
+    },
+    {
+      "id": 254,
+      "slug": "what-happens-legally-when-a-company-suffers-a-data-breach",
+      "category": "Digital rights & law",
+      "title_en": "What happens legally when a company suffers a data breach",
+      "title_fr": "Quelles sont les conséquences juridiques d’une violation de données pour une entreprise ?"
+    },
+    {
+      "id": 255,
+      "slug": "who-is-liable-when-ai-makes-the-wrong-decision",
+      "category": "Law",
+      "title_en": "Who is liable when AI makes the wrong decision?",
+      "title_fr": "Qui est responsable lorsqu’une IA prend une mauvaise décision ?"
+    },
+    {
+      "id": 256,
+      "slug": "why-contracts-contain-so-many-boilerplate-clauses",
+      "category": "Law",
+      "title_en": "Why contracts contain so many “boilerplate” clauses",
+      "title_fr": "Pourquoi les contrats contiennent-ils tant de clauses standard ?"
+    },
+    {
+      "id": 257,
+      "slug": "arbitration-vs-litigation-why-companies-choose-one-over-the-other",
+      "category": "Law",
+      "title_en": "Arbitration vs litigation: why companies choose one over the other",
+      "title_fr": "Arbitrage ou procès : pourquoi les entreprises choisissent-elles l’un plutôt que l’autre ?"
+    },
+    {
+      "id": 258,
+      "slug": "how-foreign-investment-restrictions-actually-work",
+      "category": "Law",
+      "title_en": "How foreign investment restrictions actually work",
+      "title_fr": "Comment fonctionnent les restrictions aux investissements étrangers ?"
+    },
+    {
+      "id": 259,
+      "slug": "what-actually-happens-in-an-m-a-due-diligence",
+      "category": "Law",
+      "title_en": "What actually happens in an M&A due diligence",
+      "title_fr": "Que comprend réellement un audit préalable de fusion-acquisition ?"
+    },
+    {
+      "id": 260,
+      "slug": "why-companies-create-subsidiaries-instead-of-putting-everything-into-one-entity",
+      "category": "Law",
+      "title_en": "Why companies create subsidiaries instead of putting everything into one entity",
+      "title_fr": "Pourquoi les entreprises créent-elles des filiales au lieu de tout regrouper dans une seule entité ?"
+    },
+    {
+      "id": 261,
+      "slug": "how-companies-avoid-tax-without-breaking-the-law-and-where-avoidance-becomes-abu",
+      "category": "Law",
+      "title_en": "How companies avoid tax without breaking the law — and where avoidance becomes abuse",
+      "title_fr": "Comment les entreprises réduisent-elles légalement leurs impôts, et à partir de quand l’optimisation devient-elle abusive ?"
+    },
+    {
+      "id": 262,
+      "slug": "why-some-expenses-are-tax-deductible-and-others-are-not",
+      "category": "Law",
+      "title_en": "Why some expenses are tax-deductible and others are not",
+      "title_fr": "Pourquoi certaines dépenses sont-elles déductibles des impôts et d’autres non ?"
+    },
+    {
+      "id": 263,
+      "slug": "salary-vs-dividends-vs-directors-fees",
+      "category": "Law",
+      "title_en": "Salary vs dividends vs director’s fees",
+      "title_fr": "Salaire, dividendes ou rémunération d’administrateur ?"
+    },
+    {
+      "id": 264,
+      "slug": "why-companies-use-holding-companies",
+      "category": "Law",
+      "title_en": "Why companies use holding companies",
+      "title_fr": "Pourquoi les entreprises recourent-elles à des sociétés holding ?"
+    },
+    {
+      "id": 265,
+      "slug": "what-creates-a-permanent-establishment",
+      "category": "Law",
+      "title_en": "What creates a permanent establishment?",
+      "title_fr": "Qu’est-ce qui constitue un établissement stable ?"
+    },
+    {
+      "id": 266,
+      "slug": "how-double-tax-treaties-actually-work",
+      "category": "Law",
+      "title_en": "How double tax treaties actually work",
+      "title_fr": "Comment fonctionnent les conventions fiscales contre la double imposition ?"
+    },
+    {
+      "id": 267,
+      "slug": "how-vat-gst-works-across-a-supply-chain",
+      "category": "Law",
+      "title_en": "How VAT/GST works across a supply chain",
+      "title_fr": "Comment fonctionnent la TVA et la TPS tout au long d’une chaîne d’approvisionnement ?"
+    },
+    {
+      "id": 268,
+      "slug": "why-intellectual-property-is-often-at-the-center-of-tax-planning",
+      "category": "Law",
+      "title_en": "Why intellectual property is often at the center of tax planning",
+      "title_fr": "Pourquoi la propriété intellectuelle est-elle souvent au cœur de la planification fiscale ?"
+    },
+    {
+      "id": 269,
+      "slug": "what-does-offshore-actually-mean",
+      "category": "Law",
+      "title_en": "What does “offshore” actually mean?",
+      "title_fr": "Que signifie réellement « offshore » ?"
+    },
+    {
+      "id": 270,
+      "slug": "how-offshore-banking-differs-from-offshore-incorporation",
+      "category": "Law",
+      "title_en": "How offshore banking differs from offshore incorporation",
+      "title_fr": "En quoi les services bancaires offshore diffèrent-ils de la constitution d’une société à l’étranger ?"
+    },
+    {
+      "id": 271,
+      "slug": "how-the-common-reporting-standard-changed-offshore-secrecy",
+      "category": "Law",
+      "title_en": "How the Common Reporting Standard changed offshore secrecy",
+      "title_fr": "Comment la norme commune de déclaration a-t-elle changé le secret bancaire offshore ?"
+    },
+    {
+      "id": 272,
+      "slug": "how-fatca-made-us-tax-reporting-global",
+      "category": "Law",
+      "title_en": "How FATCA made US tax reporting global",
+      "title_fr": "Comment FATCA a-t-elle mondialisé les déclarations fiscales américaines ?"
+    },
+    {
+      "id": 273,
+      "slug": "what-are-controlled-foreign-company-rules",
+      "category": "Law",
+      "title_en": "What are controlled foreign company rules?",
+      "title_fr": "Que sont les règles relatives aux sociétés étrangères contrôlées ?"
+    },
+    {
+      "id": 274,
+      "slug": "how-treaty-shopping-used-to-work-and-why-it-became-harder",
+      "category": "Law",
+      "title_en": "How treaty shopping used to work — and why it became harder",
+      "title_fr": "Comment fonctionnait le chalandage fiscal, et pourquoi est-il devenu plus difficile ?"
+    },
+    {
+      "id": 275,
+      "slug": "how-offshore-structures-interact-with-double-tax-treaties",
+      "category": "Law",
+      "title_en": "How offshore structures interact with double-tax treaties",
+      "title_fr": "Comment les structures offshore interagissent-elles avec les conventions contre la double imposition ?"
+    },
+    {
+      "id": 276,
+      "slug": "how-transfer-pricing-applies-to-offshore-entities",
+      "category": "Law",
+      "title_en": "How transfer pricing applies to offshore entities",
+      "title_fr": "Comment les règles de prix de transfert s’appliquent-elles aux entités offshore ?"
+    },
+    {
+      "id": 277,
+      "slug": "how-private-equity-funds-use-offshore-structures",
+      "category": "Law",
+      "title_en": "How private equity funds use offshore structures",
+      "title_fr": "Comment les fonds de capital-investissement utilisent-ils les structures offshore ?"
+    },
+    {
+      "id": 278,
+      "slug": "why-ships-and-aircraft-are-often-owned-through-offshore-companies",
+      "category": "Law",
+      "title_en": "Why ships and aircraft are often owned through offshore companies",
+      "title_fr": "Pourquoi les navires et les avions appartiennent-ils souvent à des sociétés offshore ?"
+    },
+    {
+      "id": 279,
+      "slug": "why-do-companies-incorporate-in-the-cayman-islands",
+      "category": "Law",
+      "title_en": "Why do companies incorporate in the Cayman Islands?",
+      "title_fr": "Pourquoi les entreprises s’immatriculent-elles aux îles Caïmans ?"
+    },
+    {
+      "id": 280,
+      "slug": "how-governments-detect-abusive-offshore-structures",
+      "category": "Law",
+      "title_en": "How governments detect abusive offshore structures",
+      "title_fr": "Comment les gouvernements détectent-ils les structures offshore abusives ?"
+    },
+    {
+      "id": 281,
+      "slug": "why-are-bvi-companies-used-so-often",
+      "category": "Law",
+      "title_en": "Why are BVI companies used so often?",
+      "title_fr": "Pourquoi les sociétés des îles Vierges britanniques sont-elles si répandues ?"
+    },
+    {
+      "id": 282,
+      "slug": "what-is-a-tax-haven",
+      "category": "Law",
+      "title_en": "What is a tax haven?",
+      "title_fr": "Qu’est-ce qu’un paradis fiscal ?"
+    },
+    {
+      "id": 283,
+      "slug": "offshore-holding-companies-what-do-they-actually-do",
+      "category": "Law",
+      "title_en": "Offshore holding companies: what do they actually do?",
+      "title_fr": "Que font réellement les sociétés holding offshore ?"
+    },
+    {
+      "id": 284,
+      "slug": "how-multi-layer-corporate-structures-work",
+      "category": "Law",
+      "title_en": "How multi-layer corporate structures work",
+      "title_fr": "Comment fonctionnent les structures d’entreprise à plusieurs niveaux ?"
+    },
+    {
+      "id": 285,
+      "slug": "why-economic-substance-rules-changed-offshore-planning",
+      "category": "Law",
+      "title_en": "Why economic substance rules changed offshore planning",
+      "title_fr": "Pourquoi les règles de substance économique ont-elles changé la planification offshore ?"
+    },
+    {
+      "id": 286,
+      "slug": "what-is-beneficial-ownership",
+      "category": "Law",
+      "title_en": "What is beneficial ownership?",
+      "title_fr": "Qu’est-ce qu’un bénéficiaire effectif ?"
+    },
+    {
+      "id": 287,
+      "slug": "how-nominee-directors-and-shareholders-work",
+      "category": "Law",
+      "title_en": "How nominee directors and shareholders work",
+      "title_fr": "Comment fonctionnent les administrateurs et actionnaires prête-noms ?"
+    },
+    {
+      "id": 288,
+      "slug": "anabolic-steroids-how-synthetic-hormones-change-the-body",
+      "category": "Fitness & performance",
+      "title_en": "Anabolic steroids: how synthetic hormones change the body",
+      "title_fr": "Stéroïdes anabolisants : comment les hormones de synthèse modifient le corps"
+    },
+    {
+      "id": 289,
+      "slug": "neuroplasticity-how-the-brain-rewires-with-experience",
+      "category": "Neuroscience & the brain",
+      "title_en": "Neuroplasticity: how the brain rewires with experience",
+      "title_fr": "Neuroplasticité : comment le cerveau se remodèle avec l’expérience"
+    },
+    {
+      "id": 290,
+      "slug": "attention-how-the-brain-chooses-what-to-focus-on",
+      "category": "Neuroscience & the brain",
+      "title_en": "Attention: how the brain chooses what to focus on",
+      "title_fr": "Attention : comment le cerveau choisit ce sur quoi se concentrer"
+    },
+    {
+      "id": 291,
+      "slug": "memory-consolidation-what-sleep-does-to-what-you-learned",
+      "category": "Neuroscience & the brain",
+      "title_en": "Memory consolidation: what sleep does to what you learned",
+      "title_fr": "Consolidation de la mémoire : ce que le sommeil fait aux apprentissages"
+    },
+    {
+      "id": 292,
+      "slug": "engrams-and-forgetting-where-memories-live-and-why-they-fade",
+      "category": "Neuroscience & the brain",
+      "title_en": "Engrams and forgetting: where memories live and why they fade",
+      "title_fr": "Engrammes et oubli : où résident les souvenirs et pourquoi ils s’estompent"
+    },
+    {
+      "id": 293,
+      "slug": "working-memory-the-mind-s-small-workbench",
+      "category": "Learning & study",
+      "title_en": "Working memory: the mind's small workbench",
+      "title_fr": "Mémoire de travail : le petit établi de l’esprit"
+    },
+    {
+      "id": 294,
+      "slug": "stress-what-the-body-s-alarm-system-is-for",
+      "category": "Health & nutrition",
+      "title_en": "Stress: what the body's alarm system is for",
+      "title_fr": "Stress : à quoi sert le système d’alarme du corps"
+    },
+    {
+      "id": 295,
+      "slug": "pain-why-it-is-produced-by-the-brain-not-just-the-body",
+      "category": "Neuroscience & the brain",
+      "title_en": "Pain: why it is produced by the brain, not just the body",
+      "title_fr": "Douleur : pourquoi elle est produite par le cerveau, et pas seulement par le corps"
+    },
+    {
+      "id": 296,
+      "slug": "addiction-how-habits-become-compulsions",
+      "category": "Neuroscience & the brain",
+      "title_en": "Addiction: how habits become compulsions",
+      "title_fr": "Addiction : comment les habitudes deviennent des compulsions"
+    },
+    {
+      "id": 297,
+      "slug": "ferritin-and-iron-deficiency-reading-the-body-s-iron-stores",
+      "category": "Health & nutrition",
+      "title_en": "Ferritin and iron deficiency: reading the body's iron stores",
+      "title_fr": "Ferritine et carence en fer : comprendre les réserves de fer du corps"
+    },
+    {
+      "id": 298,
+      "slug": "emotions-what-feelings-are-made-of",
+      "category": "Psychology & behavior",
+      "title_en": "Emotions: what feelings are made of",
+      "title_fr": "Émotions : de quoi sont faits les sentiments"
+    },
+    {
+      "id": 299,
+      "slug": "decision-making-how-the-mind-weighs-options",
+      "category": "Psychology & behavior",
+      "title_en": "Decision-making: how the mind weighs options",
+      "title_fr": "Prise de décision : comment l’esprit évalue les options"
+    },
+    {
+      "id": 300,
+      "slug": "consciousness-the-hardest-question-about-the-brain",
+      "category": "Neuroscience & the brain",
+      "title_en": "Consciousness: the hardest question about the brain",
+      "title_fr": "Conscience : la question la plus difficile sur le cerveau"
+    },
+    {
+      "id": 301,
+      "slug": "anaesthesia-how-drugs-switch-awareness-off-and-on",
+      "category": "Neuroscience & the brain",
+      "title_en": "Anaesthesia: how drugs switch awareness off and on",
+      "title_fr": "Anesthésie : comment les médicaments font disparaître puis revenir la conscience"
+    },
+    {
+      "id": 302,
+      "slug": "concussion-what-happens-when-the-brain-is-shaken",
+      "category": "Neuroscience & the brain",
+      "title_en": "Concussion: what happens when the brain is shaken",
+      "title_fr": "Commotion cérébrale : que se passe-t-il quand le cerveau est secoué ?"
+    },
+    {
+      "id": 303,
+      "slug": "neurodegeneration-why-some-brain-cells-are-gradually-lost",
+      "category": "Neuroscience & the brain",
+      "title_en": "Neurodegeneration: why some brain cells are gradually lost",
+      "title_fr": "Neurodégénérescence : pourquoi certaines cellules du cerveau disparaissent progressivement"
+    },
+    {
+      "id": 304,
+      "slug": "the-cell-the-basic-unit-of-life",
+      "category": "Biochemistry & biology",
+      "title_en": "The cell: the basic unit of life",
+      "title_fr": "La cellule : unité fondamentale du vivant"
+    },
+    {
+      "id": 305,
+      "slug": "study-methods-which-techniques-hold-up-under-testing",
+      "category": "Learning & study",
+      "title_en": "Study methods: which techniques hold up under testing",
+      "title_fr": "Méthodes d’étude : quelles techniques résistent à l’épreuve des faits ?"
+    },
+    {
+      "id": 306,
+      "slug": "investing-the-basic-trade-off-between-risk-and-return",
+      "category": "Economics & personal finance",
+      "title_en": "Investing: the basic trade-off between risk and return",
+      "title_fr": "Investissement : le compromis fondamental entre risque et rendement"
+    },
+    {
+      "id": 307,
+      "slug": "intellectual-property-the-main-ways-ideas-are-owned",
+      "category": "Law",
+      "title_en": "Intellectual property: the main ways ideas are owned",
+      "title_fr": "Propriété intellectuelle : les principales formes de protection des créations"
+    },
+    {
+      "id": 308,
+      "slug": "vitamins-why-tiny-amounts-matter-so-much",
+      "category": "Health & nutrition",
+      "title_en": "Vitamins: why tiny amounts matter so much",
+      "title_fr": "Vitamines : pourquoi de minuscules quantités sont-elles si importantes ?"
+    },
+    {
+      "id": 309,
+      "slug": "the-vietnam-war-an-overview-of-a-long-conflict",
+      "category": "History",
+      "title_en": "The Vietnam War: an overview of a long conflict",
+      "title_fr": "La guerre du Vietnam : aperçu d’un long conflit"
+    },
+    {
+      "id": 310,
+      "slug": "geopolitics-how-geography-shapes-power",
+      "category": "Politics & institutions",
+      "title_en": "Geopolitics: how geography shapes power",
+      "title_fr": "Géopolitique : comment la géographie façonne le pouvoir"
+    },
+    {
+      "id": 311,
+      "slug": "current-wars-how-to-follow-a-conflict-critically",
+      "category": "Politics & institutions",
+      "title_en": "Current wars: how to follow a conflict critically",
+      "title_fr": "Guerres en cours : suivre un conflit avec un regard critique"
+    },
+    {
+      "id": 312,
+      "slug": "child-protection-how-systems-try-to-keep-children-safe",
+      "category": "Law",
+      "title_en": "Child protection: how systems try to keep children safe",
+      "title_fr": "Protection de l’enfance : comment les dispositifs cherchent à protéger les enfants"
+    },
+    {
+      "id": 313,
+      "slug": "animal-cognition-how-scientists-test-what-animals-know",
+      "category": "Animals & nature",
+      "title_en": "Animal cognition: how scientists test what animals know",
+      "title_fr": "Cognition animale : comment les scientifiques étudient ce que savent les animaux"
+    },
+    {
+      "id": 314,
+      "slug": "chocolate-how-a-bitter-bean-becomes-a-treat",
+      "category": "Everyday why",
+      "title_en": "Chocolate: how a bitter bean becomes a treat",
+      "title_fr": "Chocolat : comment une fève amère devient une gourmandise"
+    },
+    {
+      "id": 315,
+      "slug": "tourism-in-southeast-asia-benefits-and-pressures",
+      "category": "Art & culture",
+      "title_en": "Tourism in Southeast Asia: benefits and pressures",
+      "title_fr": "Tourisme en Asie du Sud-Est : retombées et pressions"
+    },
+    {
+      "id": 316,
+      "slug": "replication-why-science-repeats-its-experiments",
+      "category": "Science & technology",
+      "title_en": "Replication: why science repeats its experiments",
+      "title_fr": "Réplication : pourquoi la science répète ses expériences"
+    },
+    {
+      "id": 317,
+      "slug": "negativity-bias-why-bad-news-weighs-more",
+      "category": "Psychology & behavior",
+      "title_en": "Negativity bias: why bad news weighs more",
+      "title_fr": "Biais de négativité : pourquoi les mauvaises nouvelles pèsent davantage"
+    },
+    {
+      "id": 318,
+      "slug": "multitasking-why-doing-two-things-at-once-is-rarely-that",
+      "category": "Productivity & focus",
+      "title_en": "Multitasking: why doing two things at once is rarely that",
+      "title_fr": "Multitâche : pourquoi faire deux choses à la fois est rarement ce qui se passe"
+    },
+    {
+      "id": 319,
+      "slug": "the-enteric-nervous-system-the-gut-s-own-network-of-nerves",
+      "category": "Biochemistry & biology",
+      "title_en": "The enteric nervous system: the gut's own network of nerves",
+      "title_fr": "Système nerveux entérique : le réseau nerveux propre à l’intestin"
+    },
+    {
+      "id": 320,
+      "slug": "fertility-testing-what-the-common-tests-actually-measure",
+      "category": "Menstrual health & hormones",
+      "title_en": "Fertility testing: what the common tests actually measure",
+      "title_fr": "Bilans de fertilité : ce que mesurent réellement les examens courants"
+    },
+    {
+      "id": 321,
+      "slug": "how-acne-actually-forms-inside-a-pore",
+      "category": "Health & nutrition",
+      "title_en": "How acne actually forms inside a pore",
+      "title_fr": "Comment l’acné se forme-t-elle dans un pore ?"
+    },
+    {
+      "id": 322,
+      "slug": "why-some-people-get-much-more-acne-than-others",
+      "category": "Health & nutrition",
+      "title_en": "Why some people get much more acne than others",
+      "title_fr": "Pourquoi certaines personnes ont-elles beaucoup plus d’acné que d’autres ?"
+    },
+    {
+      "id": 323,
+      "slug": "hormonal-acne-how-androgens-affect-your-skin",
+      "category": "Health & nutrition",
+      "title_en": "Hormonal acne: how androgens affect your skin",
+      "title_fr": "Acné hormonale : comment les androgènes influent sur la peau"
+    },
+    {
+      "id": 324,
+      "slug": "why-acne-appears-on-the-face-jawline-chest-and-back",
+      "category": "Health & nutrition",
+      "title_en": "Why acne appears on the face, jawline, chest and back",
+      "title_fr": "Pourquoi l’acné apparaît-elle sur le visage, la mâchoire, le torse et le dos ?"
+    },
+    {
+      "id": 325,
+      "slug": "how-retinoids-actually-treat-acne",
+      "category": "Health & nutrition",
+      "title_en": "How retinoids actually treat acne",
+      "title_fr": "Comment les rétinoïdes traitent-ils l’acné ?"
+    },
+    {
+      "id": 326,
+      "slug": "benzoyl-peroxide-vs-salicylic-acid-vs-azelaic-acid",
+      "category": "Health & nutrition",
+      "title_en": "Benzoyl peroxide vs salicylic acid vs azelaic acid",
+      "title_fr": "Peroxyde de benzoyle, acide salicylique ou acide azélaïque ?"
+    },
+    {
+      "id": 327,
+      "slug": "why-acne-leaves-dark-marks-and-scars",
+      "category": "Health & nutrition",
+      "title_en": "Why acne leaves dark marks and scars",
+      "title_fr": "Pourquoi l’acné laisse-t-elle des taches foncées et des cicatrices ?"
+    },
+    {
+      "id": 328,
+      "slug": "can-diet-influence-acne",
+      "category": "Health & nutrition",
+      "title_en": "Can diet influence acne?",
+      "title_fr": "L’alimentation peut-elle influer sur l’acné ?"
+    },
+    {
+      "id": 329,
+      "slug": "why-stress-can-make-acne-worse",
+      "category": "Health & nutrition",
+      "title_en": "Why stress can make acne worse",
+      "title_fr": "Pourquoi le stress peut-il aggraver l’acné ?"
+    },
+    {
+      "id": 330,
+      "slug": "the-skin-microbiome-and-acne",
+      "category": "Health & nutrition",
+      "title_en": "The skin microbiome and acne",
+      "title_fr": "Microbiome cutané et acné"
+    },
+    {
+      "id": 331,
+      "slug": "growing-the-future-how-living-bacteria-could-revolutionize-technology",
+      "category": "Science & Technology",
+      "title_en": "Growing the Future: How Living Bacteria Could Revolutionize Technology",
+      "title_fr": "Cultiver l’avenir : comment les bactéries vivantes pourraient révolutionner la technologie"
+    }
+  ]
+}

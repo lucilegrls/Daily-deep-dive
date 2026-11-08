@@ -4,8 +4,6 @@ import type { Resource, ResourceGroups, Topic } from "@/data/topics";
 import { isSafeSourceUrl } from "@/lib/content-safety";
 import type { InterestLane } from "@/lib/interests";
 import { createPublicServerClient } from "@/lib/supabase-public.server";
-import { rankTopicMatches } from "@/lib/topic-search";
-import { categoryVariants, normalizeCategory } from "@/lib/content-labels";
 
 export interface TopicSummary {
   id: number;
@@ -163,8 +161,8 @@ export const listCategories = createServerFn({ method: "GET" }).handler(
       .select("category")
       .eq("status", "published");
     if (error) throw new Error(error.message);
-    return [...new Set((data ?? []).map((row) => normalizeCategory(row.category)))].sort(
-      (a, b) => a.localeCompare(b),
+    return [...new Set((data ?? []).map((row) => row.category))].sort((a, b) =>
+      a.localeCompare(b),
     );
   },
 );
@@ -199,6 +197,13 @@ export const getTopic = createServerFn({ method: "GET" })
     if (error) throw new Error(error.message);
     const topic = rows?.[0];
     if (!topic) return null;
+
+    const { data: trustRows } = await (supabase as any)
+      .from("content_topics")
+      .select("risk_level, last_editorial_review_at")
+      .eq("id", topic.id)
+      .limit(1);
+    const trust = trustRows?.[0] as { risk_level?: "standard" | "elevated" | "high"; last_editorial_review_at?: string | null } | undefined;
 
     const { data: resources, error: resourceError } = await supabase
       .from("content_resources")
@@ -275,6 +280,8 @@ export const getTopic = createServerFn({ method: "GET" })
       takeaways: topic.takeaways ?? [],
       tags: topic.tags ?? [],
       ...(topic.last_verified ? { lastVerified: topic.last_verified } : {}),
+      ...(trust?.risk_level ? { riskLevel: trust.risk_level } : {}),
+      ...(trust?.last_editorial_review_at ? { lastEditorialReviewAt: trust.last_editorial_review_at } : {}),
       ressources,
       related: related ?? [],
     };
@@ -303,17 +310,6 @@ export const getTopicsByIds = createServerFn({ method: "GET" })
     if (data.ids.length === 0) return [];
     const supabase = createPublicServerClient();
 
-    let categoriesForFilter: string[] | null = null;
-    if (data.category) {
-      const { data: laneRows, error: laneError } = await supabase
-        .from("interest_lane_categories")
-        .select("category")
-        .eq("lane_slug", data.category);
-      if (laneError) throw new Error(laneError.message);
-      categoriesForFilter = (laneRows ?? []).map((row) => row.category);
-      if (categoriesForFilter.length === 0) categoriesForFilter = categoryVariants(data.category);
-    }
-
     const rows: TopicSummary[] = [];
     // Chunked so a long saved list cannot blow past URL/statement limits.
     for (let i = 0; i < data.ids.length; i += 200) {
@@ -323,7 +319,7 @@ export const getTopicsByIds = createServerFn({ method: "GET" })
         .select("id, slug, title, category, context, tags, last_verified")
         .eq("status", "published")
         .in("id", chunk);
-      if (categoriesForFilter) builder = builder.in("category", categoriesForFilter);
+      if (data.category) builder = builder.eq("category", data.category);
 
       const { data: page, error } = await builder;
       if (error) throw new Error(error.message);
@@ -340,13 +336,18 @@ export const getTopicsByIds = createServerFn({ method: "GET" })
       }
     }
 
-    const filtered = rankTopicMatches(rows, data.query);
+    const needle = data.query.trim().toLowerCase();
+    const filtered = needle
+      ? rows.filter((row) =>
+          `${row.title} ${row.category} ${row.context} ${row.tags.join(" ")}`
+            .toLowerCase()
+            .includes(needle),
+        )
+      : rows;
 
     // Most recently saved first, following the order the reader's list is in.
     const rank = new Map(data.ids.map((id, index) => [id, index]));
-    return data.query.trim()
-      ? filtered
-      : filtered.sort(
-          (a, b) => (rank.get(b.id) ?? 0) - (rank.get(a.id) ?? 0),
-        );
+    return filtered.sort(
+      (a, b) => (rank.get(b.id) ?? 0) - (rank.get(a.id) ?? 0),
+    );
   });

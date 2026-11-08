@@ -11,13 +11,15 @@ import { useSavedTopics } from "@/hooks/use-saved-topics";
 import { useAccount } from "@/lib/account";
 import {
   getTopicsByIds,
-  listInterestLanes,
+  listCategories,
   listTopics,
   type TopicSummary,
 } from "@/lib/content.functions";
-import { gatewayNoun, laneName } from "@/lib/content-labels";
+import { categoryName, gatewayNoun, laneName } from "@/lib/content-labels";
 import { useI18n } from "@/lib/i18n";
 import { useOpenTopic } from "@/lib/use-open-topic";
+import { useWebMCP } from "use-webmcp-tool";
+import { runWebMCPTool } from "@/lib/webmcp-telemetry";
 
 const PAGE_SIZE = 12;
 
@@ -26,7 +28,7 @@ export const Route = createFileRoute("/")({
     search["view"] === "saved" ? { view: "saved" } : {},
   head: () => ({
     meta: [
-      { title: "Deep Dive — Understand how things actually work" },
+      { title: "Curiosity, Sourced — Understand how things actually work" },
       {
         name: "description",
         content:
@@ -34,7 +36,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Deep Dive — Understand how things actually work",
+        content: "Curiosity, Sourced — Understand how things actually work",
       },
       {
         property: "og:description",
@@ -50,16 +52,14 @@ export const Route = createFileRoute("/")({
   // or failing backend returns null after 8 s and the client query takes over.
   loader: async (): Promise<{
     initial: Awaited<ReturnType<typeof listTopics>> | null;
-    initialLanes: Awaited<ReturnType<typeof listInterestLanes>> | null;
+    initialCategories: string[] | null;
     seed: number;
   }> => {
     const seed = Math.floor(Date.now() / 86_400_000);
-    const initialLanes = await withTimeout(listInterestLanes(), 8_000).catch(
-      (error) => {
-        console.error("initial subject lanes load failed", error);
-        return null;
-      },
-    );
+    const initialCategories = await withTimeout(listCategories(), 8_000).catch((error) => {
+      console.error("initial categories load failed", error);
+      return null;
+    });
     try {
       const initial = await withTimeout(
         listTopics({
@@ -67,10 +67,10 @@ export const Route = createFileRoute("/")({
         }),
         8_000,
       );
-      return { initial, initialLanes, seed };
+      return { initial, initialCategories, seed };
     } catch (error) {
       console.error("initial feed load failed", error);
-      return { initial: null, initialLanes, seed };
+      return { initial: null, initialCategories, seed };
     }
   },
   component: Index,
@@ -99,17 +99,17 @@ function Index() {
   const { openId, openTopic, closeTopic, topic, loading, retry } = useOpenTopic();
   const showingSaved = activeFilter === "saved";
   // Seeded by the UTC day on the server: identical for SSR and hydration.
-  const { initial, initialLanes, seed } = Route.useLoaderData();
+  const { initial, initialCategories, seed } = Route.useLoaderData();
 
   useEffect(() => {
     const id = window.setTimeout(() => setQuery(rawQuery), 250);
     return () => window.clearTimeout(id);
   }, [rawQuery]);
 
-  const { data: lanes = [] } = useQuery({
-    queryKey: ["interest-lanes"],
-    queryFn: () => listInterestLanes(),
-    initialData: initialLanes ?? undefined,
+  const { data: categories = [] } = useQuery({
+    queryKey: ["categories"],
+    queryFn: () => listCategories(),
+    initialData: initialCategories ?? undefined,
     staleTime: 10 * 60_000,
   });
 
@@ -206,16 +206,57 @@ function Index() {
     return () => observer.disconnect();
   }, [feed]);
 
+  useWebMCP({
+    name: "list_visible_topics",
+    description: "List the topics currently shown in the feed (id, title, subject).",
+    annotations: { readOnlyHint: true, untrustedContentHint: true },
+    execute: () =>
+      runWebMCPTool("list_visible_topics", () => {
+        if (isLoading) return "Topics are still loading.";
+        if (items.length === 0) return "No topics shown.";
+        return items.slice(0, 60).map((it) => `${it.id}: ${it.title} (${it.category})`).join("\n");
+      }),
+  });
+
+  useWebMCP({
+    name: "search_feed",
+    description: "Filter the visible feed by words in topic titles; pass an empty string to clear.",
+    inputSchema: {
+      type: "object",
+      properties: { query: { type: "string", description: "Search words." } },
+      required: ["query"],
+    },
+    execute: ({ query: q }: { query: string }) =>
+      runWebMCPTool("search_feed", () => {
+        if (typeof q !== "string") throw new Error("query must be a string.");
+        setRawQuery(q);
+        setQuery(q);
+        return q ? `Searching for "${q}".` : "Search cleared.";
+      }),
+  });
+
+  useWebMCP({
+    name: "open_topic",
+    description: "Open the topic sheet for a topic currently shown in the feed, by its id.",
+    annotations: { untrustedContentHint: true },
+    inputSchema: {
+      type: "object",
+      properties: { id: { type: "number", description: "Topic id from list_visible_topics." } },
+      required: ["id"],
+    },
+    execute: ({ id }: { id: number }) =>
+      runWebMCPTool("open_topic", () => {
+        const found = items.find((it) => it.id === id);
+        if (!found) throw new Error("That topic is not in the current view.");
+        openTopic(found.id);
+        return `Opened "${found.title}".`;
+      }),
+  });
+
   const surprise = () => {
     if (items.length === 0) return;
     const pick = items[Math.floor(Math.random() * items.length)];
     if (pick) openTopic(pick.id);
-  };
-
-  const clearDiscovery = () => {
-    setRawQuery("");
-    setQuery("");
-    setActiveFilter("all");
   };
 
   return (
@@ -253,7 +294,7 @@ function Index() {
             session ? "text-4xl" : "text-5xl sm:text-6xl"
           }`}
         >
-          {session ? "Daily Deep Dive" : t("home.titleGuest")}
+          {session ? "Curiosity, Sourced" : t("home.titleGuest")}
         </h1>
         <div
           className="rule-diamond ornamental mx-auto mt-8 max-w-xs"
@@ -343,15 +384,13 @@ function Index() {
                 value={rawQuery}
                 onChange={(e) => setRawQuery(e.target.value)}
                 placeholder={t("feed.searchPlaceholder")}
-                className="min-h-11 w-full rounded-full border border-input bg-card py-2.5 pr-4 pl-10 text-[0.95rem] text-foreground placeholder:text-muted-foreground/70 focus:border-ring"
+                className="w-full rounded-full border border-input bg-card py-2.5 pr-4 pl-10 text-[0.95rem] text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:outline-none"
               />
             </label>
             <button
               type="button"
               onClick={surprise}
-              disabled={items.length === 0 || isLoading}
-              aria-label={t("feed.surprise")}
-              className="flex size-11 shrink-0 items-center justify-center gap-2 rounded-full border border-gold/60 bg-accent text-sm font-medium text-accent-foreground transition-colors hover:border-gold hover:bg-gold/25 disabled:cursor-not-allowed disabled:opacity-50 sm:h-11 sm:w-auto sm:px-4"
+              className="flex shrink-0 items-center gap-2 rounded-full border border-gold/60 bg-accent px-4 py-2.5 text-sm font-medium text-accent-foreground transition-colors hover:border-gold hover:bg-gold/25"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -361,7 +400,6 @@ function Index() {
                 strokeWidth="1.8"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                aria-hidden="true"
               >
                 <rect x="3.5" y="3.5" width="17" height="17" rx="4" />
                 <circle cx="8.5" cy="8.5" r="1.1" fill="currentColor" />
@@ -369,32 +407,13 @@ function Index() {
                 <circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" />
                 <circle cx="8.5" cy="15.5" r="1.1" fill="currentColor" />
               </svg>
-              <span className="hidden sm:inline">{t("feed.surprise")}</span>
+              {t("feed.surprise")}
             </button>
           </div>
 
-          <label className="sm:hidden">
-            <span className="sr-only">{t("feed.filterLabel")}</span>
-            <select
-              value={activeFilter}
-              onChange={(event) => setActiveFilter(event.target.value)}
-              className="min-h-11 w-full rounded-full border border-input bg-card px-4 text-sm text-foreground focus:border-ring"
-            >
-              <option value="all">{t("feed.all")}</option>
-              <option value="saved">
-                {t("feed.saved", { count: saved.length })}
-              </option>
-              {lanes.map((lane) => (
-                <option key={lane.slug} value={lane.slug}>
-                  {laneName(lang, lane.slug, lane.label)}
-                </option>
-              ))}
-            </select>
-          </label>
-
           <nav
             aria-label={t("feed.filterLabel")}
-            className="hidden flex-wrap gap-2 pb-1 sm:flex"
+            className="scroll-fade-x flex gap-2 overflow-x-auto pb-1 pr-10"
           >
             <FilterChip
               label={t("feed.all")}
@@ -406,16 +425,15 @@ function Index() {
               active={activeFilter === "saved"}
               onClick={() => setActiveFilter("saved")}
             />
-            {lanes.map((lane) => (
+            {categories.map((category) => (
               <FilterChip
-                key={lane.slug}
-                label={laneName(lang, lane.slug, lane.label)}
-                active={activeFilter === lane.slug}
-                onClick={() => setActiveFilter(lane.slug)}
+                key={category}
+                label={categoryName(lang, category)}
+                active={activeFilter === category}
+                onClick={() => setActiveFilter(category)}
               />
             ))}
           </nav>
-
         </div>
       </div>
 
@@ -428,24 +446,15 @@ function Index() {
             <button
               type="button"
               onClick={() => void importGuestSaves()}
-              className="ml-2 min-h-11 rounded-full border border-gold/60 bg-card px-3 text-xs font-medium"
+              className="ml-2 rounded-full border border-gold/60 bg-card px-3 py-1 text-xs font-medium"
             >
               {t("feed.guestImport")}
             </button>
           </div>
         ) : null}
 
-        <div
-          className="sr-only"
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-        >
-          {!isLoading && !error ? t("feed.results", { count: total }) : ""}
-        </div>
-
         {error && items.length === 0 ? (
-          <div className="py-20 text-center" role="alert">
+          <div className="py-20 text-center">
             <p className="text-lg text-muted-foreground italic">
               {showingSaved ? t("feed.errorSaved") : t("feed.errorFeed")}
             </p>
@@ -458,24 +467,15 @@ function Index() {
             </button>
           </div>
         ) : isLoading ? (
-          <FeedSkeleton label={t("feed.loading")} />
+          <p className="py-20 text-center text-lg text-muted-foreground italic">
+            {t("feed.loading")}
+          </p>
         ) : items.length === 0 ? (
-          <div className="py-20 text-center">
-            <p className="text-lg text-muted-foreground italic">
-              {activeFilter === "saved"
-                ? t("feed.emptySaved")
-                : t("feed.emptySearch")}
-            </p>
-            <button
-              type="button"
-              onClick={clearDiscovery}
-              className="mt-5 min-h-11 rounded-full border border-gold/60 bg-accent px-5 text-sm font-medium text-accent-foreground transition-colors hover:border-gold"
-            >
-              {activeFilter === "saved"
-                ? t("feed.browseAll")
-                : t("feed.clearSearch")}
-            </button>
-          </div>
+          <p className="py-20 text-center text-lg text-muted-foreground italic">
+            {activeFilter === "saved"
+              ? t("feed.emptySaved")
+              : t("feed.emptySearch")}
+          </p>
         ) : (
           <div className="divide-y divide-border/60">
             {items.map((item, index) => (
@@ -521,7 +521,7 @@ function Index() {
           <p className="px-6 text-center text-sm text-muted-foreground">
             {t("feed.footerCount", {
               topics: total,
-              subjects: lanes.length,
+              subjects: categories.length,
             })}
           </p>
         ) : null}
@@ -548,28 +548,6 @@ function Index() {
   );
 }
 
-function FeedSkeleton({ label }: { label: string }) {
-  return (
-    <div className="space-y-8 py-2" role="status" aria-label={label}>
-      <span className="sr-only">{label}</span>
-      {[0, 1, 2].map((item) => (
-        <div
-          key={item}
-          aria-hidden="true"
-          className="flex items-center gap-4 sm:gap-10"
-        >
-          <div className="size-24 shrink-0 animate-pulse rounded-2xl bg-muted motion-reduce:animate-none sm:size-36" />
-          <div className="min-w-0 flex-1 space-y-3">
-            <div className="h-3 w-28 animate-pulse rounded bg-muted motion-reduce:animate-none" />
-            <div className="h-6 w-full max-w-md animate-pulse rounded bg-muted motion-reduce:animate-none" />
-            <div className="h-4 w-4/5 max-w-sm animate-pulse rounded bg-muted motion-reduce:animate-none" />
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
 function FilterChip({
   label,
   active,
@@ -584,7 +562,7 @@ function FilterChip({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`min-h-11 shrink-0 rounded-full border px-3.5 text-sm whitespace-nowrap transition-colors ${
+      className={`shrink-0 rounded-full border px-3.5 py-1.5 text-sm whitespace-nowrap transition-colors ${
         active
           ? "border-primary bg-primary text-primary-foreground"
           : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-foreground"

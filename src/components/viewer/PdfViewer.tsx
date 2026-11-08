@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/lib/i18n";
+import { readerUI } from "@/lib/reader-ui";
 import { pdfPage, pdfScale, PDF_LOAD_TIMEOUT_MS } from "@/lib/pdf-display";
 
 import { supabase } from "@/integrations/supabase/client";
@@ -23,6 +25,7 @@ const localKey = (id: string) => `deep-dive:pdf:${id}`;
 
 /** Browser PDF reader; remote publisher reads are ephemeral, stored files retain rights-gated progress. */
 export default function PdfViewer({ resourceId, url, onFail, persistProgress = true }: Props) {
+  const { lang } = useI18n();
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(300);
   const [rendered, setRendered] = useState(false);
@@ -161,33 +164,33 @@ export default function PdfViewer({ resourceId, url, onFail, persistProgress = t
 
   return (
     <div className="rounded-lg border border-border bg-card">
-      <div role="toolbar" aria-label="PDF controls" className="flex flex-wrap items-center gap-2 border-b border-border p-2 text-sm">
-        <Button variant="outline" type="button" aria-label="Previous page" onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page <= 1} className="min-h-11 min-w-11 rounded-full border border-border disabled:opacity-40">‹</Button>
+      <div role="toolbar" aria-label={readerUI(lang, "PDF controls")} className="flex flex-wrap items-center gap-2 border-b border-border p-2 text-sm">
+        <Button variant="outline" type="button" aria-label={readerUI(lang, "Previous page")} onClick={() => setPage((p) => Math.max(1, p - 1))} disabled={page <= 1} className="min-h-11 min-w-11 rounded-full border border-border disabled:opacity-40">‹</Button>
         <label className="flex items-center gap-1">
-          <span className="sr-only">Page</span>
+          <span className="sr-only">{readerUI(lang, "Page")}</span>
           <input type="number" min={1} max={total || 1} value={page} onChange={(e) => setPage(pdfPage(Number(e.target.value), total))} className="w-16 rounded border border-border bg-background px-2 py-1" />
           <span className="text-muted-foreground">/ {total || "…"}</span>
         </label>
-        <Button variant="outline" type="button" aria-label="Next page" onClick={() => setPage((p) => Math.min(total || p, p + 1))} disabled={!total || page >= total} className="min-h-11 min-w-11 rounded-full border border-border disabled:opacity-40">›</Button>
-        <Button variant="outline" type="button" aria-label="Zoom out" onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.2).toFixed(1)))} className="min-h-11 min-w-11 rounded-full border border-border">−</Button>
+        <Button variant="outline" type="button" aria-label={readerUI(lang, "Next page")} onClick={() => setPage((p) => Math.min(total || p, p + 1))} disabled={!total || page >= total} className="min-h-11 min-w-11 rounded-full border border-border disabled:opacity-40">›</Button>
+        <Button variant="outline" type="button" aria-label={readerUI(lang, "Zoom out")} onClick={() => setZoom((z) => Math.max(0.5, +(z - 0.2).toFixed(1)))} className="min-h-11 min-w-11 rounded-full border border-border">−</Button>
         <span aria-live="polite">{Math.round(zoom * 100)}%</span>
-        <Button variant="outline" type="button" aria-label="Zoom in" onClick={() => setZoom((z) => Math.min(3, +(z + 0.2).toFixed(1)))} className="min-h-11 min-w-11 rounded-full border border-border">+</Button>
-        <Button variant="outline" type="button" aria-pressed={marked} onClick={() => setBookmarks((b) => (marked ? b.filter((n) => n !== page) : [...b, page].sort((x, y) => x - y)))} className="min-h-11 rounded-full border border-border px-3">{marked ? "★ Bookmarked" : "☆ Bookmark"}</Button>
+        <Button variant="outline" type="button" aria-label={readerUI(lang, "Zoom in")} onClick={() => setZoom((z) => Math.min(3, +(z + 0.2).toFixed(1)))} className="min-h-11 min-w-11 rounded-full border border-border">+</Button>
+        <Button variant="outline" type="button" aria-pressed={marked} onClick={() => setBookmarks((b) => (marked ? b.filter((n) => n !== page) : [...b, page].sort((x, y) => x - y)))} className="min-h-11 rounded-full border border-border px-3">{marked ? readerUI(lang, "★ Bookmarked") : readerUI(lang, "☆ Bookmark")}</Button>
         <form className="flex items-center gap-1" onSubmit={(e) => { e.preventDefault(); void search(); }}>
-          <label className="sr-only" htmlFor={`pdf-search-${resourceId}`}>Search in this PDF</label>
-          <input id={`pdf-search-${resourceId}`} value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search" className="w-28 rounded border border-border bg-background px-2 py-1" />
-          <Button variant="outline" type="submit" className="min-h-11 rounded-full border border-border px-3">Find</Button>
+          <label className="sr-only" htmlFor={`pdf-search-${resourceId}`}>{readerUI(lang, "Search in this PDF")}</label>
+          <input id={`pdf-search-${resourceId}`} value={query} onChange={(e) => setQuery(e.target.value)} placeholder={readerUI(lang, "Search")} className="w-28 rounded border border-border bg-background px-2 py-1" />
+          <Button variant="outline" type="submit" className="min-h-11 rounded-full border border-border px-3">{readerUI(lang, "Find")}</Button>
         </form>
       </div>
       {bookmarks.length || hits ? (
         <div className="flex flex-wrap gap-2 border-b border-border p-2 text-xs">
           {bookmarks.map((b) => <Button variant="outline" key={`b${b}`} type="button" onClick={() => setPage(b)} className="rounded-full border border-border px-2 py-1">★ p.{b}</Button>)}
-          {hits ? (hits.length ? hits.map((h) => <Button variant="outline" key={`h${h}`} type="button" onClick={() => setPage(h)} className="rounded-full bg-primary/10 px-2 py-1">p.{h}</Button>) : <span className="italic text-muted-foreground">No text match (scanned PDFs may have no searchable text).</span>) : null}
+          {hits ? (hits.length ? hits.map((h) => <Button variant="outline" key={`h${h}`} type="button" onClick={() => setPage(h)} className="rounded-full bg-primary/10 px-2 py-1">p.{h}</Button>) : <span className="italic text-muted-foreground">{readerUI(lang, "No text match (scanned PDFs may have no searchable text).")}</span>) : null}
         </div>
       ) : null}
       <div ref={containerRef} className="no-scrollbar max-h-[75dvh] overflow-auto p-2">
-        {!rendered ? <p role="status" className="p-4 text-sm text-muted-foreground">{doc ? "Rendering PDF page…" : "Loading PDF…"}</p> : null}
-        <canvas ref={canvasRef} aria-label={`PDF page ${page} of ${total}`} data-rendered={rendered} data-page-count={total} className="mx-auto block" />
+        {!rendered ? <p role="status" className="p-4 text-sm text-muted-foreground">{doc ? readerUI(lang, "Rendering PDF page…") : readerUI(lang, "Loading PDF…")}</p> : null}
+        <canvas ref={canvasRef} aria-label={`${readerUI(lang, "PDF page")} ${page} ${readerUI(lang, "of")} ${total}`} data-rendered={rendered} data-page-count={total} className="mx-auto block" />
       </div>
     </div>
   );

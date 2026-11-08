@@ -12,7 +12,9 @@ import { classifyWriteError, type WriteFailure } from "@/lib/write-outcome";
 import { retryDelay, retryTransient, withTimeout } from "@/lib/retry";
 import { getResourceBody, getTopicViewer, type ViewerResource } from "@/lib/viewer.functions";
 import { mediaUrl, playerFor, resolveSource, SECTION_LABEL, SECTION_ORDER, type SectionKey } from "@/lib/viewer-media";
-import { readerCopy, readerPublication } from "@/lib/reader-copy";
+import { sourceCopy } from "@/lib/french-public-copy";
+import { topicTitle } from "@/lib/topic-titles";
+import { readerUI, readerGroup } from "@/lib/reader-ui";
 
 const PdfViewer = lazy(() => import("@/components/viewer/PdfViewer"));
 
@@ -39,7 +41,7 @@ export default function ResourceViewer({ topicId, resourceUrl, onClose, onOpenTo
   const index = items.findIndex((r) => r.url === selectedUrl);
   const active = items[index];
   const [completed, setCompleted] = useState<Set<string>>(new Set());
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [progressError, setProgressError] = useState<WriteFailure | false>(false);
   const [saving, setSaving] = useState(false);
   useEffect(() => { setSelectedUrl(resourceUrl); }, [resourceUrl, topicId]);
@@ -85,16 +87,16 @@ export default function ResourceViewer({ topicId, resourceUrl, onClose, onOpenTo
           className="letter-sheet fixed top-1/2 left-1/2 z-[80] flex max-h-[88dvh] w-[min(94vw,52rem)] -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-lg border border-border text-foreground shadow-xl focus:outline-none"
         >
           <header className="flex shrink-0 items-center justify-between gap-3 border-b border-border px-4 py-3 sm:px-6">
-            <div className="min-w-0"><span className="eyebrow text-muted-foreground">Deep Dive</span><Dialog.Title className="font-display text-base font-semibold">{data?.title ?? "Reading"}</Dialog.Title></div>
-            <Dialog.Close asChild><Button variant="ghost" size="icon" aria-label="Close source and return to topic"><X /></Button></Dialog.Close>
+            <div className="min-w-0"><span className="eyebrow text-muted-foreground">Curiosity, Sourced</span><Dialog.Title className="font-display text-base font-semibold">{data ? topicTitle(lang, data) : readerUI(lang, "Reading")}</Dialog.Title></div>
+            <Dialog.Close asChild><Button variant="ghost" size="icon" aria-label={readerUI(lang, "Close source and return to topic")}><X /></Button></Dialog.Close>
           </header>
-          <div ref={mainRef} className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 sm:px-7" tabIndex={0} aria-label="Source content">
-            {isLoading ? <div role="status" aria-label="Loading source" className="space-y-4"><div className="aspect-video animate-pulse rounded-lg bg-muted" /><div className="h-4 animate-pulse bg-muted" /></div> : isError ? <div role="alert"><p>This source could not be loaded.</p><Button variant="outline" onClick={() => void refetch()}>Try again</Button></div> : active ? <ResourcePane key={active.id} resource={active} signedIn={!!userId} /> : <p role="status">This source is no longer available.</p>}
+          <div ref={mainRef} className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-5 sm:px-7" tabIndex={0} aria-label={readerUI(lang, "Source content")}>
+            {isLoading ? <div role="status" aria-label={readerUI(lang, "Loading source")} className="space-y-4"><div className="aspect-video animate-pulse rounded-lg bg-muted" /><div className="h-4 animate-pulse bg-muted" /></div> : isError ? <div role="alert"><p>{readerUI(lang, "This source could not be loaded.")}</p><Button variant="outline" onClick={() => void refetch()}>{readerUI(lang, "Try again")}</Button></div> : active ? <ResourcePane key={active.id} resource={active} signedIn={!!userId} /> : <p role="status">{readerUI(lang, "This source is no longer available.")}</p>}
           </div>
           {active ? <footer className="flex shrink-0 flex-wrap items-center gap-2 border-t border-border px-4 py-3">
-            <Button variant="outline" size="icon" aria-label="Previous source" disabled={index <= 0} onClick={() => go(-1)}><ArrowLeft /></Button>
-            <Button variant="outline" size="icon" aria-label="Next source" disabled={index >= items.length - 1} onClick={() => go(1)}><ArrowRight /></Button>
-            {userId ? <Button variant="outline" disabled={saving} aria-pressed={completed.has(active.id)} onClick={() => void complete()}><Check />{completed.has(active.id) ? "Finished" : "Mark as finished"}</Button> : null}
+            <Button variant="outline" size="icon" aria-label={readerUI(lang, "Previous source")} disabled={index <= 0} onClick={() => go(-1)}><ArrowLeft /></Button>
+            <Button variant="outline" size="icon" aria-label={readerUI(lang, "Next source")} disabled={index >= items.length - 1} onClick={() => go(1)}><ArrowRight /></Button>
+            {userId ? <Button variant="outline" disabled={saving} aria-pressed={completed.has(active.id)} onClick={() => void complete()}><Check />{completed.has(active.id) ? readerUI(lang, "Finished") : readerUI(lang, "Mark as finished")}</Button> : null}
             {progressError ? <p role="status" className="text-xs text-destructive">{progressError === "session" ? <>{t("err.session")} <a href="/auth" className="underline">{t("err.signIn")}</a></> : progressError === "network" ? t("err.network") : progressError === "limited" ? t("err.rateLimited") : t("err.progress")}</p> : null}
           </footer> : null}
           {data ? <ConceptToolbar topicId={topicId} onOpenTopic={(id) => { onClose(); onOpenTopic?.(id); }} /> : null}
@@ -105,12 +107,13 @@ export default function ResourceViewer({ topicId, resourceUrl, onClose, onOpenTo
 }
 
 function Attribution({ r }: { r: ViewerResource }) {
-  const meta = [r.creator, r.publisher, readerPublication(r.publication), r.duration].filter(Boolean).join(" · ");
-  const description = readerCopy(r.description);
+  const { lang } = useI18n();
+  const meta = [r.creator, r.publisher, sourceCopy(lang, r, "publications", r.publication), r.duration].filter(Boolean).join(" · ");
+  const description = sourceCopy(lang, r, "descriptions", r.description);
   return (
     <div className="mb-5">
-      <p className="eyebrow text-muted-foreground">{SECTION_LABEL[r.kind as SectionKey] ?? r.kind}{r.isStartHere ? " · Start here" : ""}</p>
-      <h3 className="mt-1 font-display text-2xl leading-snug font-semibold text-balance">{r.title}</h3>
+      <p className="eyebrow text-muted-foreground">{lang === "fr" ? readerGroup(lang, r.kind) : SECTION_LABEL[r.kind as SectionKey] ?? r.kind}{r.isStartHere ? ` · ${readerUI(lang, "Start here")}` : ""}</p>
+      <h3 className="mt-1 font-display text-2xl leading-snug font-semibold text-balance" title={r.title}>{sourceCopy(lang, r, "titles", r.title)}</h3>
       {meta ? <p className="mt-1 text-sm italic text-muted-foreground">{meta}</p> : null}
       {description ? <p data-concept-scope className="mt-3 leading-relaxed text-foreground/85">{description}</p> : null}
     </div>
@@ -118,9 +121,10 @@ function Attribution({ r }: { r: ViewerResource }) {
 }
 
 function OpenOriginal({ url }: { url: string }) {
+  const { lang } = useI18n();
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center rounded-full border border-border bg-card px-5 text-sm hover:text-primary">
-      Open original source ↗
+      {readerUI(lang, "Open original source ↗")}
     </a>
   );
 }
@@ -132,6 +136,7 @@ async function reportFailure(resourceId: string, reason: string) {
 }
 
 function ResourcePane({ resource: r, signedIn }: { resource: ViewerResource; signedIn: boolean }) {
+  const { lang } = useI18n();
   const resolution = resolveSource(r);
   const mode = resolution.mode;
   const [failed, setFailed] = useState(false);
@@ -147,7 +152,7 @@ function ResourcePane({ resource: r, signedIn }: { resource: ViewerResource; sig
     return (
       <article>
         <Attribution r={r} />
-        <p role="status" className="mb-3 text-sm italic text-muted-foreground">{failed ? "This could not be shown inside Deep Dive. You can still read it at the source." : resolution.reason}</p>
+        <p role="status" className="mb-3 text-sm italic text-muted-foreground">{failed ? readerUI(lang, "This could not be shown inside Curiosity, Sourced. You can still read it at the source.") : resolution.reason}</p>
         <OpenOriginal url={r.url} />
       </article>
     );
@@ -155,7 +160,7 @@ function ResourcePane({ resource: r, signedIn }: { resource: ViewerResource; sig
   return (
     <article>
       <Attribution r={r} />
-      {mode === "video" ? <><VideoFacade r={r} /><Button variant="outline" className="mt-3" onClick={embedFail}>Player unavailable? Show original link</Button></> : null}
+      {mode === "video" ? <><VideoFacade r={r} /><Button variant="outline" className="mt-3" onClick={embedFail}>{readerUI(lang, "Player unavailable? Show original link")}</Button></> : null}
       {mode === "internal_reader" ? <InternalReader id={r.id} onFail={bodyFail} /> : null}
       {mode === "embedded_external" ? <ExternalEmbed r={r} onFail={embedFail} /> : null}
       {mode === "remote_pdf" && resolution.url ? <RemotePdf resourceId={r.id} url={resolution.url} /> : null}
@@ -173,6 +178,7 @@ function ResourcePane({ resource: r, signedIn }: { resource: ViewerResource; sig
 
 /** Thumbnail first; the official player mounts only after Play. Unmounts with the pane. */
 function VideoFacade({ r }: { r: ViewerResource }) {
+  const { lang } = useI18n();
   const player = playerFor(r.url, r.embeddingStatus === "approved" ? r.embedUrl : null);
   const [playing, setPlaying] = useState(false);
   if (!player) return null;
@@ -182,7 +188,7 @@ function VideoFacade({ r }: { r: ViewerResource }) {
       {playing ? (
         <iframe
           src={player.src}
-          title={`Video: ${r.title}`}
+          title={`${readerUI(lang, "Video")}: ${sourceCopy(lang, r, "titles", r.title)}`}
           allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
           allowFullScreen
           referrerPolicy="strict-origin-when-cross-origin"
@@ -190,7 +196,7 @@ function VideoFacade({ r }: { r: ViewerResource }) {
           className="absolute inset-0 size-full border-0"
         />
       ) : (
-        <Button variant="ghost" type="button" onClick={() => setPlaying(true)} aria-label={`Play video: ${r.title}`} className="group absolute inset-0 flex size-full cursor-pointer items-center justify-center p-0 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring">
+        <Button variant="ghost" type="button" onClick={() => setPlaying(true)} aria-label={`${readerUI(lang, "Play video")}: ${sourceCopy(lang, r, "titles", r.title)}`} className="group absolute inset-0 flex size-full cursor-pointer items-center justify-center p-0 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-ring">
           {thumb ? <img src={thumb} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" /> : null}
           <span className="relative flex size-16 items-center justify-center rounded-full bg-background/90 text-2xl text-foreground shadow-lg transition-transform group-hover:scale-105">▶</span>
         </Button>
@@ -201,26 +207,29 @@ function VideoFacade({ r }: { r: ViewerResource }) {
 
 /** Browser-only publisher read; no copy, proxy, rights promotion or account progress write. */
 function RemotePdf({ resourceId, url }: { resourceId: string; url: string }) {
+  const { lang } = useI18n();
   const [opened, setOpened] = useState(false);
   const [failed, setFailed] = useState(false);
   const fail = useCallback(() => setFailed(true), []);
-  if (failed) return <p role="alert" className="text-sm text-muted-foreground">This PDF could not be read inside Deep Dive. It may be unavailable or the publisher may block in-app access. Open the original source below.</p>;
-  return opened ? <Suspense fallback={<p role="status">Loading PDF reader…</p>}><PdfViewer resourceId={resourceId} url={url} onFail={fail} persistProgress={false} /></Suspense> : <Button variant="outline" onClick={() => setOpened(true)}>Read original PDF here</Button>;
+  if (failed) return <p role="alert" className="text-sm text-muted-foreground">{readerUI(lang, "This PDF could not be read inside Curiosity, Sourced. It may be unavailable or the publisher may block in-app access. Open the original source below.")}</p>;
+  return opened ? <Suspense fallback={<p role="status">{readerUI(lang, "Loading PDF reader…")}</p>}><PdfViewer resourceId={resourceId} url={url} onFail={fail} persistProgress={false} /></Suspense> : <Button variant="outline" onClick={() => setOpened(true)}>{readerUI(lang, "Read original PDF here")}</Button>;
 }
 
 /** Publisher-hosted content loaded only on request; never fetched or copied by our server. */
 function RemoteDisplay({ url, title, pdf, onFail }: { url: string; title: string; pdf: boolean; onFail: () => void }) {
+  const { lang } = useI18n();
   const [opened, setOpened] = useState(false);
   return <div className="space-y-3">
-    <p className="text-sm italic text-muted-foreground">{pdf ? "The original hosted PDF opens here using your browser. Some mobile browsers or publishers cannot display it inside the app." : "The provider controls this preview and its availability. It may offer only a sample."}</p>
+    <p className="text-sm italic text-muted-foreground">{pdf ? readerUI(lang, "The original hosted PDF opens here using your browser. Some mobile browsers or publishers cannot display it inside the app.") : readerUI(lang, "The provider controls this preview and its availability. It may offer only a sample.")}</p>
     {opened ? <>
-      <Button variant="outline" onClick={onFail}>Blank or blocked? Show original link</Button>
-      <iframe src={url} title={`${pdf ? "PDF" : "Preview"}: ${title}`} onError={onFail} referrerPolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="encrypted-media; fullscreen" allowFullScreen className="h-[65dvh] w-full rounded-lg border border-border bg-card" />
-    </> : <Button variant="outline" onClick={() => setOpened(true)}>{pdf ? "Read original PDF here" : "Open provider preview"}</Button>}
+      <Button variant="outline" onClick={onFail}>{readerUI(lang, "Blank or blocked? Show original link")}</Button>
+      <iframe src={url} title={`${pdf ? "PDF" : readerUI(lang, "Preview")}: ${title}`} onError={onFail} referrerPolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" allow="encrypted-media; fullscreen" allowFullScreen className="h-[65dvh] w-full rounded-lg border border-border bg-card" />
+    </> : <Button variant="outline" onClick={() => setOpened(true)}>{pdf ? readerUI(lang, "Read original PDF here") : readerUI(lang, "Open provider preview")}</Button>}
   </div>;
 }
 
 function InternalReader({ id, onFail }: { id: string; onFail: () => void }) {
+  const { lang } = useI18n();
   const { data, isLoading, isError } = useQuery({
     queryKey: ["resource-body", id],
     queryFn: ({ signal }) => withTimeout(getResourceBody({ data: { id }, signal })),
@@ -234,12 +243,13 @@ function InternalReader({ id, onFail }: { id: string; onFail: () => void }) {
   useEffect(() => {
     if (isError || (!isLoading && !data)) onFail();
   }, [isError, isLoading, data, onFail]);
-  if (isLoading) return <div role="status" aria-label="Loading text" className="space-y-3">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-muted" />)}</div>;
+  if (isLoading) return <div role="status" aria-label={readerUI(lang, "Loading text")} className="space-y-3">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-muted" />)}</div>;
   return <div data-concept-scope className="prose-reader leading-relaxed [&_a]:underline [&_h2]:mt-6 [&_h2]:font-display [&_h2]:text-xl [&_img]:h-auto [&_img]:max-w-full [&_p]:mt-3" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 /** Only for embeds an editor has checked. A load timeout falls back to the link. */
 function ExternalEmbed({ r, onFail }: { r: ViewerResource; onFail: () => void }) {
+  const { lang } = useI18n();
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     if (loaded) return;
@@ -248,11 +258,11 @@ function ExternalEmbed({ r, onFail }: { r: ViewerResource; onFail: () => void })
   }, [loaded, onFail]);
   return (
     <div className="relative h-[70dvh] overflow-hidden rounded-xl border border-border bg-card">
-      {!loaded ? <div role="status" className="absolute inset-0 flex items-center justify-center text-sm italic text-muted-foreground">Loading the original page…</div> : null}
-      <Button variant="outline" className="absolute bottom-3 left-3 z-10" onClick={onFail}>Page blank or blocked? Show source link</Button>
+      {!loaded ? <div role="status" className="absolute inset-0 flex items-center justify-center text-sm italic text-muted-foreground">{readerUI(lang, "Loading the original page…")}</div> : null}
+      <Button variant="outline" className="absolute bottom-3 left-3 z-10" onClick={onFail}>{readerUI(lang, "Page blank or blocked? Show source link")}</Button>
       <iframe
         src={r.embedUrl ?? r.url}
-        title={`Original page: ${r.title}`}
+        title={`${readerUI(lang, "Original page")}: ${r.title}`}
         onLoad={() => setLoaded(true)}
         onError={onFail}
         referrerPolicy="no-referrer"

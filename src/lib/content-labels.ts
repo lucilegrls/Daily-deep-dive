@@ -6,25 +6,20 @@
  * translation falls back to the original English wording, so a new lane or
  * category still reads correctly the day it is added.
  *
- * Topic titles, context, takeaways and the sources themselves are NOT
- * translated: they stay in the language they were written and checked in.
+ * Reviewed topic titles use topicTitle separately. Context, takeaways and
+ * sources stay in their original language.
  */
 
 import type { LanguageCode } from "@/lib/i18n";
 
 type Entry = { label: string; description?: string };
 type Table = Record<string, Entry>;
-type ByLang = Partial<Record<LanguageCode, Table>>;
+type StoredLanguage = LanguageCode | "es" | "zh" | "ar";
+// Retain retired catalogue labels as data, not supported runtime locales.
+type ByLang = Partial<Record<StoredLanguage, Table>>;
 
 const LANES: ByLang = {
   en: {
-    "science-technology": { label: "Science, technology & AI" },
-    "health-mind": { label: "Health, body & mind" },
-    "business-economy": { label: "Business, money & economics" },
-    "society-culture": { label: "Society, culture & politics" },
-    "learning-work": { label: "Learning, focus & work" },
-    "nature-everyday": { label: "Nature & everyday questions" },
-    "world-travel": { label: "World, food & travel" },
     "animals-nature-why": { label: "Animals, nature & dumb questions" },
     "art-culture-society": { label: "Art, culture & society" },
     "body-health-nutrition": { label: "Body, health & nutrition" },
@@ -44,34 +39,6 @@ const LANES: ByLang = {
     "technology-ai": { label: "Technology & AI" },
   },
   fr: {
-    "science-technology": {
-      label: "Sciences, technologie & IA",
-      description: "Le vivant, les découvertes et les technologies qui transforment le monde.",
-    },
-    "health-mind": {
-      label: "Santé, corps & esprit",
-      description: "Le corps, le cerveau, la psychologie et la performance.",
-    },
-    "business-economy": {
-      label: "Économie, finance & entreprises",
-      description: "L'argent, les marchés et le fonctionnement des entreprises.",
-    },
-    "society-culture": {
-      label: "Société, culture & politique",
-      description: "Les idées, l'histoire, le droit et les institutions.",
-    },
-    "learning-work": {
-      label: "Apprentissage, concentration & travail",
-      description: "Apprendre, retenir, créer et mieux travailler.",
-    },
-    "nature-everyday": {
-      label: "Nature & questions du quotidien",
-      description: "Le monde vivant et les pourquoi de tous les jours.",
-    },
-    "world-travel": {
-      label: "Monde, cuisine & voyage",
-      description: "Les lieux, les cultures et ce que l'on mange.",
-    },
     "animals-nature-why": {
       label: "Animaux, nature & pourquoi du quotidien",
       description: "Le vivant et les questions que personne ne tranche.",
@@ -127,13 +94,6 @@ const LANES: ByLang = {
     },
   },
   es: {
-    "science-technology": { label: "Ciencia, tecnología e IA" },
-    "health-mind": { label: "Salud, cuerpo y mente" },
-    "business-economy": { label: "Economía, finanzas y negocios" },
-    "society-culture": { label: "Sociedad, cultura y política" },
-    "learning-work": { label: "Aprendizaje, concentración y trabajo" },
-    "nature-everyday": { label: "Naturaleza y preguntas cotidianas" },
-    "world-travel": { label: "Mundo, comida y viajes" },
     "animals-nature-why": {
       label: "Animales, naturaleza y porqués cotidianos",
       description: "Lo vivo y las preguntas que nadie resuelve.",
@@ -189,13 +149,6 @@ const LANES: ByLang = {
     },
   },
   zh: {
-    "science-technology": { label: "科学、技术与人工智能" },
-    "health-mind": { label: "健康、身体与心理" },
-    "business-economy": { label: "经济、金融与商业" },
-    "society-culture": { label: "社会、文化与政治" },
-    "learning-work": { label: "学习、专注与工作" },
-    "nature-everyday": { label: "自然与日常问题" },
-    "world-travel": { label: "世界、饮食与旅行" },
     "animals-nature-why": {
       label: "动物、自然与日常为什么",
       description: "生命，以及没人给出答案的问题。",
@@ -250,13 +203,6 @@ const LANES: ByLang = {
     },
   },
   ar: {
-    "science-technology": { label: "العلوم والتقنية والذكاء الاصطناعي" },
-    "health-mind": { label: "الصحة والجسد والعقل" },
-    "business-economy": { label: "الاقتصاد والمال والأعمال" },
-    "society-culture": { label: "المجتمع والثقافة والسياسة" },
-    "learning-work": { label: "التعلّم والتركيز والعمل" },
-    "nature-everyday": { label: "الطبيعة وأسئلة الحياة اليومية" },
-    "world-travel": { label: "العالم والطعام والسفر" },
     "animals-nature-why": {
       label: "الحيوانات والطبيعة وأسئلة الحياة اليومية",
       description: "الكائنات الحية والأسئلة التي لا يجيب عنها أحد.",
@@ -322,6 +268,7 @@ const CATEGORIES: ByLang = {
     "Art & culture": { label: "Art & culture" },
     "Biochemistry & biology": { label: "Biochimie & biologie" },
     "Digital rights & law": { label: "Droits numériques & droit" },
+    "Economics & personal finance": { label: "Économie & finances perso" },
     "Everyday why": { label: "Pourquoi du quotidien" },
     History: { label: "Histoire" },
     Mathematics: { label: "Mathématiques" },
@@ -346,6 +293,7 @@ const CATEGORIES: ByLang = {
     "Art & culture": { label: "Arte y cultura" },
     "Biochemistry & biology": { label: "Bioquímica y biología" },
     "Digital rights & law": { label: "Derechos digitales y derecho" },
+    "Economics & personal finance": { label: "Economía y finanzas personales" },
     "Everyday why": { label: "Porqués cotidianos" },
     History: { label: "Historia" },
     Mathematics: { label: "Matemáticas" },
@@ -370,6 +318,7 @@ const CATEGORIES: ByLang = {
     "Art & culture": { label: "艺术与文化" },
     "Biochemistry & biology": { label: "生物化学与生物学" },
     "Digital rights & law": { label: "数字权利与法律" },
+    "Economics & personal finance": { label: "经济与个人理财" },
     "Everyday why": { label: "日常为什么" },
     History: { label: "历史" },
     Mathematics: { label: "数学" },
@@ -394,6 +343,7 @@ const CATEGORIES: ByLang = {
     "Art & culture": { label: "الفن والثقافة" },
     "Biochemistry & biology": { label: "الكيمياء الحيوية والأحياء" },
     "Digital rights & law": { label: "الحقوق الرقمية والقانون" },
+    "Economics & personal finance": { label: "الاقتصاد والمال الشخصي" },
     "Everyday why": { label: "أسئلة الحياة اليومية" },
     History: { label: "التاريخ" },
     Mathematics: { label: "الرياضيات" },
@@ -413,32 +363,6 @@ const CATEGORIES: ByLang = {
     "Recent promising research": { label: "أبحاث حديثة واعدة" },
   },
 };
-
-const CATEGORY_ALIASES: Record<string, string> = {
-  "science & technology": "Science & technology",
-  "economics & personal finance": "Finance & economics",
-  "finance & economics": "Finance & economics",
-};
-
-const STORED_CATEGORY_VARIANTS: Record<string, string[]> = {
-  "Science & technology": ["Science & technology", "Science & Technology"],
-  "Finance & economics": [
-    "Finance & economics",
-    "Economics & personal finance",
-  ],
-};
-
-/** A stable display/filter value for legacy editorial category spellings. */
-export function normalizeCategory(category: string): string {
-  const trimmed = category.trim();
-  return CATEGORY_ALIASES[trimmed.toLocaleLowerCase("en-US")] ?? trimmed;
-}
-
-/** Every stored category represented by a normalized filter value. */
-export function categoryVariants(category: string): string[] {
-  const canonical = normalizeCategory(category);
-  return STORED_CATEGORY_VARIANTS[canonical] ?? [canonical];
-}
 
 const MIXES: ByLang = {
   fr: {
@@ -598,8 +522,7 @@ export function laneDescription(
 }
 
 export function categoryName(lang: LanguageCode, category: string) {
-  const canonical = normalizeCategory(category);
-  return pick(CATEGORIES, lang, canonical)?.label ?? canonical;
+  return pick(CATEGORIES, lang, category)?.label ?? category;
 }
 
 export function feedMixName(lang: LanguageCode, id: string, fallback: string) {
@@ -633,7 +556,7 @@ export function themeDescription(
  * plain noun used after "every".
  */
 type Gateway = { one: string; bare: string };
-const GATEWAY_NOUNS: Partial<Record<LanguageCode, Record<string, Gateway>>> = {
+const GATEWAY_NOUNS: Partial<Record<StoredLanguage, Record<string, Gateway>>> = {
   en: {
     romantic: { one: "an envelope", bare: "envelope" },
     minimal: { one: "a card", bare: "card" },
@@ -687,11 +610,11 @@ export function gatewayNoun(
   themeId: string,
   form: "one" | "bare" = "bare",
 ) {
-  const table = GATEWAY_NOUNS[lang] ?? GATEWAY_NOUNS.en!;
+  const table = GATEWAY_NOUNS[lang] ?? GATEWAY_NOUNS.en ?? {};
   const entry =
     table[themeId] ??
-    GATEWAY_NOUNS.en![themeId] ??
+    GATEWAY_NOUNS.en?.[themeId] ??
     table["romantic"] ??
-    GATEWAY_NOUNS.en!["romantic"]!;
-  return entry[form];
+    GATEWAY_NOUNS.en?.["romantic"];
+  return entry?.[form] ?? (form === "one" ? "an envelope" : "envelope");
 }

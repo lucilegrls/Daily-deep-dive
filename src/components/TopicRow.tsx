@@ -1,7 +1,9 @@
 import { openInPlace, spaceOpens, TopicGateway } from "@/components/TopicGateway";
 import { categoryName } from "@/lib/content-labels";
 import { useI18n } from "@/lib/i18n";
-import { readerCopy } from "@/lib/reader-copy";
+import { topicTitle } from "@/lib/topic-titles";
+import { topicContext } from "@/lib/topic-copy";
+import { readerUI } from "@/lib/reader-ui";
 
 export interface TopicRowTopic {
   id: number;
@@ -26,18 +28,20 @@ export function TopicRow({
   onOpen,
   onToggleSave,
 }: TopicRowProps) {
-  const { lang, t } = useI18n();
+  const { lang } = useI18n();
+  const title = topicTitle(lang, topic);
   const flipped = index % 2 === 1;
 
 
   return (
     <article className="animate-rise relative">
       <div
-        className={`topic-row group flex items-center gap-3 sm:gap-10 ${
-          flipped ? "sm:flex-row-reverse" : ""
+        className={`topic-row group flex items-center gap-5 sm:gap-10 ${
+          flipped ? "flex-row-reverse" : ""
         }`}
       >
         <TopicGateway
+          title={title}
           href={`/topic/${topic.slug}`}
           onOpen={() => onOpen(topic)}
         />
@@ -46,7 +50,7 @@ export function TopicRow({
           href={`/topic/${topic.slug}`}
           onClick={(e) => openInPlace(e, () => onOpen(topic))}
           onKeyDown={(e) => spaceOpens(e, () => onOpen(topic))}
-          className={`topic-copy block min-w-0 flex-1 cursor-pointer rounded-sm text-left ${
+          className={`topic-copy block min-w-0 flex-1 cursor-pointer text-left focus:outline-none ${
             flipped ? "sm:text-right" : ""
           }`}
         >
@@ -54,14 +58,14 @@ export function TopicRow({
             {categoryName(lang, topic.category)}
           </span>
           <h2 className="mt-1.5 font-display text-xl leading-snug font-semibold text-balance text-foreground transition-colors group-hover:text-primary sm:text-2xl">
-            {topic.title}
+            {title}
           </h2>
           <p
-            className={`mt-2 line-clamp-2 max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-[0.95rem] ${
+            className={`mt-2 hidden line-clamp-2 max-w-lg text-[0.95rem] leading-relaxed text-muted-foreground sm:block ${
               flipped ? "sm:ml-auto" : ""
             }`}
           >
-            {readerCopy(topic.context)}
+            {topicContext(lang, topic)}
           </p>
         </a>
 
@@ -73,8 +77,8 @@ export function TopicRow({
             onToggleSave(topic.id);
           }}
           aria-pressed={saved}
-          aria-label={saved ? t("ts.unsave") : t("ts.save")}
-          className={`flex size-11 shrink-0 self-start items-center justify-center rounded-full border transition-colors ${
+          aria-label={readerUI(lang, saved ? "Remove from saved topics" : "Save topic for later")}
+          className={`flex size-9 shrink-0 self-start items-center justify-center rounded-full border transition-colors ${
             saved
               ? "border-primary/30 bg-primary text-primary-foreground"
               : "border-border bg-card/80 text-muted-foreground hover:border-primary/40 hover:text-primary"

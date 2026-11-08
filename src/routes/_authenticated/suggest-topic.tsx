@@ -20,16 +20,16 @@ import {
 export const Route = createFileRoute("/_authenticated/suggest-topic")({
   head: () => ({
     meta: [
-      { title: "Suggest a topic — Daily Deep Dive" },
+      { title: "Suggest a topic — Curiosity, Sourced" },
       {
         name: "description",
         content:
           "Send the editors a question or subject you would like to understand, and follow what happens to it.",
       },
-      { property: "og:title", content: "Suggest a topic — Daily Deep Dive" },
+      { property: "og:title", content: "Suggest a topic — Curiosity, Sourced" },
       {
         property: "og:description",
-        content: "The reader suggestion box for the Daily Deep Dive library.",
+        content: "The reader suggestion box for the Curiosity, Sourced library.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

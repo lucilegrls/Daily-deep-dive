@@ -5,7 +5,6 @@ import { AppHeader } from "@/components/AppHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { useAccount } from "@/lib/account";
 import { useI18n } from "@/lib/i18n";
-import { recordUxEvent, uxJourney } from "@/lib/ux-analytics";
 
 interface Row {
   display_name: string;
@@ -23,17 +22,17 @@ export const Route = createFileRoute("/leaderboard")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Reading community beta — Daily Deep Dive" },
+      { title: "The most curious readers — Curiosity, Sourced" },
       {
         name: "description",
         content:
-          "An optional beta view of community reading activity.",
+          "See this week's most curious readers on Curiosity, Sourced, ranked by the number of topics they opened, plus the all-time standings.",
       },
-      { property: "og:title", content: "Reading community beta" },
+      { property: "og:title", content: "The most curious readers" },
       {
         property: "og:description",
         content:
-          "An optional beta view of community reading activity.",
+          "Weekly and all-time rankings of the readers who open the most topics.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -52,16 +51,6 @@ function Leaderboard() {
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [mine, setMine] = useState<Mine | null>(null);
-  const [journeyId] = useState(() => uxJourney("reading_community"));
-
-  useEffect(() => {
-    recordUxEvent({
-      journeyId,
-      surface: "reading_community",
-      event: "community_viewed",
-      variant: "week",
-    });
-  }, [journeyId]);
 
   useEffect(() => {
     let active = true;
@@ -135,15 +124,7 @@ function Leaderboard() {
             <button
               key={p}
               type="button"
-              onClick={() => {
-                setPeriod(p);
-                recordUxEvent({
-                  journeyId,
-                  surface: "reading_community",
-                  event: "period_changed",
-                  variant: p,
-                });
-              }}
+              onClick={() => setPeriod(p)}
               aria-pressed={period === p}
               className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
                 period === p

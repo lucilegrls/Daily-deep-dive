@@ -44,7 +44,7 @@ describe("createSingleFlight", () => {
   });
 });
 
-describe("recovery messages in all five languages", () => {
+describe("recovery messages in supported languages", () => {
   const keys = ["ts.failed", "feed.retry", "err.network", "err.session", "err.permission", "err.duplicate", "err.unexpected", "err.rateLimited", "err.signIn", "err.dismiss", "err.saveTopic", "err.progress", "ts.noteError"] as const;
   it("every language has its own non-empty wording", () => {
     for (const lang of LANGUAGE_CODES) for (const k of keys) {
@@ -54,8 +54,8 @@ describe("recovery messages in all five languages", () => {
   });
   it("friendlyError uses the reader's language and hides raw errors", () => {
     vi.spyOn(console, "error").mockImplementation(() => {});
-    const t = (k: Parameters<typeof translate>[1]) => translate("ar", k);
-    expect(friendlyError(new TypeError("Failed to fetch"), undefined, t)).toBe(DICTIONARIES.ar["err.network"]);
-    expect(friendlyError(new Error('relation "x" violates'), undefined, t)).toBe(DICTIONARIES.ar["err.unexpected"]);
+    const t = (k: Parameters<typeof translate>[1]) => translate("fr", k);
+    expect(friendlyError(new TypeError("Failed to fetch"), undefined, t)).toBe(DICTIONARIES.fr["err.network"]);
+    expect(friendlyError(new Error('relation "x" violates'), undefined, t)).toBe(DICTIONARIES.fr["err.unexpected"]);
   });
 });

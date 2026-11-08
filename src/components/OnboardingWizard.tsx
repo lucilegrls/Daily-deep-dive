@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { useAccount } from "@/lib/account";
 import {
@@ -26,7 +26,8 @@ import {
 } from "@/lib/onboarding";
 import { DEFAULT_THEME, THEMES, isTheme } from "@/lib/themes";
 import type { TranslationKey } from "@/lib/translations";
-import { finishUxJourney, recordUxEvent, uxJourney } from "@/lib/ux-analytics";
+import { topicTitle } from "@/lib/topic-titles";
+import { topicContext } from "@/lib/topic-copy";
 
 const STEP_KEYS: TranslationKey[] = [
   "ob.stepSubjects",
@@ -58,8 +59,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [hydrated, setHydrated] = useState(false);
-  const [journeyId] = useState(() => uxJourney("onboarding"));
-  const stepStartedAt = useRef(Date.now());
 
 
   const { data: lanes = [], isLoading: loadingLanes } = useQuery({
@@ -98,17 +97,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
     writeDraft({ interests: picked, feedMix: mix, theme });
   }, [mode, hydrated, picked, mix, theme]);
 
-  useEffect(() => {
-    stepStartedAt.current = Date.now();
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "step_viewed",
-      variant: mode,
-      step,
-    });
-  }, [journeyId, mode, step]);
-
 
   const previewEnabled = step === 3 && picked.length > 0;
   const { data: preview } = useQuery({
@@ -139,14 +127,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
       setError(t("ob.errMin", { min: MIN_INTERESTS }));
       return;
     }
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "step_completed",
-      variant: mode,
-      step,
-      elapsedMs: Date.now() - stepStartedAt.current,
-    });
     setError(null);
     setStep((s) => Math.min(s + 1, STEP_KEYS.length - 1));
   };
@@ -156,26 +136,9 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
     if (step === 0) {
       // Leaving the edit without saving discards any previewed look.
       if (mode === "edit") restoreOriginalTheme();
-      recordUxEvent({
-        journeyId,
-        surface: "onboarding",
-        event: "journey_skipped",
-        variant: mode,
-        step,
-        elapsedMs: Date.now() - stepStartedAt.current,
-      });
-      finishUxJourney("onboarding");
       void navigate({ to: "/" });
       return;
     }
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "step_back",
-      variant: mode,
-      step,
-      elapsedMs: Date.now() - stepStartedAt.current,
-    });
     setStep((s) => s - 1);
   };
 
@@ -198,22 +161,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
       if (result.reason === "too_few_interests") setStep(0);
       return;
     }
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "step_completed",
-      variant: mode,
-      step: 3,
-      elapsedMs: Date.now() - stepStartedAt.current,
-    });
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "journey_completed",
-      variant: mode,
-      step: 3,
-    });
-    finishUxJourney("onboarding");
     void navigate({ to: "/" });
   };
 
@@ -226,14 +173,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
   };
 
   const cancelEdit = () => {
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "journey_skipped",
-      variant: mode,
-      step,
-    });
-    finishUxJourney("onboarding");
     restoreOriginalTheme();
     void navigate({ to: "/" });
   };
@@ -241,22 +180,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
 
   const goToAccount = () => {
     writeDraft({ interests: picked, feedMix: mix, theme });
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "step_completed",
-      variant: mode,
-      step: 3,
-      elapsedMs: Date.now() - stepStartedAt.current,
-    });
-    recordUxEvent({
-      journeyId,
-      surface: "onboarding",
-      event: "journey_completed",
-      variant: mode,
-      step: 3,
-    });
-    finishUxJourney("onboarding");
     void navigate({ to: "/auth" });
   };
 
@@ -267,15 +190,9 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
           {mode === "edit" ? t("ob.titleEdit") : t("ob.titleSignup")}
         </p>
 
-        <p className="mt-4 text-center text-sm font-medium text-foreground">
-          {t("ob.stepOf", { n: step + 1, total: STEP_KEYS.length })}
-          <span aria-hidden="true"> · </span>
-          <span>{t(STEP_KEYS[step] ?? "ob.stepSubjects")}</span>
-        </p>
-
         <ol
           aria-label={t("ob.stepOf", { n: step + 1, total: STEP_KEYS.length })}
-          className="mx-auto mt-3 flex max-w-sm gap-2"
+          className="mx-auto mt-5 flex max-w-sm gap-2"
         >
           {STEP_KEYS.map((key, i) => (
             <li key={key} className="flex-1">
@@ -468,10 +385,10 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
                       {categoryName(lang, item.category)}
                     </p>
                     <p className="mt-1 font-display text-lg text-foreground">
-                      {item.title}
+                      {topicTitle(lang, item)}
                     </p>
                     <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
-                      {item.context}
+                      {topicContext(lang, item)}
                     </p>
                   </li>
                 ))}
@@ -567,14 +484,6 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
             <button
               type="button"
               onClick={() => {
-                recordUxEvent({
-                  journeyId,
-                  surface: "onboarding",
-                  event: "journey_skipped",
-                  variant: mode,
-                  step,
-                });
-                finishUxJourney("onboarding");
                 clearDraft();
                 void navigate({ to: "/" });
               }}

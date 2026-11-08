@@ -28,7 +28,7 @@ export function LanguageGate() {
         aria-labelledby="language-gate-title"
         className="w-full max-w-md rounded-2xl border border-border bg-card p-6 shadow-2xl outline-none"
       >
-        <p className="eyebrow text-muted-foreground">Daily Deep Dive</p>
+        <p className="eyebrow text-muted-foreground">Curiosity, Sourced</p>
         <h2
           id="language-gate-title"
           className="mt-2 font-display text-2xl font-semibold text-foreground"

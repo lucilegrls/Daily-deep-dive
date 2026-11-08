@@ -58,7 +58,7 @@ export interface SourceResolution {
   url?: string;
   reason?: string;
 }
-const unavailable = "This source cannot be displayed inside Deep Dive. Read it on the original site; access may require a subscription or sign-in.";
+const unavailable = "This source cannot be displayed inside Curiosity, Sourced. Read it on the original site; access may require a subscription or sign-in.";
 export function resolveSource(r: ModeInput): SourceResolution {
   const source = mediaUrl(r.url);
   if (!source) return { mode: "link_only", reason: "This address is not supported for in-app display." };

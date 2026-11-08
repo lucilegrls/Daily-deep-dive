@@ -22,8 +22,11 @@ import { useI18n } from "@/lib/i18n";
 import type { TranslationKey } from "@/lib/translations";
 import type { TopicDetail } from "@/lib/content.functions";
 import { useAccount } from "@/lib/account";
-import { readerCopy, readerPublication } from "@/lib/reader-copy";
+import { sourceCopy, takeawayCopy } from "@/lib/french-public-copy";
 import { resolveSource } from "@/lib/viewer-media";
+import { topicTitle } from "@/lib/topic-titles";
+import { topicContext } from "@/lib/topic-copy";
+import { readerUI, readerGroup } from "@/lib/reader-ui";
 
 const ResourceViewer = lazy(() => import("@/components/viewer/ResourceViewer"));
 const ConceptToolbar = lazy(() => import("@/components/viewer/ConceptToolbar").then((m) => ({ default: m.ConceptToolbar })));
@@ -50,15 +53,16 @@ interface TopicSheetProps {
 }
 
 function ResourceItem({ resource, onOpen }: { resource: Resource; onOpen: (url: string) => void }) {
-  const { t } = useI18n();
-  const meta = [resource.author, resource.source, readerPublication(resource.publication)].filter(Boolean).join(" • ");
-  const description = readerCopy(resource.description);
-  const limitation = readerCopy(resource.verification?.limitation);
+  const { lang } = useI18n();
+  const meta = [resource.author, resource.source, sourceCopy(lang, resource, "publications", resource.publication)].filter(Boolean).join(" • ");
+  const description = sourceCopy(lang, resource, "descriptions", resource.description);
+  const limitation = sourceCopy(lang, resource, "limitations", resource.verification?.limitation);
   const embedded = resolveSource(resource.media ?? { url: resource.url, embedType: "link_only", embeddingStatus: "needs_review", rightsStatus: "unknown" }).mode !== "link_only";
   return (
     <li className="border-b border-foreground/15 py-3 last:border-b-0">
       <a
         href={resource.url}
+        title={resource.title}
         target="_blank"
         rel="noopener noreferrer"
         onClick={embedded ? (e) => {
@@ -68,9 +72,9 @@ function ResourceItem({ resource, onOpen }: { resource: Resource; onOpen: (url: 
         onKeyDown={embedded ? (e) => { if (e.key === " " && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey) { e.preventDefault(); onOpen(resource.url); } } : undefined}
         className="font-display text-[0.95rem] leading-snug font-medium text-foreground underline decoration-gold decoration-1 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
       >
-        {resource.title}
+        {sourceCopy(lang, resource, "titles", resource.title)}
       </a>
-      {resource.isStartHere ? <p className="mt-1 text-xs font-medium text-primary">{t("ts.startHere")}</p> : null}
+      {resource.isStartHere ? <p className="mt-1 text-xs font-medium text-primary">{readerUI(lang, "Start here")}</p> : null}
       {meta ? (
         <p className="mt-1 text-sm text-foreground/75 italic">{meta}</p>
       ) : null}
@@ -89,7 +93,7 @@ function ResourceItem({ resource, onOpen }: { resource: Resource; onOpen: (url: 
 }
 
 function BibliographyGroups({ topic, onOpen }: { topic: TopicDetail; onOpen: (url: string) => void }) {
-  const { t } = useI18n();
+  const { lang } = useI18n();
   const hasAny = GROUP_META.some((group) =>
     (topic.ressources[group.key] ?? []).some((item) => isSafeSourceUrl(item.url)),
   );
@@ -97,7 +101,7 @@ function BibliographyGroups({ topic, onOpen }: { topic: TopicDetail; onOpen: (ur
     <>
       {!hasAny ? (
         <p className="mt-4 text-sm italic text-foreground/75">
-          {t("ts.biblioPreparing")}
+          {readerUI(lang, "Bibliography in preparation.")}
         </p>
       ) : null}
       {GROUP_META.map((group) => {
@@ -114,7 +118,7 @@ function BibliographyGroups({ topic, onOpen }: { topic: TopicDetail; onOpen: (ur
                 className="size-5 object-contain"
               />
               <h4 className="font-display text-base font-semibold text-foreground">
-                {t(`ts.group.${group.key}` as TranslationKey)}
+                {readerGroup(lang, group.key)}
               </h4>
             </div>
             <ul>
@@ -239,7 +243,7 @@ export function PrivateNote({
         onBlur={() => void save()}
         rows={3}
         placeholder={t("ts.notePlaceholder")}
-        className="mt-2 w-full rounded-lg border border-border bg-card/70 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-ring disabled:opacity-50"
+        className="mt-2 w-full rounded-lg border border-border bg-card/70 px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/70 focus:border-ring focus:outline-none disabled:opacity-50"
       />
       <p role="status" aria-live="polite" className="mt-1 text-xs text-muted-foreground/70 italic">
         {state === "loading"
@@ -351,7 +355,7 @@ export function TopicSheet({
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
-      window.prompt(t("ts.copyLink"), url);
+      window.prompt("Copy this link", url);
     }
   };
 
@@ -365,7 +369,7 @@ export function TopicSheet({
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-40 bg-foreground/45 backdrop-blur-[2px] data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0" />
         {romantic ? (
-          <Dialog.Content {...sheetFocus} className="fixed inset-0 z-50 h-[100dvh] w-full overflow-y-auto overscroll-contain bg-transparent data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 motion-reduce:animate-none sm:inset-auto sm:top-1/2 sm:left-1/2 sm:h-auto sm:max-h-[92vh] sm:w-[min(94vw,44rem)] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:data-[state=open]:zoom-in-95 sm:data-[state=closed]:zoom-out-95">
+          <Dialog.Content {...sheetFocus} className="fixed top-1/2 left-1/2 z-50 max-h-[92vh] w-[min(94vw,44rem)] -translate-x-1/2 -translate-y-1/2 no-scrollbar overflow-y-auto overscroll-contain bg-transparent focus:outline-none data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 motion-reduce:animate-none">
             {/* One sheet: the existing lace + clip image on top, the lace
                 middle strip repeated down the full content height, and the
                 lace bottom closing the page. No banner, no inner card. */}
@@ -376,8 +380,8 @@ export function TopicSheet({
                 className="stationery pointer-events-none absolute inset-0"
                 style={{ backgroundImage: `url(${paperMiddle})`, backgroundRepeat: "repeat-y", backgroundSize: "100% auto" }}
               />
-              <div ref={laceContentRef} data-topic-sheet className={`relative px-5 pb-4 sm:px-[20%] ${romantic ? "text-left sm:text-justify" : ""}`}>
-                <div className="sticky top-2 z-20 flex items-start justify-between gap-3 rounded-xl bg-card/90 p-1.5 shadow-sm backdrop-blur-sm sm:static sm:rounded-none sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none">
+              <div ref={laceContentRef} data-topic-sheet className={`relative px-[17%] pb-4 sm:px-[20%] ${romantic ? "text-justify" : ""}`}>
+                <div className="flex items-start justify-between gap-3">
                   <div className="pt-2">
                     <Dialog.Title className="eyebrow text-blush-foreground">
                 {topic ? categoryName(lang, topic.category) : t("ts.opening")}
@@ -395,7 +399,7 @@ export function TopicSheet({
                       type="button"
                       onClick={() => void share()}
                       aria-label={t("ts.copyLink")}
-                      className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                      className="flex size-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -414,7 +418,7 @@ export function TopicSheet({
                       type="button"
                       onClick={() => onToggleSave(topic.id)}
                       aria-pressed={saved}
-                      className={`flex size-11 items-center justify-center rounded-full border transition-colors ${
+                      className={`flex size-9 items-center justify-center rounded-full border transition-colors ${
                         saved
                           ? "border-primary/30 bg-primary text-primary-foreground"
                           : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-primary"
@@ -436,7 +440,7 @@ export function TopicSheet({
                 ) : null}
                 <Dialog.Close
                   aria-label={t("ts.close")}
-                  className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground"
+                  className="flex size-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -473,11 +477,16 @@ export function TopicSheet({
                 <Dialog.Description asChild>
                   <div>
                     <h2 className="font-display text-left text-3xl leading-tight font-semibold text-balance text-foreground">
-                      {topic.title}
+                      {topicTitle(lang, topic)}
                     </h2>
                     <p data-concept-scope className="mt-4 text-lg leading-relaxed text-foreground/85">
-                      {readerCopy(topic.context)}
+                      {topicContext(lang, topic)}
                     </p>
+                    {topic.lastEditorialReviewAt && topic.riskLevel !== "standard" ? (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        Last reviewed: {new Intl.DateTimeFormat(lang, { day: "numeric", month: "long", year: "numeric" }).format(new Date(topic.lastEditorialReviewAt))}
+                      </p>
+                    ) : null}
                   </div>
                 </Dialog.Description>
 
@@ -485,7 +494,7 @@ export function TopicSheet({
 
                 <h3 className="eyebrow text-muted-foreground">{t("ts.remember")}</h3>
                 <ul className="mt-3 space-y-2.5">
-                  {topic.takeaways.map(readerCopy).filter(Boolean).map((takeaway) => (
+                  {topic.takeaways.map((value) => takeawayCopy(lang, topic, value)).filter(Boolean).map((takeaway) => (
                     <li key={takeaway} className="flex gap-3">
                       <span
                         aria-hidden="true"
@@ -542,7 +551,7 @@ export function TopicSheet({
                             onClick={() => onOpenTopic(rel.id)}
                             className="text-left font-display text-[0.95rem] font-medium text-foreground underline decoration-gold/60 decoration-1 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
                           >
-                            {rel.title}
+                            {topicTitle(lang, rel)}
                           </button>
                         </li>
                       ))}
@@ -560,7 +569,7 @@ export function TopicSheet({
             {topic && resourceUrl ? <Suspense fallback={null}><ResourceViewer topicId={topic.id} resourceUrl={resourceUrl} onClose={() => setResourceUrl(null)} onOpenTopic={onOpenTopic} /></Suspense> : null}
         </Dialog.Content>
         ) : (
-        <Dialog.Content {...sheetFocus} className="letter-sheet fixed inset-0 z-50 flex h-[100dvh] w-full flex-col overflow-hidden border border-border data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:h-auto sm:max-h-[88vh] sm:w-[min(92vw,42rem)] sm:-translate-x-1/2 sm:-translate-y-1/2 sm:rounded-xl sm:data-[state=open]:zoom-in-95 sm:data-[state=closed]:zoom-out-95">
+        <Dialog.Content {...sheetFocus} className="letter-sheet fixed top-1/2 left-1/2 z-50 flex max-h-[88vh] w-[min(92vw,42rem)] -translate-x-1/2 -translate-y-1/2 flex-col overflow-hidden rounded-xl border border-border focus:outline-none data-[state=open]:animate-in data-[state=open]:fade-in-0 data-[state=open]:zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95">
           <div className="border-b border-border/70 bg-blush/40 px-6 py-4 sm:px-9">
             <div className="flex items-center justify-between gap-4">
               <Dialog.Title className="eyebrow text-blush-foreground">
@@ -573,7 +582,7 @@ export function TopicSheet({
                       type="button"
                       onClick={() => void share()}
                       aria-label={t("ts.copyLink")}
-                      className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                      className="flex size-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
                     >
                       <svg
                         viewBox="0 0 24 24"
@@ -592,7 +601,7 @@ export function TopicSheet({
                       type="button"
                       onClick={() => onToggleSave(topic.id)}
                       aria-pressed={saved}
-                      className={`flex size-11 items-center justify-center rounded-full border transition-colors ${
+                      className={`flex size-9 items-center justify-center rounded-full border transition-colors ${
                         saved
                           ? "border-primary/30 bg-primary text-primary-foreground"
                           : "border-border bg-card text-muted-foreground hover:border-primary/40 hover:text-primary"
@@ -614,7 +623,7 @@ export function TopicSheet({
                 ) : null}
                 <Dialog.Close
                   aria-label={t("ts.close")}
-                  className="flex size-11 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground"
+                  className="flex size-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -657,11 +666,16 @@ export function TopicSheet({
                 <Dialog.Description asChild>
                   <div>
                     <h2 className="font-display text-3xl leading-tight font-semibold text-balance text-foreground">
-                      {topic.title}
+                      {topicTitle(lang, topic)}
                     </h2>
                     <p data-concept-scope className="mt-4 text-lg leading-relaxed text-foreground/85">
-                      {readerCopy(topic.context)}
+                      {topicContext(lang, topic)}
                     </p>
+                    {topic.lastEditorialReviewAt && topic.riskLevel !== "standard" ? (
+                      <p className="mt-2 text-xs text-muted-foreground">
+                        Last reviewed: {new Intl.DateTimeFormat(lang, { day: "numeric", month: "long", year: "numeric" }).format(new Date(topic.lastEditorialReviewAt))}
+                      </p>
+                    ) : null}
                   </div>
                 </Dialog.Description>
 
@@ -669,7 +683,7 @@ export function TopicSheet({
 
                 <h3 className="eyebrow text-muted-foreground">{t("ts.remember")}</h3>
                 <ul className="mt-3 space-y-2.5">
-                  {topic.takeaways.map(readerCopy).filter(Boolean).map((takeaway) => (
+                  {topic.takeaways.map((value) => takeawayCopy(lang, topic, value)).filter(Boolean).map((takeaway) => (
                     <li key={takeaway} className="flex gap-3">
                       <span
                         aria-hidden="true"
@@ -720,7 +734,7 @@ export function TopicSheet({
                             onClick={() => onOpenTopic(rel.id)}
                             className="text-left font-display text-[0.95rem] font-medium text-foreground underline decoration-gold/60 decoration-1 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
                           >
-                            {rel.title}
+                            {topicTitle(lang, rel)}
                           </button>
                         </li>
                       ))}

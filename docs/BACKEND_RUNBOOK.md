@@ -26,6 +26,7 @@ Wrap in `DO $$ … RAISE EXCEPTION 'RESULT: %', r; $$` — the exception rolls e
 - Editorial HTTP endpoints (`/api/public/editorial/import`, `/daily-expansion`) always require the cron secret, in preview too.
 - AI drafting is paused: `runDailyExpansion` makes no AI call unless `AI_DRAFTING_ENABLED=true`; it also refuses a second run within an hour.
 - Link checker: **server-side probing is disabled** (`LINK_PROBE_ENABLED = false` in `src/lib/link-safety.ts`). The Worker runtime has no DNS resolution API and no fetch pinned to a validated IP, so a public name resolving or rebinding to an internal address cannot be excluded; string/IP checks alone are not SSRF protection. `checkSourceLinks` still requires an editor, makes no network request and returns `disabled`; a unit test proves no fetch is called. Old reports remain visible. The guarded implementation (`probeLink`, manual redirects re-validated, 5 hops, 9 s) is kept for a future platform with pinned egress.
+- Resource trust model and safe deployment/backfill procedure: see `docs/RESOURCE_VERIFICATION.md`. Technical observations, human source reviews and human claim reviews are separate append-only evidence streams; never copy one status into another.
 - Reads: one per reader/topic/UTC day; `read_at`, `read_day` set by the server; seconds clamped 0–3600.
 - Ranking exposes only display name, totals, place and an `is_me` flag; limit capped at 100.
 - Suggestions: max 10 per reader per 24 h; identical waiting title refused.

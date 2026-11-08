@@ -11,32 +11,32 @@ import {
 
 const lanes: InterestLane[] = [
   {
-    slug: "health-mind",
-    label: "Health, body & mind",
+    slug: "body-health-nutrition",
+    label: "Body, health & nutrition",
     description: "",
     examples: ["iron"],
     categories: ["Biochemistry & biology", "Health & nutrition"],
     publishedCount: 24,
   },
   {
-    slug: "learning-work",
-    label: "Learning, focus & work",
+    slug: "learning-focus",
+    label: "Learning & focus",
     description: "",
     examples: [],
     categories: ["Learning & study", "Productivity & focus"],
     publishedCount: 7,
   },
   {
-    slug: "society-culture",
-    label: "Society, culture & politics",
+    slug: "law-tax-offshore",
+    label: "Law, tax & offshore",
     description: "",
     examples: [],
     categories: ["Law"],
     publishedCount: 6,
   },
   {
-    slug: "world-travel",
-    label: "World, food & travel",
+    slug: "southeast-asia-food-travel",
+    label: "Southeast Asia, food & travel",
     description: "",
     examples: [],
     categories: [],
@@ -55,7 +55,7 @@ const categories = [
 
 describe("interest catalogue", () => {
   it("maps a lane to the library categories it covers", () => {
-    expect(expandInterests(lanes, ["learning-work"], categories)).toEqual([
+    expect(expandInterests(lanes, ["learning-focus"], categories)).toEqual([
       "Learning & study",
       "Productivity & focus",
     ]);
@@ -69,35 +69,35 @@ describe("interest catalogue", () => {
 
   it("ignores values that are neither a lane nor a real category", () => {
     expect(expandInterests(lanes, ["not-a-lane"], categories)).toEqual([]);
-    expect(validInterests(lanes, ["not-a-lane", "society-culture"], categories)).toEqual([
-      "society-culture",
+    expect(validInterests(lanes, ["not-a-lane", "law-tax-offshore"], categories)).toEqual([
+      "law-tax-offshore",
     ]);
   });
 
   it("accepts a lane with no published topics yet", () => {
     expect(
-      validInterests(lanes, ["world-travel"], categories),
-    ).toEqual(["world-travel"]);
-    expect(expandInterests(lanes, ["world-travel"], categories)).toEqual(
+      validInterests(lanes, ["southeast-asia-food-travel"], categories),
+    ).toEqual(["southeast-asia-food-travel"]);
+    expect(expandInterests(lanes, ["southeast-asia-food-travel"], categories)).toEqual(
       [],
     );
   });
 
   it("requires three distinct valid choices", () => {
-    expect(hasEnoughInterests(lanes, ["learning-work", "society-culture"], categories)).toBe(
+    expect(hasEnoughInterests(lanes, ["learning-focus", "law-tax-offshore"], categories)).toBe(
       false,
     );
     expect(
       hasEnoughInterests(
         lanes,
-        ["learning-work", "learning-work", "society-culture"],
+        ["learning-focus", "learning-focus", "law-tax-offshore"],
         categories,
       ),
     ).toBe(false);
     expect(
       hasEnoughInterests(
         lanes,
-        ["learning-work", "society-culture", "Politics & institutions"],
+        ["learning-focus", "law-tax-offshore", "Politics & institutions"],
         categories,
       ),
     ).toBe(true);
@@ -106,21 +106,11 @@ describe("interest catalogue", () => {
   it("preselects lanes for a reader whose saved subjects are legacy categories", () => {
     expect(
       toLaneSelection(lanes, ["Law", "Biochemistry & biology", "learning-focus"]),
-    ).toEqual(["society-culture", "health-mind", "learning-work"]);
-  });
-
-  it("folds old subject slugs into the new seven-subject taxonomy", () => {
-    expect(
-      toLaneSelection(lanes, [
-        "body-health-nutrition",
-        "brain-behavior",
-        "southeast-asia-food-travel",
-      ]),
-    ).toEqual(["health-mind", "world-travel"]);
+    ).toEqual(["law-tax-offshore", "body-health-nutrition", "learning-focus"]);
   });
 
   it("shows the friendly label, falling back to the saved value", () => {
-    expect(laneLabel(lanes, "society-culture")).toBe("Society, culture & politics");
+    expect(laneLabel(lanes, "law-tax-offshore")).toBe("Law, tax & offshore");
     expect(laneLabel(lanes, "Politics & institutions")).toBe(
       "Politics & institutions",
     );

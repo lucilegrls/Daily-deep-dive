@@ -78,6 +78,13 @@
       "when": 1792487737192,
       "tag": "0010_keyless_research_pilot",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1793782145328,
+      "tag": "0011_resource_health_and_trust",
+      "breakpoints": true
     }
   ]
 }

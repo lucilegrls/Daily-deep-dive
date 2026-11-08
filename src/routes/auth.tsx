@@ -2,24 +2,28 @@ import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { friendlyError } from "@/lib/friendly-error";
 import { useEffect, useState } from "react";
 
+import { lovable } from "@/integrations/lovable/index";
 import { supabase } from "@/integrations/supabase/client";
 import { useAccount } from "@/lib/account";
 import { useI18n } from "@/lib/i18n";
+import { oauthReturnPath } from "@/lib/oauth-return-path";
 
 export const Route = createFileRoute("/auth")({
+  validateSearch: (s: Record<string, unknown>): { next?: string } =>
+    typeof s["next"] === "string" ? { next: s["next"] } : {},
   head: () => ({
     meta: [
-      { title: "Join Daily Deep Dive — shape your reading room" },
+      { title: "Join Curiosity, Sourced — keep your streak and ranking" },
       {
         name: "description",
         content:
-          "Create a free account to shape your feed and keep your saved topics and notes.",
+          "Create a free account to pick the subjects you love, keep a daily reading streak, and climb the weekly ranking of the most curious readers.",
       },
-      { property: "og:title", content: "Join Daily Deep Dive" },
+      { property: "og:title", content: "Join Curiosity, Sourced" },
       {
         property: "og:description",
         content:
-          "Pick your subjects and keep your reading room across devices.",
+          "Pick your subjects, keep a daily reading streak, and climb the weekly ranking.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -32,6 +36,9 @@ function AuthPage() {
   const { session, profile } = useAccount();
   const { t } = useI18n();
   const navigate = useNavigate();
+  const { next: rawNext } = Route.useSearch();
+  const next = rawNext ? oauthReturnPath(rawNext) : null;
+  const returnUrl = () => (next ? new URL(next, window.location.origin).href : window.location.origin);
   const [mode, setMode] = useState<"signin" | "signup">("signup");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -42,11 +49,15 @@ function AuthPage() {
 
   useEffect(() => {
     if (!session) return;
+    if (next) {
+      window.location.assign(next);
+      return;
+    }
     void navigate({
       to: profile && profile.onboarded ? "/" : "/welcome",
       replace: true,
     });
-  }, [session, profile, navigate]);
+  }, [session, profile, navigate, next]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,7 +70,7 @@ function AuthPage() {
           email,
           password,
           options: {
-            emailRedirectTo: window.location.origin,
+            emailRedirectTo: returnUrl(),
             data: { display_name: displayName || email.split("@")[0] },
           },
         });
@@ -83,13 +94,10 @@ function AuthPage() {
 
   const google = async () => {
     setError(null);
-    const { error: oauthError } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: window.location.origin,
-      },
+    const result = await lovable.auth.signInWithOAuth("google", {
+      redirect_uri: returnUrl(),
     });
-    if (oauthError) {
+    if (result.error) {
       setError(t("auth.googleError"));
     }
   };
@@ -101,7 +109,7 @@ function AuthPage() {
           {mode === "signup" ? t("auth.eyebrowSignup") : t("auth.eyebrowSignin")}
         </p>
         <h1 className="mt-3 text-center font-display text-3xl font-semibold text-foreground">
-          Daily Deep Dive
+          Curiosity, Sourced
         </h1>
         <div className="rule-diamond ornamental mx-auto mt-5 max-w-[12rem]" aria-hidden="true" />
         <p className="mt-5 text-center text-sm leading-relaxed text-muted-foreground">

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Curiosity, Sourced archive mark</title>
+  <desc id="desc">A cream C,S monogram inside an oxblood archive stamp.</desc>
+  <rect width="512" height="512" rx="112" fill="#F3E9D7"/>
+  <path d="M48 256h416" stroke="#24364B" stroke-width="9"/>
+  <circle cx="256" cy="256" r="160" fill="#87362E" stroke="#63251F" stroke-width="16"/>
+  <circle cx="256" cy="256" r="132" fill="none" stroke="#C5796D" stroke-width="5"/>
+  <text x="256" y="285" text-anchor="middle" fill="#F3E9D7" font-family="Fraunces, Georgia, serif" font-size="116" font-weight="600">C,S</text>
+  <rect x="245" y="328" width="22" height="22" rx="2" transform="rotate(45 256 339)" fill="#D1A85C"/>
+</svg>

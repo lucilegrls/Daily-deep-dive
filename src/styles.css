@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Daily Deep Dive design system.
+ * Curiosity, Sourced design system.
  *
  * Mood: romantic stationery — cream laid paper, blush lace envelope,
  * gold clip, espresso ink, wax-seal rosewood accents.
@@ -110,32 +110,30 @@
     border-color: var(--color-border);
   }
 
-  html {
-    scrollbar-gutter: stable;
-    scrollbar-color: var(--color-border) transparent;
-    scrollbar-width: thin;
+  /*
+   * No native scrollbars anywhere in the app (document, dialogs, menus,
+   * lists). Only the bar is hidden: wheel, touch and keyboard scrolling are
+   * untouched, and nothing gets overflow:hidden. Zero-width bars also mean
+   * no width jump when a dialog locks page scrolling.
+   */
+  html,
+  body,
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-serif);
-  }
-
-  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-    outline: 2px solid var(--color-ring);
-    outline-offset: 3px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
   }
 }
 
@@ -306,7 +304,7 @@
 
 [data-theme="maximal"] body {
   background-color: var(--color-background);
-  background-image: url("/theme-assets/maximalist-background.png");
+  background-image: url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
   background-repeat: repeat;
   background-size: 262px 446px;
   background-attachment: fixed;
@@ -330,7 +328,7 @@
   background-color: transparent;
   background-image:
     linear-gradient(oklch(1 0 0 / 0.68), oklch(1 0 0 / 0.68)),
-    url("/theme-assets/maximalist-background.png");
+    url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
   background-size:
     auto,
     262px 446px;
@@ -573,7 +571,7 @@
       oklch(0.975 0.008 95 / 0.85),
       oklch(0.975 0.008 95 / 0.85)
     ),
-    url("/theme-assets/maximalist-background.png");
+    url("/__l5e/assets-v1/190b1e84-bd2d-42d6-8496-888a0b67d45a/maximalist-background.png");
   background-size: auto, 262px 446px;
   background-attachment: scroll, scroll;
   border-top: 2px solid var(--color-border);
@@ -655,4 +653,38 @@
 @utility scroll-fade-x {
   mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
   -webkit-mask-image: linear-gradient(to right, black calc(100% - 2.5rem), transparent);
+}
+
+/* Curiosity, Sourced launch overlay — brand colours are fixed by the logo. */
+.launch-overlay {
+  --launch-parchment: #f3e9d7;
+  --launch-navy: #1b2a4a;
+  --launch-brass: #c89a4e;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: var(--launch-parchment);
+  color: var(--launch-navy);
+  animation: launch-out 0.35s ease 1.3s forwards;
+}
+.launch-paper { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: contrast(1.2); pointer-events: none; }
+.launch-inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; width: min(100%, 26rem); }
+.launch-mark { width: clamp(7rem, 30vw, 10rem); height: auto; }
+.launch-wordmark { margin-top: 1.5rem; font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(2.6rem, 11vw, 4rem); line-height: 1; letter-spacing: -0.02em; }
+.launch-status { margin-top: 2.5rem; font-family: "Newsreader", Georgia, serif; font-size: 1.15rem; }
+.launch-trail { position: relative; margin-top: 0.9rem; width: 100%; height: 2px; background: color-mix(in srgb, var(--launch-navy) 30%, transparent); }
+.launch-trail::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 0; background: var(--launch-navy); animation: launch-fill 1.2s ease-out forwards; }
+.launch-diamond { position: absolute; top: 50%; left: 0; width: 0.7rem; height: 0.7rem; background: var(--launch-brass); transform: translate(-50%, -50%) rotate(45deg); animation: launch-move 1.2s ease-out forwards; }
+.launch-tagline { margin-top: 1.5rem; font-family: "Newsreader", Georgia, serif; font-size: 0.8rem; letter-spacing: 0.12em; color: color-mix(in srgb, var(--launch-navy) 70%, transparent); }
+@keyframes launch-fill { to { width: 65%; } }
+@keyframes launch-move { to { left: 65%; } }
+@keyframes launch-out { to { opacity: 0; visibility: hidden; pointer-events: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .launch-trail::before { animation: none; width: 65%; }
+  .launch-diamond { animation: none; left: 65%; }
+  .launch-overlay { animation-duration: 0.01s; }
 }

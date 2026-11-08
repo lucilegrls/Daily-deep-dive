@@ -11,9 +11,12 @@ import type { ErrorComponentProps } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import brandPaper from "@/assets/brand-paper-grain.jpg.asset.json";
+import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AccountProvider } from "@/lib/account";
 import { LanguageProvider } from "@/lib/i18n";
 import { LanguageGate } from "@/components/LanguageGate";
+import { LaunchOverlay } from "@/components/LaunchOverlay";
 
 function NotFoundComponent() {
   return (
@@ -40,7 +43,9 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => console.error(error), [error]);
+  useEffect(() => {
+    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -78,15 +83,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Daily Deep Dive" },
+      { title: "Curiosity, Sourced" },
       {
         name: "description",
         content: "A calm collection of curated ideas.",
       },
-      { name: "theme-color", content: "#FBF3E0" },
-      { name: "application-name", content: "Daily Deep Dive" },
+      { name: "theme-color", content: "#F3E9D7" },
+      { name: "application-name", content: "Curiosity, Sourced" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
-      { name: "apple-mobile-web-app-title", content: "Deep Dive" },
+      { name: "apple-mobile-web-app-title", content: "Curiosity, Sourced" },
       { name: "apple-mobile-web-app-status-bar-style", content: "default" },
       { name: "mobile-web-app-capable", content: "yes" },
     ],
@@ -95,8 +100,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "preload", href: brandPaper.url, as: "image" },
+      { rel: "icon", href: "/favicon-wax.png?v=3", type: "image/png", sizes: "64x64" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon-wax.png?v=3", sizes: "180x180" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
@@ -124,7 +130,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{var t=localStorage.getItem('daily-deep-dive:theme');if(t){document.documentElement.setAttribute('data-theme',t)}var l=localStorage.getItem('daily-deep-dive:lang');if(l){document.documentElement.setAttribute('lang',l);document.documentElement.setAttribute('dir',l==='ar'?'rtl':'ltr')}}catch(e){}",
+              "try{var t=localStorage.getItem('daily-deep-dive:theme');if(t){document.documentElement.setAttribute('data-theme',t)}var l=localStorage.getItem('daily-deep-dive:lang');if(l==='en'||l==='fr'){document.documentElement.setAttribute('lang',l)}document.documentElement.setAttribute('dir','ltr')}catch(e){}",
           }}
         />
       </head>
@@ -146,6 +152,7 @@ function RootComponent() {
           {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
           <Outlet />
           <LanguageGate />
+          <LaunchOverlay />
         </AccountProvider>
       </LanguageProvider>
     </QueryClientProvider>

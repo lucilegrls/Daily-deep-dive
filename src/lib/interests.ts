@@ -19,23 +19,6 @@ export interface InterestLane {
 
 export const MIN_LANE_CHOICES = 3;
 
-/** Old subject slugs folded into the smaller seven-subject taxonomy. */
-const LEGACY_LANE_ALIASES: Record<string, string> = {
-  "technology-ai": "science-technology",
-  "mathematics-scientific-thinking": "science-technology",
-  "body-health-nutrition": "health-mind",
-  "brain-behavior": "health-mind",
-  "fitness-performance": "health-mind",
-  "economics-investing": "business-economy",
-  "business-marketing": "business-economy",
-  "law-tax-offshore": "society-culture",
-  "politics-history-geopolitics": "society-culture",
-  "art-culture-society": "society-culture",
-  "learning-focus": "learning-work",
-  "animals-nature-why": "nature-everyday",
-  "southeast-asia-food-travel": "world-travel",
-};
-
 /** Library categories covered by a saved preference list. */
 export function expandInterests(
   lanes: InterestLane[],
@@ -91,9 +74,8 @@ export function toLaneSelection(
   const slugs = new Set(lanes.map((l) => l.slug));
   const out: string[] = [];
   for (const value of saved) {
-    const canonicalValue = LEGACY_LANE_ALIASES[value] ?? value;
-    if (slugs.has(canonicalValue)) {
-      if (!out.includes(canonicalValue)) out.push(canonicalValue);
+    if (slugs.has(value)) {
+      if (!out.includes(value)) out.push(value);
       continue;
     }
     for (const lane of lanes) {

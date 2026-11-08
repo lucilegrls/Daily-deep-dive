@@ -13,9 +13,6 @@ import { DICTIONARIES, type TranslationKey } from "./translations";
 export const LANGUAGES = [
   { code: "en", label: "English", native: "English", dir: "ltr" },
   { code: "fr", label: "French", native: "Français", dir: "ltr" },
-  { code: "es", label: "Spanish", native: "Español", dir: "ltr" },
-  { code: "zh", label: "Chinese", native: "中文", dir: "ltr" },
-  { code: "ar", label: "Arabic", native: "العربية", dir: "rtl" },
 ] as const;
 
 export type LanguageCode = (typeof LANGUAGES)[number]["code"];
@@ -30,8 +27,8 @@ export function isLanguage(value: unknown): value is LanguageCode {
   );
 }
 
-export function dirFor(code: LanguageCode): "ltr" | "rtl" {
-  return code === "ar" ? "rtl" : "ltr";
+export function dirFor(_code: LanguageCode): "ltr" {
+  return "ltr";
 }
 
 /** Best guess from the browser, used only to pre-select the first-visit card. */
@@ -41,6 +38,14 @@ export function detectLanguage(candidates: readonly string[]): LanguageCode {
     if (isLanguage(base)) return base;
   }
   return "en";
+}
+
+/** Existing choices stay chosen; retired/invalid choices migrate rather than trapping the reader. */
+export function resolveLanguagePreference(stored: unknown, candidates: readonly string[]) {
+  return {
+    lang: isLanguage(stored) ? stored : detectLanguage(candidates),
+    chosen: stored !== null && stored !== undefined,
+  };
 }
 
 type Vars = Record<string, string | number>;
@@ -85,11 +90,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     } catch {
       stored = null;
     }
-    if (isLanguage(stored)) {
-      setLangState(stored);
-      setChosen(true);
-    } else {
-      setLangState(detectLanguage(navigator.languages ?? [navigator.language]));
+    const preference = resolveLanguagePreference(stored, navigator.languages ?? [navigator.language]);
+    setLangState(preference.lang);
+    setChosen(preference.chosen);
+    if (preference.chosen && stored !== preference.lang) {
+      try { window.localStorage.setItem(STORAGE_KEY, preference.lang); } catch { /* visit-only fallback */ }
     }
     setReady(true);
   }, []);
@@ -101,11 +106,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   const setLang = useCallback((code: LanguageCode, remember = true) => {
-    setLangState(code);
+    const safeCode = isLanguage(code) ? code : "en";
+    setLangState(safeCode);
     if (remember) {
       setChosen(true);
       try {
-        window.localStorage.setItem(STORAGE_KEY, code);
+        window.localStorage.setItem(STORAGE_KEY, safeCode);
       } catch {
         /* private mode: the choice simply lasts for this visit */
       }

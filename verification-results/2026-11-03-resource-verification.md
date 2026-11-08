@@ -1,0 +1,211 @@
+# Resource verification — 2026-11-03
+
+Audited 1300 resources (1253 unique URLs) across 331 topics; the final retry pass rechecked 69 URLs.
+
+- broken: 9
+- embed_unavailable: 22
+- healthy: 970
+- needs_review: 55
+- redirected: 134
+- restricted: 110
+
+## Requires attention (196)
+
+- [Dementias – National Institute of Neurological Disorders and Stroke](https://www.ninds.nih.gov/health-information/disorders/dementias) — topic 303; articles; restricted; http_403
+- [Harmful Tax Competition: An Emerging Global Issue](https://www.oecd.org/en/publications/1998/04/harmful-tax-competition_g1ghgc60.html) — topic 282; articles; needs_review; response_too_large
+- [Architecture Tour: The Temple of Dendur](https://www.metmuseum.org/pt/audio-guide/63) — topic 174; articles; needs_review; http_429
+- [The Roman Empire (27 B.C.–393 A.D.)](https://www.metmuseum.org/de/essays/the-roman-empire-27-b-c-393-a-d) — topic 94; articles; needs_review; http_429
+- [Domestic cat larynges can produce purring frequencies without neural input](https://www.sciencedirect.com/science/article/pii/S0960982223012307) — topic 231; articles; needs_review; response_too_large
+- [Sleep’s contribution to memory formation](https://doi.org/10.1152/physrev.00054.2024) — topic 291; papers; restricted; http_403
+- [The world historical transformation of marriage](https://onlinelibrary.wiley.com/doi/10.1111/j.0022-2445.2004.00067.x) — topic 136; papers; restricted; http_403
+- [Cultural Landscape of Vernacular Stilt Housing in Colombia](https://whc.unesco.org/en/tentativelists/5842/) — topic 152; articles; restricted; http_403
+- [The 19th-century women's movement](https://teara.govt.nz/en/womens-movement/page-1) — topic 106; articles; restricted; http_403
+- [Dark Patterns at Scale: Findings from a Crawl of 11K Shopping Websites](https://doi.org/10.1145/3359183) — topic 83; papers; restricted; http_403
+- [How Images Draw the Eye: An Eye-Tracking Study of Composition](https://doi.org/10.1177/0276237417693564) — topic 186; papers; needs_review; read ECONNRESET
+- [Vernacular Architecture: The Path to Sustainability](https://www.ted.com/talks/benny_kuriakose_vernacular_architecture_the_path_to_sustainability) — topic 152; videos; embed_unavailable; http_200
+- [Estimating the Direction of Disease Transmission with Rt](https://www.cdc.gov/cfa-modeling-and-forecasting/modeling-handbook/mh-rt.html) — topic 159; articles; restricted; http_403
+- [The Concept of Offshore Financial Centers: In Search of an Operational Definition](https://www.imf.org/external/pubs/ft/wp/2007/wp0787.pdf) — topic 269; articles; restricted; http_403
+- [The microbiome as a regulator of brain and behavior](https://www.nccih.nih.gov/training/videolectures/towards-psychobiotics) — topic 12; videos; embed_unavailable; http_200
+- [Working vs Catastrophe Excess of Loss Treaty Tuto #06](https://www.youtube.com/watch?v=7sx4yd1enh4) — topic 86; videos; embed_unavailable; http_200
+- [The World of Ancient Egypt](https://smarthistory.org/reframing-art-history/world-of-ancient-egypt/) — topic 180; articles; restricted; http_403
+- [Architecture for the People—and the Planet](https://folklife.si.edu/magazine/folk-architecture-climate) — topic 152; articles; restricted; http_403
+- [Extreme Beauty: The Body Transformed](https://www.metmuseum.org/exhibitions/listings/2001/extreme-beauty) — topic 146; articles; needs_review; http_429
+- [Queueing Theory and Modeling](https://www.gregoryschmidt.com/articles/hhds16-queueing-theory-and-modeling) — topic 157; videos; embed_unavailable; http_200
+- [In Search of the Origin of Original Sin Dissipation](https://www.imf.org/en/publications/wp/issues/2024/01/26/in-search-of-the-origin-of-original-sin-dissipation-544049) — topic 129; papers; restricted; http_403
+- [Material Degradomics: On the Smell of Old Books](https://pubs.acs.org/doi/10.1021/ac9016049) — topic 218; articles; restricted; http_403
+- [Hydrodynamics, Sensing, and Control in Schooling Fish](https://www.annualreviews.org/content/journals/10.1146/annurev-fluid-112823-105113) — topic 201; papers; restricted; http_403
+- [Investigating Rothko's Technique](https://www.nga.gov/stories/videos/investigating-rothkos-technique) — topic 185; videos; embed_unavailable; http_200
+- [The empirical status of predictive coding and active inference](https://www.sciencedirect.com/science/article/pii/S0149763423004426) — topic 299; articles; needs_review; http_400
+- [A Model of Trading in the Art Market](https://doi.org/10.1257/aer.20160522) — topic 190; papers; restricted; http_403
+- [The Great Hall of The Metropolitan Museum of Art](https://www.metmuseum.org/de/press-releases/the-great-hall-of-the-metropolitan-museum-of-art-2010-general-information) — topic 174; articles; needs_review; http_429
+- [Bringing Dark Patterns to Light](https://www.ftc.gov/reports/bringing-dark-patterns-light) — topic 83; articles; broken; http_404
+- [The World's First Museums Were Weird](https://www.nga.gov/stories/videos/worlds-first-museums-were-weird) — topic 174; videos; embed_unavailable; http_200
+- [Action Potentials](https://books.lib.uoguelph.ca/human-physiology/chapter/action-potentials) — topic 23; books; restricted; http_403
+- [Understanding Bonds](https://www.stlouisfed.org/education/no-frills-money-skills-video-series/episode-4-understanding-bonds) — topic 35; videos; needs_review; read ECONNRESET
+- [Human-algorithm interactions help explain the spread of misinformation](https://www.sciencedirect.com/science/article/pii/S2352250X23002154) — topic 317; articles; needs_review; http_400
+- [Sweet and Clean? Bodies and Clothes in Early Modern England](https://reviews.history.ac.uk/wp-content/uploads/pdf/Reviews_in_History_-_Sweet_and_Clean_Bodies_and_Clothes_in_Early_Modern_England_-_2020_09_25.pdf) — topic 142; articles; restricted; http_403
+- [Antitrust Division: Chapter 6](https://www.justice.gov/atr/chapter-6) — topic 121; articles; restricted; http_403
+- [EU foreign investment screening framework (Regulation 2019/452) and 2026 revision update](https://www.consilium.europa.eu/en/press/press-releases/2026/06/08/foreign-investment-screening-council-signs-off-on-updated-framework/pdf) — topic 258; articles; restricted; http_403
+- [The basics — Art Detective](https://www.artuk.org/artdetective/for-collections/the-basics) — topic 189; articles; restricted; http_403
+- [IASP revised definition of pain and explanatory notes](https://www.iasp-pain.org/publications/iasp-news/iasp-announces-revised-definition-of-pain/) — topic 295; articles; restricted; http_403
+- [Cognitive flexibility in and out of the laboratory: task switching, sustained attention, and mind wandering](https://www.sciencedirect.com/science/article/abs/pii/S2352154624000858) — topic 318; articles; needs_review; http_400
+- [Why Do Bond Prices and Interest Rates Move in Opposite Directions?](https://www.stlouisfed.org/publications/page-one-economics/2023/11/03/why-do-bond-prices-and-interest-rates-move-in-opposite-directions) — topic 126; articles; needs_review; read ECONNRESET
+- [Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html) — topic 47; papers; restricted; http_403
+- [Productivity | Economics For Everyone](https://www.youtube.com/watch?v=CplmAGGi15U) — topic 132; videos; embed_unavailable; http_200
+- [Geopolitics: A Very Short Introduction, 3rd edition](https://academic.oup.com/book/28414) — topic 310; books; restricted; http_403
+- [Reinsurance](https://content.naic.org/insurance-topics/reinsurance) — topic 86; articles; restricted; http_403
+- [Rembrandt's Journey](https://archive.artic.edu/rembrandt/themes.html) — topic 178; articles; restricted; http_403
+- [Vitamin K — health professional fact sheet](https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/) — topic 34; articles; restricted; http_403
+- [The effectiveness of nudging: A meta-analysis of choice architecture interventions across behavioral domains](https://doi.org/10.1073/pnas.2107346118) — topic 120; papers; restricted; http_403
+- [Crypto’s Conservative Coins](https://www.imf.org/en/publications/fandd/issues/2022/09/basics-crypto-conservative-coins-bains-singh) — topic 78; articles; restricted; http_403
+- [Ancient Egyptian Art](https://smarthistory.org/ancient-egyptian-art/) — topic 180; articles; restricted; http_403
+- [Art in the Dark: How Does Light Change Art?](https://www.metmuseum.org/it/perspectives/metkids-microscope-art-in-the-dark) — topic 176; videos; needs_review; http_429
+- [Bernini, Pluto and Proserpina](https://smarthistory.org/bernini-pluto-and-proserpina-3/) — topic 188; videos; restricted; http_403
+- [Vitamin C — health professional fact sheet](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/) — topic 31; articles; restricted; http_403
+- [How big is infinity?](https://ed.ted.com/lessons/how-big-is-infinity/digdeeper) — topic 153; videos; embed_unavailable; http_200
+- [Drivers of Declining Labor Share of Income](https://www.imf.org/en/blogs/articles/2017/04/12/drivers-of-declining-labor-share-of-income) — topic 116; articles; restricted; http_403
+- [Variations in the Menstrual Cycle: Get to know your cycle](https://esaro.unfpa.org/en/video/variations-menstrual-cycle-get-know-your-cycle) — topic 2; videos; embed_unavailable; http_200
+- [CDC Key Recommendations for the Care of Adult Patients with Mild Traumatic Brain Injury](https://www.cdc.gov/traumatic-brain-injury/media/pdfs/key_recommendations_adult_mTBI-508.pdf) — topic 302; articles; restricted; http_403
+- [About Mild TBI and Concussion](https://www.cdc.gov/traumatic-brain-injury/about/index.html) — topic 302; articles; restricted; http_403
+- [Local taxation, land use regulation, and land use: a survey of the evidence](https://www.oecd.org/en/publications/2017/03/local-taxation-land-use-regulation-and-land-use_141c8871.html) — topic 128; papers; restricted; http_403
+- [Vitamin D — consumer fact sheet](https://ods.od.nih.gov/factsheets/VitaminD-Consumer) — topic 30; articles; restricted; http_403
+- [The Colonial Origins of Comparative Development](https://pubs.aeaweb.org/doi/10.1257/aer.91.5.1369) — topic 115; papers; restricted; http_403
+- [Inflation: Prices on the Rise](https://www.imf.org/-/media/files/publications/fandd/back-to-basics/oner-inflation.pdf) — topic 5; articles; restricted; http_403
+- [The Impressionists and Photography](https://www.museothyssen.org/en/thyssenmultimedia/impressionists-and-photography) — topic 173; videos; restricted; http_403
+- [Improving Students’ Learning With Effective Learning Techniques](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html) — topic 48; papers; restricted; http_403
+- [The structure of liquid water and ice](https://www.nature.com/articles/35098033) — topic 243; articles; broken; http_404
+- [Silence and politeness in intercultural communication in university seminars](https://www.sciencedirect.com/science/article/pii/S0378216606000117) — topic 139; papers; needs_review; response_too_large
+- [OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations 2022](https://www.oecd.org/tax/transfer-pricing/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-20769717.htm) — topic 268; articles; restricted; http_403
+- [Surface active taste modifiers: a comparison of the physical and psychophysical properties of gymnemic acid and sodium lauryl sulfate](https://doi.org/10.1093/chemse/5.4.317) — topic 249; articles; restricted; http_403
+- [A Revolutionary World](https://www.americanhistory.si.edu/explore/exhibitions/american-democracy/online/great-leap/great-debates/revolutionary-world) — topic 112; articles; restricted; http_403
+- [The Dance of Life: The Other Dimension of Time](https://search.worldcat.org/title/The-dance-of-life-%3A-the-other-dimension-of-time/oclc/48509571) — topic 140; books; restricted; http_403
+- [Principles of Marketing, Chapter 5: Market Segmentation, Targeting, and Positioning](https://openstax.org/books/principles-marketing/pages/5-introduction) — topic 41; books; broken; http_404
+- [How Impressionism Began: Cassatt, Degas, Monet, Morisot, and the Société Anonyme](https://www.nga.gov/stories/videos/how-impressionism-began-cassatt-degas-monet-morisot-and-societe-anonyme) — topic 183; videos; embed_unavailable; http_200
+- [A systematic review of interleaving as a concept learning strategy](https://strathprints.strath.ac.uk/75711) — topic 49; papers; needs_review; timeout
+- [From nature's masters of camouflage to engineered optics: cephalopod-inspired materials and technologies](https://pubs.rsc.org/en/content/articlepdf/2025/tc/d5tc02185e) — topic 197; articles; restricted; http_403
+- [Pablo Picasso and the new language of Cubism](https://smarthistory.org/picasso-guitar/) — topic 175; videos; restricted; http_403
+- [Understanding Bonds](https://www.stlouisfed.org/education/no-frills-money-skills-video-series/episode-4-understanding-bonds) — topic 37; videos; needs_review; read ECONNRESET
+- [Catastrophe Models Property](https://content.naic.org/insurance-topics/catastrophe-models-property) — topic 86; articles; restricted; http_403
+- [Luck versus Skill in the Cross-Section of Mutual Fund Returns](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.2010.01598.x) — topic 11; papers; restricted; http_403
+- [Heat Stress: Acclimatization](https://www.cdc.gov/niosh/docs/2017-124/pdfs/2017-124.pdf) — topic 93; articles; restricted; http_403
+- [What Makes the Painting Image Change?](https://mci.si.edu/what-makes-painting-image-change) — topic 189; articles; restricted; http_403
+- [Vitamin A — consumer fact sheet](https://ods.od.nih.gov/factsheets/VitaminA-Consumer) — topic 33; articles; restricted; http_403
+- [WHO guideline on use of ferritin concentrations to assess iron status in individuals and populations](https://www.who.int/publications/i/item/9789240000124) — topic 297; articles; restricted; http_403
+- [Creatine](https://ods.od.nih.gov/factsheets/ExerciseAndAthleticPerformance-HealthProfessional) — topic 67; articles; restricted; http_403
+- [Money and Inflation Explained](https://www.stlouisfed.org/education/feducation-video-series/money-and-inflation-explained) — topic 5; videos; needs_review; read ECONNRESET
+- [A Thermal Tactile Sensation Display with Controllable Thermal Conductivity](https://www.mdpi.com/2072-666X/10/6/359) — topic 224; articles; restricted; http_403
+- [Vitamin B12 — health professional fact sheet](https://ods.od.nih.gov/factsheets/VitaminB12-HealthProfessional/) — topic 29; articles; restricted; http_403
+- [OECD Transfer Pricing Guidelines for Multinational Enterprises and Tax Administrations 2022](https://www.oecd.org/tax/transfer-pricing/oecd-transfer-pricing-guidelines-for-multinational-enterprises-and-tax-administrations-20769717.htm) — topic 276; articles; restricted; http_403
+- [Expert Talks: Photography and Impressionism](https://www.museum-barberini.de/en/mediathek/7608/expert-talks-photography-and-impressionism) — topic 173; videos; embed_unavailable; http_200
+- [Monet's Palette and Technique](https://www.nga.gov/stories/videos/monets-palette-and-technique) — topic 183; videos; embed_unavailable; http_200
+- [Pablo Picasso, Still Life with Chair Caning](https://smarthistory.org/picasso-still-life-with-chair-caning/) — topic 175; videos; restricted; http_403
+- [Improving plant nutrient management for better farmer livelihoods, food security and environmental sustainability](https://www.fao.org/4/ag120e/AG120E09.htm) — topic 101; articles; restricted; http_403
+- [The Resplendent Body](https://www.metmuseum.org/exhibitions/listings/2018/jewelry/resplendent-body) — topic 151; articles; needs_review; http_429
+- [From Sand to Silicon: The Making of a Chip](https://community.intel.com/t5/Blogs/Intel/We-Are-Intel/From-Sand-to-Silicon-The-Making-of-a-Chip/post/1334092) — topic 79; articles; restricted; http_403
+- [Understanding the limits to animal cognition](https://www.sciencedirect.com/science/article/pii/S0960982224002185) — topic 313; articles; needs_review; http_400
+- [Qu'est-ce que le droit d'accès ?](https://video.cnil.fr/videos/watch/56dfe933-06ab-4a4b-be2a-49a5c406218c) — topic 7; videos; embed_unavailable; http_200
+- [Nazi propaganda](https://encyclopedia.ushmm.org/content/en/article/nazi-propaganda) — topic 182; articles; needs_review; timeout
+- [Albrecht Dürer, Self-Portrait (1498)](https://smarthistory.org/durer-self-portrait-1498/) — topic 178; videos; restricted; http_403
+- [Elephant behavior toward the dead: A review and insights from field observations](https://doi.org/10.1007/s10329-019-00766-5) — topic 207; papers; needs_review; redirect_loop_or_limit
+- [Research@LINC: Reactions to exercising the right of access](https://linc.cnil.fr/video-researchlinc-reactions-des-personnes-concernees-lexercice-de-leur-droit-dacces-arthur-borem) — topic 7; videos; embed_unavailable; http_200
+- [Why This Counts: Productivity and Its Impact on Our Lives](https://www.bls.gov/blog/2016/why-this-counts-productivity-and-its-impact-on-our-lives.htm) — topic 132; articles; restricted; http_403
+- [The Fiscal and Financial Risks of a High-Debt, Slow-Growth World](https://www.imf.org/en/blogs/articles/2024/03/28/the-fiscal-and-financial-risks-of-a-high-debt-slow-growth-world) — topic 129; articles; restricted; http_403
+- [Élisabeth Louise Vigée Le Brun, Self-Portrait with her Daughter](https://smarthistory.org/vigee-le-brun-self-portrait-with-her-daughter/) — topic 178; videos; restricted; http_403
+- [International Military Tribunal at Nuremberg](https://encyclopedia.ushmm.org/content/en/article/international-military-tribunal-at-nuremberg) — topic 109; articles; needs_review; timeout
+- [Vitamin A — health professional fact sheet](https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/) — topic 33; articles; restricted; http_403
+- [Baths and Bathing Culture in the Middle East: The Hammam](https://www.metmuseum.org/fr/essays/baths-and-bathing-culture-in-the-middle-east-the-hammam) — topic 142; articles; needs_review; http_429
+- [The Yield Curve as a Forecasting Tool](https://www.stlouisfed.org/publications/regional-economist/october-1997/yielding-clues-about-recessions-the-yield-curve-as-a-forecasting-tool) — topic 130; articles; needs_review; read ECONNRESET
+- [Outsmart the System: How Psychology Hacks Your Money Decisions](https://www.gresham.ac.uk/watch-now/outsmart-system-how-psychology-hacks-your-money-decisions) — topic 120; articles; restricted; http_403
+- [Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology](https://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html) — topic 50; papers; restricted; http_403
+- [Frans Hals and the impression of life](https://www.metmuseum.org/pt/essays/frans-hals-158283-1666) — topic 181; articles; needs_review; http_429
+- [Gustave Courbet and Photography](https://www.metmuseum.org/exhibitions/listings/2008/gustave-courbet) — topic 173; articles; needs_review; http_429
+- [Graffiti culture: criminal activity or artistic expression?](https://www.ted.com/talks/brian_garcia_graffiti_culture_criminal_activity_or_artistic_expression) — topic 179; videos; embed_unavailable; http_200
+- [Bottlenose dolphins can use learned vocal labels to address each other](https://doi.org/10.1073/pnas.1304459110) — topic 204; papers; restricted; http_403
+- [Mythic Value of Luxury](https://www.ted.com/talks/mahul_brahma_mythic_value_of_luxury) — topic 151; videos; embed_unavailable; http_200
+- [A Ninth-Century Miss Manners: Dining Etiquette in Abbasid Iraq](https://www.metmuseum.org/pt/perspectives/dining-etiquette-in-abbasid-iraq) — topic 147; articles; needs_review; http_429
+- [Bread Staling: Molecular Basis and Control](https://doi.org/10.1111/j.1541-4337.2003.tb00011.x) — topic 236; articles; restricted; http_403
+- [On Persistence in Mutual Fund Performance](https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1997.tb03808.x) — topic 11; papers; restricted; http_403
+- [Mark Rothko, No. 3/No. 13](https://smarthistory.org/mark-rothko-no-3no-13/) — topic 185; videos; restricted; http_403
+- [Genesis of petrichor](https://www.sciencedirect.com/science/article/pii/0016703766900251) — topic 217; articles; needs_review; http_400
+- [Pricing Research: State of the Art and Future Opportunities](https://journals.sagepub.com/doi/10.1177/21582440211032168) — topic 44; papers; needs_review; read ECONNRESET
+- [Advertising and Marketing](https://www.ftc.gov/business-guidance/advertising-marketing) — topic 46; articles; broken; http_404
+- [Models of brand equity. A systematic and critical review](https://www.tandfonline.com/doi/full/10.1080/23311975.2024.2433168) — topic 45; papers; restricted; http_403
+- [Is the Yield Curve Signaling a Recession?](https://www.stlouisfed.org/on-the-economy/2016/march/is-yield-curve-signaling-recession) — topic 130; articles; needs_review; read ECONNRESET
+- [Synthetic Cubism, Part I](https://smarthistory.org/synthetic-cubism-part-i/) — topic 175; articles; restricted; http_403
+- [The Psychology of Superorganisms: Collective Decision Making by Insect Societies](https://www.annualreviews.org/doi/10.1146/annurev-ento-020117-043249) — topic 208; papers; restricted; http_403
+- [Vitamin C — consumer fact sheet](https://ods.od.nih.gov/factsheets/VitaminC-Consumer) — topic 31; articles; restricted; http_403
+- [How Were the Crimes Defined?](https://encyclopedia.ushmm.org/content/en/article/how-were-the-crimes-defined) — topic 109; articles; needs_review; timeout
+- [No evidence for nudging after adjusting for publication bias](https://doi.org/10.1073/pnas.2200300119) — topic 120; papers; restricted; http_403
+- [Cayman Islands Private Funds Act (2025 Revision)](https://www.cima.ky/upimages/lawsregulations/PrivateFundsAct2025Revision_1756133628.pdf) — topic 277; articles; broken; http_404
+- [Vitamin B12 — consumer fact sheet](https://ods.od.nih.gov/factsheets/VitaminB12-Consumer) — topic 29; articles; restricted; http_403
+- [Science and Technology to Meet the Challenges: Food Security, Poverty Alleviation, and Sustainability](https://www.fao.org/4/ac483e/ac483e08.htm) — topic 101; articles; restricted; http_403
+- [Introduction to Inequality](https://www.imf.org/en/topics/inequality/introduction-to-inequality) — topic 116; articles; restricted; http_403
+- [The cortisol awakening response: regulation and functional significance](https://doi.org/10.1111/jne.13392) — topic 238; papers; restricted; http_403
+- [Shaker Furniture](https://www.metmuseum.org/es/essays/shaker-furniture) — topic 135; articles; needs_review; http_429
+- [United Nations Model Double Taxation Convention between Developed and Developing Countries 2021](https://financing.desa.un.org/document/united-nations-model-double-taxation-convention-between-developed-and-developing-countries-2021) — topic 266; articles; restricted; http_403
+- [French Decorative Arts during the Reign of Louis XIV](https://www.metmuseum.org/fr/essays/french-decorative-arts-during-the-reign-of-louis-xiv-1654-1715) — topic 135; articles; needs_review; http_429
+- [The Final Days: Five Portraits from Leonardo to Matisse](https://www.metmuseum.org/de/perspectives/leonardo-to-matisse) — topic 178; articles; needs_review; http_429
+- [The Green Revolution: research, development, access and impact](https://www.fao.org/4/Y5160E/y5160e08.htm) — topic 101; articles; restricted; http_403
+- [Behavioral response to price: Data-based insights and future research for retailing](https://www.sciencedirect.com/science/article/pii/S0022435922000124) — topic 44; articles; needs_review; http_400
+- [The Powerful Placebo](https://newsinhealth.nih.gov/sites/newsinhealth/files/2023/January/NIHNiHJan2023.pdf) — topic 89; articles; restricted; http_403
+- [History of London Wall](https://www.english-heritage.org.uk/visit/places/london-wall/history/) — topic 103; articles; restricted; http_403
+- [So That's How You Make Paint?](https://www.metmuseum.org/it/perspectives/metkids-microscope-how-is-paint-made) — topic 177; videos; needs_review; http_429
+- [Understanding Bonds](https://www.stlouisfed.org/education/no-frills-money-skills-video-series/episode-4-understanding-bonds) — topic 38; videos; needs_review; read ECONNRESET
+- [House Altar depicting Akhenaten, Nefertiti and Three of their Daughters](https://smarthistory.org/house-altar-depicting-akhenaten-nefertiti-and-three-of-their-daughters/) — topic 180; videos; restricted; http_403
+- [Volatile sensation: The chemical ecology of the earthy odorant geosmin](https://enviromicro-journals.onlinelibrary.wiley.com/doi/10.1111/1462-2920.16381) — topic 217; papers; restricted; http_403
+- [CS336 Lecture 11: Scaling Laws](https://www.youtube.com/watch?v=vTfEyOyzV9E) — topic 6; videos; embed_unavailable; http_200
+- [Report of the Tenth Session of the World Urban Forum](https://unhabitat.org/report-of-the-tenth-session-of-the-world-urban-forum) — topic 145; articles; restricted; http_403
+- [Leonardo, Mona Lisa](https://smarthistory.org/leonardo-mona-lisa/) — topic 181; videos; restricted; http_403
+- [Uncovering modern paint forgeries by radiocarbon dating](https://doi.org/10.1073/pnas.1901540116) — topic 191; papers; restricted; http_403
+- [Mechanism of popcorn popping](https://doi.org/10.1016/0733-5210(81)90038-1) — topic 247; papers; broken; http_404
+- [Cayman Islands Department for International Tax Cooperation – Legislation](https://www.ditc.ky/legislation) — topic 279; articles; broken; http_404
+- [LED Lighting in Museums and Art Galleries](https://www.canada.ca/en/conservation-institute/services/conservation-preservation-publications/technical-bulletins/led-lighting-museums.html) — topic 176; articles; needs_review; read ECONNRESET
+- [How to Make Tempera Paint at Home](https://www.metmuseum.org/ja/perspectives/metkids-create-tempera-paint) — topic 177; videos; needs_review; http_429
+- [How language shapes the way we think](https://www.ted.com/talks/lera_boroditsky_how_language_shapes_the_way_we_think) — topic 150; videos; embed_unavailable; http_200
+- [Agent of Deterioration: Light, Ultraviolet and Infrared](https://www.canada.ca/en/conservation-institute/services/agents-deterioration/light.html) — topic 176; articles; needs_review; read ECONNRESET
+- [How to outsmart the Prisoner's Dilemma](https://ed.ted.com/lessons/how-to-outsmart-the-prisoner-s-dilemma-lucas-husted) — topic 156; videos; embed_unavailable; http_200
+- [Housing and Inclusive Growth: policy and governance](https://www.oecd.org/en/publications/housing-and-inclusive-growth_6ef36f4b-en/full-report/component-5.html) — topic 128; articles; needs_review; response_too_large
+- [Management of Acne Vulgaris (Second Edition)](https://www.moh.gov.my/moh/resources/Penerbitan/CPG/Skin%20Condition/e-CPG_Ance-26_11_22.pdf) — topic 325; articles; restricted; http_403
+- [Beginners’ Guide to Asset Allocation, Diversification, and Rebalancing](https://www.sec.gov/investor/pubs/assetallocation.htm) — topic 306; articles; restricted; http_403
+- [Antisemitism in History: From the Early Church to 1400](https://encyclopedia.ushmm.org/content/en/article/antisemitism-in-history-from-the-early-church-to-1400) — topic 98; articles; needs_review; timeout
+- [Tasks interrupted: How anticipating time pressure on resumption of an interrupted task causes attention residue and low performance on interrupting tasks and how a “ready-to-resume” plan mitigates the effects](https://pubsonline.informs.org/doi/10.1287/orsc.2017.1184) — topic 9; papers; restricted; http_403
+- [Theory of constructed emotion: an active inference account of interoception and categorization](https://doi.org/10.1093/SCAN/NSW154) — topic 298; papers; restricted; http_403
+- [Mortuary Temple and Large Kneeling Statue of Hatshepsut](https://smarthistory.org/hatshepsut/) — topic 180; videos; restricted; http_403
+- [Effects of mental accounting on purchase decision processes: A systematic review and research agenda](https://doi.org/10.1002/CB.2193) — topic 40; papers; restricted; http_403
+- [Thiamin — health professional fact sheet](https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional) — topic 32; articles; restricted; http_403
+- [Golden Kingdoms: Luxury and Legacy in the Ancient Americas](https://www.metmuseum.org/exhibitions/listings/2018/golden-kingdoms/exhibition-galleries) — topic 151; articles; needs_review; http_429
+- [The Effects of Spaced Practice on Second Language Learning: A Meta-Analysis](https://doi.org/10.1111/lang.12479) — topic 48; papers; restricted; http_403
+- [Chameleon Color Change Communicates](https://core.ac.uk/download/pdf/79581276.pdf) — topic 196; articles; restricted; http_403
+- [Vitamin D — health professional fact sheet](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/) — topic 30; articles; restricted; http_403
+- [Water vapor and condensation](https://www.weather.gov/jetstream/water) — topic 239; articles; restricted; http_403
+- [A review of three decades of academic research on brand equity](https://www.sciencedirect.com/science/article/pii/S0148296321007505) — topic 45; papers; needs_review; http_400
+- [Experience-dependent neuroplasticity in the hippocampus of bilingual young adults](https://www.eneuro.org/content/eneuro/early/2025/05/16/ENEURO.0128-25.2025.full.pdf) — topic 289; articles; restricted; http_403
+- [The philosophy of Stoicism](https://ed.ted.com/lessons/the-philosophy-of-stoicism-massimo-pigliucci/digdeeper) — topic 4; videos; embed_unavailable; http_200
+- [World War I Posters: About this Collection](https://www.loc.gov/collections/world-war-i-posters/about-this-collection/) — topic 182; articles; restricted; http_403
+- [Vitamin K — consumer fact sheet](https://ods.od.nih.gov/factsheets/VitaminK-Consumer) — topic 34; articles; restricted; http_403
+- [Museums as Civic Space: A Conversation with Met Architects](https://www.metmuseum.org/es/perspectives/museums-as-civic-space-a-conversation-with-met-architects) — topic 174; videos; needs_review; http_429
+- [Stress and stress responses: A narrative literature review from physiological mechanisms to intervention approaches](https://journals.sagepub.com/doi/10.1177/18344909241289222) — topic 294; papers; needs_review; read ECONNRESET
+- [How Concussion Affects the Brain](https://www.youtube.com/watch?v=q91C2N9D-Kk) — topic 302; videos; embed_unavailable; http_200
+- [Inflation — Economic Lowdown](https://www.stlouisfed.org/education/economic-lowdown-video-series/episode-9-inflation) — topic 5; videos; needs_review; read ECONNRESET
+- [Layered Narratives: Clothing and Status in the Northern Renaissance](https://www.metmuseum.org/pt/exhibitions/layered-narratives-the-northern-renaissance-gallery/visiting-guide) — topic 144; articles; needs_review; http_429
+- [From vandalism to fine art](https://www.ted.com/talks/ben_eine_from_vandalism_to_fine_art) — topic 179; videos; embed_unavailable; http_200
+- [Motilin-induced gastric contractions signal hunger in man](https://gut.bmj.com/content/57/8/1054) — topic 220; articles; restricted; http_403
+- [What can labor productivity tell us about the U.S. economy?](https://www.bls.gov/opub/btn/volume-3/what-can-labor-productivity-tell-us-about-the-us-economy.htm) — topic 132; articles; restricted; http_403
+- [UN Convention on Conditions for Registration of Ships](https://unctad.org/topic/transport-and-trade-logistics/transport-laws/registration-of-ships) — topic 278; articles; broken; http_404
+- [Iron: fact sheet for health professionals](https://ods.od.nih.gov/factsheets/Iron-HealthProfessional/) — topic 1; articles; restricted; http_403
+- [An integrative, multiscale view on neural theories of consciousness](https://www.sciencedirect.com/science/article/pii/S0896627324000886) — topic 300; articles; needs_review; http_400
+- [Theories of Harm for Digital Mergers](https://www.justice.gov/atr/media/1347686/dl?inline=) — topic 121; articles; restricted; http_403
+- [The Persian House in Central Plateau of Iran](https://whc.unesco.org/en/tentativelists/6200/) — topic 152; articles; restricted; http_403
+- [Caring for paintings](https://www.canada.ca/en/conservation-institute/services/preventive-conservation/guidelines-collections/paintings.html) — topic 189; articles; needs_review; read ECONNRESET
+- [Coffeepot](https://www.metmuseum.org/art/collection/search/200118) — topic 134; articles; needs_review; http_429
+- [What does Impressionism mean?](https://smarthistory.org/what-does-impressionism-mean/) — topic 183; articles; restricted; http_403
+- [UNICEF Policy on Safeguarding (March 2024)](https://www.unicef.org/media/159656/file/UNICEF_Policy_on_Safeguarding_March%202024.pdf.pdf) — topic 312; articles; broken; http_404
+- [Augustus of Primaporta](https://www.metmuseum.org/art/collection/search/247993) — topic 182; articles; needs_review; http_429
+- [La gabelle et les taxes sur le sel, une longue histoire](https://www.economie.gouv.fr/saef/document-du-mois/la-gabelle-et-les-taxes-sur-le-sel-une-longue-histoire) — topic 111; articles; restricted; http_403
+- [Bad Is Stronger Than Good](https://doi.org/10.1037/1089-2680.5.4.323) — topic 317; papers; needs_review; read ECONNRESET
+- [Bad is stronger than good](https://doi.org/10.1037/1089-2680.5.4.323) — topic 3; papers; needs_review; read ECONNRESET
+- [Kombucha Bacterial Cellulose: A Promising Biopolymer for Advanced Food and Nonfood Applications](https://www.mdpi.com/2304-8158/14/5/738) — topic 331; papers; restricted; http_403
+- [A cross-cultural investigation of time management practices and job outcomes](https://www.sciencedirect.com/science/article/pii/S014717670500043X) — topic 140; papers; needs_review; http_400
+- [Merger Guidelines, Guideline 6](https://www.justice.gov/atr/merger-guidelines/applying-merger-guidelines/guideline-6) — topic 121; articles; restricted; http_403
+
+> These are technical observations only. They are not source reviews or claim verification.

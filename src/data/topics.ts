@@ -39,6 +39,9 @@ export interface Topic {
   takeaways: string[];
   tags?: string[];
   lastVerified?: string;
+  /** Genuine human editorial review only; never populated from a crawler. */
+  lastEditorialReviewAt?: string;
+  riskLevel?: "standard" | "elevated" | "high";
   ressources: ResourceGroups;
 }
 
