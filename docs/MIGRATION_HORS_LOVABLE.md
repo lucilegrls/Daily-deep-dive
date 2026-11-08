@@ -78,18 +78,16 @@ utilisateurs.
 - Base/Auth : nouveau projet Supabase Free, car le backend actuel appartient au
   domaine Lovable Cloud. Conserver PostgreSQL, les UUID, les fonctions et RLS ;
   ne pas convertir vers Firebase ou une autre base documentaire.
-- Hébergement : préparer Cloudflare Workers Free pour TanStack Start, puis
-  vérifier les limites réelles du compte avant activation. Aucun déploiement ne
-  doit être créé automatiquement sans confirmation.
+- Hébergement : Cloudflare Workers Free, déployé à l'adresse
+  `https://daily-deep-dive.lucilegroleas.workers.dev` après confirmation.
 - IA : désactivée par défaut. L'ancien gateway Lovable est remplacé par une
   interface OpenAI-compatible optionnelle, seulement si un fournisseur et un
   budget sont explicitement choisis plus tard.
 
-Le build Node/Nitro et le build Cloudflare sont distincts. Au 6 novembre 2026,
-les deux compilent, le paquet Cloudflare passe `wrangler deploy --dry-run`, et
-aucune publication n'a été effectuée. Les variables de production devront être
-créées comme secrets Cloudflare ; aucune clé réelle ne doit entrer dans
-`wrangler.jsonc`.
+Le build Node/Nitro et le build Cloudflare sont distincts. Les deux compilent et
+la préproduction Cloudflare est publiée. Les variables publiques sont
+configurées dans le Worker et la clé serveur Supabase y est stockée comme
+secret chiffré ; aucune clé secrète n'entre dans Git.
 
 ## Ordre de migration et critères d'arrêt
 
@@ -115,14 +113,14 @@ créées comme secrets Cloudflare ; aucune clé réelle ne doit entrer dans
 
 ## Éléments encore à terminer
 
-- configuration OAuth Google pour la nouvelle URL ;
-- ajout de la clé serveur Supabase comme secret Cloudflare ;
-- publication de la préproduction Cloudflare Free ;
-- publication de la branche de migration sur GitHub, sans remplacer `main` ;
-- tests connectés d'écriture avec l'utilisateur migré et test OAuth Google.
+- test personnel de connexion par e-mail/mot de passe avec l'utilisateur migré,
+  puis contrôle d'un favori, d'une note et d'une progression ;
+- configuration OAuth Google directe dans Supabase avec des identifiants Google
+  indépendants de Lovable, si cette méthode de connexion doit être réactivée.
 
-Ces étapes impliquent des comptes externes ou des changements de production et
-nécessitent donc une confirmation au moment de leur exécution.
+Le bouton Google reste masqué tant que ce fournisseur n'est pas configuré, afin
+d'éviter une connexion cassée. La branche `cursor-migration` est publiée sur
+GitHub sans remplacer `main`. Lovable reste intact pendant la validation.
 
 ## Vérifications déjà réussies
 
@@ -143,3 +141,7 @@ nécessitent donc une confirmation au moment de leur exécution.
 - API publique de la cible : 331 sujets lisibles sous RLS avec la clé publique.
 - Smoke test visuel local connecté à la cible : bibliothèque chargée, 331 sujets
   et 24 matières affichés, sans dépendance Lovable.
+- Préproduction Cloudflare : HTTPS 200, bibliothèque chargée, 331 sujets et 24
+  matières affichés depuis le Supabase indépendant.
+- URL de site et URL de redirection Supabase configurées pour la préproduction
+  Cloudflare.

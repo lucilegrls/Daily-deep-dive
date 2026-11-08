@@ -21,8 +21,7 @@ export const Route = createFileRoute("/auth")({
       { property: "og:title", content: "Join Curiosity, Sourced" },
       {
         property: "og:description",
-        content:
-          "Pick your subjects, keep a daily reading streak, and climb the weekly ranking.",
+        content: "Pick your subjects, keep a daily reading streak, and climb the weekly ranking.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -37,7 +36,8 @@ function AuthPage() {
   const navigate = useNavigate();
   const { next: rawNext } = Route.useSearch();
   const next = rawNext ? oauthReturnPath(rawNext) : null;
-  const returnUrl = () => (next ? new URL(next, window.location.origin).href : window.location.origin);
+  const returnUrl = () =>
+    next ? new URL(next, window.location.origin).href : window.location.origin;
   const [mode, setMode] = useState<"signin" | "signup">("signup");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -45,6 +45,7 @@ function AuthPage() {
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const googleEnabled = import.meta.env["VITE_GOOGLE_AUTH_ENABLED"] === "true";
 
   useEffect(() => {
     if (!session) return;
@@ -118,37 +119,41 @@ function AuthPage() {
           {t("auth.intro")}
         </p>
 
-        <button
-          type="button"
-          onClick={() => void google()}
-          className="mt-7 flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50"
-        >
-          <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
-            <path
-              fill="#4285F4"
-              d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9Z"
-            />
-            <path
-              fill="#34A853"
-              d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.1-4 1.1-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24Z"
-            />
-            <path
-              fill="#FBBC05"
-              d="M5.4 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l4-3.1Z"
-            />
-            <path
-              fill="#EA4335"
-              d="M12 4.7c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.6l4 3.1C6.3 6.9 8.9 4.7 12 4.7Z"
-            />
-          </svg>
-          {t("auth.google")}
-        </button>
+        {googleEnabled ? (
+          <>
+            <button
+              type="button"
+              onClick={() => void google()}
+              className="mt-7 flex w-full items-center justify-center gap-2 rounded-full border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/50"
+            >
+              <svg viewBox="0 0 24 24" className="size-4" aria-hidden="true">
+                <path
+                  fill="#4285F4"
+                  d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9Z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.1-4 1.1-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24Z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M5.4 14.3a7.2 7.2 0 0 1 0-4.6V6.6H1.4a12 12 0 0 0 0 10.8l4-3.1Z"
+                />
+                <path
+                  fill="#EA4335"
+                  d="M12 4.7c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.6l4 3.1C6.3 6.9 8.9 4.7 12 4.7Z"
+                />
+              </svg>
+              {t("auth.google")}
+            </button>
 
-        <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
-          <span className="h-px flex-1 bg-border" />
-          {t("auth.or")}
-          <span className="h-px flex-1 bg-border" />
-        </div>
+            <div className="my-6 flex items-center gap-3 text-xs text-muted-foreground">
+              <span className="h-px flex-1 bg-border" />
+              {t("auth.or")}
+              <span className="h-px flex-1 bg-border" />
+            </div>
+          </>
+        ) : null}
 
         <form onSubmit={submit} className="space-y-3">
           {mode === "signup" ? (
@@ -177,23 +182,15 @@ function AuthPage() {
             required
           />
 
-          {error ? (
-            <p className="text-sm text-destructive">{error}</p>
-          ) : null}
-          {message ? (
-            <p className="text-sm text-foreground">{message}</p>
-          ) : null}
+          {error ? <p className="text-sm text-destructive">{error}</p> : null}
+          {message ? <p className="text-sm text-foreground">{message}</p> : null}
 
           <button
             type="submit"
             disabled={busy}
             className="w-full rounded-full bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
           >
-            {busy
-              ? t("auth.busy")
-              : mode === "signup"
-                ? t("auth.create")
-                : t("auth.signIn")}
+            {busy ? t("auth.busy") : mode === "signup" ? t("auth.create") : t("auth.signIn")}
           </button>
         </form>
 
