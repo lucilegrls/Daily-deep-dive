@@ -1,6 +1,6 @@
 # Migration de Daily Deep Dive hors de Lovable
 
-État au 5 novembre 2026. Ce document est le garde-fou opérationnel : aucune
+État au 8 novembre 2026. Ce document est le garde-fou opérationnel : aucune
 résiliation, suppression de projet ou écriture de production n'est autorisée
 avant la fin de la validation.
 
@@ -9,7 +9,7 @@ avant la fin de la validation.
 - Le dépôt GitHub `lucilegrls/Daily-deep-dive` sur `main` contient une ancienne
   PWA statique : 64 sujets locaux, favoris dans `localStorage`, aucun compte et
   aucune synchronisation cloud. Il ne doit pas remplacer la version publiée.
-- Le dernier export complet de code Lovable disponible contient React 19,
+- L'export complet de code Lovable du 8 novembre contient React 19,
   TanStack Start, Supabase JS, 37 tables publiques typées, les migrations SQL,
   les tests RLS, tous les thèmes et les composants de lecture.
 - La base active est à l'hôte
@@ -19,9 +19,8 @@ avant la fin de la validation.
   embarque aussi une base historique de 64 sujets, une banque de 220 idées et un
   backlog de 188 idées ; ces nombres se recouvrent et ne doivent pas être
   additionnés.
-- Aucun appel `storage.from(...)` ni bucket applicatif n'est présent dans le
-  code. Il faut néanmoins vérifier `storage.buckets` et `storage.objects` dans
-  la base avant de conclure qu'il n'existe aucun fichier hors dépôt.
+- Aucun objet applicatif Storage n'est à copier : l'export contient un bucket de
+  service Lovable et zéro ligne dans `storage.objects`.
 - Les données personnelles sont réparties notamment dans `profiles`,
   `saved_topics`, `topic_notes`, `topic_reads`, `resource_progress`,
   `user_interests`, `topic_suggestions` et `user_roles`, avec références à
@@ -40,18 +39,25 @@ avant la fin de la validation.
   `lovable-export-2026-10-22`, branche `migration/independent-hosting`.
 - Export partiel disponible : les 331 lignes `content_topics` du 22 octobre.
   Il ne remplace pas une sauvegarde complète de la base.
+- Export PostgreSQL complet du 8 novembre :
+  `backups/lovable-full-2026-11-08/curiosity-sourced_261108.backup`.
+- Archive d'origine et SHA-256 :
+  `curiosity-sourced_261108.backup.zip`,
+  `B5F0C7C6CC0EE7005B33FB6513C3F8989603E88833000DD93094FC302F6ACFAB`.
+- Export du code Lovable du 8 novembre et SHA-256 :
+  `backups/lovable-code-2026-11-08/curiosity-sourced.zip`,
+  `8CE371ED973450A08014BC682F7449D627F9C4937191A68AE10BE5BDBC3E0487`.
 
 Rollback du code local : créer une nouvelle branche depuis le tag
 `lovable-export-2026-10-22`. Ne pas réécrire l'historique publié de Lovable.
 
-## Sauvegarde complète obligatoire avant basculement
+## Sauvegarde et restauration effectuées
 
-Obtenir depuis Lovable Cloud une URL PostgreSQL de migration temporaire ou un
-fichier de sauvegarde complet. Ne jamais coller cette URL dans Git ou dans un
-ticket. Avec l'URL placée uniquement dans `SOURCE_DATABASE_URL`, exécuter le
-script `scripts/backup-production.ps1`.
+Le fichier de sauvegarde complet a été exporté depuis Lovable Cloud et restauré
+dans le projet Supabase Free indépendant `klsxbfzxlrdglcsimtgm`, en région
+Singapour. Lovable et ses sauvegardes quotidiennes sont restés intacts.
 
-La sauvegarde est acceptée seulement si elle contient et permet de compter :
+La sauvegarde contient et permet de compter :
 
 1. `auth.users`, identités et mots de passe hachés ;
 2. toutes les tables, vues, fonctions, triggers, séquences et données `public` ;
@@ -107,30 +113,33 @@ créées comme secrets Cloudflare ; aucune clé réelle ne doit entrer dans
     restauration testée. La suppression du projet est une décision distincte et
     ultérieure.
 
-## Éléments encore bloquants
+## Éléments encore à terminer
 
-- sauvegarde complète de production et preuve de restauration ;
-- accès à un projet Supabase cible créé avec l'accord de la propriétaire ;
 - configuration OAuth Google pour la nouvelle URL ;
-- choix et création de l'hébergement gratuit ;
-- synchronisation du dépôt GitHub, dont `main` est actuellement l'ancienne PWA.
+- ajout de la clé serveur Supabase comme secret Cloudflare ;
+- publication de la préproduction Cloudflare Free ;
+- publication de la branche de migration sur GitHub, sans remplacer `main` ;
+- tests connectés d'écriture avec l'utilisateur migré et test OAuth Google.
 
 Ces étapes impliquent des comptes externes ou des changements de production et
 nécessitent donc une confirmation au moment de leur exécution.
 
-## Vérifications locales déjà réussies
+## Vérifications déjà réussies
 
 - TypeScript strict : réussi.
-- Tests unitaires : 205/205 réussis dans 16 fichiers.
+- Tests unitaires : 246/246 réussis dans 20 fichiers.
 - Build Node/Nitro : réussi.
 - Build Cloudflare Workers : réussi.
 - Packaging Wrangler en mode `--dry-run` : réussi, sans déploiement.
-- Smoke test HTTP : `/` et `/auth` répondent 200 ; CSS et neuf images de thèmes
-  répondent 200 avec leur taille exacte.
-- Contrôle visuel : sélecteur de langue et écran d'authentification rendus sans
-  dépendance d'interface Lovable.
-
-Limite : le backend Lovable Cloud n'était pas joignable de façon fiable depuis
-le serveur local pendant le smoke test. La parité des 331 sujets, utilisateurs,
-notes et progressions doit donc être prouvée sur la base restaurée, pas déduite
-du seul build du frontend.
+- Comparaison source/cible : 82 tables Auth/Public/Storage contrôlées, 82
+  identiques, aucune différence de nombre de lignes.
+- Schéma public : 45 tables RLS, 83 politiques, 26 triggers et toutes les
+  fonctions source présents dans la cible.
+- Données fonctionnelles : 331 sujets publiés, 1 324 ressources, 1 303
+  contrôles techniques, profils, favoris, notes, lectures, progression et rôles
+  préservés.
+- Auth : utilisateurs, identités, sessions, jetons de rafraîchissement et MFA
+  restaurés avec leurs mots de passe hachés.
+- API publique de la cible : 331 sujets lisibles sous RLS avec la clé publique.
+- Smoke test visuel local connecté à la cible : bibliothèque chargée, 331 sujets
+  et 24 matières affichés, sans dépendance Lovable.

@@ -13,15 +13,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as LeaderboardRouteImport } from './routes/leaderboard'
-import { Route as McpRouteImport } from './routes/mcp'
 import { Route as StartRouteImport } from './routes/start'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
 import { Route as AuthenticatedEditorRouteImport } from './routes/_authenticated/editor'
 import { Route as AuthenticatedSuggestTopicRouteImport } from './routes/_authenticated/suggest-topic'
 import { Route as AuthenticatedWelcomeRouteImport } from './routes/_authenticated/welcome'
 import { Route as TopicSlugRouteImport } from './routes/topic.$slug'
-import { Route as DotlovableOauthConsentRouteImport } from './routes/[.]lovable.oauth.consent'
 import { Route as ApiPublicEditorialDailyExpansionRouteImport } from './routes/api/public/editorial/daily-expansion'
 import { Route as ApiPublicEditorialImportRouteImport } from './routes/api/public/editorial/import'
 import { Route as ApiPublicEditorialVerifySourcesRouteImport } from './routes/api/public/editorial/verify-sources'
@@ -45,22 +42,11 @@ const LeaderboardRoute = LeaderboardRouteImport.update({
   path: '/leaderboard',
   getParentRoute: () => rootRouteImport,
 } as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const StartRoute = StartRouteImport.update({
   id: '/start',
   path: '/start',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
   id: '/account',
   path: '/account',
@@ -87,11 +73,6 @@ const TopicSlugRoute = TopicSlugRouteImport.update({
   path: '/topic/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DotlovableOauthConsentRoute = DotlovableOauthConsentRouteImport.update({
-  id: '/.lovable/oauth/consent',
-  path: '/.lovable/oauth/consent',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApiPublicEditorialDailyExpansionRoute =
   ApiPublicEditorialDailyExpansionRouteImport.update({
     id: '/api/public/editorial/daily-expansion',
@@ -115,15 +96,12 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/leaderboard': typeof LeaderboardRoute
-  '/mcp': typeof McpRoute
   '/start': typeof StartRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/account': typeof AuthenticatedAccountRoute
   '/editor': typeof AuthenticatedEditorRoute
   '/suggest-topic': typeof AuthenticatedSuggestTopicRoute
   '/welcome': typeof AuthenticatedWelcomeRoute
   '/topic/$slug': typeof TopicSlugRoute
-  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/editorial/daily-expansion': typeof ApiPublicEditorialDailyExpansionRoute
   '/api/public/editorial/import': typeof ApiPublicEditorialImportRoute
   '/api/public/editorial/verify-sources': typeof ApiPublicEditorialVerifySourcesRoute
@@ -132,15 +110,12 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
   '/leaderboard': typeof LeaderboardRoute
-  '/mcp': typeof McpRoute
   '/start': typeof StartRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/account': typeof AuthenticatedAccountRoute
   '/editor': typeof AuthenticatedEditorRoute
   '/suggest-topic': typeof AuthenticatedSuggestTopicRoute
   '/welcome': typeof AuthenticatedWelcomeRoute
   '/topic/$slug': typeof TopicSlugRoute
-  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/editorial/daily-expansion': typeof ApiPublicEditorialDailyExpansionRoute
   '/api/public/editorial/import': typeof ApiPublicEditorialImportRoute
   '/api/public/editorial/verify-sources': typeof ApiPublicEditorialVerifySourcesRoute
@@ -151,15 +126,12 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/auth': typeof AuthRoute
   '/leaderboard': typeof LeaderboardRoute
-  '/mcp': typeof McpRoute
   '/start': typeof StartRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/editor': typeof AuthenticatedEditorRoute
   '/_authenticated/suggest-topic': typeof AuthenticatedSuggestTopicRoute
   '/_authenticated/welcome': typeof AuthenticatedWelcomeRoute
   '/topic/$slug': typeof TopicSlugRoute
-  '/.lovable/oauth/consent': typeof DotlovableOauthConsentRoute
   '/api/public/editorial/daily-expansion': typeof ApiPublicEditorialDailyExpansionRoute
   '/api/public/editorial/import': typeof ApiPublicEditorialImportRoute
   '/api/public/editorial/verify-sources': typeof ApiPublicEditorialVerifySourcesRoute
@@ -170,15 +142,12 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/leaderboard'
-    | '/mcp'
     | '/start'
-    | '/.well-known/oauth-protected-resource'
     | '/account'
     | '/editor'
     | '/suggest-topic'
     | '/welcome'
     | '/topic/$slug'
-    | '/.lovable/oauth/consent'
     | '/api/public/editorial/daily-expansion'
     | '/api/public/editorial/import'
     | '/api/public/editorial/verify-sources'
@@ -187,15 +156,12 @@ export interface FileRouteTypes {
     | '/'
     | '/auth'
     | '/leaderboard'
-    | '/mcp'
     | '/start'
-    | '/.well-known/oauth-protected-resource'
     | '/account'
     | '/editor'
     | '/suggest-topic'
     | '/welcome'
     | '/topic/$slug'
-    | '/.lovable/oauth/consent'
     | '/api/public/editorial/daily-expansion'
     | '/api/public/editorial/import'
     | '/api/public/editorial/verify-sources'
@@ -205,15 +171,12 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/auth'
     | '/leaderboard'
-    | '/mcp'
     | '/start'
-    | '/.well-known/oauth-protected-resource'
     | '/_authenticated/account'
     | '/_authenticated/editor'
     | '/_authenticated/suggest-topic'
     | '/_authenticated/welcome'
     | '/topic/$slug'
-    | '/.lovable/oauth/consent'
     | '/api/public/editorial/daily-expansion'
     | '/api/public/editorial/import'
     | '/api/public/editorial/verify-sources'
@@ -224,11 +187,8 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
   LeaderboardRoute: typeof LeaderboardRoute
-  McpRoute: typeof McpRoute
   StartRoute: typeof StartRoute
-  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   TopicSlugRoute: typeof TopicSlugRoute
-  DotlovableOauthConsentRoute: typeof DotlovableOauthConsentRoute
   ApiPublicEditorialDailyExpansionRoute: typeof ApiPublicEditorialDailyExpansionRoute
   ApiPublicEditorialImportRoute: typeof ApiPublicEditorialImportRoute
   ApiPublicEditorialVerifySourcesRoute: typeof ApiPublicEditorialVerifySourcesRoute
@@ -264,25 +224,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeaderboardRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/start': {
       id: '/start'
       path: '/start'
       fullPath: '/start'
       preLoaderRoute: typeof StartRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_authenticated/account': {
@@ -318,13 +264,6 @@ declare module '@tanstack/react-router' {
       path: '/topic/$slug'
       fullPath: '/topic/$slug'
       preLoaderRoute: typeof TopicSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.lovable/oauth/consent': {
-      id: '/.lovable/oauth/consent'
-      path: '/.lovable/oauth/consent'
-      fullPath: '/.lovable/oauth/consent'
-      preLoaderRoute: typeof DotlovableOauthConsentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/public/editorial/daily-expansion': {
@@ -373,12 +312,8 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
   LeaderboardRoute: LeaderboardRoute,
-  McpRoute: McpRoute,
   StartRoute: StartRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
   TopicSlugRoute: TopicSlugRoute,
-  DotlovableOauthConsentRoute: DotlovableOauthConsentRoute,
   ApiPublicEditorialDailyExpansionRoute: ApiPublicEditorialDailyExpansionRoute,
   ApiPublicEditorialImportRoute: ApiPublicEditorialImportRoute,
   ApiPublicEditorialVerifySourcesRoute: ApiPublicEditorialVerifySourcesRoute,

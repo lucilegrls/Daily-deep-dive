@@ -18,8 +18,6 @@ import {
 import { categoryName, gatewayNoun, laneName } from "@/lib/content-labels";
 import { useI18n } from "@/lib/i18n";
 import { useOpenTopic } from "@/lib/use-open-topic";
-import { useWebMCP } from "use-webmcp-tool";
-import { runWebMCPTool } from "@/lib/webmcp-telemetry";
 
 const PAGE_SIZE = 12;
 
@@ -205,53 +203,6 @@ function Index() {
     observer.observe(sentinel);
     return () => observer.disconnect();
   }, [feed]);
-
-  useWebMCP({
-    name: "list_visible_topics",
-    description: "List the topics currently shown in the feed (id, title, subject).",
-    annotations: { readOnlyHint: true, untrustedContentHint: true },
-    execute: () =>
-      runWebMCPTool("list_visible_topics", () => {
-        if (isLoading) return "Topics are still loading.";
-        if (items.length === 0) return "No topics shown.";
-        return items.slice(0, 60).map((it) => `${it.id}: ${it.title} (${it.category})`).join("\n");
-      }),
-  });
-
-  useWebMCP({
-    name: "search_feed",
-    description: "Filter the visible feed by words in topic titles; pass an empty string to clear.",
-    inputSchema: {
-      type: "object",
-      properties: { query: { type: "string", description: "Search words." } },
-      required: ["query"],
-    },
-    execute: ({ query: q }: { query: string }) =>
-      runWebMCPTool("search_feed", () => {
-        if (typeof q !== "string") throw new Error("query must be a string.");
-        setRawQuery(q);
-        setQuery(q);
-        return q ? `Searching for "${q}".` : "Search cleared.";
-      }),
-  });
-
-  useWebMCP({
-    name: "open_topic",
-    description: "Open the topic sheet for a topic currently shown in the feed, by its id.",
-    annotations: { untrustedContentHint: true },
-    inputSchema: {
-      type: "object",
-      properties: { id: { type: "number", description: "Topic id from list_visible_topics." } },
-      required: ["id"],
-    },
-    execute: ({ id }: { id: number }) =>
-      runWebMCPTool("open_topic", () => {
-        const found = items.find((it) => it.id === id);
-        if (!found) throw new Error("That topic is not in the current view.");
-        openTopic(found.id);
-        return `Opened "${found.title}".`;
-      }),
-  });
 
   const surprise = () => {
     if (items.length === 0) return;
