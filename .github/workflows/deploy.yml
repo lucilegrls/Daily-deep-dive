@@ -1,0 +1,49 @@
+name: Deploy production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [cursor-migration]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - name: Lint changed source files
+        shell: bash
+        env:
+          EVENT_BEFORE: ${{ github.event.before }}
+        run: |
+          base="$EVENT_BEFORE"
+          if [[ -z "$base" || "$base" =~ ^0+$ ]]; then base="HEAD^"; fi
+          git diff --diff-filter=ACMR --name-only -z "$base" HEAD -- '*.js' '*.mjs' '*.cjs' '*.ts' '*.tsx' \
+            | xargs -0 -r pnpm exec eslint
+      - run: pnpm build:cloudflare
+      - name: Deploy the verified build
+        run: pnpm exec wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

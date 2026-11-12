@@ -16,6 +16,8 @@ import { AccountProvider } from "@/lib/account";
 import { LanguageProvider } from "@/lib/i18n";
 import { LanguageGate } from "@/components/LanguageGate";
 import { LaunchOverlay } from "@/components/LaunchOverlay";
+import { ClientDiagnostics } from "@/components/ClientDiagnostics";
+import { sendClientError } from "@/lib/client-error";
 
 function NotFoundComponent() {
   return (
@@ -42,7 +44,10 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => console.error(error), [error]);
+  useEffect(() => {
+    const status = error instanceof Response ? error.status : undefined;
+    sendClientError("error_boundary", status);
+  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -150,6 +155,7 @@ function RootComponent() {
           <Outlet />
           <LanguageGate />
           <LaunchOverlay />
+          <ClientDiagnostics />
         </AccountProvider>
       </LanguageProvider>
     </QueryClientProvider>

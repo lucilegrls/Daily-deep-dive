@@ -41,3 +41,31 @@ la sauvegarde complète, la configuration des secrets et l'accord de basculement
 - `AI_DRAFTING_ENABLED=false` empêche tout appel IA et toute dépense par défaut.
 - Ne jamais supprimer Lovable Cloud avant le contrôle de parité et la période de
   rollback.
+
+## Assistant et MCP
+
+Le serveur MCP en lecture seule est publié à `/mcp`. Il utilise les jetons
+utilisateur Supabase et les politiques RLS existantes; aucune clé service-role
+n'est utilisée par les outils. La découverte OAuth est publiée à
+`/.well-known/oauth-protected-resource` et le consentement à `/oauth/consent`.
+
+Dans Supabase → Authentication → OAuth Server, activer OAuth 2.1, définir
+`/oauth/consent` comme Authorization Path et activer l'enregistrement dynamique
+des clients si des assistants non préenregistrés doivent se connecter. Utiliser
+une clé de signature JWT asymétrique avant d'activer OpenID Connect en
+production. Le flux doit être testé avec un compte lecteur, puis révoqué depuis
+la gestion des autorisations Supabase.
+
+Les navigateurs compatibles disposent aussi de trois outils WebMCP locaux via
+`document.modelContext`: lister les sujets visibles, filtrer le fil et ouvrir
+un sujet. Les autres navigateurs ignorent cette intégration.
+
+## Livraison et surveillance
+
+- `.github/workflows/ci.yml` vérifie types, tests, lint et build Cloudflare.
+- `.github/workflows/deploy.yml` ne publie qu'après avoir répété ces contrôles;
+  il requiert `CLOUDFLARE_API_TOKEN` et `CLOUDFLARE_ACCOUNT_ID` dans
+  l'environnement GitHub `production`.
+- `.github/workflows/production-monitor.yml` contrôle le site et ses en-têtes
+  toutes les 30 minutes, ouvre une issue GitHub en cas d'échec et la ferme après
+  récupération.

@@ -1,13 +1,4 @@
-<!-- LOVABLE:BEGIN -->
-> [!IMPORTANT]
-> This project is connected to [Lovable](https://lovable.dev). Avoid rewriting
-> published git history — force pushing, or rebasing/amending/squashing commits
-> that are already pushed — as it rewrites history on Lovable's side and the
-> user will likely lose their project history.
->
-> Commits you push to the connected branch sync back to Lovable and show up in
-> the editor, so keep the branch in a working state.
-<!-- LOVABLE:END -->
+- Production is the independent Supabase + Cloudflare deployment. Keep `cursor-migration` deployable; CI must pass before release, and never commit Cloudflare or Supabase secrets.
 - Branding uses one imported raster seal in the header and launch overlay; derive favicons and installable icons from it, and keep paper texture scoped to the launch screen — why: consistent identity without changing reader themes.
 - Editorial `/api/public/editorial/*` routes always verify the cron secret (preview URL is public too); AI drafting only runs with `AI_DRAFTING_ENABLED=true` — why: no unauthenticated writes, no surprise AI spend.
 - Server-side link probing stays disabled (`LINK_PROBE_ENABLED=false`) until egress can be pinned to a validated IP — why: string checks cannot stop DNS rebinding SSRF.
@@ -31,4 +22,5 @@
 - Resource imports use authenticated editor-only bounded insert-ignore batches, deterministic per-file/account row IDs, and expiring browser checkpoints; supplied records are retained in editor-private metadata — why: resume partial writes without overwriting sources, fetching external pages, or exposing research notes.
 - Source verification (src/lib/source-verification.server.ts + source-rules.ts) never edits source rows: tri-state rules (unknown = blocked, never failure), rejections open replacement gaps and only apply_verified_replacement (same kind, atomic) hides a source; hourly schedule stays paused until the route is live — why: no fake verification, no lost coverage, no failing jobs.
 - Web research uses only the Tavily keyless adapter (src/lib/tavily-keyless.server.ts, fixed endpoints, no key) via the 10-topic pilot; budget is reserved in reserve_research_call before each call and evidence lives in research_candidates/research_evidence, never content_resources — why: no paid fallback, hard caps, and machine-extracted text never auto-approves a source.
-- Agent integrations: MCP tools live in src/lib/mcp/ (OAuth via Cloud Auth issuer, caller-scoped client, read-only); consent at /.lovable/oauth/consent; /auth honours a validated `next` — why: assistants act as the reader under existing RLS, never with elevated keys.
+- Agent integrations: `/mcp` uses Supabase OAuth 2.1, caller-scoped RLS and read-only tools; consent lives at `/oauth/consent`, discovery at `/.well-known/oauth-protected-resource`, and browser tools use native `document.modelContext` — why: assistants act as the reader without Lovable or elevated keys.
+- Browser failures are reduced to route/kind/status and forwarded to Cloudflare logs; never send messages, stacks, URLs, form values or account data — why: production visibility without collecting reader content.

@@ -2,7 +2,7 @@ import { useInfiniteQuery, useQuery, useQueryClient } from "@tanstack/react-quer
 import { writeFailureKey } from "@/lib/write-outcome";
 import { retryDelay, retryTransient, withTimeout } from "@/lib/retry";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { AppHeader } from "@/components/AppHeader";
 import { TopicRow } from "@/components/TopicRow";
@@ -18,6 +18,7 @@ import {
 import { categoryName, gatewayNoun, laneName } from "@/lib/content-labels";
 import { useI18n } from "@/lib/i18n";
 import { useOpenTopic } from "@/lib/use-open-topic";
+import { useVisibleTopicTools } from "@/lib/webmcp";
 
 const PAGE_SIZE = 12;
 
@@ -61,7 +62,16 @@ export const Route = createFileRoute("/")({
     try {
       const initial = await withTimeout(
         listTopics({
-          data: { query: "", category: null, interests: [], readIds: [], feedMix: "balanced", seed, limit: PAGE_SIZE, offset: 0 },
+          data: {
+            query: "",
+            category: null,
+            interests: [],
+            readIds: [],
+            feedMix: "balanced",
+            seed,
+            limit: PAGE_SIZE,
+            offset: 0,
+          },
         }),
         8_000,
       );
@@ -79,9 +89,7 @@ function Index() {
   const { t, lang } = useI18n();
   const [rawQuery, setRawQuery] = useState("");
   const [query, setQuery] = useState("");
-  const [activeFilter, setActiveFilter] = useState<string>(
-    view === "saved" ? "saved" : "all",
-  );
+  const [activeFilter, setActiveFilter] = useState<string>(view === "saved" ? "saved" : "all");
   const {
     saved,
     toggle,
@@ -122,18 +130,20 @@ function Index() {
     enabled: !showingSaved,
     initialPageParam: 0,
     queryFn: ({ pageParam }) =>
-      withTimeout(listTopics({
-        data: {
-          query,
-          category: activeFilter,
-          interests,
-          readIds: readTopicIds,
-          feedMix,
-          seed,
-          limit: PAGE_SIZE,
-          offset: pageParam,
-        },
-      })),
+      withTimeout(
+        listTopics({
+          data: {
+            query,
+            category: activeFilter,
+            interests,
+            readIds: readTopicIds,
+            feedMix,
+            seed,
+            limit: PAGE_SIZE,
+            offset: pageParam,
+          },
+        }),
+      ),
 
     retry: retryTransient,
     retryDelay,
@@ -204,6 +214,12 @@ function Index() {
     return () => observer.disconnect();
   }, [feed]);
 
+  const setWebMcpSearch = useCallback((value: string) => {
+    setRawQuery(value);
+    setQuery(value);
+  }, []);
+  useVisibleTopicTools({ items, isLoading, setSearch: setWebMcpSearch, openTopic });
+
   const surprise = () => {
     if (items.length === 0) return;
     const pick = items[Math.floor(Math.random() * items.length)];
@@ -214,107 +230,98 @@ function Index() {
     <div className="paper-grain min-h-screen bg-background">
       <AppHeader />
       <header
-        className={`mx-auto max-w-3xl px-6 ${
-          session ? "pt-10 pb-6" : "pt-16 pb-10 sm:pt-20"
-        }`}
+        className={`mx-auto max-w-3xl px-6 ${session ? "pt-10 pb-6" : "pt-16 pb-10 sm:pt-20"}`}
       >
         <div className="hero-plaque text-center">
-        <img
-          src="/maximalist-clip.png"
-          alt=""
-          aria-hidden="true"
-          className="plaque-deco plaque-deco-clip"
-        />
-        <img
-          src="/maximalist-stamp.png"
-          alt=""
-          aria-hidden="true"
-          className="plaque-deco plaque-deco-stamp"
-        />
-        <img
-          src="/maximalist-star.png"
-          alt=""
-          aria-hidden="true"
-          className="plaque-deco plaque-deco-star"
-        />
-        <p className="eyebrow text-muted-foreground">
-          {t("home.eyebrow")}
-        </p>
-        <h1
-          className={`mt-4 font-display font-semibold tracking-tight text-balance text-foreground ${
-            session ? "text-4xl" : "text-5xl sm:text-6xl"
-          }`}
-        >
-          {session ? "Curiosity, Sourced" : t("home.titleGuest")}
-        </h1>
-        <div
-          className="rule-diamond ornamental mx-auto mt-8 max-w-xs"
-          aria-hidden="true"
-        />
-        {session ? (
-          <>
-            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
-              {t("home.introMember", { object: gatewayNoun(lang, theme, "one") })}
-            </p>
-            {interests.length > 0 ? (
-              <p className="mt-5 text-sm text-muted-foreground italic">
-                {t("home.leaning", {
-                  subjects: interests
-                    .slice(0, 3)
-                    .map((v) => laneName(lang, v, v))
-                    .join(", "),
-                })}
-                {interests.length > 3 ? t("home.andMore") : ""} —{" "}
-                <Link to="/welcome" className="underline underline-offset-4">
-                  {t("home.tuneLink")}
-                </Link>
+          <img
+            src="/maximalist-clip.png"
+            alt=""
+            aria-hidden="true"
+            className="plaque-deco plaque-deco-clip"
+          />
+          <img
+            src="/maximalist-stamp.png"
+            alt=""
+            aria-hidden="true"
+            className="plaque-deco plaque-deco-stamp"
+          />
+          <img
+            src="/maximalist-star.png"
+            alt=""
+            aria-hidden="true"
+            className="plaque-deco plaque-deco-star"
+          />
+          <p className="eyebrow text-muted-foreground">{t("home.eyebrow")}</p>
+          <h1
+            className={`mt-4 font-display font-semibold tracking-tight text-balance text-foreground ${
+              session ? "text-4xl" : "text-5xl sm:text-6xl"
+            }`}
+          >
+            {session ? "Curiosity, Sourced" : t("home.titleGuest")}
+          </h1>
+          <div className="rule-diamond ornamental mx-auto mt-8 max-w-xs" aria-hidden="true" />
+          {session ? (
+            <>
+              <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
+                {t("home.introMember", { object: gatewayNoun(lang, theme, "one") })}
               </p>
-            ) : (
-              <p className="mt-5 text-sm text-muted-foreground italic">
-                <Link to="/welcome" className="underline underline-offset-4">
-                  {t("home.pickSubjects")}
-                </Link>
-                {t("home.pickSubjectsAfter")}
+              {interests.length > 0 ? (
+                <p className="mt-5 text-sm text-muted-foreground italic">
+                  {t("home.leaning", {
+                    subjects: interests
+                      .slice(0, 3)
+                      .map((v) => laneName(lang, v, v))
+                      .join(", "),
+                  })}
+                  {interests.length > 3 ? t("home.andMore") : ""} —{" "}
+                  <Link to="/welcome" className="underline underline-offset-4">
+                    {t("home.tuneLink")}
+                  </Link>
+                </p>
+              ) : (
+                <p className="mt-5 text-sm text-muted-foreground italic">
+                  <Link to="/welcome" className="underline underline-offset-4">
+                    {t("home.pickSubjects")}
+                  </Link>
+                  {t("home.pickSubjectsAfter")}
+                </p>
+              )}
+            </>
+          ) : (
+            <>
+              <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                {t("home.introGuest", { objects: gatewayNoun(lang, theme, "bare") })}
               </p>
-            )}
-          </>
-        ) : (
-          <>
-            <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t("home.introGuest", { objects: gatewayNoun(lang, theme, "bare") })}
-            </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                to="/start"
-                className="flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 sm:w-auto"
-              >
-                {t("home.build")}
-              </Link>
-              <a
-                href="#library"
-                className="flex min-h-12 w-full max-w-xs items-center justify-center rounded-full border border-gold/60 bg-accent px-6 text-sm font-medium text-accent-foreground transition-colors hover:border-gold sm:w-auto"
-              >
-                {t("home.browse")}
-              </a>
-            </div>
-            <p className="mt-5 text-sm text-muted-foreground italic">
-              {t("home.noAccountBefore")}
-              <Link to="/auth" className="underline underline-offset-4">
-                {t("nav.signIn")}
-              </Link>
-              {t("home.noAccountAfter")}
-            </p>
-          </>
-        )}
+              <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  to="/start"
+                  className="flex min-h-12 w-full max-w-xs items-center justify-center rounded-full bg-primary px-6 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 sm:w-auto"
+                >
+                  {t("home.build")}
+                </Link>
+                <a
+                  href="#library"
+                  className="flex min-h-12 w-full max-w-xs items-center justify-center rounded-full border border-gold/60 bg-accent px-6 text-sm font-medium text-accent-foreground transition-colors hover:border-gold sm:w-auto"
+                >
+                  {t("home.browse")}
+                </a>
+              </div>
+              <p className="mt-5 text-sm text-muted-foreground italic">
+                {t("home.noAccountBefore")}
+                <Link to="/auth" className="underline underline-offset-4">
+                  {t("nav.signIn")}
+                </Link>
+                {t("home.noAccountAfter")}
+              </p>
+            </>
+          )}
         </div>
       </header>
-
 
       <div
         id="library"
         className="sticky top-0 z-30 scroll-mt-0 border-y border-border/70 bg-background/85 backdrop-blur-md"
       >
-
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 sm:px-6">
           <div className="flex items-center gap-3">
             <label className="relative flex-1">
@@ -423,9 +430,7 @@ function Index() {
           </p>
         ) : items.length === 0 ? (
           <p className="py-20 text-center text-lg text-muted-foreground italic">
-            {activeFilter === "saved"
-              ? t("feed.emptySaved")
-              : t("feed.emptySearch")}
+            {activeFilter === "saved" ? t("feed.emptySaved") : t("feed.emptySearch")}
           </p>
         ) : (
           <div className="divide-y divide-border/60">
@@ -461,9 +466,7 @@ function Index() {
             {t("feed.loadingMore")}
           </p>
         ) : items.length > 0 && !feed.hasNextPage ? (
-          <p className="mt-12 text-center text-sm text-muted-foreground italic">
-            {t("feed.end")}
-          </p>
+          <p className="mt-12 text-center text-sm text-muted-foreground italic">{t("feed.end")}</p>
         ) : null}
       </main>
 
@@ -479,10 +482,21 @@ function Index() {
       </footer>
 
       {saveWriteError ? (
-        <div role="alert" className="fixed bottom-4 left-1/2 z-[90] flex max-w-[92vw] -translate-x-1/2 items-center gap-3 rounded-lg border border-border bg-card px-4 py-2 text-sm text-foreground shadow-lg">
-          <span>{t("err.saveTopic")} {t(writeFailureKey(saveWriteError))}</span>
-          {saveWriteError === "session" ? <a href="/auth" className="underline underline-offset-2">{t("err.signIn")}</a> : null}
-          <button type="button" onClick={clearWriteError} className="underline underline-offset-2">{t("err.dismiss")}</button>
+        <div
+          role="alert"
+          className="fixed bottom-4 left-1/2 z-[90] flex max-w-[92vw] -translate-x-1/2 items-center gap-3 rounded-lg border border-border bg-card px-4 py-2 text-sm text-foreground shadow-lg"
+        >
+          <span>
+            {t("err.saveTopic")} {t(writeFailureKey(saveWriteError))}
+          </span>
+          {saveWriteError === "session" ? (
+            <a href="/auth" className="underline underline-offset-2">
+              {t("err.signIn")}
+            </a>
+          ) : null}
+          <button type="button" onClick={clearWriteError} className="underline underline-offset-2">
+            {t("err.dismiss")}
+          </button>
         </div>
       ) : null}
       <TopicSheet

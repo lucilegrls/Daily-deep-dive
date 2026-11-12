@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 
 import type { Resource, ResourceGroups, Topic } from "@/data/topics";
 import { isSafeSourceUrl } from "@/lib/content-safety";
+import { normalizeCategory } from "@/lib/content-labels";
 import type { InterestLane } from "@/lib/interests";
 import { createPublicServerClient } from "@/lib/supabase-public.server";
 
@@ -28,10 +29,7 @@ function emptyGroups(): ResourceGroups {
 
 function numberList(value: unknown, cap: number): number[] {
   return Array.isArray(value)
-    ? [...new Set(value.map((n) => Number(n)).filter(Number.isFinite))].slice(
-        0,
-        cap,
-      )
+    ? [...new Set(value.map((n) => Number(n)).filter(Number.isFinite))].slice(0, cap)
     : [];
 }
 
@@ -84,7 +82,6 @@ export const listTopics = createServerFn({ method: "GET" })
       _limit: data.limit,
       _offset: data.offset,
     });
-
 
     if (error) throw new Error(error.message);
 
@@ -144,10 +141,7 @@ export const listInterestLanes = createServerFn({ method: "GET" }).handler(
         description: lane.description,
         examples: lane.examples ?? [],
         categories,
-        publishedCount: categories.reduce(
-          (sum, c) => sum + (counts.get(c) ?? 0),
-          0,
-        ),
+        publishedCount: categories.reduce((sum, c) => sum + (counts.get(c) ?? 0), 0),
       };
     });
   },
@@ -161,7 +155,7 @@ export const listCategories = createServerFn({ method: "GET" }).handler(
       .select("category")
       .eq("status", "published");
     if (error) throw new Error(error.message);
-    return [...new Set((data ?? []).map((row) => row.category))].sort((a, b) =>
+    return [...new Set((data ?? []).map((row) => normalizeCategory(row.category)))].sort((a, b) =>
       a.localeCompare(b),
     );
   },
@@ -184,26 +178,27 @@ export const getTopic = createServerFn({ method: "GET" })
     const supabase = createPublicServerClient();
     let builder = supabase
       .from("content_topics")
-      .select(
-        "id, slug, title, category, context, takeaways, tags, last_verified, related_ids",
-      )
+      .select("id, slug, title, category, context, takeaways, tags, last_verified, related_ids")
       .eq("status", "published")
       .limit(1);
-    builder = data.slug
-      ? builder.eq("slug", data.slug)
-      : builder.eq("id", data.id ?? -1);
+    builder = data.slug ? builder.eq("slug", data.slug) : builder.eq("id", data.id ?? -1);
 
     const { data: rows, error } = await builder;
     if (error) throw new Error(error.message);
     const topic = rows?.[0];
     if (!topic) return null;
 
+    // The live table has these post-generation editorial columns; the checked-in
+    // Supabase type snapshot predates them.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { data: trustRows } = await (supabase as any)
       .from("content_topics")
       .select("risk_level, last_editorial_review_at")
       .eq("id", topic.id)
       .limit(1);
-    const trust = trustRows?.[0] as { risk_level?: "standard" | "elevated" | "high"; last_editorial_review_at?: string | null } | undefined;
+    const trust = trustRows?.[0] as
+      | { risk_level?: "standard" | "elevated" | "high"; last_editorial_review_at?: string | null }
+      | undefined;
 
     const { data: resources, error: resourceError } = await supabase
       .from("content_resources")
@@ -218,10 +213,15 @@ export const getTopic = createServerFn({ method: "GET" })
     if (resourceError) throw new Error(resourceError.message);
 
     // Only body identifiers visible through the existing public rights policy, never text.
-    const bodyIds = (resources ?? []).filter((r) => r.embed_type === "internal_reader" && isSafeSourceUrl(r.url)).map((r) => r.id);
+    const bodyIds = (resources ?? [])
+      .filter((r) => r.embed_type === "internal_reader" && isSafeSourceUrl(r.url))
+      .map((r) => r.id);
     const bodies = new Set<string>();
     if (bodyIds.length) {
-      const { data: bodyRows, error: bodyError } = await supabase.from("content_resource_bodies").select("resource_id").in("resource_id", bodyIds);
+      const { data: bodyRows, error: bodyError } = await supabase
+        .from("content_resource_bodies")
+        .select("resource_id")
+        .in("resource_id", bodyIds);
       if (bodyError) throw new Error(bodyError.message);
       for (const row of bodyRows ?? []) bodies.add(row.resource_id);
     }
@@ -236,9 +236,14 @@ export const getTopic = createServerFn({ method: "GET" })
         title: row.title,
         url: row.url,
         media: {
-          url: row.url, kind: row.kind, embedType: row.embed_type,
-          embeddingStatus: row.embedding_status, rightsStatus: row.rights_status,
-          embedUrl: row.embed_url, contentUrl: row.content_url, hasBody: bodies.has(row.id),
+          url: row.url,
+          kind: row.kind,
+          embedType: row.embed_type,
+          embeddingStatus: row.embedding_status,
+          rightsStatus: row.rights_status,
+          embedUrl: row.embed_url,
+          contentUrl: row.content_url,
+          hasBody: bodies.has(row.id),
         },
         ...(row.author ? { author: row.author } : {}),
         ...(row.source ? { source: row.source } : {}),
@@ -281,7 +286,9 @@ export const getTopic = createServerFn({ method: "GET" })
       tags: topic.tags ?? [],
       ...(topic.last_verified ? { lastVerified: topic.last_verified } : {}),
       ...(trust?.risk_level ? { riskLevel: trust.risk_level } : {}),
-      ...(trust?.last_editorial_review_at ? { lastEditorialReviewAt: trust.last_editorial_review_at } : {}),
+      ...(trust?.last_editorial_review_at
+        ? { lastEditorialReviewAt: trust.last_editorial_review_at }
+        : {}),
       ressources,
       related: related ?? [],
     };
@@ -347,7 +354,5 @@ export const getTopicsByIds = createServerFn({ method: "GET" })
 
     // Most recently saved first, following the order the reader's list is in.
     const rank = new Map(data.ids.map((id, index) => [id, index]));
-    return filtered.sort(
-      (a, b) => (rank.get(b.id) ?? 0) - (rank.get(a.id) ?? 0),
-    );
+    return filtered.sort((a, b) => (rank.get(b.id) ?? 0) - (rank.get(a.id) ?? 0));
   });

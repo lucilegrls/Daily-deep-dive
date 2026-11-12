@@ -1,0 +1,70 @@
+name: Production monitor
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check application, catalogue and security headers
+        id: smoke
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://daily-deep-dive.lucilegroleas.workers.dev"
+          curl --fail --silent --show-error --retry 2 "$base/" > home.html
+          curl --fail --silent --show-error --retry 2 "$base/auth" > auth.html
+          grep -q "Curiosity, Sourced" home.html
+          grep -q "331 published topics" home.html
+          headers="$(curl --fail --silent --show-error --head "$base/")"
+          grep -qi '^content-security-policy:' <<< "$headers"
+          grep -qi '^x-content-type-options: nosniff' <<< "$headers"
+          grep -qi '^x-frame-options: DENY' <<< "$headers"
+          grep -qi '^referrer-policy:' <<< "$headers"
+
+      - name: Open or resolve the production alert
+        uses: actions/github-script@v7
+        env:
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+        with:
+          script: |
+            const title = "Production smoke check is failing";
+            const { data } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = data.find((issue) => !issue.pull_request && issue.title === title);
+            if (process.env.SMOKE_OUTCOME !== "success") {
+              if (!existing) {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title,
+                  body: `The scheduled production check failed at ${new Date().toISOString()}. Inspect the workflow run and Cloudflare logs before deploying again.`,
+                });
+              }
+            } else if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body: `Production recovered at ${new Date().toISOString()}; the automated checks are passing again.`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                state: "closed",
+              });
+            }

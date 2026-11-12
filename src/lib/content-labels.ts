@@ -49,8 +49,7 @@ const LANES: ByLang = {
     },
     "body-health-nutrition": {
       label: "Corps, santé & nutrition",
-      description:
-        "Comment le corps fonctionne vraiment, de la cellule aux habitudes.",
+      description: "Comment le corps fonctionne vraiment, de la cellule aux habitudes.",
     },
     "brain-behavior": {
       label: "Cerveau, psychologie & comportement",
@@ -104,8 +103,7 @@ const LANES: ByLang = {
     },
     "body-health-nutrition": {
       label: "Cuerpo, salud y nutrición",
-      description:
-        "Cómo funciona el cuerpo de verdad, de las células a los hábitos.",
+      description: "Cómo funciona el cuerpo de verdad, de las células a los hábitos.",
     },
     "brain-behavior": {
       label: "Cerebro, psicología y conducta",
@@ -501,11 +499,16 @@ const THEME_LABELS: ByLang = {
   },
 };
 
-function pick(
-  tables: ByLang,
-  lang: LanguageCode,
-  key: string,
-): Entry | undefined {
+const CATEGORY_ALIASES: Readonly<Record<string, string>> = {
+  "Science & Technology": "Science & technology",
+};
+
+/** Collapse historical database spellings before they reach filters or copy. */
+export function normalizeCategory(category: string): string {
+  return CATEGORY_ALIASES[category] ?? category;
+}
+
+function pick(tables: ByLang, lang: LanguageCode, key: string): Entry | undefined {
   return tables[lang]?.[key];
 }
 
@@ -513,27 +516,20 @@ export function laneName(lang: LanguageCode, slug: string, fallback: string) {
   return pick(LANES, lang, slug)?.label ?? fallback;
 }
 
-export function laneDescription(
-  lang: LanguageCode,
-  slug: string,
-  fallback: string,
-) {
+export function laneDescription(lang: LanguageCode, slug: string, fallback: string) {
   return pick(LANES, lang, slug)?.description ?? fallback;
 }
 
 export function categoryName(lang: LanguageCode, category: string) {
-  return pick(CATEGORIES, lang, category)?.label ?? category;
+  const normalized = normalizeCategory(category);
+  return pick(CATEGORIES, lang, normalized)?.label ?? normalized;
 }
 
 export function feedMixName(lang: LanguageCode, id: string, fallback: string) {
   return pick(MIXES, lang, id)?.label ?? fallback;
 }
 
-export function feedMixDescription(
-  lang: LanguageCode,
-  id: string,
-  fallback: string,
-) {
+export function feedMixDescription(lang: LanguageCode, id: string, fallback: string) {
   return pick(MIXES, lang, id)?.description ?? fallback;
 }
 
@@ -541,11 +537,7 @@ export function themeName(lang: LanguageCode, id: string, fallback: string) {
   return pick(THEME_LABELS, lang, id)?.label ?? fallback;
 }
 
-export function themeDescription(
-  lang: LanguageCode,
-  id: string,
-  fallback: string,
-) {
+export function themeDescription(lang: LanguageCode, id: string, fallback: string) {
   return pick(THEME_LABELS, lang, id)?.description ?? fallback;
 }
 
@@ -605,11 +597,7 @@ const GATEWAY_NOUNS: Partial<Record<StoredLanguage, Record<string, Gateway>>> = 
 };
 
 /** The look's object, in the reader's language. */
-export function gatewayNoun(
-  lang: LanguageCode,
-  themeId: string,
-  form: "one" | "bare" = "bare",
-) {
+export function gatewayNoun(lang: LanguageCode, themeId: string, form: "one" | "bare" = "bare") {
   const table = GATEWAY_NOUNS[lang] ?? GATEWAY_NOUNS.en ?? {};
   const entry =
     table[themeId] ??

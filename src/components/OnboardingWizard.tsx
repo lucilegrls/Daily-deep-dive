@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link, useNavigate } from "@tanstack/react-router";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { useAccount } from "@/lib/account";
 import {
@@ -28,6 +28,7 @@ import { DEFAULT_THEME, THEMES, isTheme } from "@/lib/themes";
 import type { TranslationKey } from "@/lib/translations";
 import { topicTitle } from "@/lib/topic-titles";
 import { topicContext } from "@/lib/topic-copy";
+import { finishUxJourney, recordUxEvent, uxJourney } from "@/lib/ux-analytics";
 
 const STEP_KEYS: TranslationKey[] = [
   "ob.stepSubjects",
@@ -59,7 +60,8 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [hydrated, setHydrated] = useState(false);
-
+  const [journeyId] = useState(() => uxJourney("onboarding"));
+  const stepStartedAt = useRef(Date.now());
 
   const { data: lanes = [], isLoading: loadingLanes } = useQuery({
     queryKey: ["interest-lanes"],
@@ -97,6 +99,17 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
     writeDraft({ interests: picked, feedMix: mix, theme });
   }, [mode, hydrated, picked, mix, theme]);
 
+  useEffect(() => {
+    if (!hydrated) return;
+    stepStartedAt.current = Date.now();
+    recordUxEvent({
+      journeyId,
+      surface: "onboarding",
+      event: "step_viewed",
+      variant: mode,
+      step,
+    });
+  }, [hydrated, journeyId, mode, step]);
 
   const previewEnabled = step === 3 && picked.length > 0;
   const { data: preview } = useQuery({
@@ -116,9 +129,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
   const toggle = (category: string) => {
     setError(null);
     setPicked((prev) =>
-      prev.includes(category)
-        ? prev.filter((c) => c !== category)
-        : [...prev, category],
+      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category],
     );
   };
 
@@ -127,6 +138,14 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
       setError(t("ob.errMin", { min: MIN_INTERESTS }));
       return;
     }
+    recordUxEvent({
+      journeyId,
+      surface: "onboarding",
+      event: "step_completed",
+      variant: mode,
+      step,
+      elapsedMs: Date.now() - stepStartedAt.current,
+    });
     setError(null);
     setStep((s) => Math.min(s + 1, STEP_KEYS.length - 1));
   };
@@ -134,11 +153,27 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
   const back = () => {
     setError(null);
     if (step === 0) {
+      recordUxEvent({
+        journeyId,
+        surface: "onboarding",
+        event: "journey_skipped",
+        variant: mode,
+        step,
+      });
+      finishUxJourney("onboarding");
       // Leaving the edit without saving discards any previewed look.
       if (mode === "edit") restoreOriginalTheme();
       void navigate({ to: "/" });
       return;
     }
+    recordUxEvent({
+      journeyId,
+      surface: "onboarding",
+      event: "step_back",
+      variant: mode,
+      step,
+      elapsedMs: Date.now() - stepStartedAt.current,
+    });
     setStep((s) => s - 1);
   };
 
@@ -161,22 +196,37 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
       if (result.reason === "too_few_interests") setStep(0);
       return;
     }
+    recordUxEvent({
+      journeyId,
+      surface: "onboarding",
+      event: "journey_completed",
+      variant: mode,
+      step,
+      elapsedMs: Date.now() - stepStartedAt.current,
+    });
+    finishUxJourney("onboarding");
     void navigate({ to: "/" });
   };
 
   // Leaving an edit only puts the look back the way the account had it —
   // nothing was written to the account while previewing.
   const restoreOriginalTheme = () => {
-    const original =
-      startTheme ?? (isTheme(profile?.theme) ? profile.theme : DEFAULT_THEME);
+    const original = startTheme ?? (isTheme(profile?.theme) ? profile.theme : DEFAULT_THEME);
     previewTheme(original);
   };
 
   const cancelEdit = () => {
+    recordUxEvent({
+      journeyId,
+      surface: "onboarding",
+      event: "journey_skipped",
+      variant: mode,
+      step,
+    });
+    finishUxJourney("onboarding");
     restoreOriginalTheme();
     void navigate({ to: "/" });
   };
-
 
   const goToAccount = () => {
     writeDraft({ interests: picked, feedMix: mix, theme });
@@ -246,9 +296,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
                           <span
                             aria-hidden="true"
                             className={`size-2.5 shrink-0 rotate-45 border ${
-                              active
-                                ? "border-primary bg-primary"
-                                : "border-border"
+                              active ? "border-primary bg-primary" : "border-border"
                             }`}
                           />
                         </span>
@@ -307,11 +355,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
                         ) : null}
                       </span>
                       <span className="mt-1 block text-sm text-muted-foreground">
-                        {feedMixDescription(
-                          lang,
-                          option.id,
-                          option.description,
-                        )}
+                        {feedMixDescription(lang, option.id, option.description)}
                       </span>
                     </button>
                   );
@@ -328,9 +372,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
               >
                 {t("ob.q3")}
               </h2>
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                {t("ob.q3hint")}
-              </p>
+              <p className="mt-4 text-center text-sm text-muted-foreground">{t("ob.q3hint")}</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 {THEMES.map((t) => (
                   <button
@@ -372,15 +414,10 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
               <h2 className="text-center font-display text-3xl font-semibold text-foreground">
                 {t("ob.q4")}
               </h2>
-              <p className="mt-4 text-center text-sm text-muted-foreground">
-                {t("ob.q4hint")}
-              </p>
+              <p className="mt-4 text-center text-sm text-muted-foreground">{t("ob.q4hint")}</p>
               <ul className="mt-7 space-y-3">
                 {(preview?.items ?? []).map((item) => (
-                  <li
-                    key={item.id}
-                    className="rounded-xl border border-border bg-card px-5 py-4"
-                  >
+                  <li key={item.id} className="rounded-xl border border-border bg-card px-5 py-4">
                     <p className="eyebrow text-muted-foreground">
                       {categoryName(lang, item.category)}
                     </p>
@@ -408,15 +445,10 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
                   >
                     {t("ob.createAccount")}
                   </button>
-                  <p className="mt-3 text-xs text-muted-foreground">
-                    {t("ob.draftNote")}
-                  </p>
+                  <p className="mt-3 text-xs text-muted-foreground">{t("ob.draftNote")}</p>
                   <p className="mt-3 text-sm text-muted-foreground">
                     {t("ob.already")}{" "}
-                    <Link
-                      to="/auth"
-                      className="text-foreground underline underline-offset-4"
-                    >
+                    <Link to="/auth" className="text-foreground underline underline-offset-4">
                       {t("ob.signIn")}
                     </Link>
                   </p>
@@ -429,11 +461,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
                     onClick={() => void finish()}
                     className="min-h-12 w-full rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
                   >
-                    {busy
-                      ? t("ob.saving")
-                      : mode === "edit"
-                        ? t("ob.saveFeed")
-                        : t("ob.enterFeed")}
+                    {busy ? t("ob.saving") : mode === "edit" ? t("ob.saveFeed") : t("ob.enterFeed")}
                   </button>
                   {mode === "edit" ? (
                     <button
@@ -459,11 +487,7 @@ export function OnboardingWizard({ mode }: { mode: "signup" | "edit" }) {
               onClick={back}
               className="min-h-11 rounded-full border border-border bg-card px-5 text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              {step === 0
-                ? mode === "edit"
-                  ? t("ob.cancel")
-                  : t("ob.notNow")
-                : t("ob.back")}
+              {step === 0 ? (mode === "edit" ? t("ob.cancel") : t("ob.notNow")) : t("ob.back")}
             </button>
             {step < STEP_KEYS.length - 1 ? (
               <button

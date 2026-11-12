@@ -17,12 +17,10 @@ export default defineConfig(({ mode }) => {
       dedupe: ["react", "react-dom", "@tanstack/react-router"],
     },
     plugins: [
-      ...(isCloudflare
-        ? [cloudflare({ viteEnvironment: { name: "ssr" } })]
-        : []),
+      ...(isCloudflare ? [cloudflare({ viteEnvironment: { name: "ssr" } })] : []),
       tanstackStart({
         // Preserve the existing SSR error wrapper.
-        server: { entry: "server" },
+        server: { entry: "./server.ts" },
       }),
       ...(!isCloudflare ? [nitro()] : []),
       viteReact(),

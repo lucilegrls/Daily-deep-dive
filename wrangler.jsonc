@@ -3,11 +3,14 @@
   "name": "daily-deep-dive",
   "compatibility_date": "2026-11-06",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "@tanstack/react-start/server-entry",
+  "main": "src/server.ts",
+  "observability": {
+    "enabled": true,
+  },
   "keep_vars": true,
   "vars": {
     "SUPABASE_URL": "https://klsxbfzxlrdglcsimtgm.supabase.co",
     "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_smp1_u70LN8mtdHtcAjc5Q_s6hJCak9",
-    "AI_DRAFTING_ENABLED": "false"
-  }
+    "AI_DRAFTING_ENABLED": "false",
+  },
 }

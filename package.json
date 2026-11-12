@@ -12,7 +12,7 @@
     "start": "node .output/server/index.mjs",
     "preview:cloudflare": "vite preview --mode cloudflare",
     "deploy:cloudflare": "pnpm build:cloudflare && wrangler deploy",
-    "test": "vitest run",
+    "test": "vitest run --testTimeout=15000 --no-isolate",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write ."

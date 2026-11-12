@@ -5,6 +5,7 @@ import { AppHeader } from "@/components/AppHeader";
 import { supabase } from "@/integrations/supabase/client";
 import { useAccount } from "@/lib/account";
 import { useI18n } from "@/lib/i18n";
+import { recordUxEvent, uxJourney } from "@/lib/ux-analytics";
 
 interface Row {
   display_name: string;
@@ -31,8 +32,7 @@ export const Route = createFileRoute("/leaderboard")({
       { property: "og:title", content: "The most curious readers" },
       {
         property: "og:description",
-        content:
-          "Weekly and all-time rankings of the readers who open the most topics.",
+        content: "Weekly and all-time rankings of the readers who open the most topics.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -51,6 +51,17 @@ function Leaderboard() {
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const [mine, setMine] = useState<Mine | null>(null);
+  const [journeyId] = useState(() => uxJourney("reading_community"));
+  const hasSession = Boolean(session);
+
+  useEffect(() => {
+    recordUxEvent({
+      journeyId,
+      surface: "reading_community",
+      event: "community_viewed",
+      variant: "week",
+    });
+  }, [journeyId]);
 
   useEffect(() => {
     let active = true;
@@ -74,7 +85,7 @@ function Leaderboard() {
         .order("place")
         .order("display_name")
         .limit(50),
-      session
+      hasSession
         ? supabase.rpc("my_leaderboard_place", { _period: period })
         : Promise.resolve({ data: [], error: null }),
     ]).then(([board, me]) => {
@@ -89,7 +100,12 @@ function Leaderboard() {
         setMine(own);
         setRows(
           (board.data ?? []).map((r) => {
-            const isMe = !marked && !!own && r.place === own.place && r.reads === own.reads && r.display_name === myName;
+            const isMe =
+              !marked &&
+              !!own &&
+              r.place === own.place &&
+              r.reads === own.reads &&
+              r.display_name === myName;
             if (isMe) marked = true;
             return { ...r, is_me: isMe };
           }),
@@ -101,30 +117,32 @@ function Leaderboard() {
       active = false;
       window.clearTimeout(timer);
     };
-  }, [period, attempt, session?.user.id, profileName]);
-
+  }, [period, attempt, hasSession, profileName]);
 
   return (
     <div className="paper-grain min-h-screen bg-background">
       <AppHeader />
       <main className="mx-auto max-w-2xl px-4 py-14 sm:px-6">
-        <p className="eyebrow text-center text-muted-foreground">
-          {t("lb.eyebrow")}
-        </p>
+        <p className="eyebrow text-center text-muted-foreground">{t("lb.eyebrow")}</p>
         <h1 className="mt-3 text-center font-display text-4xl font-semibold text-foreground">
           {t("lb.title")}
         </h1>
-        <div
-          className="rule-diamond ornamental mx-auto mt-6 max-w-xs"
-          aria-hidden="true"
-        />
+        <div className="rule-diamond ornamental mx-auto mt-6 max-w-xs" aria-hidden="true" />
 
         <div className="mt-8 flex justify-center gap-2">
           {(["week", "all"] as const).map((p) => (
             <button
               key={p}
               type="button"
-              onClick={() => setPeriod(p)}
+              onClick={() => {
+                setPeriod(p);
+                recordUxEvent({
+                  journeyId,
+                  surface: "reading_community",
+                  event: "period_changed",
+                  variant: p,
+                });
+              }}
               aria-pressed={period === p}
               className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
                 period === p
@@ -140,10 +158,9 @@ function Leaderboard() {
         {session ? (
           <p className="mt-6 text-center text-sm text-muted-foreground">
             {t("lb.streak", {
-              days: t(
-                streak.current === 1 ? "nav.streakDay" : "nav.streakDays",
-                { count: streak.current },
-              ),
+              days: t(streak.current === 1 ? "nav.streakDay" : "nav.streakDays", {
+                count: streak.current,
+              }),
               best: streak.best,
               total: streak.total,
             })}
@@ -160,9 +177,7 @@ function Leaderboard() {
 
         <ol className="mt-10 divide-y divide-border/60">
           {loading ? (
-            <p className="py-16 text-center text-muted-foreground italic">
-              {t("lb.loading")}
-            </p>
+            <p className="py-16 text-center text-muted-foreground italic">{t("lb.loading")}</p>
           ) : failed ? (
             <div className="py-16 text-center">
               <p className="text-muted-foreground italic">{t("feed.errorFeed")}</p>
@@ -175,20 +190,14 @@ function Leaderboard() {
               </button>
             </div>
           ) : rows.length === 0 ? (
-            <p className="py-16 text-center text-muted-foreground italic">
-              {t("lb.empty")}
-            </p>
+            <p className="py-16 text-center text-muted-foreground italic">{t("lb.empty")}</p>
           ) : (
             rows.map((row) => (
               <li
                 key={`${row.place}-${row.display_name}`}
-                className={`flex items-center gap-4 py-4 ${
-                  row.is_me ? "font-medium" : ""
-                }`}
+                className={`flex items-center gap-4 py-4 ${row.is_me ? "font-medium" : ""}`}
               >
-                <span className="w-8 shrink-0 font-display text-xl text-gold">
-                  {row.place}
-                </span>
+                <span className="w-8 shrink-0 font-display text-xl text-gold">{row.place}</span>
                 <span className="min-w-0 flex-1 truncate text-foreground">
                   {row.display_name}
                   {row.is_me ? t("lb.you") : ""}
