@@ -6,9 +6,10 @@ avant la fin de la validation.
 
 ## Ce que l'audit a établi
 
-- Le dépôt GitHub `lucilegrls/Daily-deep-dive` sur `main` contient une ancienne
+- Le dépôt GitHub `lucilegrls/Daily-deep-dive` conserve sur `main` une ancienne
   PWA statique : 64 sujets locaux, favoris dans `localStorage`, aucun compte et
-  aucune synchronisation cloud. Il ne doit pas remplacer la version publiée.
+  aucune synchronisation cloud. La branche par défaut est désormais
+  `cursor-migration`, qui porte la version migrée et déployée.
 - L'export complet de code Lovable du 8 novembre contient React 19,
   TanStack Start, Supabase JS, 37 tables publiques typées, les migrations SQL,
   les tests RLS, tous les thèmes et les composants de lecture.
@@ -120,7 +121,8 @@ secret chiffré ; aucune clé secrète n'entre dans Git.
 
 Le bouton Google reste masqué tant que ce fournisseur n'est pas configuré, afin
 d'éviter une connexion cassée. La branche `cursor-migration` est publiée sur
-GitHub sans remplacer `main`. Lovable reste intact pendant la validation.
+GitHub et configurée comme branche par défaut, sans supprimer l'historique de
+`main`. Lovable reste intact pendant la validation.
 
 ## Vérifications déjà réussies
 
