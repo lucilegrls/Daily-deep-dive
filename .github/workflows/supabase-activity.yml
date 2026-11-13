@@ -1,0 +1,31 @@
+name: Supabase Free activity check
+
+on:
+  schedule:
+    - cron: '17 3 */3 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  activity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read a public content row from the migrated Supabase project
+        env:
+          SUPABASE_URL: https://klsxbfzxlrdglcsimtgm.supabase.co
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_PUBLISHABLE_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$SUPABASE_PUBLISHABLE_KEY" ]; then
+            echo "::error::Add SUPABASE_PUBLISHABLE_KEY as a repository Actions secret."
+            exit 1
+          fi
+          curl --fail-with-body --show-error --silent --max-time 25 \
+            --retry 2 --retry-delay 3 \
+            -H "apikey: $SUPABASE_PUBLISHABLE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_PUBLISHABLE_KEY" \
+            "$SUPABASE_URL/rest/v1/content_topics?select=id&limit=1" > /dev/null
+          echo "Supabase REST query succeeded."
